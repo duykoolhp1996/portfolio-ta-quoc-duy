@@ -1,0 +1,23 @@
+# Operating System & Environment
+.DS_Store
+Thumbs.db
+.env
+
+# Browser profile and session cookies (Confidential)
+browser_data/
+*.session.json
+*session*.json
+
+# Automation scripts, scrapers & application rules
+AUTOMATION_RULES.md
+*.py
+*.json
+__pycache__/
+*.pyc
+
+# Screenshot dumps from job portal scrapers
+v24h_*.png
+vieclam24h_*.png
+jobsgo_*.png
+vietnamworks_*.png
+google_chooser.png
