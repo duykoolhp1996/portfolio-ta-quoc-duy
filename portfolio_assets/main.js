@@ -184,12 +184,12 @@ const caseStudiesData = {
 
   bravigo: {
     category: "Thiết Bị Công Nghệ Ô Tô Thông Minh (B2B & B2C)",
-    company: "Bravigo Việt Nam",
+    company: "Bravigo Việt Nam & Thiết Bị Công Nghệ Xe",
     role: "Marketing Manager",
     period: "03/2022 – 04/2024",
-    title: "Mở Rộng Thị Phần Toàn Quốc Qua Mạng Lưới Hàng Trăm Đại Lý & Trade Marketing",
-    challenge: "Thị trường màn hình và thiết bị ô tô thông minh cạnh tranh gay gắt, đòi hỏi sự kết hợp chặt chẽ giữa xây dựng nhận diện thương hiệu với người tiêu dùng (B2C) và chính sách thúc đẩy hàng qua mạng lưới đại lý phân phối (B2B).",
-    strategy: "Hoạch định chiến lược marketing trung và dài hạn, quản lý đội ngũ 8 chuyên viên, phối hợp chặt chẽ với agency sáng tạo và hệ thống KOLs/KOCs chuyên môn cao ngành xe; phủ sóng ấn phẩm POSM tại hàng trăm đại lý toàn quốc.",
+    title: "Mở Rộng Thị Phần Toàn Quốc Qua Mạng Lưới Hàng Trăm Đại Lý & Chủ Trì Ra Mắt Flagship Ottocast P3",
+    challenge: "Thị trường màn hình và thiết bị ô tô thông minh cạnh tranh gay gắt, đòi hỏi sự kết hợp chặt chẽ giữa xây dựng nhận diện thương hiệu với người tiêu dùng (B2C) và chính sách thúc đẩy hàng qua mạng lưới đại lý phân phối (B2B). Đồng thời cần tổ chức sự kiện ra mắt hoành tráng cho dòng sản phẩm chiến lược Ottocast P3.",
+    strategy: "Hoạch định chiến lược marketing trung và dài hạn, quản lý đội ngũ 8 chuyên viên, phối hợp chặt chẽ với agency sáng tạo và hệ thống KOLs/KOCs chuyên môn cao ngành xe; phủ sóng ấn phẩm POSM tại hàng trăm đại lý toàn quốc. Trực tiếp làm Event Lead sự kiện ra mắt Ottocast P3 và tự tay thiết kế toàn bộ Keynote Presentation.",
     deliverables: [
       {
         title: "Chiến Lược Mở Rộng Thị Phần B2B & B2C",
@@ -220,17 +220,36 @@ const caseStudiesData = {
         items: [
           "Booking và định hướng nội dung cho các reviewer công nghệ xe hàng đầu",
           "Sản xuất TVC, chuỗi video review công nghệ trên YouTube và TikTok",
-          "Định vị Bravigo trở thành thương hiệu top-of-mind trong phân khúc màn hình ô tô Android"
+          "Định vị thương hiệu top-of-mind trong phân khúc màn hình và Android Box ô tô"
         ],
         attachment: "Danh sách KOLs hợp tác & Kịch bản TVC review"
+      },
+      {
+        title: "Chủ Trì Ra Mắt Ottocast P3 & Thiết Kế Slide Keynote",
+        tag: "Product Launch & Keynote",
+        desc: "Đảm nhiệm vai trò Event Lead sự kiện ra mắt Flagship Ottocast P3; tự tay thiết kế và cấu trúc 100% Slide thuyết trình Keynote chuẩn quốc tế trên Canva.",
+        items: [
+          "Lên kế hoạch tổ chức sự kiện ra mắt, điều phối khu vực trải nghiệm Live Demo cho đại lý",
+          "Tự tay thiết kế và biên soạn toàn bộ Slide thuyết trình Keynote trên Canva với định hướng trực quan cao cấp",
+          "Cấu trúc thông điệp sản phẩm (Chip Snapdragon, OttoDrive 2.0, Ambient LED) và chính sách ưu đãi mở bán",
+          "Quy tụ đông đảo đại lý, gara ô tô toàn quốc và các reviewer công nghệ xe hàng đầu"
+        ],
+        attachment: "Slide Keynote Canva & Kịch bản chương trình ra mắt"
       }
     ],
+    embedSlide: {
+      title: "Slide Giới Thiệu Sự Kiện Ra Mắt Ottocast P3",
+      author: "Tạ Quốc Duy (Event Lead & Slide Designer)",
+      url: "https://www.canva.com/design/DAFzc_JdrZs/tAccurnki2vgpJgjPrDIUQ/view?embed",
+      canvaLink: "https://www.canva.com/design/DAFzc_JdrZs/tAccurnki2vgpJgjPrDIUQ/view?utm_content=DAFzc_JdrZs&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
+    },
     results: [
-      "Thúc đẩy tăng trưởng nhận diện thương hiệu Bravigo trên toàn quốc.",
+      "Thúc đẩy tăng trưởng nhận diện thương hiệu công nghệ ô tô trên toàn quốc.",
       "Phủ sóng ấn phẩm POSM tại hàng trăm đại lý phân phối và gara ủy quyền.",
+      "Tổ chức thành công sự kiện ra mắt Flagship Ottocast P3, kích hoạt hàng loạt đơn đặt hàng từ hệ thống đại lý.",
       "Quản lý điều phối hiệu quả đội ngũ 8 chuyên viên và mạng lưới đối tác agency/KOLs."
     ],
-    tech: ["Auto Tech", "B2B & B2C", "Trade Marketing", "Team 8 Mems", "Hàng Trăm Đại Lý", "KOL Campaigns"]
+    tech: ["Auto Tech", "Ottocast P3 Launch", "Canva Keynote Lead", "Trade Marketing", "Team 8 Mems", "Hàng Trăm Đại Lý", "KOL Campaigns"]
   },
 
   lath: {
@@ -557,6 +576,35 @@ window.openCaseModal = function(caseKey) {
         <span><strong>${r}</strong></span>
       </li>
     `).join("");
+  }
+
+  // Render Slide Embed (if available)
+  const slideContainer = document.getElementById("modalSlideContainer");
+  if (slideContainer) {
+    if (data.embedSlide) {
+      slideContainer.innerHTML = `
+        <div class="modal-slide-box" id="modalSlideSection">
+          <div class="modal-slide-header">
+            <span class="modal-slide-badge"><i data-lucide="presentation"></i> ${data.embedSlide.title}</span>
+            <a href="${data.embedSlide.canvaLink}" target="_blank" rel="noopener" class="btn btn-outline btn-xs" style="font-size: 0.76rem; padding: 5px 10px;">
+              <i data-lucide="external-link" style="width: 13px; height: 13px;"></i>
+              <span>Mở Canva Toàn Màn Hình</span>
+            </a>
+          </div>
+          <div class="canva-embed-wrapper">
+            <iframe loading="lazy" src="${data.embedSlide.url}" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+          </div>
+          <p class="modal-slide-caption">
+            <i data-lucide="check-circle-2" style="width: 14px; height: 14px; color: var(--accent-emerald); display: inline-block; vertical-align: middle; margin-right: 4px;"></i>
+            ${data.embedSlide.author} • Slide thuyết trình chuẩn nhận diện cao cấp, có thể xem lướt từng trang trực tiếp.
+          </p>
+        </div>
+      `;
+      slideContainer.style.display = "block";
+    } else {
+      slideContainer.innerHTML = "";
+      slideContainer.style.display = "none";
+    }
   }
 
   modal.classList.add("active");
