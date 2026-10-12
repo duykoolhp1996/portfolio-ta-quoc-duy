@@ -799,20 +799,20 @@ a {
 
 /* ================= 04. SECTION COMMON STYLING ================= */
 section {
-  padding: 90px 0;
+  padding: 120px 0;
   position: relative;
   z-index: 1;
 }
 
 .section-header {
-  margin-bottom: 48px;
+  margin-bottom: 60px;
   text-align: left;
 }
 
 .section-header-center {
   text-align: center;
-  max-width: 720px;
-  margin: 0 auto 48px;
+  max-width: 760px;
+  margin: 0 auto 60px;
 }
 
 .section-tag {
@@ -827,24 +827,26 @@ section {
   color: var(--accent-cyan);
   background: rgba(6, 182, 212, 0.1);
   border: 1px solid rgba(6, 182, 212, 0.25);
-  padding: 5px 14px;
+  padding: 6px 16px;
   border-radius: var(--radius-full);
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .section-title {
-  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-size: clamp(2.1rem, 3.4vw, 2.85rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   color: #FFFFFF;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  line-height: 1.25;
 }
 
 .section-subtitle {
-  font-size: 1.05rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  max-width: 760px;
+  font-size: 1.08rem;
+  color: #94A3B8;
+  line-height: 1.75;
+  max-width: 780px;
+  margin-top: 8px;
 }
 
 /* Standard Dark Glass Card */
@@ -852,7 +854,7 @@ section {
   background: var(--bg-surface);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-lg);
-  padding: 32px;
+  padding: 36px 38px;
   box-shadow: var(--shadow-card);
   transition: var(--transition);
 }
@@ -869,19 +871,20 @@ section {
   background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-deep) 100%);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
+  padding: 110px 0 130px;
 }
 
 .impact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 26px;
 }
 
 .impact-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-lg);
-  padding: 28px;
+  padding: 34px 30px;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
@@ -1038,20 +1041,20 @@ section {
 .pillars-3col-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 28px;
 }
 
 .pillar-editorial-card {
   background: var(--bg-surface);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
-  padding: 30px;
+  padding: 36px 32px;
   transition: var(--transition);
 }
 
 .pillar-editorial-card:hover {
   background: var(--bg-surface-elevated);
-  border-color: var(--border-glass-hover);
+  border-color: rgba(6, 182, 212, 0.35);
   transform: translateY(-4px);
 }
 
@@ -1062,55 +1065,57 @@ section {
   color: var(--accent-cyan);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .pillar-heading {
   font-size: 1.25rem;
   font-weight: 700;
   color: #FFFFFF;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  line-height: 1.35;
 }
 
 .pillar-desc {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
+  font-size: 0.92rem;
+  color: #94A3B8;
+  line-height: 1.75;
 }
 
 /* ================= 07. SECTION 04: DETAILED CASE STUDIES ================= */
 .cases-section {
   background: var(--bg-deep);
   border-top: 1px solid var(--border-subtle);
+  padding: 120px 0 140px;
 }
 
 .cases-stack {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 64px;
 }
 
 .case-study-item {
   background: var(--bg-surface);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-xl);
-  padding: 36px;
+  padding: 46px 48px;
   transition: var(--transition);
   position: relative;
 }
 
 .case-study-item:hover {
-  border-color: rgba(255, 255, 255, 0.16);
+  border-color: rgba(6, 182, 212, 0.35);
   background: var(--bg-surface-elevated);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
 }
 
 .case-study-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 24px;
+  gap: 24px;
+  margin-bottom: 30px;
 }
 
 .case-company-name {
@@ -1119,21 +1124,21 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--accent-cyan);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .case-project-title {
-  font-size: 1.45rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: #FFFFFF;
-  line-height: 1.3;
+  line-height: 1.35;
 }
 
 .case-meta-right {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 6px;
+  gap: 8px;
   flex-shrink: 0;
 }
 
@@ -1141,25 +1146,25 @@ section {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid var(--border-glass);
   color: #FFFFFF;
-  padding: 6px 14px;
+  padding: 6px 16px;
   border-radius: var(--radius-full);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 600;
 }
 
 .case-period-text {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
 }
 
 /* ================= INTERACTIVE CHART & FUNNEL HUB (SECTION 02) ================= */
 .interactive-chart-hub {
-  margin-top: 45px;
+  margin-top: 64px;
   background: var(--bg-surface);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-xl);
-  padding: 32px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  padding: 40px 44px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
   position: relative;
   overflow: hidden;
 }
@@ -1350,11 +1355,114 @@ section {
 }
 
 /* ================= CASE STUDY ENHANCED VISUALS (SECTION 04) ================= */
+.case-metrics-banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.case-metric-block {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+  transition: var(--transition);
+}
+
+.case-metric-block:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+.case-metric-number {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.case-metric-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
 .case-split-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 32px;
+  gap: 48px;
   align-items: start;
+}
+
+.case-narrative h4 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-top: 26px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.case-narrative h4:first-child {
+  margin-top: 0;
+}
+
+.case-narrative p {
+  font-size: 0.94rem;
+  color: #94A3B8;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.case-scope-box {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  margin-top: 28px;
+}
+
+.case-scope-title {
+  font-family: var(--font-heading);
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.case-scope-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.case-scope-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: #CBD5E1;
+  line-height: 1.65;
+}
+
+.case-scope-list li i {
+  width: 15px;
+  height: 15px;
+  color: var(--accent-emerald);
+  flex-shrink: 0;
+  margin-top: 4px;
 }
 
 .case-mockup-frame {
@@ -1362,9 +1470,9 @@ section {
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  margin-bottom: 26px;
   background: #090B10;
 }
 
@@ -1384,10 +1492,10 @@ section {
   position: absolute;
   top: 14px;
   left: 14px;
-  background: rgba(9, 11, 16, 0.8);
+  background: rgba(9, 11, 16, 0.85);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 4px 12px;
+  padding: 5px 14px;
   border-radius: var(--radius-full);
   font-size: 0.72rem;
   font-weight: 700;
@@ -1400,18 +1508,18 @@ section {
 .before-after-matrix {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid var(--border-glass);
+  gap: 22px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: var(--radius-md);
-  padding: 16px;
-  margin-bottom: 20px;
+  padding: 22px 24px;
+  margin-bottom: 24px;
 }
 
 .ba-column {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .ba-header {
@@ -1419,10 +1527,11 @@ section {
   align-items: center;
   gap: 6px;
   font-family: var(--font-heading);
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  margin-bottom: 4px;
 }
 
 .ba-header.before {
@@ -1437,9 +1546,9 @@ section {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  font-size: 0.78rem;
-  line-height: 1.45;
+  gap: 10px;
+  font-size: 0.82rem;
+  line-height: 1.6;
 }
 
 .ba-points-list.before li {
@@ -1473,17 +1582,17 @@ section {
 /* ================= MARTECH ARCHITECTURE HERO (SECTION 05) ================= */
 .martech-hero-visual-card {
   background: var(--bg-surface);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  margin-bottom: 36px;
+  margin-bottom: 56px;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
   position: relative;
 }
 
 .martech-hero-img-box {
   width: 100%;
-  max-height: 460px;
+  max-height: 480px;
   overflow: hidden;
   position: relative;
 }
@@ -1497,41 +1606,43 @@ section {
 }
 
 .martech-hero-overlay-bar {
-  padding: 20px 28px;
+  padding: 24px 32px;
   background: var(--bg-surface-elevated);
   border-top: 1px solid var(--border-glass);
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 18px;
 }
 
 .martech-overlay-title {
   font-family: var(--font-heading);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 800;
   color: #FFFFFF;
 }
 
 .martech-overlay-desc {
-  font-size: 0.84rem;
-  color: var(--text-secondary);
+  font-size: 0.88rem;
+  color: #94A3B8;
+  line-height: 1.6;
+  margin-top: 4px;
 }
 
 /* Visual 5-Stage Pipeline */
 .pipeline-5step-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-  margin-bottom: 36px;
+  gap: 16px;
+  margin-bottom: 56px;
 }
 
 .pipeline-step-item {
   background: var(--bg-surface);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
-  padding: 18px 14px;
+  padding: 22px 18px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1545,54 +1656,55 @@ section {
 }
 
 .pipeline-step-num {
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 800;
   color: var(--accent-cyan);
   text-transform: uppercase;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
 }
 
 .pipeline-step-name {
   font-family: var(--font-heading);
-  font-size: 0.92rem;
+  font-size: 0.96rem;
   font-weight: 700;
   color: #FFFFFF;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .pipeline-step-sub {
-  font-size: 0.76rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
-  line-height: 1.4;
+  line-height: 1.55;
 }
 
 /* ================= SKILL BARS (SECTION 06) ================= */
 .skills-depth-box {
-  margin-top: 36px;
+  margin-top: 56px;
   background: var(--bg-surface);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
-  padding: 28px 32px;
+  padding: 38px 44px;
 }
 
 .skills-depth-title {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: #FFFFFF;
-  margin-bottom: 20px;
+  margin-bottom: 26px;
 }
 
 .skill-bar-row {
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 
 .skill-bar-info {
   display: flex;
   justify-content: space-between;
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   font-weight: 600;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   color: var(--text-secondary);
 }
 
@@ -1602,7 +1714,7 @@ section {
 
 .skill-bar-track {
   width: 100%;
-  height: 8px;
+  height: 9px;
   background: rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-full);
   overflow: hidden;
@@ -1618,34 +1730,35 @@ section {
 .case-tech-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
 .case-tag-item {
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 600;
   color: var(--text-muted);
   background: rgba(255, 255, 255, 0.05);
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: var(--radius-full);
 }
 
 /* ================= 08. SECTION 05: MARTECH & AI AUTOMATION ================= */
 .martech-section {
   background: var(--bg-main);
+  padding: 120px 0 140px;
 }
 
 .martech-layers-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  gap: 28px;
 }
 
 .martech-layer-card {
   background: var(--bg-surface);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
-  padding: 28px;
+  padding: 34px 32px;
   transition: var(--transition);
 }
 
@@ -1658,13 +1771,13 @@ section {
 .martech-layer-header {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 18px;
+  gap: 16px;
+  margin-bottom: 20px;
 }
 
 .martech-layer-icon {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: var(--radius-md);
   background: rgba(6, 182, 212, 0.12);
   border: 1px solid rgba(6, 182, 212, 0.25);
@@ -1677,30 +1790,30 @@ section {
 .martech-layer-title {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: #FFFFFF;
 }
 
 .martech-layer-desc {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 18px;
+  font-size: 0.9rem;
+  color: #94A3B8;
+  line-height: 1.7;
+  margin-bottom: 22px;
 }
 
 .martech-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
 .martech-chip {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #FFFFFF;
   background: rgba(255, 255, 255, 0.06);
-  border: 1px solid var(--border-glass);
-  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 14px;
   border-radius: var(--radius-full);
 }
 
@@ -1708,19 +1821,20 @@ section {
 .capabilities-section {
   background: var(--bg-deep);
   border-top: 1px solid var(--border-subtle);
+  padding: 120px 0 140px;
 }
 
 .capabilities-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 
 .capability-card {
   background: var(--bg-surface);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
-  padding: 26px;
+  padding: 32px 28px;
   transition: var(--transition);
 }
 
@@ -1773,19 +1887,20 @@ section {
 /* ================= 10. SECTION 07: DELIVERABLES & ARTIFACTS ================= */
 .deliverables-section {
   background: var(--bg-main);
+  padding: 120px 0 140px;
 }
 
 .deliverables-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 28px;
 }
 
 .deliverable-card {
   background: var(--bg-surface);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
-  padding: 26px;
+  padding: 34px 30px;
   transition: var(--transition);
 }
 
@@ -1801,49 +1916,53 @@ section {
   color: var(--accent-amber);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .deliverable-name {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: #FFFFFF;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  line-height: 1.35;
 }
 
 .deliverable-desc {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  line-height: 1.55;
-  margin-bottom: 16px;
+  font-size: 0.88rem;
+  color: #94A3B8;
+  line-height: 1.7;
+  margin-bottom: 20px;
 }
 
 .deliverable-points {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  font-size: 0.82rem;
-  color: var(--text-muted);
+  gap: 10px;
+  font-size: 0.84rem;
+  color: #CBD5E1;
 }
 
 .deliverable-points li {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  line-height: 1.5;
 }
 
 .deliverable-points li i {
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
   color: var(--accent-emerald);
+  flex-shrink: 0;
 }
 
 /* ================= 11. SECTION 08: CAREER TIMELINE ================= */
 .timeline-section {
   background: var(--bg-deep);
   border-top: 1px solid var(--border-subtle);
+  padding: 120px 0 140px;
 }
 
 .timeline-track {
@@ -1865,13 +1984,13 @@ section {
 
 .timeline-item {
   position: relative;
-  margin-bottom: 36px;
+  margin-bottom: 48px;
 }
 
 .timeline-dot {
   position: absolute;
   left: -32px;
-  top: 6px;
+  top: 8px;
   width: 14px;
   height: 14px;
   border-radius: 50%;
@@ -1882,47 +2001,51 @@ section {
 
 .timeline-content-card {
   background: var(--bg-surface);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
-  padding: 24px 28px;
+  padding: 30px 34px;
   transition: var(--transition);
 }
 
 .timeline-content-card:hover {
   background: var(--bg-surface-elevated);
-  border-color: var(--border-glass-hover);
+  border-color: rgba(6, 182, 212, 0.35);
 }
 
 .timeline-period-badge {
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 700;
   color: var(--accent-cyan);
   text-transform: uppercase;
-  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
 }
 
 .timeline-role-title {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #FFFFFF;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .timeline-company-text {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--text-secondary);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
 }
 
 .timeline-highlights {
-  font-size: 0.86rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
+  font-size: 0.9rem;
+  color: #94A3B8;
+  line-height: 1.75;
 }
 
 /* ================= 12. SECTION 09: FAQ & MINDSET ================= */
 .faq-section {
   background: var(--bg-main);
+  padding: 120px 0 140px;
 }
 
 .faq-list {
@@ -1930,24 +2053,24 @@ section {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .faq-card {
   background: var(--bg-surface);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: var(--transition);
 }
 
 .faq-card:hover {
-  border-color: var(--border-glass-hover);
+  border-color: rgba(6, 182, 212, 0.3);
 }
 
 .faq-question-btn {
   width: 100%;
-  padding: 22px 26px;
+  padding: 24px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1956,7 +2079,7 @@ section {
   color: #FFFFFF;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   text-align: left;
   cursor: pointer;
 }
@@ -1972,10 +2095,10 @@ section {
 }
 
 .faq-answer-body {
-  padding: 0 26px 22px;
-  font-size: 0.92rem;
-  color: var(--text-secondary);
-  line-height: 1.65;
+  padding: 0 30px 26px;
+  font-size: 0.94rem;
+  color: #94A3B8;
+  line-height: 1.8;
   display: none;
 }
 
@@ -1987,32 +2110,32 @@ section {
 .contact-section {
   background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-deep) 100%);
   border-top: 1px solid var(--border-subtle);
-  padding-bottom: 60px;
+  padding: 120px 0 80px;
 }
 
 .contact-card-wrap {
   background: var(--bg-surface);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-xl);
-  padding: 48px;
+  padding: 56px 64px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: 56px;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
 }
 
 .contact-info-col h3 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 800;
   color: #FFFFFF;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .contact-info-col p {
-  font-size: 0.96rem;
-  color: var(--text-secondary);
-  line-height: 1.65;
-  margin-bottom: 28px;
+  font-size: 1rem;
+  color: #94A3B8;
+  line-height: 1.75;
+  margin-bottom: 32px;
 }
 
 .contact-channels-list {
