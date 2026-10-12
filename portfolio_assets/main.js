@@ -126,7 +126,7 @@ const caseStudiesData = {
     logoUrl: "portfolio_assets/images/logo_luclam.png",
     role: "Quản Lý Marketing",
     period: "04/2024 – 04/2025",
-    title: "Xây Dựng Thương Hiệu Từ Số 0 & Đạt Doanh Thu 1 Tỷ Đồng/Tháng",
+    title: "Xây Dựng Thương Hiệu Từ Số 0 & Đạt Doanh Thu 40 Tỷ Đồng",
     challenge: "Gia nhập ngành F&B trà sữa và quà tặng cao cấp từ con số 0: chưa có thương hiệu, chưa có kênh bán hàng online và thiếu quy trình tiếp nhận đơn hàng.",
     strategy: "Xây dựng trọn bộ nhận diện thương hiệu cao cấp, phát triển hệ thống 4 website kết nối phần mềm quản lý khách hàng, kết hợp quảng cáo mùa vụ với sự kiện trải nghiệm tại trung tâm thương mại Takashimaya.",
     deliverables: [
@@ -164,9 +164,9 @@ const caseStudiesData = {
         attachment: "Hình ảnh sự kiện Takashimaya & Kế hoạch trải nghiệm"
       },
       {
-        title: "Chiến Dịch Bứt Phá Doanh Thu 1 Tỷ/Tháng",
+        title: "Chiến Dịch Bứt Phá Doanh Thu 40 Tỷ",
         tag: "Tăng Trưởng Bán Hàng",
-        desc: "Kết hợp quảng cáo online và bán quà tặng mùa Tết đạt mốc doanh thu 1 tỷ/tháng.",
+        desc: "Kết hợp quảng cáo online và bán quà tặng mùa Tết đạt mốc doanh thu 40 tỷ.",
         items: [
           "Chạy quảng cáo mục tiêu trên Facebook và Google",
           "Đẩy mạnh gói quà Tết cho doanh nghiệp và khách lẻ",
@@ -176,11 +176,11 @@ const caseStudiesData = {
       }
     ],
     results: [
-      "Đưa doanh thu từ con số 0 đạt mốc 1 tỷ đồng/tháng.",
+      "Đưa doanh thu từ con số 0 đạt mốc 40 tỷ đồng.",
       "Xây dựng và đào tạo đội ngũ 8 nhân sự Marketing vận hành độc lập.",
       "Hoàn thiện hệ sinh thái 4 website và hệ thống quản lý dữ liệu khách hàng."
     ],
-    tech: ["Doanh Thu 1 Tỷ/Tháng", "Ra Mắt Thương Hiệu", "Đội Ngũ 8 Người", "4 Website", "Quản Lý Khách Hàng", "Sự Kiện Takashimaya"]
+    tech: ["Doanh Thu 40 Tỷ", "Ra Mắt Thương Hiệu", "Đội Ngũ 8 Người", "4 Website", "Quản Lý Khách Hàng", "Sự Kiện Takashimaya"]
   },
 
   bravigo: {

@@ -9,15 +9,15 @@
 ---
 
 ## TÓM TẮT NĂNG LỰC CỐT LÕI (EXECUTIVE SUMMARY)
-**Senior Marketing Manager** với **8+ năm kinh nghiệm** thực chiến trong hoạch định chiến lược tiếp thị đa kênh (Omnichannel), xây dựng thương hiệu từ số 0 (Zero to Hero) và dẫn dắt song song **Team Digital Marketing** & **Team Branding** quy mô 8–14 nhân sự. Thế mạnh độc nhất kết hợp giữa **tư duy logic Bách Khoa (CNTT)** với năng lực quản trị hiệu suất cao: trực tiếp điều hành ngân sách quảng cáo quy mô lớn đạt đỉnh **lên tới 700 triệu/tháng** (hiện quản lý **300 triệu/tháng** tại Sala Garden, đem về đều đặn **50+ Qualified Leads/tháng**), chỉ đạo cỗ máy sản xuất nội dung quy mô lớn **130+ videos/tháng**, tiên phong **tự xây dựng AI Agents tự hành & Vibe Coding phát triển SaaS tools** nội bộ giải phóng 30% thời gian vận hành và dẫn dắt các chiến dịch đạt doanh thu **1 tỷ/tháng** trong các ngành Bất động sản sinh thái, F&B, Công nghệ & Bán lẻ.
+**Senior Marketing Manager** với **8+ năm kinh nghiệm** thực chiến trong hoạch định chiến lược tiếp thị đa kênh (Omnichannel), xây dựng thương hiệu từ số 0 (Zero to Hero) và dẫn dắt song song **Team Digital Marketing** & **Team Branding** quy mô 10 nhân sự. Thế mạnh độc nhất kết hợp giữa **tư duy logic Bách Khoa (CNTT)** với năng lực quản trị hiệu suất cao: trực tiếp điều hành ngân sách quảng cáo quy mô lớn đạt đỉnh **lên tới 700 triệu/tháng** (hiện quản lý **300 triệu/tháng** tại Sala Garden, đem về đều đặn **50+ Qualified Leads/tháng**), chỉ đạo cỗ máy sản xuất nội dung quy mô lớn **130+ videos/tháng**, tiên phong **tự xây dựng AI Agents tự hành & Vibe Coding phát triển SaaS tools** nội bộ giải phóng 30% thời gian vận hành và dẫn dắt các chiến dịch đạt doanh thu **40 tỷ VNĐ** trong các ngành Bất động sản sinh thái, F&B, Công nghệ & Bán lẻ.
 
 ---
 
 ## CÁC CHỈ SỐ ẤN TƯỢNG (KEY IMPACT METRICS)
 - **130+ Videos/Tháng:** Công suất sản xuất video phủ nhận diện đa kênh (Shorts, Reels, TikTok, YouTube do Brand Team triển khai).
 - **Peak 700 Triệu Ads:** Ngân sách quảng cáo lớn nhất từng điều hành & tối ưu ROI (hiện tại quản lý 300 triệu/tháng tại Sala Garden, duy trì 50+ Q.Leads/tháng).
-- **1 Tỷ VNĐ Doanh Thu/Tháng:** Xây dựng thương hiệu chuỗi F&B từ số 0; tăng trưởng doanh thu ads +40%; cắt giảm 25% CPI.
-- **Lãnh đạo 2 Teams chuyên biệt (8-14 nhân sự):** Điều hành song song Team Digital Marketing và Team Branding; thiết lập bộ khung KPIs định lượng chi tiết cho từng vị trí.
+- **40 Tỷ VNĐ Doanh Thu:** Xây dựng thương hiệu chuỗi F&B từ số 0; tăng trưởng doanh thu ads +40%; cắt giảm 25% CPI.
+- **Lãnh đạo 2 Teams chuyên biệt (10 nhân sự):** Điều hành song song Team Digital Marketing và Team Branding; thiết lập bộ khung KPIs định lượng chi tiết cho từng vị trí.
 
 ---
 
@@ -44,11 +44,11 @@
 
 ### MARKETING MANAGER | Công Ty TNHH TM DV SX Lục Lam (Chuỗi F&B & Quà tặng)
 *04/2024 – 04/2025*
-- **Tăng trưởng doanh thu 1 Tỷ/tháng từ số 0:** Dẫn dắt chiến lược marketing đưa thương hiệu trà sữa & quà tặng cao cấp đạt mốc **doanh thu 1 tỷ VNĐ/tháng** từ con số 0; trực tiếp tuyển dụng, đào tạo và quản lý **8 nhân sự Marketing**.
+- **Tăng trưởng doanh thu 40 Tỷ từ số 0:** Dẫn dắt chiến lược marketing đưa thương hiệu trà sữa & quà tặng cao cấp đạt mốc **doanh thu 40 tỷ VNĐ** từ con số 0; trực tiếp tuyển dụng, đào tạo và quản lý **8 nhân sự Marketing**.
 - **Kiến tạo thương hiệu & Hệ sinh thái 4 Websites:** Hoàn thiện trọn bộ Brand Guideline, moodboard định vị chuỗi; phát triển **4 website chuyên biệt** (*store.luclam.vn, trahoa.luclam.vn, gift.luclam.vn, vietnamtravel.com*) và hệ thống CRM quản trị khép kín từ data đến giao hàng.
 - **Ứng dụng AI Automation & CRM:** Tích hợp các luồng tự động hóa bằng AI vào quy trình chăm sóc khách hàng và marketing; điều hành chiến dịch đa kênh Google & Facebook Ads, chiến dịch quà Tết bùng nổ doanh số.
-- **Activation & Sự kiện quy mô lớn:** Tổ chức chuỗi Activation tại **TTTM Takashimaya**; triển khai ấn phẩm POSM Trade Marketing tại điểm bán; chủ trì sự kiện tri ân quy mô **200+ khách mời**; quản lý quan hệ KOLs/KOCs.
-- *Công nghệ & Kỹ năng:* Doanh thu 1 Tỷ/tháng, Brand Launching, Team 8 Mems, CRM & AI System, Takashimaya Activation.
+- **Activation & Sự kiện quy mô lớn:** Tổ chức chuỗi Activation tại **TTTM Takashimaya**; triển khai ấn phẩm POSM Trade Marketing tại điểm bán; chủ trì sự kiện tri n quy mô **200+ khách mời**; quản lý quan hệ KOLs/KOCs.
+- *Công nghệ & Kỹ năng:* Doanh thu 40 Tỷ, Brand Launching, Team 8 Mems, CRM & AI System, Takashimaya Activation.
 
 ---
 
@@ -77,7 +77,7 @@
 ---
 
 ## KỸ NĂNG CHUYÊN MÔN (CORE COMPETENCIES)
-- **Chiến Lược & Quản Trị:** Marketing Strategy, **Xây dựng hình ảnh thương hiệu (Brand Building)**, Định vị & Nhận diện thương hiệu, Quản lý 2 Teams (8-14 nhân sự), Setup KPI / OKRs từng vị trí, Quản trị ngân sách & P&L, Omnichannel Marketing, B2B & B2C Go-to-market, Nghiên cứu thị trường & Insight, Chuẩn hóa quy trình SOP.
+- **Chiến Lược & Quản Trị:** Marketing Strategy, **Xây dựng hình ảnh thương hiệu (Brand Building)**, Định vị & Nhận diện thương hiệu, Quản lý 2 Teams (10 nhân sự), Setup KPI / OKRs từng vị trí, Quản trị ngân sách & P&L, Omnichannel Marketing, B2B & B2C Go-to-market, Nghiên cứu thị trường & Insight, Chuẩn hóa quy trình SOP.
 - **MarTech, AI Agent & SaaS:** Build AI Agents (Multi-Agent Systems), SaaS Product & Vibe Coding, AI Content Engine (LLMs/Prompt Engineering), CRM & Lead-to-Order, Tracking Pixel & CPL/CPA, Zalo OA & Funnel Automation, CMS & Web Architecture.
 - **Digital & Performance:** High-budget Ads (tới 700Tr), Facebook, TikTok & Google Ads, High-volume Video Distribution, SEO On-page/Off-page, E-commerce / Sàn TMĐT.
 - **Thương Hiệu & Sáng Tạo:** **Xây dựng hình ảnh & Bản sắc thương hiệu**, Brand Guidelines & Identity, High-volume Video Production (130+ videos/tháng), Creative Direction & Design, Trade Marketing & POSM, Booking KOLs / KOCs & PR, Tổ chức Sự kiện & Activation, Livestream & Video Commerce.

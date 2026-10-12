@@ -11,8 +11,8 @@
 ## 🌟 Chỉ Số Tác Động Nổi Bật (Key Impact Metrics)
 - **130+ Videos / Tháng:** Công suất cỗ máy sản xuất nội dung đa kênh (TikTok, YouTube Shorts, Facebook Reels, phóng sự văn hóa tri ân).
 - **Peak 700 Triệu Ads / Tháng:** Quy mô ngân sách quảng cáo lớn nhất từng điều hành & tối ưu ROI (hiện quản lý 300 triệu/tháng tại Sala Garden, duy trì đều đặn 50+ Qualified Leads/tháng).
-- **1 Tỷ VNĐ Doanh Thu / Tháng:** Xây dựng thương hiệu chuỗi F&B từ số 0 (Zero to Hero); tăng trưởng doanh thu ads +40%; cắt giảm 25% CPI.
-- **Lãnh Đạo 2 Teams Chuyên Biệt (8–14 nhân sự):** Điều hành song song Team Digital Marketing & Team Branding; thiết lập bộ khung KPIs định lượng chi tiết cho từng vị trí.
+- **40 Tỷ VNĐ Doanh Thu:** Xây dựng thương hiệu chuỗi F&B từ số 0 (Zero to Hero); tăng trưởng doanh thu ads +40%; cắt giảm 25% CPI.
+- **Lãnh Đạo 2 Teams Chuyên Biệt (10 nhân sự):** Điều hành song song Team Digital Marketing & Team Branding; thiết lập bộ khung KPIs định lượng chi tiết cho từng vị trí.
 - **Tiên Phong AI Agents & Vibe Coding:** Tự xây dựng Multi-Agent Systems và SaaS/Web tools nội bộ, giải phóng 30% thời gian vận hành.
 
 ---
@@ -23,7 +23,7 @@
 2. **Công ty Fclick** (Nền tảng ứng dụng công nghệ số) - *06/2025 – 02/2026*
    - Cắt giảm 25% CPI, tự động hóa bằng AI tiết kiệm 30% thời gian, cải thiện 20% Retention rate.
 3. **Công Ty TNHH TM DV SX Lục Lam** (Chuỗi F&B & Quà tặng) - *04/2024 – 04/2025*
-   - Tăng trưởng doanh thu 1 Tỷ/tháng từ số 0, hệ sinh thái 4 websites, Activation Takashimaya, Gala 200+ khách.
+   - Tăng trưởng doanh thu 40 Tỷ từ số 0, hệ sinh thái 4 websites, Activation Takashimaya, Gala 200+ khách.
 4. **Bravigo Việt Nam** (Thiết bị công nghệ ô tô thông minh - B2B & B2C) - *03/2022 – 04/2024*
    - Mở rộng thị phần toàn quốc qua mạng lưới hàng trăm đại lý phân phối và gara ủy quyền.
 5. **LATH Group / TSD Group** (Bán lẻ & Thương mại điện tử) - *2019 – 2022*
