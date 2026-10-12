@@ -1472,37 +1472,66 @@ section {
 /* ================= CASE STUDY ENHANCED VISUALS (SECTION 04) ================= */
 .case-metrics-banner {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
   margin-bottom: 36px;
 }
 
 .case-metric-block {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: var(--radius-md);
-  padding: 18px 22px;
-  transition: var(--transition);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  padding: 20px 22px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  backdrop-filter: blur(10px);
+}
+
+.case-metric-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-cyan), rgba(6, 182, 212, 0.1));
+  opacity: 0.8;
+  transition: all 0.3s ease;
 }
 
 .case-metric-block:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(6, 182, 212, 0.3);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.04) 100%);
+  border-color: rgba(6, 182, 212, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 20px rgba(6, 182, 212, 0.18);
+}
+
+.case-metric-block:hover::before {
+  opacity: 1;
+  height: 4px;
 }
 
 .case-metric-number {
   font-family: var(--font-heading);
-  font-size: 1.55rem;
+  font-size: 1.6rem;
   font-weight: 800;
   color: #FFFFFF;
+  line-height: 1.2;
   margin-bottom: 6px;
   letter-spacing: -0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .case-metric-desc {
   font-size: 0.82rem;
-  color: var(--text-muted);
-  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.45;
+  font-weight: 500;
 }
 
 .case-split-grid {
@@ -2571,6 +2600,10 @@ footer {
   .case-body-grid,
   .contact-card-wrap {
     grid-template-columns: 1fr;
+  }
+  .case-metrics-banner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
   
   /* Mobile Horizontal Scroll for Fanned Deck */

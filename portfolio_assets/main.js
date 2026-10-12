@@ -19,7 +19,7 @@ const caseStudiesData = {
       {
         title: "Giao Kế Hoạch & Chỉ Tiêu Cho 2 Nhóm",
         tag: "Quản Trị Đội Ngũ",
-        desc: "Vận hành song song 2 nhóm (8–14 nhân sự) với chỉ tiêu công việc định lượng rõ ràng từng vị trí.",
+        desc: "Vận hành song song 2 nhóm (10 nhân sự) với chỉ tiêu công việc định lượng rõ ràng từng vị trí.",
         items: [
           "Bộ chỉ tiêu cụ thể cho từng chuyên viên quảng cáo, nội dung, dựng video và thiết kế",
           "Chuẩn hóa quy trình phối hợp nhịp nhàng giữa Marketing, Kinh doanh và CSKH",
