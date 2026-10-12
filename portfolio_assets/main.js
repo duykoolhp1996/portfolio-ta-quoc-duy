@@ -526,6 +526,28 @@ function animateValue(el) {
 }
 
 // 3. Modal Deep-Dive Controller
+window.scrollModalTo = function(elementId) {
+  const el = document.getElementById(elementId);
+  const body = document.getElementById("modalBody");
+  if (el && body) {
+    const elTop = el.offsetTop - body.offsetTop;
+    body.scrollTo({ top: Math.max(0, elTop - 10), behavior: "smooth" });
+  }
+
+  // Update active pill manually on click
+  const pills = document.querySelectorAll(".modal-nav-pill");
+  pills.forEach(p => p.classList.remove("active"));
+  if (elementId === "modalOverview") {
+    pills[0]?.classList.add("active");
+  } else if (elementId === "modalSlideContainer") {
+    document.getElementById("modalNavSlideBtn")?.classList.add("active");
+  } else if (elementId === "modalDeliverablesSec") {
+    document.querySelector(".modal-nav-pill:nth-of-type(3)")?.classList.add("active");
+  } else if (elementId === "modalResultsSec") {
+    document.querySelector(".modal-nav-pill:last-of-type")?.classList.add("active");
+  }
+};
+
 window.openCaseModal = function(caseKey) {
   const data = caseStudiesData[caseKey];
   if (!data) return;
@@ -572,23 +594,19 @@ window.openCaseModal = function(caseKey) {
     }
   }
 
-  // Render Results
-  const resContainer = document.getElementById("modalResults");
-  if (resContainer) {
-    resContainer.innerHTML = data.results.map(r => `
-      <li>
-        <i data-lucide="trending-up"></i>
-        <span><strong>${r}</strong></span>
-      </li>
-    `).join("");
+  const countBadge = document.getElementById("modalDelivCount");
+  if (countBadge && data.deliverables) {
+    countBadge.innerText = `${data.deliverables.length} Hạng Mục`;
   }
 
   // Render Slide Embed (if available)
   const slideContainer = document.getElementById("modalSlideContainer");
+  const slideNavBtn = document.getElementById("modalNavSlideBtn");
+
   if (slideContainer) {
     if (data.embedSlide) {
       slideContainer.innerHTML = `
-        <div class="modal-slide-box" id="modalSlideSection">
+        <div class="modal-slide-box" id="modalSlideSection" style="margin-top: 10px;">
           <div class="modal-slide-header">
             <span class="modal-slide-badge"><i data-lucide="presentation"></i> ${data.embedSlide.title}</span>
             <a href="${data.embedSlide.canvaLink}" target="_blank" rel="noopener" class="btn btn-outline btn-xs" style="font-size: 0.76rem; padding: 5px 10px;">
@@ -606,10 +624,70 @@ window.openCaseModal = function(caseKey) {
         </div>
       `;
       slideContainer.style.display = "block";
+      if (slideNavBtn) slideNavBtn.style.display = "inline-flex";
     } else {
       slideContainer.innerHTML = "";
       slideContainer.style.display = "none";
+      if (slideNavBtn) slideNavBtn.style.display = "none";
     }
+  }
+
+  // Render Results
+  const resContainer = document.getElementById("modalResults");
+  if (resContainer) {
+    resContainer.innerHTML = data.results.map(r => `
+      <li>
+        <i data-lucide="trending-up"></i>
+        <span><strong>${r}</strong></span>
+      </li>
+    `).join("");
+  }
+
+  // Reset scroll position & activate first tab
+  const modalBody = document.getElementById("modalBody");
+  if (modalBody) {
+    modalBody.scrollTop = 0;
+  }
+  const pills = document.querySelectorAll(".modal-nav-pill");
+  pills.forEach((p, idx) => {
+    if (idx === 0) p.classList.add("active");
+    else p.classList.remove("active");
+  });
+
+  // Modal internal ScrollSpy
+  if (modalBody && !modalBody.dataset.spyInit) {
+    modalBody.dataset.spyInit = "true";
+    modalBody.addEventListener("scroll", () => {
+      const scrollPos = modalBody.scrollTop + 90;
+      const sections = [
+        { id: "modalOverview", pillIdx: 0 },
+        { id: "modalSlideContainer", pillId: "modalNavSlideBtn" },
+        { id: "modalDeliverablesSec", pillIdx: 2 },
+        { id: "modalResultsSec", pillIdx: 3 }
+      ];
+
+      let currentSec = null;
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const sEl = document.getElementById(sections[i].id);
+        if (sEl && sEl.style.display !== "none" && sEl.offsetHeight > 0) {
+          const top = sEl.offsetTop - modalBody.offsetTop;
+          if (scrollPos >= top) {
+            currentSec = sections[i];
+            break;
+          }
+        }
+      }
+
+      if (currentSec) {
+        const allPills = document.querySelectorAll(".modal-nav-pill");
+        allPills.forEach(p => p.classList.remove("active"));
+        if (currentSec.pillId) {
+          document.getElementById(currentSec.pillId)?.classList.add("active");
+        } else if (allPills[currentSec.pillIdx]) {
+          allPills[currentSec.pillIdx].classList.add("active");
+        }
+      }
+    }, { passive: true });
   }
 
   modal.classList.add("active");
