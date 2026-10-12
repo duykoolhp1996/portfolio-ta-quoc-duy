@@ -5,303 +5,303 @@
              FAQ Accordion, Smooth Scroll, Form Handler
 ======================================================== */
 
-// Professional Case Studies Dataset (Strictly aligned with CV)
+// Dữ liệu chi tiết các dự án (Đồng bộ số liệu thực tế từ CV)
 const caseStudiesData = {
   sala: {
     category: "Bất Động Sản Hoa Viên Sinh Thái Cao Cấp",
     company: "Công Ty Cổ Phần TM & DV Sala Garden",
-    role: "Marketing Manager",
+    role: "Quản Lý Marketing",
     period: "03/2026 – Hiện tại",
-    title: "Vận Hành Hệ Thống Nội Dung 130+ Videos/Tháng & Quản Trị Ngân Sách 300Tr Tạo 50+ Q.Leads",
-    challenge: "Bất động sản hoa viên sinh thái 5 sao là phân khúc đặc thù, giá trị cao và chu kỳ ra quyết định mua hàng dài. Thách thức lớn nhất là phải xây dựng được lòng tin sâu sắc, truyền tải trọn vẹn giá trị văn hóa hiếu nghĩa và tạo ra dòng khách hàng tiềm năng thực sự quan tâm (Qualified Leads) cho đội ngũ tư vấn chốt đơn.",
-    strategy: "Tái cấu trúc và dẫn dắt song song hai đội ngũ chuyên biệt: Team Digital Marketing (tập trung chuyển đổi dữ liệu, lead và đo lường) và Team Branding (sáng tạo nội dung, nhận diện và trải nghiệm). Chuẩn hóa quy trình vận hành liên phòng ban Marketing x Sales x CSKH.",
+    title: "Sản Xuất 130+ Video/Tháng & Quản Trị Ngân Sách Ads 300Tr Tạo 50+ Khách VIP",
+    challenge: "Bất động sản sinh thái cao cấp có giá trị lớn và chu kỳ mua kéo dài. Thách thức lớn là tạo dựng niềm tin sâu sắc và mang về khách hàng thực sự có nhu cầu để đội ngũ tư vấn chốt giao dịch.",
+    strategy: "Điều hành 2 nhóm chuyên biệt: Nhóm Quảng cáo số (chuyển đổi và đo lường) và Nhóm Thương hiệu (nội dung, hình ảnh). Chuẩn hóa quy trình phối hợp nhịp nhàng giữa Marketing và Kinh doanh.",
     deliverables: [
       {
-        title: "Hoạch Định Chiến Lược & Setup KPI 2 Teams",
-        tag: "Strategy & P&L",
-        desc: "Thiết lập cấu trúc vận hành song song Team Digital Marketing & Team Branding (8–14 nhân sự) với khung KPIs định lượng chi tiết cho từng vị trí.",
+        title: "Giao Kế Hoạch & Chỉ Tiêu Cho 2 Nhóm",
+        tag: "Quản Trị Đội Ngũ",
+        desc: "Vận hành song song 2 nhóm (8–14 nhân sự) với chỉ tiêu công việc định lượng rõ ràng từng vị trí.",
         items: [
-          "Bộ khung KPI/OKR chi tiết cho Ads Specialist, Content Creator, Video Editor, Graphic Designer",
-          "Chuẩn hóa quy trình SOP phối hợp liên phòng ban Marketing – Sales – CSKH",
-          "Kiểm soát ngân sách P&L và theo dõi đo lường ROI/ROAS thời gian thực"
+          "Bộ chỉ tiêu cụ thể cho từng chuyên viên quảng cáo, nội dung, dựng video và thiết kế",
+          "Chuẩn hóa quy trình phối hợp nhịp nhàng giữa Marketing, Kinh doanh và CSKH",
+          "Kiểm soát ngân sách chi phí và hiệu quả đầu tư theo thời gian thực"
         ],
-        attachment: "SOP phối hợp liên phòng ban & Bảng theo dõi KPI"
+        attachment: "Quy trình phối hợp liên phòng ban & Bảng theo dõi chỉ tiêu"
       },
       {
-        title: "Cỗ Máy Sản Xuất Nội Dung 130+ Videos/Tháng",
-        tag: "Content Factory",
-        desc: "Xây dựng quy trình sản xuất nội dung quy mô lớn đạt công suất 130+ video/tháng phủ sóng toàn diện trên TikTok, Reels, Shorts và phóng sự.",
+        title: "Quy Trình Sản Xuất 130+ Video/Tháng",
+        tag: "Sản Xuất Nội Dung",
+        desc: "Xây dựng luồng sản xuất nội dung quy mô lớn đạt 130+ video/tháng phủ khắp TikTok, Reels, Shorts và phóng sự.",
         items: [
-          "Phát triển cấu trúc kịch bản video ngắn chuẩn Hook-Body-CTA tăng giữ chân khán giả",
-          "Chỉ đạo sản xuất chuỗi phóng sự văn hóa tri ân và trải nghiệm hoa viên sinh thái 5 sao",
-          "Phân phối đa nền tảng số và tối ưu hóa lượt tương tác tự nhiên"
+          "Chuẩn hóa kịch bản video ngắn thu hút người xem ngay 3 giây đầu",
+          "Sản xuất chuỗi phóng sự văn hóa tri ân và trải nghiệm hoa viên sinh thái",
+          "Phân phối đa kênh để tăng tương tác và nhận diện tự nhiên"
         ],
         attachment: "Bộ kịch bản video ngắn & Phân luồng sản xuất"
       },
       {
-        title: "Quản Trị Ngân Sách Ads 300Tr & 50+ Q.Leads",
-        tag: "Performance Ads",
-        desc: "Hoạch định và tối ưu ngân sách quảng cáo số 300.000.000 VNĐ/tháng đa kênh đem về đều đặn 50+ Qualified Leads chất lượng cao/tháng.",
+        title: "Tối Ưu Ngân Sách Ads 300Tr & 50+ Khách VIP",
+        tag: "Quảng Cáo Số",
+        desc: "Điều phối ngân sách quảng cáo 300 triệu/tháng đa kênh, đem về đều đặn hơn 50 khách hàng tiềm năng chất lượng cao mỗi tháng.",
         items: [
-          "Quản lý và tối ưu đa kênh: Facebook Ads, Google Ads, TikTok Ads, Zalo OA",
-          "Thiết lập phễu lọc khách hàng tiềm năng phân khúc bất động sản cao cấp",
-          "Nuôi dưỡng và chuyển giao lead chất lượng cho đội ngũ tư vấn chốt deal"
+          "Tối ưu ngân sách trên Facebook, Google, TikTok và Zalo OA",
+          "Lọc khách hàng tiềm năng có thu nhập cao và nhu cầu thực tế",
+          "Chuyển giao thông tin khách hàng cho đội ngũ tư vấn chăm sóc"
         ],
-        attachment: "Dashboard báo cáo hiệu suất chi phí CPL/Qualified Leads"
+        attachment: "Báo cáo hiệu quả chi phí và danh sách khách hàng tiềm năng"
       },
       {
-        title: "Tiếp Thị Điểm Chạm & POSM Sự Kiện Tại Chỗ",
-        tag: "Omnichannel & POSM",
-        desc: "Kết nối tiếp thị số với hoạt động tại chỗ, nâng cao trải nghiệm và niềm tin cho khách hàng tham quan thực tế.",
+        title: "Tiếp Thị Trực Tiếp & Sự Kiện Đón Tiếp",
+        tag: "Tiếp Thị Thực Địa",
+        desc: "Gắn kết quảng cáo online với trải nghiệm thực tế tại dự án để tăng tỷ lệ chốt đơn.",
         items: [
-          "Thiết kế decor không gian sự kiện Nhà tròn và ấn phẩm đón tiếp khách VIP",
-          "Phát hành Voucher tri ân sự kiện và Standee đối tác liên kết",
-          "Gia tăng niềm tin thương hiệu và tỷ lệ chuyển đổi lịch hẹn thực tế"
+          "Trang trí không gian đón tiếp và tài liệu giới thiệu cho khách VIP",
+          "Phát hành phiếu ưu đãi và tài liệu giới thiệu tại sự kiện",
+          "Gia tăng niềm tin và tỷ lệ đặt lịch hẹn tham quan thực tế"
         ],
-        attachment: "Ấn phẩm POSM tại chỗ & Concept Decor sự kiện"
+        attachment: "Tài liệu trưng bày thực tế & Không gian sự kiện"
       }
     ],
     results: [
-      "Duy trì đều đặn 50+ Qualified Leads chất lượng cao/tháng phục vụ đội ngũ tư vấn chốt đơn.",
-      "Vận hành cỗ máy sản xuất 130+ video/tháng, tăng trưởng tương tác tự nhiên trên các kênh số.",
-      "Tối ưu chi phí trên mỗi khách hàng tiềm năng (CPL) và nâng cao tỷ lệ chuyển đổi từ lead sang lịch hẹn tham quan thực tế."
+      "Đem về đều đặn hơn 50 khách hàng tiềm năng chất lượng cao mỗi tháng.",
+      "Vận hành cỗ máy sản xuất 130+ video/tháng, tăng trưởng mạnh tương tác tự nhiên.",
+      "Tối ưu chi phí tìm khách và nâng cao tỷ lệ chuyển đổi sang lịch hẹn tham quan thực tế."
     ],
-    tech: ["Team Leadership", "Setup KPI từng vị trí", "130+ Videos/Tháng", "300Tr Ads/Tháng", "50+ Q.Leads", "Omnichannel", "Zalo OA"]
+    tech: ["Quản Trị Đội Ngũ", "Chỉ Tiêu KPI", "130+ Video/Tháng", "300Tr Ads/Tháng", "50+ Khách VIP", "Zalo OA", "Facebook & Google"]
   },
 
   fclick: {
     category: "Nền Tảng Ứng Dụng Công Nghệ Số",
     company: "Công ty Fclick",
-    role: "Marketing Manager & MarTech Lead",
+    role: "Quản Lý Marketing & Trưởng Nhóm MarTech",
     period: "06/2025 – 02/2026",
-    title: "Cắt Giảm 25% CPI & Tối Ưu Hóa Vận Hành Bằng AI Tiết Kiệm 30% Thời Gian",
-    challenge: "Chi phí thu hút người dùng cài đặt ứng dụng (CPI - Cost Per Install) tăng cao, quy trình sáng tạo và sản xuất nội dung thủ công tốn nhiều nguồn lực, đồng thời thiếu bảng điều khiển đo lường tập trung.",
-    strategy: "Tái cấu trúc tệp khách hàng mục tiêu, tối ưu thông điệp qua A/B testing liên tục, chuẩn hóa tracking phễu qua MMP. Tiên phong ứng dụng AI Automation vào sản xuất nội dung và thiết lập Real-time Dashboard kết nối đa kênh.",
+    title: "Cắt Giảm 25% Chi Phí Tìm Khách & Tự Động Hóa AI Tiết Kiệm 30% Thời Gian",
+    challenge: "Chi phí quảng cáo để thu hút người dùng cài đặt ứng dụng ngày càng tăng cao, khâu sản xuất nội dung tốn nhiều thời gian và thiếu báo cáo số liệu tập trung.",
+    strategy: "Điều chỉnh tệp khách hàng, thử nghiệm liên tục các mẫu quảng cáo và đo lường chính xác từng bước. Ứng dụng AI tự động hóa khâu lên ý tưởng nội dung và kết nối số liệu về một bảng theo dõi chung.",
     deliverables: [
       {
-        title: "Tối Ưu Phễu Chuyển Đổi & Cắt Giảm 25% CPI",
-        tag: "Growth Hacking",
-        desc: "Tái cấu trúc tệp khách hàng mục tiêu và tối ưu hóa chi phí thu hút người dùng cho ứng dụng số.",
+        title: "Tối Ưu Quảng Cáo & Cắt Giảm 25% Chi Phí",
+        tag: "Tăng Trưởng Người Dùng",
+        desc: "Tái cấu trúc nhóm đối tượng và cải thiện tỷ lệ chuyển đổi trên các kênh quảng cáo.",
         items: [
-          "Chuẩn hóa hệ thống tracking phễu chuyển đổi và phân tầng đối tượng theo hành vi",
-          "Triển khai A/B Testing liên tục thông điệp, hình ảnh và video quảng cáo",
-          "Cắt giảm thành công 25% chi phí cài đặt (CPI) trên toàn bộ kênh trả phí"
+          "Đo lường hành vi người dùng từ lúc thấy quảng cáo đến khi cài ứng dụng",
+          "Thử nghiệm liên tục các mẫu tiêu đề, hình ảnh và video thu hút nhất",
+          "Cắt giảm 25% chi phí trên mỗi lượt cài đặt ứng dụng"
         ],
-        attachment: "Báo cáo A/B Testing & Phân tích phễu chuyển đổi"
+        attachment: "Báo cáo thử nghiệm quảng cáo & Phân tích hành vi người dùng"
       },
       {
-        title: "Ứng Dụng AI Automation (-30% Thời Gian Vận Hành)",
-        tag: "AI & Automation",
-        desc: "Tiên phong đưa các giải pháp AI tự động hóa vào quy trình làm việc của đội ngũ marketing.",
+        title: "Ứng Dụng AI Giảm 30% Thời Gian Vận Hành",
+        tag: "Tự Động Hóa AI",
+        desc: "Đưa các công cụ AI vào quy trình làm việc hằng ngày của đội ngũ Marketing.",
         items: [
-          "Xây dựng quy trình nghiên cứu thị trường và lập dàn ý nội dung bằng AI Agents",
-          "Tiết kiệm 30% thời gian triển khai sáng tạo và sản xuất nội dung cho team",
-          "Nâng cao tốc độ kiểm thử và nhân bản chiến dịch quảng cáo đa kênh"
+          "Dùng AI hỗ trợ nghiên cứu xu hướng và lập dàn ý nội dung nhanh",
+          "Tiết kiệm 30% thời gian sáng tạo và sản xuất nội dung cho nhóm",
+          "Tăng tốc độ thử nghiệm các mẫu thông điệp quảng cáo mới"
         ],
-        attachment: "Tài liệu quy trình AI Content Engine & Workflow"
+        attachment: "Tài liệu quy trình sản xuất nội dung bằng AI"
       },
       {
-        title: "Phát Triển 4 Websites Vệ Tinh & Real-Time Dashboard",
-        tag: "MarTech & Data",
-        desc: "Xây dựng hạ tầng số và bảng điều khiển đo lường chiến dịch thời gian thực.",
+        title: "Xây Dựng 4 Website & Báo Cáo Số Liệu Tự Động",
+        tag: "Hạ Tầng Dữ Liệu",
+        desc: "Thiết lập các trang thông tin vệ tinh và bảng theo dõi hiệu quả đa kênh.",
         items: [
-          "Xây dựng hoàn thiện hệ thống nhận diện số và 4 website vệ tinh",
-          "Thiết lập Dashboard đo lường realtime kết nối dữ liệu Facebook, Google, TikTok",
-          "Cá nhân hóa chiến dịch Push Notification giúp cải thiện 20% tỷ lệ giữ chân (Retention)"
+          "Hoàn thiện 4 website thông tin hỗ trợ giới thiệu sản phẩm",
+          "Kết nối số liệu quảng cáo Facebook, Google, TikTok về một báo cáo chung",
+          "Tăng 20% tỷ lệ người dùng tiếp tục gắn bó với ứng dụng"
         ],
-        attachment: "Kiến trúc hệ sinh thái 4 website & Dashboard số liệu"
+        attachment: "Sơ đồ 4 website vệ tinh & Báo cáo số liệu thời gian thực"
       }
     ],
     results: [
-      "Giảm thành công 25% CPI trên toàn bộ các kênh quảng cáo trả phí.",
-      "Tiết kiệm 30% thời gian triển khai sáng tạo và sản xuất nội dung theo CV.",
-      "Cải thiện 20% tỷ lệ giữ chân người dùng (Retention Rate) sau khi cài đặt ứng dụng."
+      "Cắt giảm 25% chi phí cài đặt trên toàn bộ các kênh quảng cáo trả phí.",
+      "Tiết kiệm 30% thời gian sản xuất và vận hành nội dung nhờ AI.",
+      "Tăng 20% tỷ lệ người dùng tiếp tục gắn bó với ứng dụng sau khi cài đặt."
     ],
-    tech: ["AI Automation", "CPI -25%", "Retention +20%", "Real-time Dashboard", "MarTech Lead", "Growth Hacking"]
+    tech: ["Tự Động Hóa AI", "Giảm 25% Chi Phí Cài Đặt", "Giữ Chân +20%", "Báo Cáo Tự Động", "Quản Lý MarTech"]
   },
 
   luclam: {
     category: "Chuỗi F&B & Quà Tặng Cao Cấp",
     company: "Công Ty TNHH TM DV SX Lục Lam (Lục Lam Group)",
     logoUrl: "portfolio_assets/images/logo_luclam.png",
-    role: "Marketing Manager",
+    role: "Quản Lý Marketing",
     period: "04/2024 – 04/2025",
-    title: "Kiến Tạo Thương Hiệu Từ Số 0 (Zero to Hero) & Bứt Phá Doanh Thu 1 Tỷ VNĐ/Tháng",
-    challenge: "Gia nhập thị trường F&B trà sữa và quà tặng cao cấp từ con số 0: chưa có nhận diện thương hiệu, chưa có hạ tầng tiếp thị số và thiếu hệ thống quy trình vận hành bán hàng khép kín.",
-    strategy: "Xây dựng chiến lược thương hiệu Zero-to-Hero: thiết lập trọn bộ Brand Guidelines & Moodboard, phát triển hệ sinh thái 4 website chuyên biệt kết nối CRM, kết hợp chuỗi Activation tại TTTM Takashimaya với chiến dịch Ads bùng nổ doanh số.",
+    title: "Xây Dựng Thương Hiệu Từ Số 0 & Đạt Doanh Thu 1 Tỷ Đồng/Tháng",
+    challenge: "Gia nhập ngành F&B trà sữa và quà tặng cao cấp từ con số 0: chưa có thương hiệu, chưa có kênh bán hàng online và thiếu quy trình tiếp nhận đơn hàng.",
+    strategy: "Xây dựng trọn bộ nhận diện thương hiệu cao cấp, phát triển hệ thống 4 website kết nối phần mềm quản lý khách hàng, kết hợp quảng cáo mùa vụ với sự kiện trải nghiệm tại trung tâm thương mại Takashimaya.",
     deliverables: [
       {
-        title: "Kiến Tạo Bản Sắc Thương Hiệu Zero to Hero",
-        tag: "Brand Identity",
-        desc: "Xây dựng trọn vẹn thương hiệu chuỗi F&B trà sữa & quà tặng cao cấp từ con số 0.",
+        title: "Xây Dựng Nhận Diện Thương Hiệu Từ Đầu",
+        tag: "Xây Dựng Thương Hiệu",
+        desc: "Định vị phong cách chuỗi F&B trà hoa và quà tặng cao cấp từ con số 0.",
         items: [
-          "Hoàn thiện trọn bộ Brand Guidelines, Moodboard và định vị chuỗi cao cấp",
-          "Xây dựng nhận diện số và bộ ấn phẩm truyền thông toàn diện",
-          "Tuyển dụng, đào tạo và dẫn dắt bộ máy 8 nhân sự Marketing vận hành tự chủ"
+          "Thiết lập bộ quy chuẩn nhận diện, màu sắc và phong cách thương hiệu",
+          "Thiết kế toàn bộ bao bì, menu và ấn phẩm truyền thông đồng bộ",
+          "Tuyển dụng, đào tạo và dẫn dắt đội ngũ 8 nhân sự marketing"
         ],
-        attachment: "Brand Guidelines & Moodboard định vị Lục Lam"
+        attachment: "Bộ quy chuẩn thương hiệu & Phong cách thiết kế Lục Lam"
       },
       {
-        title: "Hệ Sinh Thái 4 Websites & CRM Khép Kín",
-        tag: "Web & CRM Architecture",
-        desc: "Phát triển hệ sinh thái 4 website vệ tinh kết nối hệ thống CRM khép kín từ data đến giao vận.",
+        title: "Hệ Thống 4 Website & Quản Lý Khách Hàng",
+        tag: "Hệ Thống Bán Hàng",
+        desc: "Phát triển hệ thống website chuyên biệt kết nối dữ liệu đơn hàng và chăm sóc khách hàng.",
         items: [
-          "Xây dựng store.luclam.vn, trahoa.luclam.vn, gift.luclam.vn, vietnamtravel.com",
-          "Tích hợp CRM quản trị lead và luồng chăm sóc khách hàng tự động",
-          "Tích hợp các luồng tự động hóa bằng AI vào chăm sóc khách hàng"
+          "Xây dựng 4 website bán lẻ, trà hoa, quà tặng và du lịch",
+          "Tự động lưu trữ thông tin khách hàng và kích hoạt chăm sóc tự động",
+          "Ứng dụng công nghệ hỗ trợ trả lời và phân loại đơn hàng nhanh"
         ],
-        attachment: "Sơ đồ kiến trúc 4 website & Quy trình CRM"
+        attachment: "Sơ đồ kiến trúc 4 website & Quy trình chăm sóc khách hàng"
       },
       {
-        title: "Activation Takashimaya & Sự Kiện Tri Ân",
-        tag: "Activation & KOLs",
-        desc: "Tổ chức chuỗi sự kiện quy mô lớn khẳng định vị thế thương hiệu trên thị trường bán lẻ cao cấp.",
+        title: "Sự Kiện Takashimaya & Hợp Tác Người Nổi Tiếng",
+        tag: "Trải Nghiệm & Sự Kiện",
+        desc: "Tổ chức hoạt động trải nghiệm thực tế khẳng định chất lượng thương hiệu cao cấp.",
         items: [
-          "Chủ trì chuỗi Activation trực tiếp tại TTTM danh tiếng Takashimaya",
-          "Tổ chức sự kiện tri ân quy mô 200+ khách mời và đối tác",
-          "Quản lý quan hệ và điều phối chiến dịch Booking KOLs/KOCs"
+          "Tổ chức chuỗi hoạt động dùng thử trà tại TTTM Takashimaya",
+          "Tổ chức sự kiện tri ân hơn 200 khách mời và đối tác",
+          "Hợp tác cùng người có ảnh hưởng (KOLs) để lan tỏa thương hiệu"
         ],
-        attachment: "Hình ảnh sự kiện Takashimaya & Kế hoạch Activation"
+        attachment: "Hình ảnh sự kiện Takashimaya & Kế hoạch trải nghiệm"
       },
       {
-        title: "Chiến Dịch Tăng Trưởng Doanh Thu 1 Tỷ/Tháng",
-        tag: "Growth Marketing",
-        desc: "Điều hành chiến dịch quảng cáo đa kênh và mùa vụ quà Tết đạt mốc doanh thu 1 tỷ VNĐ/tháng.",
+        title: "Chiến Dịch Bứt Phá Doanh Thu 1 Tỷ/Tháng",
+        tag: "Tăng Trưởng Bán Hàng",
+        desc: "Kết hợp quảng cáo online và bán quà tặng mùa Tết đạt mốc doanh thu 1 tỷ/tháng.",
         items: [
-          "Quản trị và tối ưu chiến dịch đa kênh Google Ads & Facebook Ads",
-          "Chiến dịch Quà Tết bùng nổ doanh số kết hợp B2B Gift và điểm bán lẻ",
-          "Triển khai ấn phẩm POSM Trade Marketing tại tất cả các điểm bán"
+          "Chạy quảng cáo mục tiêu trên Facebook và Google",
+          "Đẩy mạnh gói quà Tết cho doanh nghiệp và khách lẻ",
+          "Trưng bày đồng bộ tài liệu bán hàng tại tất cả các điểm bán"
         ],
         attachment: "Kế hoạch chiến dịch Quà Tết & Báo cáo doanh số"
       }
     ],
     results: [
-      "Đưa doanh thu từ con số 0 đạt mốc 1 tỷ VNĐ/tháng.",
-      "Tuyển dụng, đào tạo và xây dựng bộ máy 8 nhân sự Marketing.",
-      "Hoàn thiện hệ sinh thái 4 website và hệ thống CRM quản trị dữ liệu khép kín."
+      "Đưa doanh thu từ con số 0 đạt mốc 1 tỷ đồng/tháng.",
+      "Xây dựng và đào tạo đội ngũ 8 nhân sự Marketing vận hành độc lập.",
+      "Hoàn thiện hệ sinh thái 4 website và hệ thống quản lý dữ liệu khách hàng."
     ],
-    tech: ["Doanh Thu 1 Tỷ/Tháng", "Brand Launching", "Team 8 Mems", "4 Websites", "CRM & AI System", "Takashimaya Activation"]
+    tech: ["Doanh Thu 1 Tỷ/Tháng", "Ra Mắt Thương Hiệu", "Đội Ngũ 8 Người", "4 Website", "Quản Lý Khách Hàng", "Sự Kiện Takashimaya"]
   },
 
   bravigo: {
     category: "Thiết Bị Công Nghệ Ô Tô Thông Minh (B2B & B2C)",
     company: "Bravigo Việt Nam & Thiết Bị Công Nghệ Xe",
-    role: "Marketing Manager",
+    role: "Quản Lý Marketing",
     period: "03/2022 – 04/2024",
-    title: "Mở Rộng Thị Phần Toàn Quốc Qua Mạng Lưới Hàng Trăm Đại Lý & Chủ Trì Ra Mắt Flagship Ottocast P3",
-    challenge: "Thị trường màn hình và thiết bị ô tô thông minh cạnh tranh gay gắt, đòi hỏi sự kết hợp chặt chẽ giữa xây dựng nhận diện thương hiệu với người tiêu dùng (B2C) và chính sách thúc đẩy hàng qua mạng lưới đại lý phân phối (B2B). Đồng thời cần tổ chức sự kiện ra mắt hoành tráng cho dòng sản phẩm chiến lược Ottocast P3.",
-    strategy: "Hoạch định chiến lược marketing trung và dài hạn, quản lý đội ngũ 8 chuyên viên, phối hợp chặt chẽ với agency sáng tạo và hệ thống KOLs/KOCs chuyên môn cao ngành xe; phủ sóng ấn phẩm POSM tại hàng trăm đại lý toàn quốc. Trực tiếp làm Event Lead sự kiện ra mắt Ottocast P3 và tự tay thiết kế toàn bộ Keynote Presentation.",
+    title: "Phát Triển Thị Phần Qua Hàng Trăm Đại Lý & Chủ Trì Ra Mắt Flagship Ottocast P3",
+    challenge: "Thị trường phụ kiện công nghệ ô tô cạnh tranh khốc liệt. Cần kết hợp giữa quảng bá cho người lái xe và chính sách phân phối cho hệ thống gara, đại lý. Đồng thời cần tổ chức sự kiện ra mắt hoành tráng cho sản phẩm chiến lược Ottocast P3.",
+    strategy: "Hoạch định chiến lược tiếp thị, quản lý đội ngũ 8 chuyên viên, phối hợp cùng các kênh đánh giá xe uy tín và phủ sóng tài liệu trưng bày tại hàng trăm đại lý. Đảm nhiệm vai trò Trưởng Ban Tổ Chức sự kiện và tự thiết kế toàn bộ Slide thuyết trình giới thiệu Ottocast P3.",
     deliverables: [
       {
-        title: "Chiến Lược Mở Rộng Thị Phần B2B & B2C",
-        tag: "Chiến Lược Toàn Quốc",
-        desc: "Lập kế hoạch marketing ngắn và trung hạn đưa hệ sinh thái màn hình ô tô thông minh chiếm lĩnh thị phần.",
+        title: "Chiến Lược Phân Phối Đại Lý & Người Tiêu Dùng",
+        tag: "Chiến Lược Thị Phần",
+        desc: "Kết hợp quảng bá thương hiệu đến tài xế với chính sách hỗ trợ bán hàng cho hệ thống đại lý.",
         items: [
-          "Lãnh đạo và phân bổ ngân sách cho team Marketing 8 chuyên viên",
-          "Kết hợp chiến lược nhận diện người tiêu dùng (B2C) và đẩy hàng đại lý (B2B)",
-          "Làm việc cùng các agency sáng tạo chuyên sâu ngành ô tô"
+          "Lãnh đạo và phân bổ ngân sách cho nhóm 8 chuyên viên marketing",
+          "Kết hợp giữa truyền thông thương hiệu và chính sách đẩy hàng đại lý",
+          "Phối hợp với các đối tác truyền thông chuyên sâu về ô tô"
         ],
         attachment: "Kế hoạch tiếp thị mở rộng thị phần Bravigo"
       },
       {
-        title: "Phủ POSM Trade Marketing Hàng Trăm Đại Lý",
-        tag: "Trade Marketing",
-        desc: "Triển khai bộ nhận diện thương hiệu tại điểm bán trên mạng lưới đại lý phân phối toàn quốc.",
+        title: "Phủ Sóng Ấn Phẩm Trưng Bày Tại Hàng Trăm Đại Lý",
+        tag: "Tiếp Thị Điểm Bán",
+        desc: "Đồng bộ nhận diện thương hiệu tại các gara và đại lý phân phối toàn quốc.",
         items: [
-          "Phối hợp khối kinh doanh triển khai POSM tại hàng trăm đại lý và gara ủy quyền",
-          "Tối ưu CPA và chuẩn hóa quy trình phân bổ lead cho các đại lý khu vực",
-          "Hỗ trợ tổ chức các sự kiện trải nghiệm lái thử tại đại lý"
+          "Lắp đặt bảng biển, tài liệu giới thiệu tại hàng trăm đại lý và gara",
+          "Chuyển giao khách hàng tiềm năng theo đúng khu vực cho đại lý xử lý",
+          "Hỗ trợ tổ chức các buổi trải nghiệm và lái thử sản phẩm tại chỗ"
         ],
-        attachment: "Bộ nhận diện POSM tại đại lý & Gara ô tô"
+        attachment: "Tài liệu trưng bày tại đại lý & Gara ô tô"
       },
       {
-        title: "Chiến Dịch Booking KOLs/KOCs Ngành Xe",
-        tag: "KOLs & PR",
-        desc: "Hợp tác cùng mạng lưới chuyên gia và reviewer xe hơi uy tín tạo độ phủ nhận diện vượt trội.",
+        title: "Hợp Tác Với Các Kênh Đánh Giá Xe Uy Tín",
+        tag: "Truyền Thông Chuyên Môn",
+        desc: "Hợp tác với các chuyên gia và reviewer xe hơi hàng đầu tạo lòng tin với khách hàng.",
         items: [
-          "Booking và định hướng nội dung cho các reviewer công nghệ xe hàng đầu",
-          "Sản xuất TVC, chuỗi video review công nghệ trên YouTube và TikTok",
-          "Định vị thương hiệu top-of-mind trong phân khúc màn hình và Android Box ô tô"
+          "Hợp tác sản xuất video trải nghiệm với các reviewer xe hàng đầu",
+          "Sản xuất chuỗi video giới thiệu tính năng trên YouTube và TikTok",
+          "Đưa thương hiệu trở thành lựa chọn hàng đầu trong phân khúc thiết bị ô tô"
         ],
-        attachment: "Danh sách KOLs hợp tác & Kịch bản TVC review"
+        attachment: "Danh sách hợp tác reviewer & Kịch bản video trải nghiệm"
       },
       {
-        title: "Chủ Trì Ra Mắt Ottocast P3 & Thiết Kế Slide Keynote",
-        tag: "Product Launch & Keynote",
-        desc: "Đảm nhiệm vai trò Event Lead sự kiện ra mắt Flagship Ottocast P3; tự tay thiết kế và cấu trúc 100% Slide thuyết trình Keynote chuẩn quốc tế trên Canva.",
+        title: "Chủ Trì Ra Mắt Ottocast P3 & Thiết Kế Slide Thuyết Trình",
+        tag: "Sự Kiện Ra Mắt",
+        desc: "Trưởng Ban Tổ Chức sự kiện ra mắt Flagship Ottocast P3; tự tay cấu trúc và thiết kế 100% Slide thuyết trình trên Canva.",
         items: [
-          "Lên kế hoạch tổ chức sự kiện ra mắt, điều phối khu vực trải nghiệm Live Demo cho đại lý",
-          "Tự tay thiết kế và biên soạn toàn bộ Slide thuyết trình Keynote trên Canva với định hướng trực quan cao cấp",
-          "Cấu trúc thông điệp sản phẩm (Chip Snapdragon, OttoDrive 2.0, Ambient LED) và chính sách ưu đãi mở bán",
-          "Quy tụ đông đảo đại lý, gara ô tô toàn quốc và các reviewer công nghệ xe hàng đầu"
+          "Lên kế hoạch sự kiện và điều phối khu vực trải nghiệm thực tế cho đại lý",
+          "Tự tay thiết kế toàn bộ Slide thuyết trình trên Canva với hình ảnh sắc nét, hiện đại",
+          "Làm rõ các tính năng nổi bật (Chip Snapdragon, Hệ điều hành OttoDrive, Đèn viền nội thất)",
+          "Quy tụ đông đảo đại lý, gara ô tô và các chuyên gia đánh giá xe hàng đầu"
         ],
-        attachment: "Slide Keynote Canva & Kịch bản chương trình ra mắt"
+        attachment: "Slide thuyết trình Canva & Kịch bản chương trình ra mắt"
       }
     ],
     embedSlide: {
       title: "Slide Giới Thiệu Sự Kiện Ra Mắt Ottocast P3",
-      author: "Tạ Quốc Duy (Event Lead & Slide Designer)",
+      author: "Tạ Quốc Duy (Trưởng Ban Tổ Chức & Người Thiết Kế Slide)",
       url: "https://www.canva.com/design/DAFzc_JdrZs/tAccurnki2vgpJgjPrDIUQ/view?embed",
       canvaLink: "https://www.canva.com/design/DAFzc_JdrZs/tAccurnki2vgpJgjPrDIUQ/view?utm_content=DAFzc_JdrZs&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
     },
     results: [
-      "Thúc đẩy tăng trưởng nhận diện thương hiệu công nghệ ô tô trên toàn quốc.",
-      "Phủ sóng ấn phẩm POSM tại hàng trăm đại lý phân phối và gara ủy quyền.",
-      "Tổ chức thành công sự kiện ra mắt Flagship Ottocast P3, kích hoạt hàng loạt đơn đặt hàng từ hệ thống đại lý.",
-      "Quản lý điều phối hiệu quả đội ngũ 8 chuyên viên và mạng lưới đối tác agency/KOLs."
+      "Gia tăng mạnh mẽ độ nhận diện thương hiệu thiết bị ô tô thông minh trên toàn quốc.",
+      "Phủ sóng hình ảnh và tài liệu trưng bày tại hàng trăm đại lý, gara ủy quyền.",
+      "Tổ chức thành công sự kiện ra mắt Ottocast P3, thúc đẩy hàng loạt đơn đặt hàng từ đại lý.",
+      "Quản lý hiệu quả đội ngũ 8 chuyên viên và các đối tác truyền thông ngành xe."
     ],
-    tech: ["Auto Tech", "Ottocast P3 Launch", "Canva Keynote Lead", "Trade Marketing", "Team 8 Mems", "Hàng Trăm Đại Lý", "KOL Campaigns"]
+    tech: ["Công Nghệ Ô Tô", "Ra Mắt Ottocast P3", "Tự Thiết Kế Slide Canva", "Tiếp Thị Điểm Bán", "Đội Ngũ 8 Người", "Hàng Trăm Đại Lý"]
   },
 
   lath: {
     category: "Bán Lẻ & Thương Mại Điện Tử",
     company: "LATH Group / TSD Group",
-    role: "Marketing Lead",
+    role: "Trưởng Nhóm Marketing",
     period: "08/2020 – 02/2022",
-    title: "Tăng Trưởng Doanh Thu Ads +40% & Phát Triển 5.000+ SEO Traffic Tự Nhiên",
-    challenge: "Cần tối ưu hóa chi phí quảng cáo trực tuyến, đa dạng hóa nguồn khách hàng sang tìm kiếm tự nhiên bền vững và đưa sản phẩm vào chuỗi siêu thị lớn cùng các sàn TMĐT.",
-    strategy: "Triển khai chiến lược Performance Ads với thầu thông minh kết hợp SEO On-page/Off-page toàn diện cho website lath.vn; đưa sản phẩm vào chuỗi siêu thị Lotte Mart; tối ưu UX/UI ứng dụng di động KingPang.",
+    title: "Tăng 40% Doanh Thu Quảng Cáo & Đạt 5.000 Lượt Khách Tự Nhiên/Tháng",
+    challenge: "Cần tối ưu chi phí quảng cáo, mở rộng nguồn khách hàng tự nhiên từ tìm kiếm Google và đưa sản phẩm vào hệ thống siêu thị lớn cùng các sàn thương mại điện tử.",
+    strategy: "Tối ưu hóa quảng cáo Google và Facebook, đẩy mạnh từ khóa website lath.vn lên top tìm kiếm tự nhiên, đưa sản phẩm vào chuỗi siêu thị Lotte Mart và cải thiện trải nghiệm ứng dụng KingPang.",
     deliverables: [
       {
-        title: "Tăng Trưởng Doanh Thu Từ Ads (+40%)",
-        tag: "Performance Ads",
-        desc: "Triển khai các chiến dịch quảng cáo trực tuyến hiệu quả cao, thúc đẩy doanh số bán lẻ bứt phá.",
+        title: "Tăng Trưởng 40% Doanh Thu Quảng Cáo",
+        tag: "Quảng Cáo Trực Tuyến",
+        desc: "Tối ưu ngân sách quảng cáo để tăng doanh số bán lẻ vượt bậc.",
         items: [
-          "Tối ưu chiến lược thầu thông minh trên Google Ads & Facebook Ads",
-          "Tăng trưởng doanh thu từ quảng cáo +40% so với kỳ trước theo CV",
-          "Tối ưu hoạt động Marketing hỗ trợ hệ thống showroom bán lẻ"
+          "Tối ưu giá thầu thông minh trên Google Ads và Facebook Ads",
+          "Tăng trưởng doanh thu từ quảng cáo 40% so với kỳ trước",
+          "Điều phối các chương trình quảng bá hỗ trợ hệ thống showroom"
         ],
-        attachment: "Báo cáo tăng trưởng doanh thu Ads & ROAS"
+        attachment: "Báo cáo tăng trưởng doanh thu quảng cáo & Hiệu quả chi phí"
       },
       {
-        title: "Xây Dựng Kênh SEO Bền Vững (5.000+ Traffic)",
-        tag: "SEO Organic",
-        desc: "Chiến lược SEO toàn diện giúp website lath.vn tạo ra nguồn doanh thu tự nhiên ổn định.",
+        title: "Đưa Website Lên Top Google (5.000 Lượt Xem/Tháng)",
+        tag: "Tìm Kiếm Tự Nhiên",
+        desc: "Tối ưu nội dung và cấu trúc website để thu hút khách hàng miễn phí từ Google.",
         items: [
-          "Đưa website lath.vn đạt hơn 5.000 organic traffic/tháng tự nhiên",
-          "Tạo ra hơn 200 đơn hàng tự nhiên/tháng không mất chi phí quảng cáo",
-          "Tối ưu cấu trúc On-page, Off-page và trải nghiệm mua sắm"
+          "Đưa website lath.vn đạt hơn 5.000 lượt truy cập tự nhiên mỗi tháng",
+          "Tạo ra hơn 200 đơn hàng tự nhiên mỗi tháng không tốn chi phí quảng cáo",
+          "Cải thiện nội dung và trải nghiệm mua sắm trên website"
         ],
-        attachment: "Báo cáo tăng trưởng Organic Traffic & Từ khóa SEO"
+        attachment: "Báo cáo lượng khách hàng tự nhiên & Xếp hạng từ khóa"
       },
       {
-        title: "Đưa Hàng Vào Siêu Thị Lotte Mart & Sàn TMĐT",
-        tag: "Trade & E-Commerce",
-        desc: "Mở rộng kênh phân phối từ bán lẻ truyền thống sang hệ thống siêu thị lớn và sàn TMĐT.",
+        title: "Đưa Hàng Vào Chuỗi Siêu Thị Lotte Mart & Sàn Online",
+        tag: "Kênh Phân Phối",
+        desc: "Mở rộng kênh bán hàng sang hệ thống siêu thị lớn và các sàn thương mại điện tử.",
         items: [
-          "Đưa sản phẩm thành công vào chuỗi siêu thị Lotte Mart (tăng 25% tỷ lệ mua hàng)",
-          "Vận hành gian hàng trên các sàn TMĐT lớn (Shopee, Lazada, Tiki)",
-          "Tối ưu UX/UI app KingPang giúp tăng 20% lượt tải ứng dụng"
+          "Đưa sản phẩm thành công vào hệ thống siêu thị Lotte Mart (tăng 25% tỷ lệ mua)",
+          "Vận hành bán hàng trên các sàn Shopee, Lazada và Tiki",
+          "Cải thiện giao diện ứng dụng KingPang giúp tăng 20% lượt tải"
         ],
-        attachment: "Hồ sơ sản phẩm Lotte Mart & Case Study App KingPang"
+        attachment: "Hồ sơ sản phẩm vào Lotte Mart & Cải tiến ứng dụng KingPang"
       }
     ],
     results: [
       "Tăng 40% doanh thu từ quảng cáo so với kỳ trước.",
-      "Hơn 5.000 organic traffic/tháng và hơn 200 đơn hàng tự nhiên/tháng.",
-      "Tăng 25% tỷ lệ mua hàng khi vào chuỗi Lotte Mart; tăng 20% lượt tải app KingPang."
+      "Đạt hơn 5.000 lượt truy cập tự nhiên và hơn 200 đơn hàng miễn phí mỗi tháng.",
+      "Tăng 25% tỷ lệ mua hàng khi vào chuỗi Lotte Mart; tăng 20% lượt tải ứng dụng."
     ],
-    tech: ["Ads Rev +40%", "SEO 5k Traffic", "200+ Đơn Tự Nhiên", "Lotte Mart Trade", "UX/UI App KingPang"]
+    tech: ["Doanh Thu Ads +40%", "5.000 Khách Tự Nhiên", "200+ Đơn Miễn Phí", "Hệ Thống Lotte Mart", "Tối Ưu Ứng Dụng"]
   }
 };
 
