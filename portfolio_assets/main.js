@@ -1,8 +1,8 @@
 /* ========================================================
    PORTFOLIO TẠ QUỐC DUY — JAVASCRIPT CONTROLLER
    Author: 🐱 Xu Xu & Tạ Quốc Duy
-   Features: Modal Deep-Dive with Deliverables, Stats Counter,
-             Smooth Navigation, Copy Clipboard, Mobile Nav
+   Features: 3D Fanned Deck Modal Integration, Stats Counter,
+             FAQ Accordion, Smooth Scroll, Form Handler
 ======================================================== */
 
 // Professional Case Studies Dataset (Strictly aligned with CV)
@@ -285,12 +285,11 @@ const caseStudiesData = {
   }
 };
 
-// Initialize Controller
+// Initialize Application
 document.addEventListener("DOMContentLoaded", () => {
   initLucide();
   initStatsCounter();
-  initModal();
-  initMobileNav();
+  initFaqAccordion();
   initSmoothScroll();
 });
 
@@ -347,168 +346,128 @@ function animateValue(el) {
   requestAnimationFrame(update);
 }
 
-// 3. Deep-Dive Modal System
-function initModal() {
-  const modalOverlay = document.getElementById("caseModal");
-  const modalClose = document.getElementById("modalClose");
-  const detailBtns = document.querySelectorAll(".case-details-btn");
+// 3. Modal Deep-Dive Controller
+window.openCaseModal = function(caseKey) {
+  const data = caseStudiesData[caseKey];
+  if (!data) return;
 
-  if (!modalOverlay) return;
+  const modal = document.getElementById("caseModalOverlay");
+  if (!modal) return;
 
-  detailBtns.forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      const caseKey = btn.getAttribute("data-case");
-      const data = caseStudiesData[caseKey];
-      if (data) {
-        populateModal(data);
-        modalOverlay.classList.add("active");
-        document.body.style.overflow = "hidden";
-      }
-    });
-  });
-
-  if (modalClose) {
-    modalClose.addEventListener("click", closeModal);
-  }
-
-  modalOverlay.addEventListener("click", (e) => {
-    if (e.target === modalOverlay) {
-      closeModal();
-    }
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modalOverlay.classList.contains("active")) {
-      closeModal();
-    }
-  });
-
-  function closeModal() {
-    modalOverlay.classList.remove("active");
-    document.body.style.overflow = "";
-  }
-}
-
-function populateModal(data) {
-  document.getElementById("modalBadge").innerText = data.category;
-  document.getElementById("modalCompany").innerText = data.company;
+  // Populate data
+  document.getElementById("modalCategory").innerText = data.category;
   document.getElementById("modalTitle").innerText = data.title;
-  document.getElementById("modalRolePeriod").innerText = `${data.role} • ${data.period}`;
+  document.getElementById("modalCompany").innerText = data.company;
+  document.getElementById("modalRole").innerText = data.role;
+  document.getElementById("modalPeriod").innerText = data.period;
   document.getElementById("modalChallenge").innerText = data.challenge;
   document.getElementById("modalStrategy").innerText = data.strategy;
 
-  // Deliverables list
-  const delivList = document.getElementById("modalDeliverables");
-  if (delivList) {
+  // Render Deliverables
+  const delivContainer = document.getElementById("modalDeliverables");
+  if (delivContainer) {
     if (data.deliverables && data.deliverables.length) {
-      delivList.innerHTML = data.deliverables.map(d => `
-        <div class="deliverable-card">
-          <div class="deliverable-header">
-            <div class="deliverable-title">
-              <i data-lucide="check-circle" style="width: 16px; height: 16px;"></i>
-              <span>${d.title}</span>
-            </div>
-            <span class="deliverable-tag">${d.tag}</span>
+      delivContainer.innerHTML = data.deliverables.map(d => `
+        <div class="modal-deliverable-item">
+          <div class="modal-del-header">
+            <span class="modal-del-title">${d.title}</span>
+            <span class="modal-del-tag">${d.tag}</span>
           </div>
-          <p class="deliverable-desc">${d.desc}</p>
-          <ul class="deliverable-checklist">
+          <p class="modal-del-desc">${d.desc}</p>
+          <ul class="modal-del-list">
             ${d.items.map(item => `
               <li>
-                <i data-lucide="corner-down-right" style="width: 13px; height: 13px;"></i>
+                <i data-lucide="check-circle-2"></i>
                 <span>${item}</span>
               </li>
             `).join("")}
           </ul>
-          ${d.attachment ? `
-            <div class="deliverable-attachment-hint">
-              <i data-lucide="paperclip" style="width: 14px; height: 14px;"></i>
-              <span>${d.attachment}</span>
-            </div>
-          ` : `
-            <div class="deliverable-attachment-hint">
-              <i data-lucide="paperclip" style="width: 14px; height: 14px;"></i>
-              <span>Sẵn sàng đính kèm tài liệu / ấn phẩm minh chứng</span>
-            </div>
-          `}
         </div>
       `).join("");
     } else {
-      delivList.innerHTML = `<div style="color: var(--text-muted); font-size: 0.88rem;">Đang cập nhật các hạng mục chi tiết...</div>`;
+      delivContainer.innerHTML = `<div style="color: var(--text-muted); font-size: 0.88rem;">Đang cập nhật các hạng mục chi tiết...</div>`;
     }
   }
 
-  // Results list
-  const resList = document.getElementById("modalResults");
-  resList.innerHTML = data.results.map(r => `
-    <li>
-      <i data-lucide="trending-up" style="width: 18px; height: 18px;"></i>
-      <span><strong>${r}</strong></span>
-    </li>
-  `).join("");
-
-  // Tags
-  const tagList = document.getElementById("modalTags");
-  tagList.innerHTML = data.tech.map(t => `
-    <span class="case-tag-item" style="background: var(--accent-emerald-subtle); color: var(--accent-emerald-text); border-color: var(--accent-emerald-border); font-weight: 600;">${t}</span>
-  `).join("");
-
-  initLucide();
-}
-
-// 4. Mobile Navigation
-function initMobileNav() {
-  const toggleBtn = document.getElementById("mobileToggle");
-  const navLinks = document.getElementById("navLinks");
-
-  if (toggleBtn && navLinks) {
-    toggleBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-      const icon = navLinks.classList.contains("active") ? "x" : "menu";
-      toggleBtn.innerHTML = `<i data-lucide="${icon}"></i>`;
-      initLucide();
-    });
-
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        toggleBtn.innerHTML = `<i data-lucide="menu"></i>`;
-        initLucide();
-      });
-    });
+  // Render Results
+  const resContainer = document.getElementById("modalResults");
+  if (resContainer) {
+    resContainer.innerHTML = data.results.map(r => `
+      <li>
+        <i data-lucide="trending-up"></i>
+        <span><strong>${r}</strong></span>
+      </li>
+    `).join("");
   }
+
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+  initLucide();
+};
+
+window.closeCaseModal = function() {
+  const modal = document.getElementById("caseModalOverlay");
+  if (modal) {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+};
+
+window.closeModalOnBackdrop = function(e) {
+  if (e.target.id === "caseModalOverlay") {
+    window.closeCaseModal();
+  }
+};
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    window.closeCaseModal();
+  }
+});
+
+// 4. FAQ Accordion Controller
+function initFaqAccordion() {
+  const faqCards = document.querySelectorAll(".faq-card");
+  faqCards.forEach(card => {
+    const btn = card.querySelector(".faq-question-btn");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        const isOpen = card.classList.contains("open");
+        // Close all
+        faqCards.forEach(c => c.classList.remove("open"));
+        // Toggle current
+        if (!isOpen) {
+          card.classList.add("open");
+        }
+      });
+    }
+  });
 }
 
 // 5. Smooth Scroll & Active Nav Spy
 function initSmoothScroll() {
-  const sections = document.querySelectorAll("section[id], header[id]");
-  const navLinks = document.querySelectorAll(".nav-links a[href^='#']");
-
-  window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach(sec => {
-      const top = sec.offsetTop - 100;
-      if (window.pageYOffset >= top) {
-        current = sec.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active");
+  const links = document.querySelectorAll("a[href^='#']");
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      const targetId = link.getAttribute("href");
+      if (targetId && targetId !== "#" && targetId !== "#modal") {
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
   });
 }
 
-// 6. Copy text utility
-window.copyText = function(text, el) {
-  navigator.clipboard.writeText(text).then(() => {
-    const originalText = el.innerText;
-    el.innerText = "✓ Đã sao chép!";
-    setTimeout(() => {
-      el.innerText = originalText;
-    }, 2000);
-  });
+// 6. Contact Form Submit Handler
+window.handleFormSubmit = function(e) {
+  e.preventDefault();
+  const name = document.getElementById("senderName").value;
+  const email = document.getElementById("senderEmail").value;
+  const subject = document.getElementById("senderSubject").value;
+
+  alert(`Cảm ơn anh/chị ${name}!\nLời nhắn về chủ đề "${subject}" đã được ghi nhận. Tạ Quốc Duy sẽ phản hồi lại qua email ${email} trong thời gian sớm nhất.`);
+  e.target.reset();
 };
