@@ -17,8 +17,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Lucide Icons -->
+  <!-- Lucide Icons & Chart.js -->
   <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Dark Studio Stylesheet -->
   <link rel="stylesheet" href="portfolio_assets/style.css">
@@ -291,6 +292,104 @@
         </div>
 
       </div>
+
+      <!-- ================= INTERACTIVE CHART & FUNNEL HUB ================= -->
+      <div class="interactive-chart-hub">
+        <div class="chart-hub-header">
+          <div class="chart-hub-title">
+            <i data-lucide="line-chart" style="width: 22px; height: 22px; color: var(--accent-cyan);"></i>
+            <h3>Trực Quan Hóa Tăng Trưởng &amp; Hiệu Suất Vận Hành</h3>
+          </div>
+          <div class="chart-hub-tabs">
+            <button class="chart-tab-btn active" onclick="switchChartTab('chart-view', this)">
+              <i data-lucide="trending-up" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i>
+              Biểu Đồ Tăng Trưởng &amp; Chi Phí
+            </button>
+            <button class="chart-tab-btn" onclick="switchChartTab('funnel-view', this)">
+              <i data-lucide="filter" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i>
+              Mô Hình Phễu Chuyển Đổi Thực Chiến
+            </button>
+          </div>
+        </div>
+
+        <!-- Panel 1: Chart.js Line & Bar Graph -->
+        <div class="chart-view-panel active" id="chart-view">
+          <div class="chart-canvas-wrapper">
+            <canvas id="growthChart"></canvas>
+          </div>
+          <div class="chart-summary-bar">
+            <div class="chart-summary-item">
+              <span class="chart-sum-label">Chi Phí Cài Đặt (CPI / CPA)</span>
+              <span class="chart-sum-val cyan">-25% Chi Phí Tối Ưu</span>
+            </div>
+            <div class="chart-summary-item">
+              <span class="chart-sum-label">Tăng Trưởng Doanh Thu Ads</span>
+              <span class="chart-sum-val emerald">+40% Bứt Phá Lũy Tiến</span>
+            </div>
+            <div class="chart-summary-item">
+              <span class="chart-sum-label">Tốc Độ Vận Hành Bằng AI</span>
+              <span class="chart-sum-val purple">Tiết Kiệm 30% Thời Gian</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Visual Growth Funnel -->
+        <div class="chart-view-panel" id="funnel-view">
+          <div class="growth-funnel-wrapper">
+            
+            <div class="funnel-layer-card">
+              <div class="funnel-layer-step">01</div>
+              <div class="funnel-layer-content">
+                <div class="funnel-layer-title">Tầng 1: Nhận Diện Thương Hiệu &amp; Tiếp Cận Đa Nền Tảng (Top of Funnel)</div>
+                <div class="funnel-layer-desc">Cỗ máy 130+ Videos/Tháng (TikTok, Reels, Shorts), Performance Ads ngân sách đỉnh cao 700M VNĐ/Tháng tiếp cận hàng triệu khách hàng mục tiêu.</div>
+              </div>
+              <div class="funnel-progress-bar-wrap">
+                <span class="funnel-pct-text">100% Phủ Sóng</span>
+                <div class="funnel-track"><div class="funnel-fill" style="width: 100%;"></div></div>
+              </div>
+            </div>
+
+            <div class="funnel-layer-card">
+              <div class="funnel-layer-step">02</div>
+              <div class="funnel-layer-content">
+                <div class="funnel-layer-title">Tầng 2: Tương Tác Sâu &amp; Lưu Lượng Tìm Kiếm Tự Nhiên (Middle of Funnel)</div>
+                <div class="funnel-layer-desc">5.000+ SEO Organic Sessions/Tháng, Hệ sinh thái 4 Websites thương hiệu kết nối CRM, A/B Testing liên tục thông điệp giảm 25% CPI.</div>
+              </div>
+              <div class="funnel-progress-bar-wrap">
+                <span class="funnel-pct-text">72% Quan Tâm</span>
+                <div class="funnel-track"><div class="funnel-fill" style="width: 72%;"></div></div>
+              </div>
+            </div>
+
+            <div class="funnel-layer-card">
+              <div class="funnel-layer-step">03</div>
+              <div class="funnel-layer-content">
+                <div class="funnel-layer-title">Tầng 3: Khách Hàng Tiềm Năng Xác Thực (Bottom of Funnel - Qualified Leads)</div>
+                <div class="funnel-layer-desc">Duy trì đều đặn 50+ Qualified Leads BĐS cao cấp/Tháng chốt đơn, Đơn đặt bàn F&amp;B Takashimaya, Đại lý đăng ký tư vấn phụ kiện xe hơi.</div>
+              </div>
+              <div class="funnel-progress-bar-wrap">
+                <span class="funnel-pct-text">38% Qualified</span>
+                <div class="funnel-track"><div class="funnel-fill" style="width: 38%;"></div></div>
+              </div>
+            </div>
+
+            <div class="funnel-layer-card">
+              <div class="funnel-layer-step">04</div>
+              <div class="funnel-layer-content">
+                <div class="funnel-layer-title">Tầng 4: Doanh Thu Thực Tế &amp; Mở Rộng Bền Vững (Revenue &amp; Retention)</div>
+                <div class="funnel-layer-desc">Doanh thu F&amp;B đạt mốc 1 Tỷ VNĐ/Tháng từ số 0, Mạng lưới hàng trăm đại lý phân phối toàn quốc, Tự động hóa AI giúp giải phóng 30% thời gian.</div>
+              </div>
+              <div class="funnel-progress-bar-wrap">
+                <span class="funnel-pct-text">20% Doanh Thu</span>
+                <div class="funnel-track"><div class="funnel-fill" style="width: 20%;"></div></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
@@ -411,7 +510,7 @@
             </div>
           </div>
 
-          <div class="case-body-grid">
+          <div class="case-split-grid">
             <div class="case-narrative">
               <h4>Bối Cảnh &amp; Thách Thức</h4>
               <p>
@@ -421,20 +520,52 @@
               <p>
                 Lãnh đạo song song 2 đội ngũ: Team Digital Marketing (tối ưu hóa lead số, tracking và đo lường) và Team Branding (sáng tạo nội dung, định vị và trải nghiệm điểm chạm). Thiết lập khung KPI/OKR chi tiết cho từng vị trí gắn với mục tiêu chuyển đổi. Kết nối tiếp thị số (FB, Google, TikTok, Zalo OA) với các điểm chạm tại chỗ.
               </p>
+              
+              <div class="case-scope-box" style="margin-top: 18px;">
+                <div class="case-scope-title">
+                  <i data-lucide="check-square" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
+                  <span>Phạm Vi Trách Nhiệm Trực Tiếp</span>
+                </div>
+                <ul class="case-scope-list">
+                  <li><i data-lucide="check"></i><span>Lãnh đạo 2 teams chuyên biệt: Digital Marketing &amp; Branding (8–14 người)</span></li>
+                  <li><i data-lucide="check"></i><span>Xây dựng bộ chỉ số KPI/OKR định lượng chi tiết cho từng vị trí</span></li>
+                  <li><i data-lucide="check"></i><span>Quản trị và tối ưu ngân sách quảng cáo 300 triệu VNĐ/tháng</span></li>
+                  <li><i data-lucide="check"></i><span>Phát triển hệ thống sản xuất hơn 130 video/tháng phủ đa kênh</span></li>
+                </ul>
+              </div>
             </div>
 
-            <div class="case-scope-box">
-              <div class="case-scope-title">
-                <i data-lucide="check-square" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
-                <span>Phạm Vi Trách Nhiệm Trực Tiếp</span>
+            <!-- Right Visual: Mockup + Before vs After -->
+            <div class="case-visual-col">
+              <div class="case-mockup-frame">
+                <span class="case-mockup-badge">Content Factory &amp; Qualified Leads</span>
+                <img src="portfolio_assets/images/mockup_sala.jpg" alt="Sala Garden Video Production Pipeline">
               </div>
-              <ul class="case-scope-list">
-                <li><i data-lucide="check"></i><span>Lãnh đạo 2 teams chuyên biệt: Digital Marketing &amp; Branding</span></li>
-                <li><i data-lucide="check"></i><span>Xây dựng bộ chỉ số KPI/OKR định lượng cho từng vị trí</span></li>
-                <li><i data-lucide="check"></i><span>Quản trị và tối ưu ngân sách quảng cáo 300 triệu VNĐ/tháng</span></li>
-                <li><i data-lucide="check"></i><span>Phát triển hệ thống sản xuất hơn 130 video/tháng phủ đa kênh</span></li>
-                <li><i data-lucide="check"></i><span>Kết nối tiếp thị số với sự kiện tại chỗ (Decor Nhà tròn, Voucher)</span></li>
-              </ul>
+
+              <div class="before-after-matrix">
+                <div class="ba-column">
+                  <div class="ba-header before">
+                    <i data-lucide="x-circle" style="width: 13px; height: 13px;"></i>
+                    <span>Trước Tối Ưu</span>
+                  </div>
+                  <ul class="ba-points-list before">
+                    <li>Sản xuất nội dung rời rạc, chưa có định dạng chuẩn</li>
+                    <li>Chi phí CPL ngành BĐS cao, tỷ lệ lead ảo lớn</li>
+                    <li>Thiếu sự gắn kết giữa team số và sự kiện tại chỗ</li>
+                  </ul>
+                </div>
+                <div class="ba-column">
+                  <div class="ba-header after">
+                    <i data-lucide="check-circle-2" style="width: 13px; height: 13px;"></i>
+                    <span>Sau Khi Điều Hành</span>
+                  </div>
+                  <ul class="ba-points-list after">
+                    <li>130+ video/tháng phủ TikTok, Reels, Shorts</li>
+                    <li>Duy trì 50+ Qualified Leads chất lượng cao/tháng</li>
+                    <li>Đo lường P&amp;L minh bạch &amp; phối hợp Sales nhịp nhàng</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -482,7 +613,7 @@
             </div>
           </div>
 
-          <div class="case-body-grid">
+          <div class="case-split-grid">
             <div class="case-narrative">
               <h4>Bối Cảnh &amp; Thách Thức</h4>
               <p>
@@ -492,20 +623,52 @@
               <p>
                 Tái cấu trúc tệp khách hàng mục tiêu, tối ưu thông điệp qua A/B testing liên tục, chuẩn hóa tracking phễu qua MMP. Tiên phong ứng dụng AI Automation vào sản xuất nội dung và thiết lập Real-time Dashboard kết nối đa kênh.
               </p>
+
+              <div class="case-scope-box" style="margin-top: 18px;">
+                <div class="case-scope-title">
+                  <i data-lucide="check-square" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
+                  <span>Phạm Vi Trách Nhiệm Trực Tiếp</span>
+                </div>
+                <ul class="case-scope-list">
+                  <li><i data-lucide="check"></i><span>Hoạch định chiến lược tăng trưởng người dùng cho ứng dụng</span></li>
+                  <li><i data-lucide="check"></i><span>Tối ưu hóa các chiến dịch quảng cáo cài đặt ứng dụng (CPI)</span></li>
+                  <li><i data-lucide="check"></i><span>Ứng dụng công cụ AI tự động hóa sản xuất nội dung &amp; hình ảnh</span></li>
+                  <li><i data-lucide="check"></i><span>Xây dựng bảng điều khiển theo dõi hiệu suất đa kênh tập trung</span></li>
+                </ul>
+              </div>
             </div>
 
-            <div class="case-scope-box">
-              <div class="case-scope-title">
-                <i data-lucide="check-square" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
-                <span>Phạm Vi Trách Nhiệm Trực Tiếp</span>
+            <!-- Right Visual: Mockup + Before vs After -->
+            <div class="case-visual-col">
+              <div class="case-mockup-frame">
+                <span class="case-mockup-badge">Real-Time Analytics Dashboard</span>
+                <img src="portfolio_assets/images/mockup_fclick.jpg" alt="Fclick Marketing Dashboard">
               </div>
-              <ul class="case-scope-list">
-                <li><i data-lucide="check"></i><span>Hoạch định chiến lược tăng trưởng người dùng cho ứng dụng</span></li>
-                <li><i data-lucide="check"></i><span>Tối ưu hóa các chiến dịch quảng cáo cài đặt ứng dụng (CPI)</span></li>
-                <li><i data-lucide="check"></i><span>Ứng dụng công cụ AI tự động hóa sản xuất nội dung &amp; hình ảnh</span></li>
-                <li><i data-lucide="check"></i><span>Xây dựng bảng điều khiển theo dõi hiệu suất đa kênh tập trung</span></li>
-                <li><i data-lucide="check"></i><span>Quản lý và đào tạo nâng cao năng lực công nghệ cho đội ngũ</span></li>
-              </ul>
+
+              <div class="before-after-matrix">
+                <div class="ba-column">
+                  <div class="ba-header before">
+                    <i data-lucide="x-circle" style="width: 13px; height: 13px;"></i>
+                    <span>Trước Tối Ưu</span>
+                  </div>
+                  <ul class="ba-points-list before">
+                    <li>Chi phí CPI neo ở mức cao ($2.80+), hao phí ngân sách</li>
+                    <li>Sáng tạo kịch bản/hình ảnh thủ công mất 3-4 ngày</li>
+                    <li>Dữ liệu phân tán nhiều kênh, báo cáo chậm trễ</li>
+                  </ul>
+                </div>
+                <div class="ba-column">
+                  <div class="ba-header after">
+                    <i data-lucide="check-circle-2" style="width: 13px; height: 13px;"></i>
+                    <span>Sau Khi Điều Hành</span>
+                  </div>
+                  <ul class="ba-points-list after">
+                    <li>CPI giảm 25% bền vững qua A/B testing thông minh</li>
+                    <li>AI Engine giúp tiết kiệm 30% thời gian sản xuất</li>
+                    <li>Dashboard Realtime đồng bộ Meta, Google, TikTok</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -552,7 +715,7 @@
             </div>
           </div>
 
-          <div class="case-body-grid">
+          <div class="case-split-grid">
             <div class="case-narrative">
               <h4>Bối Cảnh &amp; Thách Thức</h4>
               <p>
@@ -562,20 +725,52 @@
               <p>
                 Xây dựng chiến lược thương hiệu và kế hoạch ra mắt chi nhánh bài bản. Tự tay thiết kế và triển khai hệ sinh thái 4 website thương hiệu kết nối đặt bàn online. Vận hành quảng cáo định vị, kết hợp KOLs/KOCs review và tiếp thị trải nghiệm tại chỗ.
               </p>
+
+              <div class="case-scope-box" style="margin-top: 18px;">
+                <div class="case-scope-title">
+                  <i data-lucide="check-square" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
+                  <span>Phạm Vi Trách Nhiệm Trực Tiếp</span>
+                </div>
+                <ul class="case-scope-list">
+                  <li><i data-lucide="check"></i><span>Xây dựng chiến lược Marketing tổng thể từ giai đoạn khởi đầu</span></li>
+                  <li><i data-lucide="check"></i><span>Thiết kế và phát triển trọn bộ hệ thống 4 website thương hiệu</span></li>
+                  <li><i data-lucide="check"></i><span>Hoạch định chiến dịch ra mắt chi nhánh mới (Takashimaya Q1)</span></li>
+                  <li><i data-lucide="check"></i><span>Điều hành chiến dịch quảng cáo số và chương trình xúc tiến bán</span></li>
+                </ul>
+              </div>
             </div>
 
-            <div class="case-scope-box">
-              <div class="case-scope-title">
-                <i data-lucide="check-square" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
-                <span>Phạm Vi Trách Nhiệm Trực Tiếp</span>
+            <!-- Right Visual: Mockup + Before vs After -->
+            <div class="case-visual-col">
+              <div class="case-mockup-frame">
+                <span class="case-mockup-badge">Omnichannel Scale 1 Billion/Mo</span>
+                <img src="portfolio_assets/images/mockup_luclam.jpg" alt="Lục Lam F&B Revenue Analytics">
               </div>
-              <ul class="case-scope-list">
-                <li><i data-lucide="check"></i><span>Xây dựng chiến lược Marketing tổng thể từ giai đoạn khởi đầu</span></li>
-                <li><i data-lucide="check"></i><span>Thiết kế và phát triển trọn bộ hệ thống 4 website thương hiệu</span></li>
-                <li><i data-lucide="check"></i><span>Hoạch định chiến dịch ra mắt chi nhánh mới (Takashimaya Q1)</span></li>
-                <li><i data-lucide="check"></i><span>Điều hành chiến dịch quảng cáo số và chương trình xúc tiến bán</span></li>
-                <li><i data-lucide="check"></i><span>Kết nối hoạt động tiếp thị với quy trình vận hành nhà hàng</span></li>
-              </ul>
+
+              <div class="before-after-matrix">
+                <div class="ba-column">
+                  <div class="ba-header before">
+                    <i data-lucide="x-circle" style="width: 13px; height: 13px;"></i>
+                    <span>Trước Tối Ưu</span>
+                  </div>
+                  <ul class="ba-points-list before">
+                    <li>Thương hiệu mới số 0, chưa có sự hiện diện online</li>
+                    <li>Không có website đặt hàng/đặt bàn tự động</li>
+                    <li>Chưa có quy trình liên kết Marketing với nhà hàng</li>
+                  </ul>
+                </div>
+                <div class="ba-column">
+                  <div class="ba-header after">
+                    <i data-lucide="check-circle-2" style="width: 13px; height: 13px;"></i>
+                    <span>Sau Khi Điều Hành</span>
+                  </div>
+                  <ul class="ba-points-list after">
+                    <li>Doanh thu chuỗi đạt mốc 1 Tỷ VNĐ/Tháng</li>
+                    <li>4 website vệ tinh chuẩn SEO kết nối CRM khép kín</li>
+                    <li>Ra mắt thành công chi nhánh TTTM Takashimaya</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -622,7 +817,7 @@
             </div>
           </div>
 
-          <div class="case-body-grid">
+          <div class="case-split-grid">
             <div class="case-narrative">
               <h4>Bối Cảnh &amp; Thách Thức</h4>
               <p>
@@ -632,20 +827,52 @@
               <p>
                 Xây dựng chiến lược tiếp thị hai chiều: Chiến dịch B2C tạo nhu cầu người dùng cuối thông qua video đánh giá trải nghiệm thực tế; kết hợp các gói hỗ trợ marketing thúc đẩy đại lý B2B nhập hàng. Quản lý ngân sách quảng cáo quy mô lớn với dữ liệu minh bạch.
               </p>
+
+              <div class="case-scope-box" style="margin-top: 18px;">
+                <div class="case-scope-title">
+                  <i data-lucide="check-square" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
+                  <span>Phạm Vi Trách Nhiệm Trực Tiếp</span>
+                </div>
+                <ul class="case-scope-list">
+                  <li><i data-lucide="check"></i><span>Hoạch định chiến lược tiếp thị số kết hợp kênh B2B và B2C</span></li>
+                  <li><i data-lucide="check"></i><span>Trực tiếp quản lý và tối ưu hóa ngân sách quảng cáo quy mô lớn</span></li>
+                  <li><i data-lucide="check"></i><span>Sản xuất nội dung video đánh giá trải nghiệm sản phẩm ô tô</span></li>
+                  <li><i data-lucide="check"></i><span>Hỗ trợ tài liệu tiếp thị và thúc đẩy bán hàng cho mạng lưới đại lý</span></li>
+                </ul>
+              </div>
             </div>
 
-            <div class="case-scope-box">
-              <div class="case-scope-title">
-                <i data-lucide="check-square" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
-                <span>Phạm Vi Trách Nhiệm Trực Tiếp</span>
+            <!-- Right Visual: Mockup + Before vs After -->
+            <div class="case-visual-col">
+              <div class="case-mockup-frame">
+                <span class="case-mockup-badge">Nationwide Dealership Distribution</span>
+                <img src="portfolio_assets/images/mockup_bravigo.jpg" alt="Bravigo Distribution Network Map">
               </div>
-              <ul class="case-scope-list">
-                <li><i data-lucide="check"></i><span>Hoạch định chiến lược tiếp thị số kết hợp kênh B2B và B2C</span></li>
-                <li><i data-lucide="check"></i><span>Trực tiếp quản lý và tối ưu hóa ngân sách quảng cáo quy mô lớn</span></li>
-                <li><i data-lucide="check"></i><span>Sản xuất nội dung video đánh giá trải nghiệm sản phẩm ô tô</span></li>
-                <li><i data-lucide="check"></i><span>Hỗ trợ tài liệu tiếp thị và thúc đẩy bán hàng cho mạng lưới đại lý</span></li>
-                <li><i data-lucide="check"></i><span>Theo dõi và phân tích hiệu quả các chiến dịch qua số liệu bán hàng lẻ</span></li>
-              </ul>
+
+              <div class="before-after-matrix">
+                <div class="ba-column">
+                  <div class="ba-header before">
+                    <i data-lucide="x-circle" style="width: 13px; height: 13px;"></i>
+                    <span>Trước Tối Ưu</span>
+                  </div>
+                  <ul class="ba-points-list before">
+                    <li>Xung đột kênh phân phối giữa bán buôn B2B và bán lẻ B2C</li>
+                    <li>Đại lý thiếu tài liệu truyền thông và POSM trưng bày</li>
+                    <li>Chi phí quảng cáo kéo khách cao, tỷ lệ ra đại lý thấp</li>
+                  </ul>
+                </div>
+                <div class="ba-column">
+                  <div class="ba-header after">
+                    <i data-lucide="check-circle-2" style="width: 13px; height: 13px;"></i>
+                    <span>Sau Khi Điều Hành</span>
+                  </div>
+                  <ul class="ba-points-list after">
+                    <li>Hàng trăm đại lý và gara ủy quyền phủ sóng toàn quốc</li>
+                    <li>Chuẩn hóa bộ ấn phẩm POSM &amp; chiến dịch Review ô tô</li>
+                    <li>Phối hợp nhịp nhàng giữa Push (Đại lý) &amp; Pull (Chủ xe)</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -692,7 +919,7 @@
             </div>
           </div>
 
-          <div class="case-body-grid">
+          <div class="case-split-grid">
             <div class="case-narrative">
               <h4>Bối Cảnh &amp; Thách Thức</h4>
               <p>
@@ -702,20 +929,47 @@
               <p>
                 Xây dựng chiến lược tiếp thị đa ngành cân bằng giữa mục tiêu ngắn hạn và dài hạn. Tối ưu hóa các chiến dịch quảng cáo chuyển đổi mang lại tăng trưởng 40% doanh thu; đồng thời đầu tư bài bản vào chiến lược nội dung và SEO, tạo ra nguồn traffic tự nhiên ổn định trên 5.000 lượt/tháng.
               </p>
+
+              <div class="case-scope-box" style="margin-top: 18px;">
+                <div class="case-scope-title">
+                  <i data-lucide="check-square" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
+                  <span>Phạm Vi Trách Nhiệm Trực Tiếp</span>
+                </div>
+                <ul class="case-scope-list">
+                  <li><i data-lucide="check"></i><span>Hoạch định và điều hành toàn diện hoạt động Marketing của tập đoàn</span></li>
+                  <li><i data-lucide="check"></i><span>Tối ưu hóa các chiến dịch quảng cáo đa kênh đóng góp 40% doanh thu</span></li>
+                  <li><i data-lucide="check"></i><span>Xây dựng và triển khai chiến lược SEO đạt 5.000+ organic traffic/tháng</span></li>
+                  <li><i data-lucide="check"></i><span>Quản lý thương hiệu và hoạt động truyền thông cho các mảng kinh doanh</span></li>
+                </ul>
+              </div>
             </div>
 
-            <div class="case-scope-box">
-              <div class="case-scope-title">
-                <i data-lucide="check-square" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
-                <span>Phạm Vi Trách Nhiệm Trực Tiếp</span>
+            <!-- Right Visual: Before vs After Matrix -->
+            <div class="case-visual-col">
+              <div class="before-after-matrix" style="margin-top: 10px;">
+                <div class="ba-column">
+                  <div class="ba-header before">
+                    <i data-lucide="x-circle" style="width: 13px; height: 13px;"></i>
+                    <span>Trước Tối Ưu</span>
+                  </div>
+                  <ul class="ba-points-list before">
+                    <li>Hoàn toàn phụ thuộc vào ngân sách Ads trả phí</li>
+                    <li>Website chưa có thứ hạng từ khóa trên Google</li>
+                    <li>Kênh bán lẻ truyền thống thiếu hỗ trợ tiếp thị số</li>
+                  </ul>
+                </div>
+                <div class="ba-column">
+                  <div class="ba-header after">
+                    <i data-lucide="check-circle-2" style="width: 13px; height: 13px;"></i>
+                    <span>Sau Khi Điều Hành</span>
+                  </div>
+                  <ul class="ba-points-list after">
+                    <li>Doanh thu từ Ads tăng trưởng +40% bứt phá</li>
+                    <li>5.000+ SEO organic traffic/tháng tạo 200+ đơn tự nhiên</li>
+                    <li>Đưa sản phẩm thành công vào hệ thống Lotte Mart</li>
+                  </ul>
+                </div>
               </div>
-              <ul class="case-scope-list">
-                <li><i data-lucide="check"></i><span>Hoạch định và điều hành toàn diện hoạt động Marketing của tập đoàn</span></li>
-                <li><i data-lucide="check"></i><span>Tối ưu hóa các chiến dịch quảng cáo đa kênh đóng góp 40% doanh thu</span></li>
-                <li><i data-lucide="check"></i><span>Xây dựng và triển khai chiến lược SEO đạt 5.000+ organic traffic/tháng</span></li>
-                <li><i data-lucide="check"></i><span>Quản lý thương hiệu và hoạt động truyền thông cho các mảng kinh doanh</span></li>
-                <li><i data-lucide="check"></i><span>Xây dựng và phát triển đội ngũ tiếp thị nội bộ của tập đoàn</span></li>
-              </ul>
             </div>
           </div>
 
@@ -747,6 +1001,52 @@
         <p class="section-subtitle">
           Sự kết hợp giữa tư duy Marketing và nền tảng Công nghệ Thông tin giúp tôi trực tiếp xây dựng, tích hợp và tối ưu hóa hệ thống công cụ phục vụ tiếp thị.
         </p>
+      </div>
+
+      <!-- Hero Mockup & 3D Architecture Visual -->
+      <div class="martech-hero-visual-card">
+        <div class="martech-hero-img-box">
+          <img src="portfolio_assets/images/mockup_martech.jpg" alt="MarTech & AI Automation Architecture Diagram 3D" loading="lazy" />
+        </div>
+        <div class="martech-hero-overlay-bar">
+          <div>
+            <div class="martech-overlay-title">Kiến Trúc Dữ Liệu Marketing Đa Tầng (End-to-End MarTech Ecosystem)</div>
+            <div class="martech-overlay-desc">Mô hình tích hợp từ Ingestion, AI Processing, Attribution đến Real-Time BI Dashboard</div>
+          </div>
+          <div class="badge badge-accent">
+            <i data-lucide="cpu"></i>
+            <span>Tự Động Hóa 100%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5-Stage Automation Pipeline -->
+      <div class="pipeline-5step-grid">
+        <div class="pipeline-step-item">
+          <span class="pipeline-step-num">Stage 01</span>
+          <h4 class="pipeline-step-name">Data Ingestion</h4>
+          <p class="pipeline-step-sub">Thu thập dữ liệu thời gian thực từ GA4, Ads API, Webhooks, Zalo OA</p>
+        </div>
+        <div class="pipeline-step-item">
+          <span class="pipeline-step-num">Stage 02</span>
+          <h4 class="pipeline-step-name">AI Processing</h4>
+          <p class="pipeline-step-sub">Gemini/Claude Agent phân loại lead, viết kịch bản và tối ưu hóa nội dung</p>
+        </div>
+        <div class="pipeline-step-item">
+          <span class="pipeline-step-num">Stage 03</span>
+          <h4 class="pipeline-step-name">Attribution & Score</h4>
+          <p class="pipeline-step-sub">Mô hình chấm điểm khách hàng tiềm năng, phân bổ kênh chuyển đổi đa điểm</p>
+        </div>
+        <div class="pipeline-step-item">
+          <span class="pipeline-step-num">Stage 04</span>
+          <h4 class="pipeline-step-name">Auto Nurturing</h4>
+          <p class="pipeline-step-sub">Kích hoạt kịch bản ZNS, Email chăm sóc tự động theo hành vi người dùng</p>
+        </div>
+        <div class="pipeline-step-item">
+          <span class="pipeline-step-num">Stage 05</span>
+          <h4 class="pipeline-step-name">BI & Alerting</h4>
+          <p class="pipeline-step-sub">Báo cáo trực quan Looker Studio, cảnh báo bất thường chi phí/CPA tức thì</p>
+        </div>
       </div>
 
       <div class="martech-layers-grid">
@@ -896,6 +1196,64 @@
           </ul>
         </div>
 
+      </div>
+
+      <!-- Skill Depth & Mastery Matrix -->
+      <div class="skills-depth-box">
+        <h3 class="skills-depth-title">
+          <i data-lucide="trending-up" style="display: inline-block; vertical-align: middle; margin-right: 8px; color: var(--accent-cyan); width: 20px; height: 20px;"></i>
+          Đo Lường Năng Lực Triển Khai Chuyên Sâu (Execution Depth)
+        </h3>
+        
+        <div class="skill-bar-row">
+          <div class="skill-bar-info">
+            <span>Hiệu Suất Quảng Cáo &amp; Tối Ưu Phễu (Performance Ads &amp; CRO)</span>
+            <span>96%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width: 96%; background: linear-gradient(90deg, #06B6D4, #3B82F6);"></div>
+          </div>
+        </div>
+
+        <div class="skill-bar-row">
+          <div class="skill-bar-info">
+            <span>Kiến Trúc MarTech, Automation &amp; AI Multi-Agents</span>
+            <span>94%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width: 94%; background: linear-gradient(90deg, #8B5CF6, #06B6D4);"></div>
+          </div>
+        </div>
+
+        <div class="skill-bar-row">
+          <div class="skill-bar-info">
+            <span>Hoạch Định Chiến Lược Tổng Thể &amp; Quản Trị Ngân Sách P&amp;L</span>
+            <span>92%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width: 92%; background: linear-gradient(90deg, #10B981, #06B6D4);"></div>
+          </div>
+        </div>
+
+        <div class="skill-bar-row">
+          <div class="skill-bar-info">
+            <span>Tự Tay Phát Triển Website &amp; Hệ Thống Tracking Sự Kiện Nâng Cao</span>
+            <span>90%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width: 90%; background: linear-gradient(90deg, #F59E0B, #EF4444);"></div>
+          </div>
+        </div>
+
+        <div class="skill-bar-row">
+          <div class="skill-bar-info">
+            <span>Lãnh Đạo Đội Ngũ Đa Năng &amp; Chuẩn Hóa Quy Trình SOPs</span>
+            <span>92%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width: 92%; background: linear-gradient(90deg, #EC4899, #8B5CF6);"></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

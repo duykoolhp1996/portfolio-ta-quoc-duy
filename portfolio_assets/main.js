@@ -291,7 +291,166 @@ document.addEventListener("DOMContentLoaded", () => {
   initStatsCounter();
   initFaqAccordion();
   initSmoothScroll();
+  initGrowthChart();
 });
+
+// Chart Hub Tab Switcher
+window.switchChartTab = function(tabId, btn) {
+  const buttons = document.querySelectorAll(".chart-tab-btn");
+  buttons.forEach(b => b.classList.remove("active"));
+  if (btn) btn.classList.add("active");
+
+  const panels = document.querySelectorAll(".chart-view-panel");
+  panels.forEach(p => p.classList.remove("active"));
+  const target = document.getElementById(tabId);
+  if (target) {
+    target.classList.add("active");
+  }
+};
+
+// Interactive Chart.js Controller
+let growthChartInstance = null;
+function initGrowthChart() {
+  const canvas = document.getElementById("growthChart");
+  if (!canvas || !window.Chart) return;
+
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  // Custom Chart Theme
+  growthChartInstance = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: [
+        "Bravigo (AutoTech)",
+        "Lục Lam (F&B Chain)",
+        "Fclick (SaaS App)",
+        "Sala Garden (BĐS 5*)",
+        "LATH Group (AI MarTech)"
+      ],
+      datasets: [
+        {
+          label: "Tối Ưu Chi Phí CPI/CPL (%)",
+          data: [-15, -25, -25, -35, -30],
+          type: "line",
+          borderColor: "#F43F5E",
+          backgroundColor: "#F43F5E",
+          borderWidth: 3,
+          tension: 0.35,
+          pointBackgroundColor: "#F43F5E",
+          pointBorderColor: "#FFFFFF",
+          pointBorderWidth: 2,
+          pointRadius: 6,
+          pointHoverRadius: 8,
+          yAxisID: "y"
+        },
+        {
+          label: "Tăng Trưởng Quy Mô & Doanh Số (%)",
+          data: [40, 100, 140, 85, 75],
+          backgroundColor: "rgba(6, 182, 212, 0.85)",
+          hoverBackgroundColor: "#22D3EE",
+          borderRadius: 8,
+          borderSkipped: false,
+          yAxisID: "y"
+        },
+        {
+          label: "Năng Suất & Tự Động Hóa AI (%)",
+          data: [35, 60, 90, 120, 145],
+          backgroundColor: "rgba(16, 185, 129, 0.8)",
+          hoverBackgroundColor: "#34D399",
+          borderRadius: 8,
+          borderSkipped: false,
+          yAxisID: "y"
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: {
+        mode: "index",
+        intersect: false
+      },
+      plugins: {
+        legend: {
+          position: "top",
+          labels: {
+            color: "#94A3B8",
+            font: {
+              family: "'Plus Jakarta Sans', sans-serif",
+              size: 12,
+              weight: "600"
+            },
+            padding: 18,
+            usePointStyle: true,
+            boxWidth: 8
+          }
+        },
+        tooltip: {
+          backgroundColor: "rgba(15, 23, 42, 0.95)",
+          titleColor: "#FFFFFF",
+          bodyColor: "#94A3B8",
+          borderColor: "rgba(255, 255, 255, 0.15)",
+          borderWidth: 1,
+          padding: 12,
+          boxPadding: 6,
+          cornerRadius: 8,
+          titleFont: {
+            family: "'Space Grotesk', sans-serif",
+            size: 13,
+            weight: "700"
+          },
+          bodyFont: {
+            family: "'Plus Jakarta Sans', sans-serif",
+            size: 12
+          },
+          callbacks: {
+            label: function(context) {
+              const label = context.dataset.label || "";
+              const val = context.parsed.y;
+              if (val < 0) {
+                return `${label}: Cắt giảm ${Math.abs(val)}% chi phí`;
+              }
+              return `${label}: +${val}% hiệu suất`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: {
+            color: "rgba(255, 255, 255, 0.05)"
+          },
+          ticks: {
+            color: "#94A3B8",
+            font: {
+              family: "'Plus Jakarta Sans', sans-serif",
+              size: 11,
+              weight: "600"
+            }
+          }
+        },
+        y: {
+          grid: {
+            color: "rgba(255, 255, 255, 0.06)"
+          },
+          ticks: {
+            color: "#94A3B8",
+            font: {
+              family: "'Plus Jakarta Sans', sans-serif",
+              size: 11
+            },
+            callback: function(value) {
+              return value + "%";
+            }
+          },
+          suggestedMin: -40,
+          suggestedMax: 160
+        }
+      }
+    }
+  });
+}
 
 // 1. Lucide Icons Helper
 function initLucide() {

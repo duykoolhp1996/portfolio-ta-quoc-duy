@@ -1152,111 +1152,467 @@ section {
   color: var(--text-muted);
 }
 
-/* Metrics Banner */
-.case-metrics-banner {
+/* ================= INTERACTIVE CHART & FUNNEL HUB (SECTION 02) ================= */
+.interactive-chart-hub {
+  margin-top: 45px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.chart-hub-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 18px;
+}
+
+.chart-hub-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chart-hub-title h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.chart-hub-tabs {
+  display: flex;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-glass);
+}
+
+.chart-tab-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.chart-tab-btn.active {
+  background: var(--accent-cyan);
+  color: #090B10;
+  box-shadow: 0 2px 10px rgba(6, 182, 212, 0.4);
+}
+
+.chart-view-panel {
+  display: none;
+}
+
+.chart-view-panel.active {
+  display: block;
+}
+
+.chart-canvas-wrapper {
+  position: relative;
+  height: 340px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.chart-summary-bar {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid var(--border-glass);
+  background: rgba(0, 0, 0, 0.3);
+  padding: 16px 20px;
   border-radius: var(--radius-md);
-  padding: 20px 24px;
-  margin-bottom: 28px;
+  border: 1px solid var(--border-glass);
 }
 
-.case-metric-block {
+.chart-summary-item {
   display: flex;
   flex-direction: column;
 }
 
-.case-metric-number {
+.chart-sum-label {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.chart-sum-val {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   font-weight: 800;
+  color: #FFFFFF;
+}
+
+.chart-sum-val.cyan { color: var(--accent-cyan); }
+.chart-sum-val.emerald { color: var(--accent-emerald); }
+.chart-sum-val.purple { color: var(--accent-purple); }
+
+/* Visual Growth Funnel (Tab 2) */
+.growth-funnel-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 10px 0;
+}
+
+.funnel-layer-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 16px 22px;
+  transition: var(--transition);
+}
+
+.funnel-layer-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(6, 182, 212, 0.3);
+  transform: translateX(6px);
+}
+
+.funnel-layer-step {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(6, 182, 212, 0.15);
+  border: 1px solid var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+}
+
+.funnel-layer-content {
+  flex: 1;
+}
+
+.funnel-layer-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+}
+
+.funnel-layer-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.funnel-progress-bar-wrap {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.funnel-pct-text {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+}
+
+.funnel-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.funnel-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-emerald));
+  border-radius: var(--radius-full);
+}
+
+/* ================= CASE STUDY ENHANCED VISUALS (SECTION 04) ================= */
+.case-split-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.case-mockup-frame {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+  background: #090B10;
+}
+
+.case-mockup-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.case-mockup-frame:hover img {
+  transform: scale(1.03);
+}
+
+.case-mockup-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(9, 11, 16, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Before vs. After Comparison Matrix */
+.before-after-matrix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.ba-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ba-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ba-header.before {
+  color: #F87171;
+}
+
+.ba-header.after {
+  color: #34D399;
+}
+
+.ba-points-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.ba-points-list.before li {
+  color: #94A3B8;
+  padding-left: 12px;
+  position: relative;
+}
+
+.ba-points-list.before li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: #F87171;
+}
+
+.ba-points-list.after li {
+  color: #FFFFFF;
+  padding-left: 14px;
+  position: relative;
+  font-weight: 500;
+}
+
+.ba-points-list.after li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #34D399;
+  font-weight: 800;
+}
+
+/* ================= MARTECH ARCHITECTURE HERO (SECTION 05) ================= */
+.martech-hero-visual-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  margin-bottom: 36px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.martech-hero-img-box {
+  width: 100%;
+  max-height: 460px;
+  overflow: hidden;
+  position: relative;
+}
+
+.martech-hero-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.martech-hero-overlay-bar {
+  padding: 20px 28px;
+  background: var(--bg-surface-elevated);
+  border-top: 1px solid var(--border-glass);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.martech-overlay-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.martech-overlay-desc {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+}
+
+/* Visual 5-Stage Pipeline */
+.pipeline-5step-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.pipeline-step-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 18px 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.pipeline-step-item:hover {
+  background: var(--bg-surface-elevated);
+  border-color: rgba(6, 182, 212, 0.4);
+  transform: translateY(-4px);
+}
+
+.pipeline-step-num {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.pipeline-step-name {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
   color: #FFFFFF;
   margin-bottom: 4px;
 }
 
-.case-metric-desc {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
+.pipeline-step-sub {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.4;
 }
 
-/* Case Body Grid */
-.case-body-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 28px;
-  margin-bottom: 24px;
-}
-
-.case-narrative h4 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 8px;
-}
-
-.case-narrative p {
-  font-size: 0.92rem;
-  color: var(--text-secondary);
-  line-height: 1.65;
-  margin-bottom: 16px;
-}
-
-.case-scope-box {
-  background: rgba(255, 255, 255, 0.03);
+/* ================= SKILL BARS (SECTION 06) ================= */
+.skills-depth-box {
+  margin-top: 36px;
+  background: var(--bg-surface);
   border: 1px solid var(--border-glass);
-  border-radius: var(--radius-md);
-  padding: 22px;
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
 }
 
-.case-scope-title {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.skills-depth-title {
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 1.15rem;
+  font-weight: 800;
   color: #FFFFFF;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
-.case-scope-list {
-  list-style: none;
+.skill-bar-row {
+  margin-bottom: 18px;
+}
+
+.skill-bar-info {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.case-scope-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 0.86rem;
-  color: var(--text-secondary);
-  line-height: 1.45;
-}
-
-.case-scope-list li i {
-  width: 16px;
-  height: 16px;
-  color: var(--accent-emerald);
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-/* Footer Actions */
-.case-footer-actions {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding-top: 20px;
-  border-top: 1px solid var(--border-subtle);
-  flex-wrap: wrap;
-  gap: 16px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+}
+
+.skill-bar-info span:first-child {
+  color: #FFFFFF;
+}
+
+.skill-bar-track {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--accent-cyan), #38BDF8);
+  transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .case-tech-tags {
