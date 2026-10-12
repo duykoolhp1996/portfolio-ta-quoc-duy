@@ -534,7 +534,7 @@ window.openCaseModal = function(caseKey) {
   if (!modal) return;
 
   // Populate data
-  document.getElementById("modalCategory").innerText = data.category;
+  document.getElementById("modalCategory").innerText = `Hạng mục: ${data.category}`;
   document.getElementById("modalTitle").innerText = data.title;
   if (data.logoUrl) {
     document.getElementById("modalCompany").innerHTML = `<img src="${data.logoUrl}" alt="Logo" style="width: 20px; height: 20px; border-radius: 4px; vertical-align: middle; margin-right: 6px; display: inline-block;"> <span>${data.company}</span>`;
