@@ -504,9 +504,9 @@ a {
 .fanned-deck-wrapper {
   position: relative;
   width: 100%;
-  max-width: 1100px;
-  margin: 20px auto 0;
-  padding-bottom: 40px;
+  max-width: 1180px;
+  margin: 30px auto 0;
+  padding-bottom: 30px;
 }
 
 .fanned-deck-container {
@@ -514,26 +514,73 @@ a {
   justify-content: center;
   align-items: flex-end;
   position: relative;
-  height: 480px;
+  height: 520px;
   perspective: 1200px;
+}
+
+/* Floating 3D Props (Megaphone & Retro Computer from reference image) */
+.floating-3d-prop {
+  position: absolute;
+  z-index: 15;
+  pointer-events: none;
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.7));
+}
+
+.prop-megaphone {
+  left: calc(50% - 530px);
+  bottom: 220px;
+  width: 140px;
+  height: 140px;
+  transform: rotate(-18deg);
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.prop-megaphone img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.prop-computer {
+  left: calc(50% + 390px);
+  bottom: 230px;
+  width: 140px;
+  height: 140px;
+  transform: rotate(14deg);
+  animation: floatSlowReverse 5.5s ease-in-out infinite;
+}
+
+.prop-computer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes floatSlowReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(14deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(12deg);
+  }
 }
 
 /* Base Fan Card */
 .fan-card {
   position: absolute;
   bottom: 0;
-  width: 285px;
-  height: 430px;
-  border-radius: var(--radius-xl);
-  padding: 24px;
+  width: 295px;
+  height: 485px;
+  border-radius: 34px;
+  padding: 20px 20px 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
   transition: var(--transition-card);
   user-select: none;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   transform-origin: bottom center;
   overflow: hidden;
 }
@@ -542,60 +589,60 @@ a {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.2), transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.22), transparent 75%);
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
-/* 5 Specific Fanned Positions */
-/* Card 1: Far Left (LATH Group - Purple) */
+/* 5 Specific Fanned Positions & Authentic Colors matching Generated 3D Avatars */
+/* Card 1: Far Left (Cloudy / LATH Group - Deep Purple Lavender) */
 .fan-card-1 {
-  background: var(--grad-purple);
-  left: calc(50% - 470px);
+  background: #372D6A;
+  left: calc(50% - 485px);
   transform: rotate(-14deg) translateY(42px);
   z-index: 1;
 }
 
-/* Card 2: Mid Left (Sala Garden - Red Coral) */
+/* Card 2: Mid Left (Dummies / Sala Garden - Coral Red) */
 .fan-card-2 {
-  background: var(--grad-red);
-  left: calc(50% - 280px);
+  background: #E0574D;
+  left: calc(50% - 295px);
   transform: rotate(-7deg) translateY(18px);
   z-index: 2;
 }
 
-/* Card 3: Center Featured (Fclick & MarTech - Vibrant Cyan) */
+/* Card 3: Center Featured (Glue / Fclick & AI - Vibrant Cyan) */
 .fan-card-3 {
-  background: var(--grad-cyan);
-  left: calc(50% - 142px);
+  background: #4AB8C5;
+  left: calc(50% - 147px);
   transform: rotate(0deg) translateY(0px);
   z-index: 5;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 25px 60px rgba(6, 182, 212, 0.35), 0 0 35px rgba(6, 182, 212, 0.2);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 30px 70px rgba(74, 184, 197, 0.4), 0 0 35px rgba(74, 184, 197, 0.25);
 }
 
-/* Card 4: Mid Right (Lục Lam Group - Lime Green) */
+/* Card 4: Mid Right (Love mumies / Lục Lam Group - Lime Green) */
 .fan-card-4 {
-  background: var(--grad-green);
-  left: calc(50% - 5px);
+  background: #A9D34B;
+  left: calc(50% + 2px);
   transform: rotate(7deg) translateY(18px);
   z-index: 2;
 }
 
-/* Card 5: Far Right (Bravigo - Royal Blue) */
+/* Card 5: Far Right (Ellenor / Bravigo - Royal Cobalt Blue) */
 .fan-card-5 {
-  background: var(--grad-blue);
-  left: calc(50% + 185px);
+  background: #2C54C6;
+  left: calc(50% + 192px);
   transform: rotate(14deg) translateY(42px);
   z-index: 1;
 }
 
 /* Card Hover Interactions */
 .fan-card:hover {
-  transform: translateY(-28px) scale(1.05) rotate(0deg) !important;
-  z-index: 20 !important;
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 255, 255, 0.25) !important;
-  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-30px) scale(1.06) rotate(0deg) !important;
+  z-index: 25 !important;
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.85), 0 0 40px rgba(255, 255, 255, 0.35) !important;
+  border-color: rgba(255, 255, 255, 0.65);
 }
 
 /* Card Inner Content */
@@ -624,7 +671,7 @@ a {
 
 .fan-card-subrole {
   font-size: 0.76rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
   margin-top: 3px;
 }
@@ -641,13 +688,41 @@ a {
   font-weight: 700;
   padding: 6px 14px;
   border-radius: var(--radius-full);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
   transition: var(--transition);
 }
 
 .fan-card-cta-pill:hover {
-  background: #F8FAFC;
+  background: #FEF08A;
   transform: scale(1.05);
+}
+
+/* 3D Character Avatar Image Box */
+.fan-card-character-wrap {
+  position: relative;
+  width: 100%;
+  height: 295px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 22px;
+  margin: 10px 0 8px;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 10px rgba(255, 255, 255, 0.15);
+}
+
+.fan-card-character-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 22px;
+}
+
+.fan-card:hover .fan-card-character-img {
+  transform: scale(1.08) translateY(-4px);
 }
 
 /* 3D Visual Graphic in Card Center */
@@ -1874,6 +1949,9 @@ footer {
   }
   
   /* Mobile Horizontal Scroll for Fanned Deck */
+  .floating-3d-prop {
+    display: none;
+  }
   .fanned-deck-container {
     position: static;
     height: auto;
@@ -1889,7 +1967,7 @@ footer {
     position: static;
     flex-shrink: 0;
     width: 280px;
-    height: 420px;
+    height: 460px;
     transform: none !important;
     scroll-snap-align: center;
   }
