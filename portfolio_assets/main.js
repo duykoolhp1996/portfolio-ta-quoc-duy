@@ -656,10 +656,15 @@ function initFaqAccordion() {
   });
 }
 
-// 5. Smooth Scroll & Active Nav Spy
+// 5. Smooth Scroll & Active Nav Spy + Mobile Drawer Controller
 function initSmoothScroll() {
-  const links = document.querySelectorAll("a[href^='#']");
-  links.forEach(link => {
+  const dockLinks = document.querySelectorAll(".nav-pill-links li a");
+  const mobileDrawer = document.getElementById("mobileNavDrawer");
+  const mobileToggle = document.getElementById("mobileToggle");
+  const allNavAnchors = document.querySelectorAll("a[href^='#']");
+
+  // Smooth scroll handler
+  allNavAnchors.forEach(link => {
     link.addEventListener("click", (e) => {
       const targetId = link.getAttribute("href");
       if (targetId && targetId !== "#" && targetId !== "#modal") {
@@ -667,10 +672,66 @@ function initSmoothScroll() {
         if (targetEl) {
           e.preventDefault();
           targetEl.scrollIntoView({ behavior: "smooth" });
+
+          // If clicked from dock, set active immediately
+          if (link.classList.contains("nav-pill-item")) {
+            dockLinks.forEach(l => l.classList.remove("active"));
+            link.classList.add("active");
+          }
+
+          // Close mobile drawer if open
+          if (mobileDrawer && mobileDrawer.classList.contains("open")) {
+            mobileDrawer.classList.remove("open");
+          }
         }
       }
     });
   });
+
+  // Mobile Drawer Toggle
+  if (mobileToggle && mobileDrawer) {
+    mobileToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      mobileDrawer.classList.toggle("open");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!mobileDrawer.contains(e.target) && !mobileToggle.contains(e.target)) {
+        mobileDrawer.classList.remove("open");
+      }
+    });
+  }
+
+  // Active Nav Scroll Spy
+  const sections = [
+    { id: "about", link: document.querySelector(".nav-pill-links a[href='#about']") },
+    { id: "impact", link: document.querySelector(".nav-pill-links a[href='#impact']") },
+    { id: "cases", link: document.querySelector(".nav-pill-links a[href='#cases']") },
+    { id: "martech", link: document.querySelector(".nav-pill-links a[href='#martech']") },
+    { id: "capabilities", link: document.querySelector(".nav-pill-links a[href='#capabilities']") },
+    { id: "deliverables", link: document.querySelector(".nav-pill-links a[href='#deliverables']") }
+  ];
+
+  window.addEventListener("scroll", () => {
+    const scrollPos = window.scrollY + 180;
+    let currentSectionId = null;
+
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const secEl = document.getElementById(sections[i].id);
+      if (secEl && secEl.offsetTop <= scrollPos) {
+        currentSectionId = sections[i].id;
+        break;
+      }
+    }
+
+    dockLinks.forEach(link => {
+      if (currentSectionId && link.getAttribute("href") === `#${currentSectionId}`) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  }, { passive: true });
 }
 
 // 6. Contact Form Submit Handler

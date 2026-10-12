@@ -31,7 +31,7 @@
     <div class="nav-container">
       
       <!-- Left: Asterisk Brand Mark -->
-      <a href="#hero" class="nav-brand-box">
+      <a href="#hero" class="nav-brand-box" title="Trang chủ Tạ Quốc Duy">
         <div class="nav-logo-star">✦</div>
         <div class="nav-brand-meta">
           <span class="nav-brand-name">Tạ Quốc Duy</span>
@@ -39,17 +39,15 @@
         </div>
       </a>
 
-      <!-- Center: Frosted Glass Capsule Nav Dock (Directly like reference image) -->
-      <nav class="nav-pill-dock">
+      <!-- Center: Frosted Glass Capsule Nav Dock -->
+      <nav class="nav-pill-dock" aria-label="Điều hướng chính">
         <ul class="nav-pill-links">
-          <li><a href="#hero" class="active">Trang Chủ</a></li>
-          <li><a href="#about">Về Tôi</a></li>
-          <li><a href="#impact">Chỉ Số</a></li>
-          <li><a href="#cases">Dự Án</a></li>
-          <li><a href="#martech">MarTech &amp; AI</a></li>
-          <li><a href="#capabilities">Năng Lực</a></li>
-          <li><a href="#deliverables">Bàn Giao</a></li>
-          <li><a href="#contact">Liên Hệ</a></li>
+          <li><a href="#about" class="nav-pill-item">Về Tôi</a></li>
+          <li><a href="#impact" class="nav-pill-item">Chỉ Số</a></li>
+          <li><a href="#cases" class="nav-pill-item">Dự Án</a></li>
+          <li><a href="#martech" class="nav-pill-item">MarTech &amp; AI</a></li>
+          <li><a href="#capabilities" class="nav-pill-item">Năng Lực</a></li>
+          <li><a href="#deliverables" class="nav-pill-item">Bàn Giao</a></li>
         </ul>
       </nav>
 
@@ -61,11 +59,33 @@
         <a href="#contact" class="nav-btn-contact">
           Liên Hệ
         </a>
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Mở Menu Điều Hướng">
           <i data-lucide="menu"></i>
         </button>
       </div>
 
+    </div>
+
+    <!-- Mobile Nav Dropdown Drawer -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link">Trang Chủ</a></li>
+        <li><a href="#about" class="mobile-nav-link">Về Tôi</a></li>
+        <li><a href="#impact" class="mobile-nav-link">Chỉ Số Thực Chiến</a></li>
+        <li><a href="#cases" class="mobile-nav-link">Dự Án &amp; Case Studies</a></li>
+        <li><a href="#martech" class="mobile-nav-link">Hệ Thống MarTech &amp; AI</a></li>
+        <li><a href="#capabilities" class="mobile-nav-link">Khung Năng Lực</a></li>
+        <li><a href="#deliverables" class="mobile-nav-link">Sản Phẩm Bàn Giao</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Liên Hệ Hợp Tác</a></li>
+      </ul>
+      <div class="mobile-nav-drawer-actions">
+        <a href="CV_Ta_Quoc_Duy_Marketing_Manager.pdf" target="_blank" class="btn-secondary" style="width: 100%; justify-content: center;">
+          <i data-lucide="file-text"></i> Tải CV (PDF)
+        </a>
+        <a href="#contact" class="btn-primary mobile-drawer-close" style="width: 100%; justify-content: center;">
+          <i data-lucide="send"></i> Liên Hệ Trực Tiếp
+        </a>
+      </div>
     </div>
   </div>
 

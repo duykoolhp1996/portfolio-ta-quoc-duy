@@ -206,33 +206,37 @@ a {
 /* ================= 01. FLOATING PILL NAVBAR ================= */
 .navbar-wrap {
   position: fixed;
-  top: 18px;
+  top: 16px;
   left: 0;
   right: 0;
   z-index: 1000;
   pointer-events: none;
+  padding: 0 20px;
 }
 
 .nav-container {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+  min-height: 52px;
 }
 
 /* Left Brand / Monogram */
 .nav-brand-box {
   pointer-events: auto;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  flex-shrink: 0;
+  text-decoration: none;
 }
 
 .nav-logo-star {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-full);
@@ -240,9 +244,11 @@ a {
   align-items: center;
   justify-content: center;
   color: #FFFFFF;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   transition: var(--transition);
+  flex-shrink: 0;
 }
 
 .nav-logo-star:hover {
@@ -254,95 +260,137 @@ a {
 .nav-brand-meta {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  line-height: 1.25;
 }
 
 .nav-brand-name {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   letter-spacing: -0.01em;
   color: #FFFFFF;
+  white-space: nowrap;
 }
 
 .nav-brand-subtitle {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
   font-weight: 500;
+  white-space: nowrap;
 }
 
-/* Center Pill Capsule Menu (Strictly like reference image) */
+/* Center Pill Capsule Menu (Concentric Padding & Pixel-Perfect Dock) */
 .nav-pill-dock {
   pointer-events: auto;
-  background: rgba(18, 22, 32, 0.75);
+  background: rgba(14, 18, 26, 0.82);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-full);
-  padding: 6px 14px;
-  display: flex;
+  border-radius: 9999px;
+  padding: 4px; /* Padding đều 4px xung quanh */
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
-  box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .nav-pill-links {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-pill-links li {
+  display: flex;
+  align-items: center;
 }
 
 .nav-pill-links li a {
-  padding: 8px 16px;
-  border-radius: var(--radius-full);
-  font-size: 0.88rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 15px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
   font-weight: 500;
   color: var(--text-secondary);
-  transition: var(--transition);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   white-space: nowrap;
+  line-height: 1;
+  text-decoration: none;
+  outline: none;
 }
 
-.nav-pill-links li a:hover,
+.nav-pill-links li a:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.06);
+}
+
 .nav-pill-links li a.active {
   color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-pill-links li a:focus,
+.nav-pill-links li a:focus-visible {
+  outline: none;
 }
 
 /* Right Actions Pill */
 .nav-actions-box {
   pointer-events: auto;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  flex-shrink: 0; /* Đảm bảo không bao giờ bị co rúm */
 }
 
 .nav-link-text {
-  font-size: 0.88rem;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.84rem;
   font-weight: 600;
   color: var(--text-secondary);
   padding: 8px 14px;
+  border-radius: 9999px;
   transition: var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-decoration: none;
+  line-height: 1;
 }
 
 .nav-link-text:hover {
   color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .nav-btn-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #FFFFFF;
   color: #090B10;
   font-weight: 600;
-  font-size: 0.88rem;
-  padding: 8px 22px;
-  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  padding: 9px 22px;
+  border-radius: 9999px;
   transition: var(--transition);
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.18);
+  white-space: nowrap; /* Triệt tiêu hoàn toàn rớt dòng chữ Liên / Hệ */
+  flex-shrink: 0;      /* Giữ nguyên kích thước và tỷ lệ */
+  text-decoration: none;
+  line-height: 1;
 }
 
 .nav-btn-contact:hover {
-  background: #E2E8F0;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
+  background: #F1F5F9;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.28);
 }
 
 .mobile-toggle {
@@ -350,13 +398,76 @@ a {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border-glass);
   color: #FFFFFF;
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: var(--radius-full);
   cursor: pointer;
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.mobile-toggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Mobile Nav Drawer Dropdown */
+.mobile-nav-drawer {
+  pointer-events: auto;
+  display: none;
+  flex-direction: column;
+  background: rgba(14, 18, 26, 0.95);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 12px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85);
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-drawer.open {
+  display: flex;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:active {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.mobile-nav-drawer-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* ================= 02. HERO SECTION ================= */
@@ -2391,6 +2502,34 @@ footer {
 }
 
 /* ================= 15. RESPONSIVE DESIGN ================= */
+@media (max-width: 1200px) {
+  .nav-pill-links li a {
+    padding: 6px 11px;
+    font-size: 0.78rem;
+  }
+  .nav-btn-contact {
+    padding: 8px 18px;
+    font-size: 0.82rem;
+  }
+  .nav-link-text {
+    padding: 7px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1040px) {
+  .nav-brand-subtitle {
+    display: none;
+  }
+  .nav-pill-dock {
+    padding: 3px;
+  }
+  .nav-pill-links li a {
+    padding: 6px 9px;
+    font-size: 0.76rem;
+  }
+}
+
 @media (max-width: 1100px) {
   .fanned-deck-container {
     height: 440px;
@@ -2410,13 +2549,16 @@ footer {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .nav-pill-dock {
-    display: none;
+    display: none !important;
   }
   .mobile-toggle {
-    display: flex;
+    display: flex !important;
   }
+}
+
+@media (max-width: 900px) {
   .impact-grid,
   .pillars-3col-grid,
   .martech-layers-grid,
