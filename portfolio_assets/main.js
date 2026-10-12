@@ -1,198 +1,195 @@
 /* ========================================================
-   PORTFOLIO TẠ QUỐC DUY - JAVASCRIPT CONTROLLER
+   PORTFOLIO TẠ QUỐC DUY — JAVASCRIPT CONTROLLER
    Author: 🐱 Xu Xu & Tạ Quốc Duy
+   Features: Modal Deep-Dive with Deliverables, Stats Counter,
+             Smooth Navigation, Copy Clipboard, Mobile Nav
 ======================================================== */
 
-// Case Studies Detailed Data for Deep-Dive Modal
+// Professional Case Studies Dataset (Strictly aligned with CV)
 const caseStudiesData = {
   sala: {
-    category: "Bất Động Sản Hoa Viên Sinh Thái 5 Sao",
+    category: "Bất Động Sản Hoa Viên Sinh Thái Cao Cấp",
     company: "Công Ty Cổ Phần TM & DV Sala Garden",
-    role: "Senior Marketing Manager",
+    role: "Marketing Manager",
     period: "03/2026 – Hiện tại",
-    title: "Vận Hành Cỗ Máy Nội Dung 130+ Videos/Tháng & Quản Trị Ngân Sách 300Tr/Tháng Tạo 50+ Q.Leads",
-    challenge: "Bất động sản hoa viên sinh thái là phân khúc đặc thù, giá trị cao và có chu kỳ ra quyết định mua hàng dài. Yêu cầu đặt ra là phải xây dựng được lòng tin sâu sắc, truyền tải được giá trị văn hóa hiếu nghĩa và tạo được dòng khách hàng tiềm năng thực sự quan tâm (Qualified Leads) cho đội ngũ tư vấn chốt đơn.",
+    title: "Vận Hành Hệ Thống Nội Dung 130+ Videos/Tháng & Quản Trị Ngân Sách 300Tr Tạo 50+ Q.Leads",
+    challenge: "Bất động sản hoa viên sinh thái 5 sao là phân khúc đặc thù, giá trị cao và chu kỳ ra quyết định mua hàng dài. Thách thức lớn nhất là phải xây dựng được lòng tin sâu sắc, truyền tải trọn vẹn giá trị văn hóa hiếu nghĩa và tạo ra dòng khách hàng tiềm năng thực sự quan tâm (Qualified Leads) cho đội ngũ tư vấn chốt đơn.",
+    strategy: "Tái cấu trúc và dẫn dắt song song hai đội ngũ chuyên biệt: Team Digital Marketing (tập trung chuyển đổi dữ liệu, lead và đo lường) và Team Branding (sáng tạo nội dung, nhận diện và trải nghiệm). Chuẩn hóa quy trình vận hành liên phòng ban Marketing x Sales x CSKH.",
     deliverables: [
       {
         title: "Hoạch Định Chiến Lược & Setup KPI 2 Teams",
-        tag: "Quản Trị & P&L",
+        tag: "Strategy & P&L",
         desc: "Thiết lập cấu trúc vận hành song song Team Digital Marketing & Team Branding (8–14 nhân sự) với khung KPIs định lượng chi tiết cho từng vị trí.",
         items: [
-          "Xây dựng bộ chỉ số KPI/OKR rõ ràng cho Ads, Content, Video Editor, Graphic Designer",
-          "Chuẩn hóa quy trình SOP phối hợp liên phòng ban Marketing x Sales x CSKH",
-          "Kiểm soát ngân sách P&L và đo lường ROI/ROAS thời gian thực"
-        ]
+          "Bộ khung KPI/OKR chi tiết cho Ads Specialist, Content Creator, Video Editor, Graphic Designer",
+          "Chuẩn hóa quy trình SOP phối hợp liên phòng ban Marketing – Sales – CSKH",
+          "Kiểm soát ngân sách P&L và theo dõi đo lường ROI/ROAS thời gian thực"
+        ],
+        attachment: "SOP phối hợp liên phòng ban & Bảng theo dõi KPI"
       },
       {
         title: "Cỗ Máy Sản Xuất Nội Dung 130+ Videos/Tháng",
-        tag: "Media & Branding",
+        tag: "Content Factory",
         desc: "Xây dựng quy trình sản xuất nội dung quy mô lớn đạt công suất 130+ video/tháng phủ sóng toàn diện trên TikTok, Reels, Shorts và phóng sự.",
         items: [
-          "Phát triển cấu trúc kịch bản video ngắn chuẩn Hook-Body-CTA",
-          "Chỉ đạo sản xuất chuỗi phóng sự văn hóa tri ân và trải nghiệm hoa viên 5 sao",
-          "Phân phối đa kênh và tối ưu hóa lượt tương tác tự nhiên"
-        ]
+          "Phát triển cấu trúc kịch bản video ngắn chuẩn Hook-Body-CTA tăng giữ chân khán giả",
+          "Chỉ đạo sản xuất chuỗi phóng sự văn hóa tri ân và trải nghiệm hoa viên sinh thái 5 sao",
+          "Phân phối đa nền tảng số và tối ưu hóa lượt tương tác tự nhiên"
+        ],
+        attachment: "Bộ kịch bản video ngắn & Phân luồng sản xuất"
       },
       {
         title: "Quản Trị Ngân Sách Ads 300Tr & 50+ Q.Leads",
         tag: "Performance Ads",
         desc: "Hoạch định và tối ưu ngân sách quảng cáo số 300.000.000 VNĐ/tháng đa kênh đem về đều đặn 50+ Qualified Leads chất lượng cao/tháng.",
         items: [
-          "Chạy và tối ưu đa kênh: Facebook Ads, Google Ads, TikTok Ads, Zalo OA",
-          "Thiết lập phễu lọc khách hàng tiềm năng phân khúc BĐS cao cấp",
-          "Nuôi dưỡng và chuyển giao lead nóng cho đội ngũ tư vấn chốt deal"
-        ]
+          "Quản lý và tối ưu đa kênh: Facebook Ads, Google Ads, TikTok Ads, Zalo OA",
+          "Thiết lập phễu lọc khách hàng tiềm năng phân khúc bất động sản cao cấp",
+          "Nuôi dưỡng và chuyển giao lead chất lượng cho đội ngũ tư vấn chốt deal"
+        ],
+        attachment: "Dashboard báo cáo hiệu suất chi phí CPL/Qualified Leads"
       },
       {
         title: "Tiếp Thị Điểm Chạm & POSM Sự Kiện Tại Chỗ",
         tag: "Omnichannel & POSM",
-        desc: "Kết nối tiếp thị số với hoạt động tại chỗ, nâng cao trải nghiệm và niềm tin cho khách hàng phân khúc hoa viên sinh thái cao cấp.",
+        desc: "Kết nối tiếp thị số với hoạt động tại chỗ, nâng cao trải nghiệm và niềm tin cho khách hàng tham quan thực tế.",
         items: [
           "Thiết kế decor không gian sự kiện Nhà tròn và ấn phẩm đón tiếp khách VIP",
           "Phát hành Voucher tri ân sự kiện và Standee đối tác liên kết",
           "Gia tăng niềm tin thương hiệu và tỷ lệ chuyển đổi lịch hẹn thực tế"
-        ]
+        ],
+        attachment: "Ấn phẩm POSM tại chỗ & Concept Decor sự kiện"
       }
     ],
-    solution: [
-      "Tái cấu trúc và dẫn dắt song song 2 Teams chuyên biệt: Team Digital Marketing (tối ưu hóa lead và đo lường đa kênh) và Team Branding (sản xuất nội dung và truyền thông thương hiệu).",
-      "Thiết lập bộ khung KPIs/OKRs định lượng rõ ràng cho từng vị trí (Ads, Content, Video Editor, Graphic Designer) gắn kết trực tiếp với mục tiêu chuyển đổi.",
-      "Xây dựng cỗ máy sản xuất nội dung quy mô lớn đạt công suất 130+ video/tháng phủ rộng trên TikTok, YouTube Shorts, Reels và phóng sự tri ân.",
-      "Hoạch định và tối ưu ngân sách quảng cáo số 300.000.000 VNĐ/tháng trên đa kênh (Facebook Ads, Google Ads, TikTok Ads, Zalo OA).",
-      "Kết hợp tiếp thị số với trải nghiệm điểm chạm tại chỗ (Decor Nhà tròn sự kiện, Voucher tri ân, Standee đối tác)."
-    ],
     results: [
-      "Duy trì đều đặn 50+ Qualified Leads chất lượng cao/tháng phục vụ đội ngũ tư vấn chốt đơn hoa viên sinh thái cao cấp.",
-      "Tạo độ phủ thương hiệu vượt bậc với hơn 130 video/tháng, tăng trưởng tương tác tự nhiên trên các kênh mạng xã hội.",
+      "Duy trì đều đặn 50+ Qualified Leads chất lượng cao/tháng phục vụ đội ngũ tư vấn chốt đơn.",
+      "Vận hành cỗ máy sản xuất 130+ video/tháng, tăng trưởng tương tác tự nhiên trên các kênh số.",
       "Tối ưu chi phí trên mỗi khách hàng tiềm năng (CPL) và nâng cao tỷ lệ chuyển đổi từ lead sang lịch hẹn tham quan thực tế."
     ],
-    tech: ["Team Leadership", "KPI Matrix", "130+ Videos/Tháng", "300Tr Ads/Tháng", "50+ Q.Leads", "Omnichannel", "Zalo OA"]
+    tech: ["Team Leadership", "Setup KPI từng vị trí", "130+ Videos/Tháng", "300Tr Ads/Tháng", "50+ Q.Leads", "Omnichannel", "Zalo OA"]
+  },
+
+  fclick: {
+    category: "Nền Tảng Ứng Dụng Công Nghệ Số",
+    company: "Công ty Fclick",
+    role: "Marketing Manager & MarTech Lead",
+    period: "06/2025 – 02/2026",
+    title: "Cắt Giảm 25% CPI & Tối Ưu Hóa Vận Hành Bằng AI Tiết Kiệm 30% Thời Gian",
+    challenge: "Chi phí thu hút người dùng cài đặt ứng dụng (CPI - Cost Per Install) tăng cao, quy trình sáng tạo và sản xuất nội dung thủ công tốn nhiều nguồn lực, đồng thời thiếu bảng điều khiển đo lường tập trung.",
+    strategy: "Tái cấu trúc tệp khách hàng mục tiêu, tối ưu thông điệp qua A/B testing liên tục, chuẩn hóa tracking phễu qua MMP. Tiên phong ứng dụng AI Automation vào sản xuất nội dung và thiết lập Real-time Dashboard kết nối đa kênh.",
+    deliverables: [
+      {
+        title: "Tối Ưu Phễu Chuyển Đổi & Cắt Giảm 25% CPI",
+        tag: "Growth Hacking",
+        desc: "Tái cấu trúc tệp khách hàng mục tiêu và tối ưu hóa chi phí thu hút người dùng cho ứng dụng số.",
+        items: [
+          "Chuẩn hóa hệ thống tracking phễu chuyển đổi và phân tầng đối tượng theo hành vi",
+          "Triển khai A/B Testing liên tục thông điệp, hình ảnh và video quảng cáo",
+          "Cắt giảm thành công 25% chi phí cài đặt (CPI) trên toàn bộ kênh trả phí"
+        ],
+        attachment: "Báo cáo A/B Testing & Phân tích phễu chuyển đổi"
+      },
+      {
+        title: "Ứng Dụng AI Automation (-30% Thời Gian Vận Hành)",
+        tag: "AI & Automation",
+        desc: "Tiên phong đưa các giải pháp AI tự động hóa vào quy trình làm việc của đội ngũ marketing.",
+        items: [
+          "Xây dựng quy trình nghiên cứu thị trường và lập dàn ý nội dung bằng AI Agents",
+          "Tiết kiệm 30% thời gian triển khai sáng tạo và sản xuất nội dung cho team",
+          "Nâng cao tốc độ kiểm thử và nhân bản chiến dịch quảng cáo đa kênh"
+        ],
+        attachment: "Tài liệu quy trình AI Content Engine & Workflow"
+      },
+      {
+        title: "Phát Triển 4 Websites Vệ Tinh & Real-Time Dashboard",
+        tag: "MarTech & Data",
+        desc: "Xây dựng hạ tầng số và bảng điều khiển đo lường chiến dịch thời gian thực.",
+        items: [
+          "Xây dựng hoàn thiện hệ thống nhận diện số và 4 website vệ tinh",
+          "Thiết lập Dashboard đo lường realtime kết nối dữ liệu Facebook, Google, TikTok",
+          "Cá nhân hóa chiến dịch Push Notification giúp cải thiện 20% tỷ lệ giữ chân (Retention)"
+        ],
+        attachment: "Kiến trúc hệ sinh thái 4 website & Dashboard số liệu"
+      }
+    ],
+    results: [
+      "Giảm thành công 25% CPI trên toàn bộ các kênh quảng cáo trả phí.",
+      "Tiết kiệm 30% thời gian triển khai sáng tạo và sản xuất nội dung theo CV.",
+      "Cải thiện 20% tỷ lệ giữ chân người dùng (Retention Rate) sau khi cài đặt ứng dụng."
+    ],
+    tech: ["AI Automation", "CPI -25%", "Retention +20%", "Real-time Dashboard", "MarTech Lead", "Growth Hacking"]
   },
 
   luclam: {
-    category: "F&B & Quà Tặng Cao Cấp",
-    company: "Công Ty TNHH TM DV SX Lục Lam",
+    category: "Chuỗi F&B & Quà Tặng Cao Cấp",
+    company: "Công Ty TNHH TM DV SX Lục Lam (Lục Lam Group)",
     role: "Marketing Manager",
     period: "04/2024 – 04/2025",
     title: "Kiến Tạo Thương Hiệu Từ Số 0 (Zero to Hero) & Bứt Phá Doanh Thu 1 Tỷ VNĐ/Tháng",
-    challenge: "Gia nhập thị trường F&B trà sữa và quà tặng cao cấp với con số 0: chưa có nhận diện thương hiệu, chưa có quy trình tiếp thị và hệ thống vận hành bán hàng trên nền tảng số.",
+    challenge: "Gia nhập thị trường F&B trà sữa và quà tặng cao cấp từ con số 0: chưa có nhận diện thương hiệu, chưa có hạ tầng tiếp thị số và thiếu hệ thống quy trình vận hành bán hàng khép kín.",
+    strategy: "Xây dựng chiến lược thương hiệu Zero-to-Hero: thiết lập trọn bộ Brand Guidelines & Moodboard, phát triển hệ sinh thái 4 website chuyên biệt kết nối CRM, kết hợp chuỗi Activation tại TTTM Takashimaya với chiến dịch Ads bùng nổ doanh số.",
     deliverables: [
       {
         title: "Kiến Tạo Bản Sắc Thương Hiệu Zero to Hero",
-        tag: "Branding",
+        tag: "Brand Identity",
         desc: "Xây dựng trọn vẹn thương hiệu chuỗi F&B trà sữa & quà tặng cao cấp từ con số 0.",
         items: [
           "Hoàn thiện trọn bộ Brand Guidelines, Moodboard và định vị chuỗi cao cấp",
           "Xây dựng nhận diện số và bộ ấn phẩm truyền thông toàn diện",
-          "Tuyển dụng, đào tạo và dẫn dắt bộ máy 8 nhân sự Marketing"
-        ]
+          "Tuyển dụng, đào tạo và dẫn dắt bộ máy 8 nhân sự Marketing vận hành tự chủ"
+        ],
+        attachment: "Brand Guidelines & Moodboard định vị Lục Lam"
       },
       {
-        title: "Hệ Sinh Thái 4 Websites & CRM Tự Động Hóa",
-        tag: "Web & CRM",
+        title: "Hệ Sinh Thái 4 Websites & CRM Khép Kín",
+        tag: "Web & CRM Architecture",
         desc: "Phát triển hệ sinh thái 4 website vệ tinh kết nối hệ thống CRM khép kín từ data đến giao vận.",
         items: [
           "Xây dựng store.luclam.vn, trahoa.luclam.vn, gift.luclam.vn, vietnamtravel.com",
           "Tích hợp CRM quản trị lead và luồng chăm sóc khách hàng tự động",
-          "Ứng dụng AI Automation vào kịch bản tư vấn và nuôi dưỡng khách hàng"
-        ]
+          "Tích hợp các luồng tự động hóa bằng AI vào chăm sóc khách hàng"
+        ],
+        attachment: "Sơ đồ kiến trúc 4 website & Quy trình CRM"
       },
       {
         title: "Activation Takashimaya & Sự Kiện Tri Ân",
         tag: "Activation & KOLs",
         desc: "Tổ chức chuỗi sự kiện quy mô lớn khẳng định vị thế thương hiệu trên thị trường bán lẻ cao cấp.",
         items: [
-          "Chủ trì chuỗi Activation trực tiếp tại TTTM Takashimaya",
-          "Tổ chức Gala tri ân quy mô 200+ khách mời và đối tác",
-          "Quản lý chiến dịch Booking KOLs/KOCs lan tỏa hình ảnh thương hiệu"
-        ]
+          "Chủ trì chuỗi Activation trực tiếp tại TTTM danh tiếng Takashimaya",
+          "Tổ chức sự kiện tri ân quy mô 200+ khách mời và đối tác",
+          "Quản lý quan hệ và điều phối chiến dịch Booking KOLs/KOCs"
+        ],
+        attachment: "Hình ảnh sự kiện Takashimaya & Kế hoạch Activation"
       },
       {
         title: "Chiến Dịch Tăng Trưởng Doanh Thu 1 Tỷ/Tháng",
         tag: "Growth Marketing",
         desc: "Điều hành chiến dịch quảng cáo đa kênh và mùa vụ quà Tết đạt mốc doanh thu 1 tỷ VNĐ/tháng.",
         items: [
-          "Quản trị và tối ưu chiến dịch đa kênh Facebook Ads, Google Ads",
-          "Chiến dịch Quà Tết B2B bùng nổ doanh số với combo quà tặng cao cấp",
-          "Phủ ấn phẩm POSM Trade Marketing tại tất cả các điểm bán"
-        ]
+          "Quản trị và tối ưu chiến dịch đa kênh Google Ads & Facebook Ads",
+          "Chiến dịch Quà Tết bùng nổ doanh số kết hợp B2B Gift và điểm bán lẻ",
+          "Triển khai ấn phẩm POSM Trade Marketing tại tất cả các điểm bán"
+        ],
+        attachment: "Kế hoạch chiến dịch Quà Tết & Báo cáo doanh số"
       }
     ],
-    solution: [
-      "Hoàn thiện trọn bộ Brand Guidelines, moodboard và định vị bản sắc thương hiệu cao cấp, thanh nhã.",
-      "Xây dựng hệ sinh thái 4 website chuyên biệt (store.luclam.vn, trahoa.luclam.vn, gift.luclam.vn, vietnamtravel.com) phục vụ đa mục tiêu kinh doanh.",
-      "Triển khai hệ thống CRM quản trị khép kín từ data marketing đến chăm sóc và giao hàng.",
-      "Tiên phong tích hợp các luồng AI Automation vào quy trình chăm sóc khách hàng và marketing nội dung.",
-      "Tổ chức chuỗi Activation trực tiếp tại TTTM Takashimaya, phủ ấn phẩm POSM tại điểm bán và chủ trì sự kiện tri ân quy mô 200+ khách mời cùng dàn KOLs/KOCs."
-    ],
     results: [
-      "Đưa doanh thu từ con số 0 đạt mốc 1 Tỷ VNĐ/tháng.",
-      "Tuyển dụng, đào tạo và xây dựng bộ máy 8 nhân sự Marketing vận hành tự chủ.",
-      "Chiến dịch quà Tết bùng nổ doanh số với sự kết hợp nhuần nhuyễn giữa Ads, B2B Gift và Activation."
+      "Đưa doanh thu từ con số 0 đạt mốc 1 tỷ VNĐ/tháng.",
+      "Tuyển dụng, đào tạo và xây dựng bộ máy 8 nhân sự Marketing.",
+      "Hoàn thiện hệ sinh thái 4 website và hệ thống CRM quản trị dữ liệu khép kín."
     ],
-    tech: ["Doanh Thu 1 Tỷ/Tháng", "Brand Launching", "4 Websites", "CRM & AI System", "Takashimaya Activation", "Team 8 Mems"]
-  },
-
-  fclick: {
-    category: "Ứng Dụng Công Nghệ & MarTech",
-    company: "Công ty Fclick",
-    role: "Marketing Manager & MarTech Lead",
-    period: "06/2025 – 02/2026",
-    title: "Cắt Giảm 25% CPI & Tự Động Hóa Vận Hành Bằng AI Tiết Kiệm 30% Thời Gian",
-    challenge: "Chi phí thu hút người dùng ứng dụng (CPI - Cost Per Install) tăng cao, quy trình sáng tạo nội dung thủ công tốn nhiều nguồn lực và thiếu hệ thống đo lường tập trung.",
-    deliverables: [
-      {
-        title: "Cắt Giảm 25% Chi Phí Cài Đặt (CPI)",
-        tag: "Growth Hacking",
-        desc: "Tối ưu hóa chi phí thu hút người dùng cho nền tảng ứng dụng công nghệ số.",
-        items: [
-          "Tái cấu trúc tệp khách hàng mục tiêu và tracking phễu chuyển đổi qua MMP",
-          "Triển khai A/B Testing liên tục thông điệp và visual quảng cáo",
-          "Cắt giảm 25% CPI trên toàn bộ các kênh quảng cáo trả phí"
-        ]
-      },
-      {
-        title: "Ứng Dụng AI Automation (-30% Thời Gian)",
-        tag: "AI & MarTech",
-        desc: "Tiên phong đưa các giải pháp AI tự động hóa vào quy trình làm việc của đội ngũ marketing.",
-        items: [
-          "Xây dựng quy trình nghiên cứu thị trường và lập dàn ý nội dung bằng AI",
-          "Giải phóng 30% thời gian triển khai sáng tạo và sản xuất nội dung",
-          "Nâng cao tốc độ kiểm thử và nhân bản chiến dịch quảng cáo"
-        ]
-      },
-      {
-        title: "Phát Triển 4 Websites & Real-Time Dashboard",
-        tag: "MarTech & Data",
-        desc: "Xây dựng hạ tầng số và bảng điều khiển đo lường chiến dịch thời gian thực.",
-        items: [
-          "Phát triển hệ thống nhận diện số và 4 website vệ tinh",
-          "Thiết lập Dashboard đo lường realtime kết nối dữ liệu FB, Google, TikTok",
-          "Cá nhân hóa chiến dịch Push Notification giúp cải thiện +20% Retention"
-        ]
-      }
-    ],
-    solution: [
-      "Tái cấu trúc tệp khách hàng mục tiêu, tối ưu thông điệp A/B testing và chuẩn hóa hệ thống tracking phễu chuyển đổi qua Mobile Measurement.",
-      "Ứng dụng AI Automation vào quy trình nghiên cứu thị trường, lập dàn ý nội dung và kiểm tra dữ liệu chiến dịch.",
-      "Phát triển hệ thống nhận diện số, 4 website vệ tinh và Real-time Marketing Dashboard kết nối dữ liệu Facebook, Google, TikTok.",
-      "Cá nhân hóa chiến dịch Push Notification nhằm gia tăng sự gắn kết của người dùng với ứng dụng."
-    ],
-    results: [
-      "Cắt giảm thành công 25% CPI trên toàn bộ các kênh quảng cáo trả phí.",
-      "Tiết kiệm 30% thời gian triển khai sáng tạo và sản xuất nội dung cho team.",
-      "Cải thiện 20% tỷ lệ giữ chân người dùng (Retention Rate) sau khi cài đặt ứng dụng."
-    ],
-    tech: ["AI Automation", "CPI -25%", "Retention +20%", "Real-time Dashboard", "MarTech Lead", "Growth Hacking"]
+    tech: ["Doanh Thu 1 Tỷ/Tháng", "Brand Launching", "Team 8 Mems", "4 Websites", "CRM & AI System", "Takashimaya Activation"]
   },
 
   bravigo: {
-    category: "Thiết Bị Công Nghệ Ô Tô B2B & B2C",
+    category: "Thiết Bị Công Nghệ Ô Tô Thông Minh (B2B & B2C)",
     company: "Bravigo Việt Nam",
     role: "Marketing Manager",
     period: "03/2022 – 04/2024",
-    title: "Dẫn Dắt Tiếp Thị Đa Kênh & Mở Rộng Thị Phần Toàn Quốc Qua Hệ Thống Hàng Trăm Đại Lý",
-    challenge: "Thị trường màn hình và thiết bị ô tô thông minh cạnh tranh gay gắt, đòi hỏi sự kết hợp chặt chẽ giữa thương hiệu nhận diện với người tiêu dùng (B2C) và chính sách hỗ trợ đẩy hàng cho mạng lưới đại lý (B2B).",
+    title: "Mở Rộng Thị Phần Toàn Quốc Qua Mạng Lưới Hàng Trăm Đại Lý & Trade Marketing",
+    challenge: "Thị trường màn hình và thiết bị ô tô thông minh cạnh tranh gay gắt, đòi hỏi sự kết hợp chặt chẽ giữa xây dựng nhận diện thương hiệu với người tiêu dùng (B2C) và chính sách thúc đẩy hàng qua mạng lưới đại lý phân phối (B2B).",
+    strategy: "Hoạch định chiến lược marketing trung và dài hạn, quản lý đội ngũ 8 chuyên viên, phối hợp chặt chẽ với agency sáng tạo và hệ thống KOLs/KOCs chuyên môn cao ngành xe; phủ sóng ấn phẩm POSM tại hàng trăm đại lý toàn quốc.",
     deliverables: [
       {
         title: "Chiến Lược Mở Rộng Thị Phần B2B & B2C",
@@ -202,17 +199,19 @@ const caseStudiesData = {
           "Lãnh đạo và phân bổ ngân sách cho team Marketing 8 chuyên viên",
           "Kết hợp chiến lược nhận diện người tiêu dùng (B2C) và đẩy hàng đại lý (B2B)",
           "Làm việc cùng các agency sáng tạo chuyên sâu ngành ô tô"
-        ]
+        ],
+        attachment: "Kế hoạch tiếp thị mở rộng thị phần Bravigo"
       },
       {
         title: "Phủ POSM Trade Marketing Hàng Trăm Đại Lý",
         tag: "Trade Marketing",
         desc: "Triển khai bộ nhận diện thương hiệu tại điểm bán trên mạng lưới đại lý phân phối toàn quốc.",
         items: [
-          "Phủ ấn phẩm POSM tại hàng trăm đại lý và gara ủy quyền",
+          "Phối hợp khối kinh doanh triển khai POSM tại hàng trăm đại lý và gara ủy quyền",
           "Tối ưu CPA và chuẩn hóa quy trình phân bổ lead cho các đại lý khu vực",
-          "Thúc đẩy tỷ lệ chốt đơn và doanh số bán lẻ tại điểm bán"
-        ]
+          "Hỗ trợ tổ chức các sự kiện trải nghiệm lái thử tại đại lý"
+        ],
+        attachment: "Bộ nhận diện POSM tại đại lý & Gara ô tô"
       },
       {
         title: "Chiến Dịch Booking KOLs/KOCs Ngành Xe",
@@ -220,32 +219,28 @@ const caseStudiesData = {
         desc: "Hợp tác cùng mạng lưới chuyên gia và reviewer xe hơi uy tín tạo độ phủ nhận diện vượt trội.",
         items: [
           "Booking và định hướng nội dung cho các reviewer công nghệ xe hàng đầu",
-          "Quản lý nội dung đa kênh: Facebook, TikTok, YouTube, SEO Website",
-          "Định vị Bravigo trở thành top-of-mind trong phân khúc màn hình Android"
-        ]
+          "Sản xuất TVC, chuỗi video review công nghệ trên YouTube và TikTok",
+          "Định vị Bravigo trở thành thương hiệu top-of-mind trong phân khúc màn hình ô tô Android"
+        ],
+        attachment: "Danh sách KOLs hợp tác & Kịch bản TVC review"
       }
     ],
-    solution: [
-      "Lãnh đạo team Marketing 8 chuyên viên; điều phối ngân sách quảng cáo và hợp tác cùng các agency sáng tạo chuyên sâu ngành ô tô.",
-      "Phủ ấn phẩm POSM Trade Marketing tại hàng trăm đại lý phân phối và gara ủy quyền trên toàn quốc.",
-      "Triển khai chiến dịch Booking KOLs/KOCs chuyên môn cao trong giới xe hơi (Reviewer công nghệ xe, diễn đàn ô tô).",
-      "Quản lý đa kênh (Facebook, TikTok, Google, SEO, Website), tối ưu hóa CPA và tỷ lệ chuyển đổi cho các điểm bán."
-    ],
     results: [
-      "Thúc đẩy tăng trưởng nhận diện thương hiệu Bravigo trở thành top-of-mind trong phân khúc màn hình ô tô Android.",
-      "Gia tăng doanh số bán lẻ thông qua mạng lưới đại lý trên toàn quốc.",
-      "Tối ưu chi phí CPA và chuẩn hóa quy trình phân bổ lead cho các đại lý khu vực."
+      "Thúc đẩy tăng trưởng nhận diện thương hiệu Bravigo trên toàn quốc.",
+      "Phủ sóng ấn phẩm POSM tại hàng trăm đại lý phân phối và gara ủy quyền.",
+      "Quản lý điều phối hiệu quả đội ngũ 8 chuyên viên và mạng lưới đối tác agency/KOLs."
     ],
-    tech: ["Auto Tech", "B2B & B2C", "Trade Marketing", "Hàng Trăm Đại Lý", "Agency & KOL Management"]
+    tech: ["Auto Tech", "B2B & B2C", "Trade Marketing", "Team 8 Mems", "Hàng Trăm Đại Lý", "KOL Campaigns"]
   },
 
   lath: {
     category: "Bán Lẻ & Thương Mại Điện Tử",
     company: "LATH Group / TSD Group",
-    role: "Marketing Lead / Digital Manager",
-    period: "2019 – 2022",
-    title: "Tăng Trưởng Doanh Thu Ads +40% & Phủ Sóng Siêu Thị Lotte Mart, Sàn TMĐT",
-    challenge: "Cần đa dạng hóa kênh bán hàng từ online sang offline và sàn TMĐT, đồng thời xây dựng kênh tìm kiếm tự nhiên bền vững để giảm phụ thuộc vào quảng cáo.",
+    role: "Marketing Lead",
+    period: "08/2020 – 02/2022",
+    title: "Tăng Trưởng Doanh Thu Ads +40% & Phát Triển 5.000+ SEO Traffic Tự Nhiên",
+    challenge: "Cần tối ưu hóa chi phí quảng cáo trực tuyến, đa dạng hóa nguồn khách hàng sang tìm kiếm tự nhiên bền vững và đưa sản phẩm vào chuỗi siêu thị lớn cùng các sàn TMĐT.",
+    strategy: "Triển khai chiến lược Performance Ads với thầu thông minh kết hợp SEO On-page/Off-page toàn diện cho website lath.vn; đưa sản phẩm vào chuỗi siêu thị Lotte Mart; tối ưu UX/UI ứng dụng di động KingPang.",
     deliverables: [
       {
         title: "Tăng Trưởng Doanh Thu Từ Ads (+40%)",
@@ -253,99 +248,62 @@ const caseStudiesData = {
         desc: "Triển khai các chiến dịch quảng cáo trực tuyến hiệu quả cao, thúc đẩy doanh số bán lẻ bứt phá.",
         items: [
           "Tối ưu chiến lược thầu thông minh trên Google Ads & Facebook Ads",
-          "Tăng trưởng doanh thu từ quảng cáo +40% so với kỳ trước",
-          "Kiểm soát chi phí trên mỗi đơn hàng (CPA) ở mức tối ưu"
-        ]
+          "Tăng trưởng doanh thu từ quảng cáo +40% so với kỳ trước theo CV",
+          "Tối ưu hoạt động Marketing hỗ trợ hệ thống showroom bán lẻ"
+        ],
+        attachment: "Báo cáo tăng trưởng doanh thu Ads & ROAS"
       },
       {
         title: "Xây Dựng Kênh SEO Bền Vững (5.000+ Traffic)",
         tag: "SEO Organic",
         desc: "Chiến lược SEO toàn diện giúp website lath.vn tạo ra nguồn doanh thu tự nhiên ổn định.",
         items: [
-          "Đưa website đạt 5.000+ Organic Traffic/tháng ổn định",
-          "Tạo ra đều đặn 200+ đơn hàng tự nhiên/tháng không mất chi phí ads",
-          "Tối ưu cấu trúc On-page, từ khóa thương mại và trải nghiệm mua hàng"
-        ]
+          "Đưa website lath.vn đạt hơn 5.000 organic traffic/tháng tự nhiên",
+          "Tạo ra hơn 200 đơn hàng tự nhiên/tháng không mất chi phí quảng cáo",
+          "Tối ưu cấu trúc On-page, Off-page và trải nghiệm mua sắm"
+        ],
+        attachment: "Báo cáo tăng trưởng Organic Traffic & Từ khóa SEO"
       },
       {
         title: "Đưa Hàng Vào Siêu Thị Lotte Mart & Sàn TMĐT",
         tag: "Trade & E-Commerce",
         desc: "Mở rộng kênh phân phối từ bán lẻ truyền thống sang hệ thống siêu thị lớn và sàn TMĐT.",
         items: [
-          "Đưa sản phẩm thành công vào chuỗi siêu thị Lotte Mart (+25% mua hàng)",
+          "Đưa sản phẩm thành công vào chuỗi siêu thị Lotte Mart (tăng 25% tỷ lệ mua hàng)",
           "Vận hành gian hàng trên các sàn TMĐT lớn (Shopee, Lazada, Tiki)",
-          "Tối ưu UX/UI app KingPang giúp tăng +20% lượt tải ứng dụng"
-        ]
+          "Tối ưu UX/UI app KingPang giúp tăng 20% lượt tải ứng dụng"
+        ],
+        attachment: "Hồ sơ sản phẩm Lotte Mart & Case Study App KingPang"
       }
     ],
-    solution: [
-      "Tối ưu hóa các chiến dịch Google Ads & Facebook Ads với chiến lược thầu thông minh và phân nhóm tệp đối tượng chuẩn xác.",
-      "Phát triển chiến lược SEO toàn diện cho website lath.vn từ nghiên cứu từ khóa, tối ưu On-page đến xây dựng liên kết chất lượng.",
-      "Triển khai đưa sản phẩm vào chuỗi siêu thị Lotte Mart và các sàn TMĐT lớn (Shopee, Lazada, Tiki).",
-      "Tối ưu hóa giao diện và trải nghiệm người dùng (UX/UI) ứng dụng KingPang; sản xuất chuỗi video review sản phẩm."
-    ],
     results: [
-      "Doanh thu từ quảng cáo tăng trưởng +40% so với kỳ trước.",
-      "Website đạt 5.000+ Organic Traffic/tháng và tạo ra hơn 200 đơn hàng tự nhiên/tháng hoàn toàn miễn phí chi phí ads.",
-      "Tăng 25% tỷ lệ mua hàng khi kết hợp với kênh siêu thị và tăng 20% lượt tải app KingPang."
+      "Tăng 40% doanh thu từ quảng cáo so với kỳ trước.",
+      "Hơn 5.000 organic traffic/tháng và hơn 200 đơn hàng tự nhiên/tháng.",
+      "Tăng 25% tỷ lệ mua hàng khi vào chuỗi Lotte Mart; tăng 20% lượt tải app KingPang."
     ],
-    tech: ["Ads Rev +40%", "SEO 5k Traffic", "Lotte Mart Trade", "UX/UI App KingPang", "E-Commerce"]
+    tech: ["Ads Rev +40%", "SEO 5k Traffic", "200+ Đơn Tự Nhiên", "Lotte Mart Trade", "UX/UI App KingPang"]
   }
 };
 
-// Initialize Application
+// Initialize Controller
 document.addEventListener("DOMContentLoaded", () => {
-  initTheme();
   initLucide();
   initStatsCounter();
-  initFilters();
   initModal();
   initMobileNav();
-  initCopyTools();
+  initSmoothScroll();
 });
 
-// 1. Theme Management (Dark / Light)
-function initTheme() {
-  const themeToggle = document.getElementById("themeToggle");
-  const savedTheme = localStorage.getItem("portfolio_theme") || "dark";
-  
-  document.documentElement.setAttribute("data-theme", savedTheme);
-  updateThemeIcon(savedTheme);
-
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
-      const newTheme = currentTheme === "dark" ? "light" : "dark";
-      
-      document.documentElement.setAttribute("data-theme", newTheme);
-      localStorage.setItem("portfolio_theme", newTheme);
-      updateThemeIcon(newTheme);
-    });
-  }
-}
-
-function updateThemeIcon(theme) {
-  const themeToggle = document.getElementById("themeToggle");
-  if (!themeToggle) return;
-  
-  if (theme === "light") {
-    themeToggle.innerHTML = '<i data-lucide="moon" style="width: 18px; height: 18px;"></i>';
-  } else {
-    themeToggle.innerHTML = '<i data-lucide="sun" style="width: 18px; height: 18px;"></i>';
-  }
-  initLucide();
-}
-
-// 2. Lucide Icons Helper
+// 1. Lucide Icons Helper
 function initLucide() {
   if (window.lucide) {
     window.lucide.createIcons();
   }
 }
 
-// 3. Animated Stats Counter
+// 2. Animated Stats Counter (Intersection Observer)
 function initStatsCounter() {
-  const statNumbers = document.querySelectorAll(".stat-number[data-target]");
+  const statNumbers = document.querySelectorAll(".impact-num[data-target]");
   if (!statNumbers.length) return;
 
   const observer = new IntersectionObserver((entries, obs) => {
@@ -355,7 +313,7 @@ function initStatsCounter() {
         obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.3 });
 
   statNumbers.forEach(el => observer.observe(el));
 }
@@ -365,7 +323,7 @@ function animateValue(el) {
   const prefix = el.getAttribute("data-prefix") || "";
   const suffix = el.getAttribute("data-suffix") || "";
   const target = parseFloat(rawTarget);
-  const duration = 1800;
+  const duration = 1600;
   const start = 0;
   const startTime = performance.now();
 
@@ -373,8 +331,8 @@ function animateValue(el) {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
     
-    // EaseOutQuad
-    const easeProgress = 1 - (1 - progress) * (1 - progress);
+    // EaseOutCubic
+    const easeProgress = 1 - Math.pow(1 - progress, 3);
     const current = Math.floor(start + (target - start) * easeProgress);
 
     el.innerText = `${prefix}${current}${suffix}`;
@@ -389,39 +347,7 @@ function animateValue(el) {
   requestAnimationFrame(update);
 }
 
-// 4. Case Studies Category Filter
-function initFilters() {
-  const filterBtns = document.querySelectorAll(".filter-btn");
-  const caseCards = document.querySelectorAll(".case-card");
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      filterBtns.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      const filterVal = btn.getAttribute("data-filter");
-
-      caseCards.forEach(card => {
-        const cardCategory = card.getAttribute("data-category");
-        if (filterVal === "all" || cardCategory === filterVal) {
-          card.style.display = "flex";
-          setTimeout(() => {
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
-          }, 50);
-        } else {
-          card.style.opacity = "0";
-          card.style.transform = "translateY(15px)";
-          setTimeout(() => {
-            card.style.display = "none";
-          }, 200);
-        }
-      });
-    });
-  });
-}
-
-// 5. Deep-Dive Modal System
+// 3. Deep-Dive Modal System
 function initModal() {
   const modalOverlay = document.getElementById("caseModal");
   const modalClose = document.getElementById("modalClose");
@@ -470,24 +396,7 @@ function populateModal(data) {
   document.getElementById("modalTitle").innerText = data.title;
   document.getElementById("modalRolePeriod").innerText = `${data.role} • ${data.period}`;
   document.getElementById("modalChallenge").innerText = data.challenge;
-
-  // Solutions list
-  const solList = document.getElementById("modalSolutions");
-  solList.innerHTML = data.solution.map(s => `
-    <li>
-      <i data-lucide="check-circle" style="width: 18px; height: 18px;"></i>
-      <span>${s}</span>
-    </li>
-  `).join("");
-
-  // Results list
-  const resList = document.getElementById("modalResults");
-  resList.innerHTML = data.results.map(r => `
-    <li>
-      <i data-lucide="trending-up" style="width: 18px; height: 18px;"></i>
-      <span><strong>${r}</strong></span>
-    </li>
-  `).join("");
+  document.getElementById("modalStrategy").innerText = data.strategy;
 
   // Deliverables list
   const delivList = document.getElementById("modalDeliverables");
@@ -529,16 +438,25 @@ function populateModal(data) {
     }
   }
 
+  // Results list
+  const resList = document.getElementById("modalResults");
+  resList.innerHTML = data.results.map(r => `
+    <li>
+      <i data-lucide="trending-up" style="width: 18px; height: 18px;"></i>
+      <span><strong>${r}</strong></span>
+    </li>
+  `).join("");
+
   // Tags
   const tagList = document.getElementById("modalTags");
   tagList.innerHTML = data.tech.map(t => `
-    <span class="case-tag" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-gold-light); font-weight: 600;">${t}</span>
+    <span class="case-tag-item" style="background: var(--accent-emerald-subtle); color: var(--accent-emerald-text); border-color: var(--accent-emerald-border); font-weight: 600;">${t}</span>
   `).join("");
 
   initLucide();
 }
 
-// 6. Mobile Navigation
+// 4. Mobile Navigation
 function initMobileNav() {
   const toggleBtn = document.getElementById("mobileToggle");
   const navLinks = document.getElementById("navLinks");
@@ -551,7 +469,6 @@ function initMobileNav() {
       initLucide();
     });
 
-    // Close on link click
     navLinks.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("active");
@@ -562,15 +479,36 @@ function initMobileNav() {
   }
 }
 
-// 7. Copy contact info helper
-function initCopyTools() {
-  window.copyText = function(text, el) {
-    navigator.clipboard.writeText(text).then(() => {
-      const originalText = el.innerText;
-      el.innerText = "✓ Đã sao chép!";
-      setTimeout(() => {
-        el.innerText = originalText;
-      }, 2000);
+// 5. Smooth Scroll & Active Nav Spy
+function initSmoothScroll() {
+  const sections = document.querySelectorAll("section[id], header[id]");
+  const navLinks = document.querySelectorAll(".nav-links a[href^='#']");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(sec => {
+      const top = sec.offsetTop - 100;
+      if (window.pageYOffset >= top) {
+        current = sec.getAttribute("id");
+      }
     });
-  };
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  });
 }
+
+// 6. Copy text utility
+window.copyText = function(text, el) {
+  navigator.clipboard.writeText(text).then(() => {
+    const originalText = el.innerText;
+    el.innerText = "✓ Đã sao chép!";
+    setTimeout(() => {
+      el.innerText = originalText;
+    }, 2000);
+  });
+};
