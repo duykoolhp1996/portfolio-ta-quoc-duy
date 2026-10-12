@@ -70,12 +70,12 @@ const caseStudiesData = {
   },
 
   fclick: {
-    category: "Nền Tảng Ứng Dụng Công Nghệ Số",
-    company: "Công ty Fclick",
+    category: "Ứng Dụng Di Động (Mobile App) & Công Nghệ",
+    company: "Công ty Fclick (Ứng Dụng Mobile App)",
     role: "Quản Lý Marketing & Trưởng Nhóm MarTech",
     period: "06/2025 – 02/2026",
-    title: "Cắt Giảm 25% Chi Phí Tìm Khách & Tự Động Hóa AI Tiết Kiệm 30% Thời Gian",
-    challenge: "Chi phí quảng cáo để thu hút người dùng cài đặt ứng dụng ngày càng tăng cao, khâu sản xuất nội dung tốn nhiều thời gian và thiếu báo cáo số liệu tập trung.",
+    title: "Cắt Giảm 25% Chi Phí Tải Ứng Dụng (CPI) & Tự Động Hóa AI Tiết Kiệm 30% Thời Gian",
+    challenge: "Chi phí quảng cáo để thu hút người dùng tải ứng dụng (CPI) ngày càng tăng cao, khâu sản xuất nội dung tốn nhiều thời gian và thiếu báo cáo số liệu tập trung.",
     strategy: "Điều chỉnh tệp khách hàng, thử nghiệm liên tục các mẫu quảng cáo và đo lường chính xác từng bước. Ứng dụng AI tự động hóa khâu lên ý tưởng nội dung và kết nối số liệu về một bảng theo dõi chung.",
     deliverables: [
       {
@@ -121,19 +121,19 @@ const caseStudiesData = {
   },
 
   luclam: {
-    category: "Chuỗi F&B & Quà Tặng Cao Cấp",
-    company: "Công Ty TNHH TM DV SX Lục Lam (Lục Lam Group)",
+    category: "Chuỗi Trà Thảo Mộc & Quà Tặng Cao Cấp",
+    company: "Công Ty TNHH TM DV SX Lục Lam (Trà Thảo Mộc & Quà Tặng)",
     logoUrl: "portfolio_assets/images/logo_luclam.png",
     role: "Quản Lý Marketing",
     period: "04/2024 – 04/2025",
     title: "Xây Dựng Thương Hiệu Từ Số 0 & Đạt Doanh Thu 40 Tỷ Đồng",
-    challenge: "Gia nhập ngành F&B trà sữa và quà tặng cao cấp từ con số 0: chưa có thương hiệu, chưa có kênh bán hàng online và thiếu quy trình tiếp nhận đơn hàng.",
+    challenge: "Gia nhập ngành trà hoa thảo mộc và quà tặng cao cấp từ con số 0: chưa có thương hiệu, chưa có kênh bán hàng online và thiếu quy trình tiếp nhận đơn hàng.",
     strategy: "Xây dựng trọn bộ nhận diện thương hiệu cao cấp, phát triển hệ thống 4 website kết nối phần mềm quản lý khách hàng, kết hợp quảng cáo mùa vụ với sự kiện trải nghiệm tại trung tâm thương mại Takashimaya.",
     deliverables: [
       {
         title: "Xây Dựng Nhận Diện Thương Hiệu Từ Đầu",
         tag: "Xây Dựng Thương Hiệu",
-        desc: "Định vị phong cách chuỗi F&B trà hoa và quà tặng cao cấp từ con số 0.",
+        desc: "Định vị phong cách chuỗi trà hoa thảo mộc và quà tặng cao cấp từ con số 0.",
         items: [
           "Thiết lập bộ quy chuẩn nhận diện, màu sắc và phong cách thương hiệu",
           "Thiết kế toàn bộ bao bì, menu và ấn phẩm truyền thông đồng bộ",
@@ -184,12 +184,12 @@ const caseStudiesData = {
   },
 
   bravigo: {
-    category: "Thiết Bị Công Nghệ Ô Tô Thông Minh (B2B & B2C)",
-    company: "Bravigo Việt Nam & Thiết Bị Công Nghệ Xe",
+    category: "Ngành Xe Ô Tô & Phụ Kiện Thông Minh (B2B & B2C)",
+    company: "Bravigo Việt Nam (Thiết Bị Công Nghệ Xe Ô Tô)",
     role: "Quản Lý Marketing",
     period: "03/2022 – 04/2024",
     title: "Phát Triển Thị Phần Qua Hàng Trăm Đại Lý & Chủ Trì Ra Mắt Flagship Ottocast P3",
-    challenge: "Thị trường phụ kiện công nghệ ô tô cạnh tranh khốc liệt. Cần kết hợp giữa quảng bá cho người lái xe và chính sách phân phối cho hệ thống gara, đại lý. Đồng thời cần tổ chức sự kiện ra mắt hoành tráng cho sản phẩm chiến lược Ottocast P3.",
+    challenge: "Thị trường phụ kiện công nghệ xe ô tô cạnh tranh khốc liệt. Cần kết hợp giữa quảng bá cho người lái xe và chính sách phân phối cho hệ thống gara, đại lý. Đồng thời cần tổ chức sự kiện ra mắt hoành tráng cho sản phẩm chiến lược Ottocast P3.",
     strategy: "Hoạch định chiến lược tiếp thị, quản lý đội ngũ 8 chuyên viên, phối hợp cùng các kênh đánh giá xe uy tín và phủ sóng tài liệu trưng bày tại hàng trăm đại lý. Đảm nhiệm vai trò Trưởng Ban Tổ Chức sự kiện và tự thiết kế toàn bộ Slide thuyết trình giới thiệu Ottocast P3.",
     deliverables: [
       {
@@ -254,18 +254,18 @@ const caseStudiesData = {
   },
 
   lath: {
-    category: "Bán Lẻ & Thương Mại Điện Tử",
-    company: "LATH Group / TSD Group",
+    category: "Công Ty Mỹ Phẩm & Thương Mại Điện Tử",
+    company: "LATH Group (Thương Hiệu Mỹ Phẩm & Bán Lẻ)",
     role: "Trưởng Nhóm Marketing",
     period: "08/2020 – 02/2022",
-    title: "Tăng 40% Doanh Thu Quảng Cáo & Đạt 5.000 Lượt Khách Tự Nhiên/Tháng",
-    challenge: "Cần tối ưu chi phí quảng cáo, mở rộng nguồn khách hàng tự nhiên từ tìm kiếm Google và đưa sản phẩm vào hệ thống siêu thị lớn cùng các sàn thương mại điện tử.",
-    strategy: "Tối ưu hóa quảng cáo Google và Facebook, đẩy mạnh từ khóa website lath.vn lên top tìm kiếm tự nhiên, đưa sản phẩm vào chuỗi siêu thị Lotte Mart và cải thiện trải nghiệm ứng dụng KingPang.",
+    title: "Tăng 40% Doanh Thu Quảng Cáo Mỹ Phẩm & Đạt 5.000 Lượt Khách Tự Nhiên/Tháng",
+    challenge: "Ngành mỹ phẩm cạnh tranh cao, cần tối ưu chi phí quảng cáo, mở rộng nguồn khách hàng tự nhiên từ tìm kiếm Google và đưa sản phẩm mỹ phẩm vào hệ thống siêu thị lớn cùng các sàn thương mại điện tử.",
+    strategy: "Tối ưu hóa quảng cáo Google và Facebook cho các dòng mỹ phẩm, đẩy mạnh từ khóa website lath.vn lên top tìm kiếm tự nhiên, đưa sản phẩm mỹ phẩm vào chuỗi siêu thị Lotte Mart và cải thiện trải nghiệm ứng dụng mua sắm KingPang.",
     deliverables: [
       {
-        title: "Tăng Trưởng 40% Doanh Thu Quảng Cáo",
+        title: "Tăng Trưởng 40% Doanh Thu Quảng Cáo Mỹ Phẩm",
         tag: "Quảng Cáo Trực Tuyến",
-        desc: "Tối ưu ngân sách quảng cáo để tăng doanh số bán lẻ vượt bậc.",
+        desc: "Tối ưu ngân sách quảng cáo để tăng doanh số bán lẻ mỹ phẩm vượt bậc.",
         items: [
           "Tối ưu giá thầu thông minh trên Google Ads và Facebook Ads",
           "Tăng trưởng doanh thu từ quảng cáo 40% so với kỳ trước",
@@ -342,11 +342,11 @@ function initGrowthChart() {
     type: "bar",
     data: {
       labels: [
-        "Bravigo (AutoTech)",
-        "Lục Lam (F&B Chain)",
-        "Fclick (SaaS App)",
-        "Sala Garden (BĐS 5*)",
-        "LATH Group (AI MarTech)"
+        "Bravigo (Ngành Xe Ô Tô)",
+        "Lục Lam (Trà Thảo Mộc)",
+        "Fclick (Ứng Dụng App)",
+        "Sala Garden (BĐS Sinh Thái)",
+        "LATH Group (Mỹ Phẩm)"
       ],
       datasets: [
         {

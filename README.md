@@ -20,14 +20,14 @@
 ## 💼 Các Dự Án & Case Studies Tiêu Biểu
 1. **Công Ty CP TM & DV Sala Garden** (BĐS Hoa viên sinh thái 5 sao) - *03/2026 – Hiện tại*
    - Quản trị ngân sách 300Tr/tháng, 50+ Q.Leads/tháng, điều hành 2 teams và cỗ máy 130+ videos/tháng.
-2. **Công ty Fclick** (Nền tảng ứng dụng công nghệ số) - *06/2025 – 02/2026*
-   - Cắt giảm 25% CPI, tự động hóa bằng AI tiết kiệm 30% thời gian, cải thiện 20% Retention rate.
-3. **Công Ty TNHH TM DV SX Lục Lam** (Chuỗi F&B & Quà tặng) - *04/2024 – 04/2025*
+2. **Công ty Fclick** (Ứng dụng di động - Mobile App & Công nghệ) - *06/2025 – 02/2026*
+   - Cắt giảm 25% CPI tải ứng dụng, tự động hóa bằng AI tiết kiệm 30% thời gian, cải thiện 20% Retention rate.
+3. **Công Ty TNHH TM DV SX Lục Lam** (Chuỗi Trà Thảo Mộc & Quà Tặng Cao Cấp) - *04/2024 – 04/2025*
    - Tăng trưởng doanh thu 40 Tỷ từ số 0, hệ sinh thái 4 websites, Activation Takashimaya, Gala 200+ khách.
-4. **Bravigo Việt Nam** (Thiết bị công nghệ ô tô thông minh - B2B & B2C) - *03/2022 – 04/2024*
+4. **Bravigo Việt Nam** (Ngành Xe Ô Tô & Phụ Kiện Thông Minh - B2B & B2C) - *03/2022 – 04/2024*
    - Mở rộng thị phần toàn quốc qua mạng lưới hàng trăm đại lý phân phối và gara ủy quyền.
-5. **LATH Group / TSD Group** (Bán lẻ & Thương mại điện tử) - *2019 – 2022*
-   - Ads revenue +40%, SEO đạt 5.000+ organic traffic/tháng với 200+ đơn tự nhiên, phủ hàng chuỗi siêu thị Lotte Mart.
+5. **LATH Group / TSD Group** (Công Ty Mỹ Phẩm & Bán Lẻ TMĐT) - *2019 – 2022*
+   - Tăng trưởng doanh thu mỹ phẩm +40%, SEO đạt 5.000+ organic traffic/tháng với 200+ đơn tự nhiên, phủ hàng chuỗi siêu thị Lotte Mart.
 
 ---
 

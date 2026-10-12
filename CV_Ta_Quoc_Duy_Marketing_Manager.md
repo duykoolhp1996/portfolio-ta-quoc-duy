@@ -9,14 +9,14 @@
 ---
 
 ## TÓM TẮT NĂNG LỰC CỐT LÕI (EXECUTIVE SUMMARY)
-**Senior Marketing Manager** với **8+ năm kinh nghiệm** thực chiến trong hoạch định chiến lược tiếp thị đa kênh (Omnichannel), xây dựng thương hiệu từ số 0 (Zero to Hero) và dẫn dắt song song **Team Digital Marketing** & **Team Branding** quy mô 10 nhân sự. Thế mạnh độc nhất kết hợp giữa **tư duy logic Bách Khoa (CNTT)** với năng lực quản trị hiệu suất cao: trực tiếp điều hành ngân sách quảng cáo quy mô lớn đạt đỉnh **lên tới 700 triệu/tháng** (hiện quản lý **300 triệu/tháng** tại Sala Garden, đem về đều đặn **50+ Qualified Leads/tháng**), chỉ đạo cỗ máy sản xuất nội dung quy mô lớn **130+ videos/tháng**, tiên phong **tự xây dựng AI Agents tự hành & Vibe Coding phát triển SaaS tools** nội bộ giải phóng 30% thời gian vận hành và dẫn dắt các chiến dịch đạt doanh thu **40 tỷ VNĐ** trong các ngành Bất động sản sinh thái, F&B, Công nghệ & Bán lẻ.
+**Senior Marketing Manager** với **8+ năm kinh nghiệm** thực chiến trong hoạch định chiến lược tiếp thị đa kênh (Omnichannel), xây dựng thương hiệu từ số 0 (Zero to Hero) và dẫn dắt song song **Team Digital Marketing** & **Team Branding** quy mô 10 nhân sự. Thế mạnh độc nhất kết hợp giữa **tư duy logic Bách Khoa (CNTT)** với năng lực quản trị hiệu suất cao: trực tiếp điều hành ngân sách quảng cáo quy mô lớn đạt đỉnh **lên tới 700 triệu/tháng** (hiện quản lý **300 triệu/tháng** tại Sala Garden, đem về đều đặn **50+ Qualified Leads/tháng**), chỉ đạo cỗ máy sản xuất nội dung quy mô lớn **130+ videos/tháng**, tiên phong **tự xây dựng AI Agents tự hành & Vibe Coding phát triển SaaS tools** nội bộ giải phóng 30% thời gian vận hành và dẫn dắt các chiến dịch đạt doanh thu **40 tỷ VNĐ** trong các ngành Bất động sản sinh thái, Trà thảo mộc, Công nghệ & Mỹ phẩm bán lẻ.
 
 ---
 
 ## CÁC CHỈ SỐ ẤN TƯỢNG (KEY IMPACT METRICS)
 - **130+ Videos/Tháng:** Công suất sản xuất video phủ nhận diện đa kênh (Shorts, Reels, TikTok, YouTube do Brand Team triển khai).
 - **Peak 700 Triệu Ads:** Ngân sách quảng cáo lớn nhất từng điều hành & tối ưu ROI (hiện tại quản lý 300 triệu/tháng tại Sala Garden, duy trì 50+ Q.Leads/tháng).
-- **40 Tỷ VNĐ Doanh Thu:** Xây dựng thương hiệu chuỗi F&B từ số 0; tăng trưởng doanh thu ads +40%; cắt giảm 25% CPI.
+- **40 Tỷ VNĐ Doanh Thu:** Xây dựng thương hiệu chuỗi trà thảo mộc từ số 0; tăng trưởng doanh thu ads +40%; cắt giảm 25% CPI.
 - **Lãnh đạo 2 Teams chuyên biệt (10 nhân sự):** Điều hành song song Team Digital Marketing và Team Branding; thiết lập bộ khung KPIs định lượng chi tiết cho từng vị trí.
 
 ---
@@ -33,7 +33,7 @@
 
 ---
 
-### MARKETING MANAGER | Công ty Fclick (Nền tảng ứng dụng công nghệ số)
+### MARKETING MANAGER | Công ty Fclick (Ứng dụng di động - Mobile App)
 *06/2025 – 02/2026*
 - **Tối ưu hóa chi phí quảng cáo (Cost Efficiency):** Cắt giảm thành công **25% CPI (Cost Per Install)** thông qua tái cấu trúc tệp khách hàng mục tiêu, tối ưu thông điệp A/B testing và chuẩn hóa hệ thống tracking phễu chuyển đổi.
 - **Số hóa & Tự động hóa bằng AI (MarTech Lead):** Tiên phong ứng dụng các công cụ AI Automation vào quy trình làm việc của team, **tiết kiệm 30% thời gian** triển khai sáng tạo và sản xuất nội dung.
@@ -42,17 +42,17 @@
 
 ---
 
-### MARKETING MANAGER | Công Ty TNHH TM DV SX Lục Lam (Chuỗi F&B & Quà tặng)
+### MARKETING MANAGER | Công Ty TNHH TM DV SX Lục Lam (Chuỗi Trà Thảo Mộc & Quà Tặng)
 *04/2024 – 04/2025*
-- **Tăng trưởng doanh thu 40 Tỷ từ số 0:** Dẫn dắt chiến lược marketing đưa thương hiệu trà sữa & quà tặng cao cấp đạt mốc **doanh thu 40 tỷ VNĐ** từ con số 0; trực tiếp tuyển dụng, đào tạo và quản lý **8 nhân sự Marketing**.
+- **Tăng trưởng doanh thu 40 Tỷ từ số 0:** Dẫn dắt chiến lược marketing đưa thương hiệu trà hoa thảo mộc & quà tặng cao cấp đạt mốc **doanh thu 40 tỷ VNĐ** từ con số 0; trực tiếp tuyển dụng, đào tạo và quản lý **8 nhân sự Marketing**.
 - **Kiến tạo thương hiệu & Hệ sinh thái 4 Websites:** Hoàn thiện trọn bộ Brand Guideline, moodboard định vị chuỗi; phát triển **4 website chuyên biệt** (*store.luclam.vn, trahoa.luclam.vn, gift.luclam.vn, vietnamtravel.com*) và hệ thống CRM quản trị khép kín từ data đến giao hàng.
 - **Ứng dụng AI Automation & CRM:** Tích hợp các luồng tự động hóa bằng AI vào quy trình chăm sóc khách hàng và marketing; điều hành chiến dịch đa kênh Google & Facebook Ads, chiến dịch quà Tết bùng nổ doanh số.
-- **Activation & Sự kiện quy mô lớn:** Tổ chức chuỗi Activation tại **TTTM Takashimaya**; triển khai ấn phẩm POSM Trade Marketing tại điểm bán; chủ trì sự kiện tri n quy mô **200+ khách mời**; quản lý quan hệ KOLs/KOCs.
+- **Activation & Sự kiện quy mô lớn:** Tổ chức chuỗi Activation tại **TTTM Takashimaya**; triển khai ấn phẩm POSM Trade Marketing tại điểm bán; chủ trì sự kiện tri ân quy mô **200+ khách mời**; quản lý quan hệ KOLs/KOCs.
 - *Công nghệ & Kỹ năng:* Doanh thu 40 Tỷ, Brand Launching, Team 8 Mems, CRM & AI System, Takashimaya Activation.
 
 ---
 
-### MARKETING MANAGER | Bravigo Việt Nam (Thiết bị công nghệ ô tô thông minh - B2B & B2C)
+### MARKETING MANAGER | Bravigo Việt Nam (Thiết bị công nghệ xe ô tô - B2B & B2C)
 *03/2022 – 04/2024*
 - **Chiến lược tiếp thị & Mở rộng thị phần:** Lập kế hoạch marketing ngắn và trung hạn cho hệ sinh thái công nghệ ô tô thông minh; thúc đẩy tăng trưởng nhận diện và chiếm lĩnh thị phần toàn quốc.
 - **Quản lý đội ngũ & Mạng lưới đối tác:** Lãnh đạo team Marketing **8 chuyên viên**; điều phối ngân sách, làm việc cùng các agency sáng tạo và hệ thống KOL/KOC trong ngành xe hơi.
@@ -61,11 +61,11 @@
 
 ---
 
-### MARKETING LEAD / DIGITAL MANAGER | LATH Group / TSD Group (Bán lẻ & Thương mại điện tử)
+### MARKETING LEAD / DIGITAL MANAGER | LATH Group / TSD Group (Thương hiệu Mỹ phẩm & Bán lẻ / TMĐT)
 *2019 – 2022*
 - **Tăng trưởng doanh thu từ Ads +40%:** Triển khai Google Ads & Facebook Ads hiệu quả cao, giúp doanh thu từ quảng cáo **tăng trưởng 40%** so với kỳ trước.
 - **Phát triển kênh SEO tự nhiên:** Tối ưu SEO đưa website *lath.vn* đạt **5.000+ organic traffic/tháng** và phát sinh đều đặn **200+ đơn hàng tự nhiên/tháng**.
-- **Thương mại điện tử & Trade Marketing:** Đưa sản phẩm vào chuỗi siêu thị **Lotte Mart** và các sàn TMĐT lớn (tăng **25% tỷ lệ mua hàng**); tối ưu UX/UI app KingPang (tăng **20% lượt tải**); sản xuất chuỗi video review YouTube/TikTok nhân đôi mức độ nhận diện.
+- **Thương mại điện tử & Trade Marketing:** Đưa các dòng sản phẩm mỹ phẩm vào chuỗi siêu thị **Lotte Mart** và các sàn TMĐT lớn (tăng **25% tỷ lệ mua hàng**); tối ưu UX/UI app KingPang (tăng **20% lượt tải**); sản xuất chuỗi video review nhân đôi mức độ nhận diện.
 - *Công nghệ & Kỹ năng:* +40% Ads Rev, SEO 5k Traffic, Lotte Mart Trade, UX/UI KingPang.
 
 ---
