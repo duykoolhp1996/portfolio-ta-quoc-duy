@@ -123,6 +123,7 @@ const caseStudiesData = {
   luclam: {
     category: "Chuỗi F&B & Quà Tặng Cao Cấp",
     company: "Công Ty TNHH TM DV SX Lục Lam (Lục Lam Group)",
+    logoUrl: "portfolio_assets/images/logo_luclam.png",
     role: "Marketing Manager",
     period: "04/2024 – 04/2025",
     title: "Kiến Tạo Thương Hiệu Từ Số 0 (Zero to Hero) & Bứt Phá Doanh Thu 1 Tỷ VNĐ/Tháng",
@@ -535,7 +536,11 @@ window.openCaseModal = function(caseKey) {
   // Populate data
   document.getElementById("modalCategory").innerText = data.category;
   document.getElementById("modalTitle").innerText = data.title;
-  document.getElementById("modalCompany").innerText = data.company;
+  if (data.logoUrl) {
+    document.getElementById("modalCompany").innerHTML = `<img src="${data.logoUrl}" alt="Logo" style="width: 20px; height: 20px; border-radius: 4px; vertical-align: middle; margin-right: 6px; display: inline-block;"> <span>${data.company}</span>`;
+  } else {
+    document.getElementById("modalCompany").innerText = data.company;
+  }
   document.getElementById("modalRole").innerText = data.role;
   document.getElementById("modalPeriod").innerText = data.period;
   document.getElementById("modalChallenge").innerText = data.challenge;
