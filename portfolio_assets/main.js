@@ -72,6 +72,7 @@ const caseStudiesData = {
   fclick: {
     category: "Ứng Dụng Di Động (Mobile App) & Công Nghệ",
     company: "Công ty Fclick (Ứng Dụng Mobile App)",
+    logoUrl: "portfolio_assets/images/logo_fclick_white_text.png",
     role: "Quản Lý Marketing & Trưởng Nhóm MarTech",
     period: "06/2025 – 02/2026",
     title: "Cắt Giảm 25% Chi Phí Tải Ứng Dụng (CPI) & Tự Động Hóa AI Tiết Kiệm 30% Thời Gian",
@@ -644,7 +645,7 @@ window.openCaseModal = function(caseKey) {
   document.getElementById("modalCategory").innerText = `Hạng mục: ${data.category}`;
   document.getElementById("modalTitle").innerText = data.title;
   if (data.logoUrl) {
-    document.getElementById("modalCompany").innerHTML = `<img src="${data.logoUrl}" alt="Logo" style="width: 20px; height: 20px; border-radius: 4px; vertical-align: middle; margin-right: 6px; display: inline-block;"> <span>${data.company}</span>`;
+    document.getElementById("modalCompany").innerHTML = `<img src="${data.logoUrl}" alt="Logo" style="height: 22px; width: auto; max-width: 90px; object-fit: contain; vertical-align: middle; margin-right: 8px; display: inline-block;"> <span>${data.company}</span>`;
   } else {
     document.getElementById("modalCompany").innerText = data.company;
   }
