@@ -328,82 +328,201 @@ window.switchChartTab = function(tabId, btn) {
   }
 };
 
-// Interactive Chart.js Controller
+// Interactive Company Boards & Chart Controller
 let growthChartInstance = null;
-function initGrowthChart() {
+
+const companyChartData = {
+  sala: {
+    title: "Phân Bổ Hoạt Động & Tăng Trưởng Khách VIP (Sala Garden)",
+    badge: "BĐS Hoa Viên Sinh Thái 5 Sao",
+    labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Hiện Tại"],
+    datasets: [
+      {
+        label: "Khách VIP Thực Tế Quan Tâm (Leads)",
+        data: [35, 42, 49, 54],
+        type: "line",
+        borderColor: "#10B981",
+        backgroundColor: "#10B981",
+        borderWidth: 3,
+        tension: 0.35,
+        pointBackgroundColor: "#10B981",
+        pointBorderColor: "#FFFFFF",
+        pointBorderWidth: 2,
+        pointRadius: 6,
+        yAxisID: "y"
+      },
+      {
+        label: "Số Lượng Video Sản Xuất / Tháng",
+        data: [85, 110, 125, 135],
+        backgroundColor: "rgba(6, 182, 212, 0.8)",
+        borderRadius: 8,
+        yAxisID: "y"
+      }
+    ],
+    yCallback: val => val + " chỉ số"
+  },
+  fclick: {
+    title: "Tối Ưu Chi Phí CPI & Tiết Kiệm Thời Gian Vận Hành (Fclick)",
+    badge: "Ứng Dụng Di Động & Công Nghệ",
+    labels: ["Giai Đoạn 1", "Giai Đoạn 2", "Giai Đoạn 3", "Hoàn Thiện"],
+    datasets: [
+      {
+        label: "Chỉ Số Chi Phí Tải App (CPI)",
+        data: [100, 88, 79, 75],
+        type: "line",
+        borderColor: "#06B6D4",
+        backgroundColor: "#06B6D4",
+        borderWidth: 3,
+        tension: 0.35,
+        pointBackgroundColor: "#06B6D4",
+        pointBorderColor: "#FFFFFF",
+        pointBorderWidth: 2,
+        pointRadius: 6,
+        yAxisID: "y"
+      },
+      {
+        label: "Thời Gian Tiết Kiệm Nhờ AI (%)",
+        data: [5, 15, 25, 30],
+        backgroundColor: "rgba(16, 185, 129, 0.8)",
+        borderRadius: 8,
+        yAxisID: "y"
+      }
+    ],
+    yCallback: val => val + "%"
+  },
+  luclam: {
+    title: "Cột Mốc Tăng Trưởng Doanh Thu Đạt 40 Tỷ VNĐ (Lục Lam)",
+    badge: "Chuỗi Trà Thảo Mộc & Quà Tặng",
+    labels: ["Khởi Đầu (Từ Số 0)", "Ra Mắt 4 Website", "Takashimaya & Gala", "Cán Mốc 40 Tỷ"],
+    datasets: [
+      {
+        label: "Doanh Thu Lũy Kế (Tỷ VNĐ)",
+        data: [0, 12, 28, 40],
+        backgroundColor: "rgba(245, 158, 11, 0.85)",
+        hoverBackgroundColor: "#FBBF24",
+        borderRadius: 8,
+        yAxisID: "y"
+      }
+    ],
+    yCallback: val => val + " Tỷ"
+  },
+  bravigo: {
+    title: "Phát Triển Mạng Lưới Đại Lý & Gara Ô Tô Toàn Quốc (Bravigo)",
+    badge: "Ngành Xe Ô Tô & Phụ Kiện",
+    labels: ["Giai Đoạn 1", "Giai Đoạn 2", "Giai Đoạn 3", "Sự Kiện Ottocast P3"],
+    datasets: [
+      {
+        label: "Mạng Lưới Đại Lý & Điểm Bán Ủy Quyền",
+        data: [80, 160, 250, 360],
+        backgroundColor: "rgba(59, 130, 246, 0.85)",
+        hoverBackgroundColor: "#60A5FA",
+        borderRadius: 8,
+        yAxisID: "y"
+      }
+    ],
+    yCallback: val => val + " Đại Lý"
+  },
+  lath: {
+    title: "Tăng Trưởng Lượng Khách Tự Nhiên (SEO) & Doanh Thu Quảng Cáo (LATH Group)",
+    badge: "Mỹ Phẩm & Bán Lẻ Trực Tuyến",
+    labels: ["Giai Đoạn 1", "Giai Đoạn 2", "Giai Đoạn 3", "Vào Siêu Thị Lotte Mart"],
+    datasets: [
+      {
+        label: "Lượt Truy Cập Tự Nhiên SEO / Tháng",
+        data: [1200, 2600, 3900, 5200],
+        backgroundColor: "rgba(236, 72, 153, 0.8)",
+        borderRadius: 8,
+        yAxisID: "y"
+      },
+      {
+        label: "Tăng Trưởng Doanh Thu Quảng Cáo (%)",
+        data: [10, 20, 32, 40],
+        type: "line",
+        borderColor: "#06B6D4",
+        backgroundColor: "#06B6D4",
+        borderWidth: 3,
+        tension: 0.35,
+        pointBackgroundColor: "#06B6D4",
+        pointBorderColor: "#FFFFFF",
+        pointBorderWidth: 2,
+        pointRadius: 6,
+        yAxisID: "y"
+      }
+    ],
+    yCallback: val => (val > 100 ? val + " Lượt" : val + "%")
+  }
+};
+
+window.filterCompanyBoard = function(companyKey, btn) {
+  // Update active pill button
+  const pills = document.querySelectorAll(".company-pill");
+  pills.forEach(p => p.classList.remove("active"));
+  if (btn) btn.classList.add("active");
+
+  const cards = document.querySelectorAll(".company-board-card");
+  const spotlight = document.getElementById("companyChartSpotlight");
+
+  if (companyKey === "all") {
+    cards.forEach(c => {
+      c.style.display = "flex";
+      c.classList.remove("highlighted");
+    });
+    if (spotlight) spotlight.style.display = "none";
+  } else {
+    cards.forEach(c => {
+      if (c.getAttribute("data-company") === companyKey) {
+        c.style.display = "flex";
+        c.classList.add("highlighted");
+      } else {
+        c.style.display = "none";
+        c.classList.remove("highlighted");
+      }
+    });
+
+    if (spotlight) {
+      spotlight.style.display = "block";
+      renderCompanySpecificChart(companyKey);
+    }
+  }
+
+  // Refresh lucide icons
+  if (window.lucide) window.lucide.createIcons();
+};
+
+function renderCompanySpecificChart(companyKey) {
+  const cfg = companyChartData[companyKey];
+  if (!cfg) return;
+
+  const titleEl = document.getElementById("spotlightChartTitle");
+  const badgeEl = document.getElementById("spotlightCompanyBadge");
+  if (titleEl) titleEl.textContent = cfg.title;
+  if (badgeEl) badgeEl.textContent = cfg.badge;
+
   const canvas = document.getElementById("growthChart");
   if (!canvas || !window.Chart) return;
 
-  const ctx = canvas.getContext("2d");
-  if (!ctx) return;
+  if (growthChartInstance) {
+    growthChartInstance.destroy();
+  }
 
-  // Custom Chart Theme
+  const ctx = canvas.getContext("2d");
   growthChartInstance = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: [
-        "Bravigo (Ngành Xe Ô Tô)",
-        "Lục Lam (Trà Thảo Mộc)",
-        "Fclick (Ứng Dụng App)",
-        "Sala Garden (BĐS Sinh Thái)",
-        "LATH Group (Mỹ Phẩm)"
-      ],
-      datasets: [
-        {
-          label: "Tối Ưu Chi Phí CPI/CPL (%)",
-          data: [-15, -25, -25, -35, -30],
-          type: "line",
-          borderColor: "#F43F5E",
-          backgroundColor: "#F43F5E",
-          borderWidth: 3,
-          tension: 0.35,
-          pointBackgroundColor: "#F43F5E",
-          pointBorderColor: "#FFFFFF",
-          pointBorderWidth: 2,
-          pointRadius: 6,
-          pointHoverRadius: 8,
-          yAxisID: "y"
-        },
-        {
-          label: "Tăng Trưởng Quy Mô & Doanh Số (%)",
-          data: [40, 100, 140, 85, 75],
-          backgroundColor: "rgba(6, 182, 212, 0.85)",
-          hoverBackgroundColor: "#22D3EE",
-          borderRadius: 8,
-          borderSkipped: false,
-          yAxisID: "y"
-        },
-        {
-          label: "Năng Suất & Tự Động Hóa AI (%)",
-          data: [35, 60, 90, 120, 145],
-          backgroundColor: "rgba(16, 185, 129, 0.8)",
-          hoverBackgroundColor: "#34D399",
-          borderRadius: 8,
-          borderSkipped: false,
-          yAxisID: "y"
-        }
-      ]
+      labels: cfg.labels,
+      datasets: cfg.datasets
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      interaction: {
-        mode: "index",
-        intersect: false
-      },
       plugins: {
         legend: {
           position: "top",
           labels: {
             color: "#94A3B8",
-            font: {
-              family: "'Plus Jakarta Sans', sans-serif",
-              size: 12,
-              weight: "600"
-            },
-            padding: 18,
-            usePointStyle: true,
-            boxWidth: 8
+            font: { family: "'Plus Jakarta Sans', sans-serif", size: 12, weight: "600" },
+            padding: 14,
+            usePointStyle: true
           }
         },
         tooltip: {
@@ -412,64 +531,30 @@ function initGrowthChart() {
           bodyColor: "#94A3B8",
           borderColor: "rgba(255, 255, 255, 0.15)",
           borderWidth: 1,
-          padding: 12,
-          boxPadding: 6,
-          cornerRadius: 8,
-          titleFont: {
-            family: "'Space Grotesk', sans-serif",
-            size: 13,
-            weight: "700"
-          },
-          bodyFont: {
-            family: "'Plus Jakarta Sans', sans-serif",
-            size: 12
-          },
-          callbacks: {
-            label: function(context) {
-              const label = context.dataset.label || "";
-              const val = context.parsed.y;
-              if (val < 0) {
-                return `${label}: Cắt giảm ${Math.abs(val)}% chi phí`;
-              }
-              return `${label}: +${val}% hiệu suất`;
-            }
-          }
+          padding: 10,
+          cornerRadius: 8
         }
       },
       scales: {
         x: {
-          grid: {
-            color: "rgba(255, 255, 255, 0.05)"
-          },
-          ticks: {
-            color: "#94A3B8",
-            font: {
-              family: "'Plus Jakarta Sans', sans-serif",
-              size: 11,
-              weight: "600"
-            }
-          }
+          grid: { color: "rgba(255, 255, 255, 0.05)" },
+          ticks: { color: "#94A3B8", font: { family: "'Plus Jakarta Sans', sans-serif", size: 11 } }
         },
         y: {
-          grid: {
-            color: "rgba(255, 255, 255, 0.06)"
-          },
+          grid: { color: "rgba(255, 255, 255, 0.06)" },
           ticks: {
             color: "#94A3B8",
-            font: {
-              family: "'Plus Jakarta Sans', sans-serif",
-              size: 11
-            },
-            callback: function(value) {
-              return value + "%";
-            }
-          },
-          suggestedMin: -40,
-          suggestedMax: 160
+            font: { family: "'Plus Jakarta Sans', sans-serif", size: 11 },
+            callback: cfg.yCallback || (v => v)
+          }
         }
       }
     }
   });
+}
+
+function initGrowthChart() {
+  // Mặc định ở chế độ Tất Cả 5 Ô Bảng, người xem nhìn thấy trực diện 5 bảng số liệu độc lập
 }
 
 // 1. Lucide Icons Helper

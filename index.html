@@ -326,8 +326,8 @@
           </div>
           <div class="chart-hub-tabs">
             <button class="chart-tab-btn active" onclick="switchChartTab('chart-view', this)">
-              <i data-lucide="trending-up" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i>
-              Biểu Đồ Tăng Trưởng &amp; Chi Phí
+              <i data-lucide="layout-grid" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i>
+              Bảng Hiệu Quả Từng Công Ty
             </button>
             <button class="chart-tab-btn" onclick="switchChartTab('funnel-view', this)">
               <i data-lucide="filter" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i>
@@ -336,25 +336,266 @@
           </div>
         </div>
 
-        <!-- Panel 1: Chart.js Line & Bar Graph -->
+        <!-- Panel 1: Bảng Hiệu Quả & Số Liệu Riêng Cho Từng Công Ty -->
         <div class="chart-view-panel active" id="chart-view">
-          <div class="chart-canvas-wrapper">
-            <canvas id="growthChart"></canvas>
+          
+          <!-- Thanh Chọn Công Ty Nhanh -->
+          <div class="company-board-nav">
+            <button class="company-pill active" onclick="filterCompanyBoard('all', this)">
+              <i data-lucide="layers" style="width: 13px; height: 13px; margin-right: 4px;"></i>
+              <span>Tất Cả (5 Ô Bảng)</span>
+            </button>
+            <button class="company-pill" onclick="filterCompanyBoard('sala', this)">
+              <span class="pill-dot dot-emerald"></span>
+              <span>Sala Garden</span>
+            </button>
+            <button class="company-pill" onclick="filterCompanyBoard('fclick', this)">
+              <span class="pill-dot dot-cyan"></span>
+              <span>Fclick</span>
+            </button>
+            <button class="company-pill" onclick="filterCompanyBoard('luclam', this)">
+              <span class="pill-dot dot-amber"></span>
+              <span>Lục Lam</span>
+            </button>
+            <button class="company-pill" onclick="filterCompanyBoard('bravigo', this)">
+              <span class="pill-dot dot-blue"></span>
+              <span>Bravigo</span>
+            </button>
+            <button class="company-pill" onclick="filterCompanyBoard('lath', this)">
+              <span class="pill-dot dot-pink"></span>
+              <span>LATH Group</span>
+            </button>
           </div>
-          <div class="chart-summary-bar">
-            <div class="chart-summary-item">
-              <span class="chart-sum-label">Chi Phí Cài Đặt Ứng Dụng</span>
-              <span class="chart-sum-val cyan">Giảm 25% Chi Phí</span>
+
+          <!-- 5 Ô BẢNG ĐỘC LẬP CHO TỪNG CÔNG TY -->
+          <div class="company-boards-grid" id="companyBoardsGrid">
+            
+            <!-- Ô 1: Sala Garden -->
+            <div class="company-board-card" data-company="sala">
+              <div class="board-card-header">
+                <div class="board-brand-info">
+                  <h4 class="board-brand-name">Sala Garden</h4>
+                  <span class="board-brand-sub">Hạng mục: BĐS Hoa Viên Sinh Thái 5 Sao</span>
+                </div>
+                <span class="board-period-badge">03/2026 – Hiện tại</span>
+              </div>
+              
+              <div class="board-metrics-grid">
+                <div class="board-metric-box">
+                  <div class="box-metric-val emerald">300 Triệu</div>
+                  <div class="box-metric-label">Ngân Sách / Tháng</div>
+                  <div class="box-metric-note">Tối ưu quảng cáo số</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val cyan">50+ Khách VIP</div>
+                  <div class="box-metric-label">Khách Tiềm Năng</div>
+                  <div class="box-metric-note">Khách thực tế quan tâm</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val purple">10 Nhân Sự</div>
+                  <div class="box-metric-label">Quy Mô Quản Lý</div>
+                  <div class="box-metric-note">Điều hành 2 teams</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val amber">130+ Video</div>
+                  <div class="box-metric-label">Sản Xuất / Tháng</div>
+                  <div class="box-metric-note">TikTok, Reels &amp; Phóng sự</div>
+                </div>
+              </div>
+
+              <div class="board-card-footer">
+                <span class="board-role-tag">Quản Lý Marketing (Marketing Manager)</span>
+                <button class="board-cta-btn" onclick="openCaseModal('sala')">
+                  <span>Xem Chi Tiết</span>
+                  <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
+                </button>
+              </div>
             </div>
-            <div class="chart-summary-item">
-              <span class="chart-sum-label">Doanh Thu Từ Quảng Cáo</span>
-              <span class="chart-sum-val emerald">Tăng Trưởng +40%</span>
+
+            <!-- Ô 2: Fclick -->
+            <div class="company-board-card" data-company="fclick">
+              <div class="board-card-header">
+                <div class="board-brand-info">
+                  <h4 class="board-brand-name">Fclick</h4>
+                  <span class="board-brand-sub">Hạng mục: Ứng Dụng Di Động &amp; Công Nghệ</span>
+                </div>
+                <span class="board-period-badge">06/2025 – 02/2026</span>
+              </div>
+              
+              <div class="board-metrics-grid">
+                <div class="board-metric-box">
+                  <div class="box-metric-val cyan">Giảm 25%</div>
+                  <div class="box-metric-label">Chi Phí Tải App (CPI)</div>
+                  <div class="box-metric-note">Tối ưu chi phí mỗi lượt cài đặt</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val emerald">Tiết Kiệm 30%</div>
+                  <div class="box-metric-label">Thời Gian Vận Hành</div>
+                  <div class="box-metric-note">Nhờ tự động hóa bằng AI</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val purple">Tăng +20%</div>
+                  <div class="box-metric-label">Tỷ Lệ Giữ Chân</div>
+                  <div class="box-metric-note">Cải thiện người dùng gắn bó app</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val amber">Tập Trung 1 Nơi</div>
+                  <div class="box-metric-label">Báo Cáo Tự Động</div>
+                  <div class="box-metric-note">Theo dõi dữ liệu thời gian thực</div>
+                </div>
+              </div>
+
+              <div class="board-card-footer">
+                <span class="board-role-tag">Quản Lý Marketing &amp; Trưởng Nhóm MarTech</span>
+                <button class="board-cta-btn" onclick="openCaseModal('fclick')">
+                  <span>Xem Chi Tiết</span>
+                  <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
+                </button>
+              </div>
             </div>
-            <div class="chart-summary-item">
-              <span class="chart-sum-label">Thời Gian Làm Việc</span>
-              <span class="chart-sum-val purple">Tiết Kiệm 30% Nhờ AI</span>
+
+            <!-- Ô 3: Lục Lam -->
+            <div class="company-board-card" data-company="luclam">
+              <div class="board-card-header">
+                <div class="board-brand-info">
+                  <h4 class="board-brand-name">Lục Lam</h4>
+                  <span class="board-brand-sub">Hạng mục: Chuỗi Trà Thảo Mộc &amp; Quà Tặng Cao Cấp</span>
+                </div>
+                <span class="board-period-badge">04/2024 – 04/2025</span>
+              </div>
+              
+              <div class="board-metrics-grid">
+                <div class="board-metric-box">
+                  <div class="box-metric-val amber">40 Tỷ VNĐ</div>
+                  <div class="box-metric-label">Doanh Thu Đạt Mốc</div>
+                  <div class="box-metric-note">Xây dựng chuỗi từ con số 0</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val cyan">4 Website</div>
+                  <div class="box-metric-label">Hệ Thống Kênh Bán</div>
+                  <div class="box-metric-note">Bán hàng online &amp; kết nối quản lý</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val emerald">Takashimaya</div>
+                  <div class="box-metric-label">Sự Kiện Lớn</div>
+                  <div class="box-metric-note">Gian hàng trải nghiệm &amp; Gala 200+ khách</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val purple">100% Đồng Bộ</div>
+                  <div class="box-metric-label">Bao Bì &amp; Nhận Diện</div>
+                  <div class="box-metric-note">Trà thảo mộc &amp; hộp quà cao cấp</div>
+                </div>
+              </div>
+
+              <div class="board-card-footer">
+                <span class="board-role-tag">Quản Lý Marketing (Marketing Manager)</span>
+                <button class="board-cta-btn" onclick="openCaseModal('luclam')">
+                  <span>Xem Chi Tiết</span>
+                  <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Ô 4: Bravigo -->
+            <div class="company-board-card" data-company="bravigo">
+              <div class="board-card-header">
+                <div class="board-brand-info">
+                  <h4 class="board-brand-name">Bravigo</h4>
+                  <span class="board-brand-sub">Hạng mục: Ngành Xe Ô Tô &amp; Phụ Kiện Thông Minh</span>
+                </div>
+                <span class="board-period-badge">03/2022 – 04/2024</span>
+              </div>
+              
+              <div class="board-metrics-grid">
+                <div class="board-metric-box">
+                  <div class="box-metric-val blue">Hàng Trăm Đại Lý</div>
+                  <div class="box-metric-label">Mạng Lưới Phân Phối</div>
+                  <div class="box-metric-note">Gara ô tô ủy quyền toàn quốc</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val purple">8 Nhân Sự</div>
+                  <div class="box-metric-label">Đội Ngũ Tiếp Thị</div>
+                  <div class="box-metric-note">Quản lý chuyên viên ngành xe</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val cyan">Ottocast P3</div>
+                  <div class="box-metric-label">Sự Kiện Ra Mắt</div>
+                  <div class="box-metric-note">Trưởng BTC &amp; Thiết kế Slide Canva</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val emerald">Kênh Xe Hơi</div>
+                  <div class="box-metric-label">Truyền Thông Chuyên Ngành</div>
+                  <div class="box-metric-note">Hợp tác Reviewer xe uy tín</div>
+                </div>
+              </div>
+
+              <div class="board-card-footer">
+                <span class="board-role-tag">Quản Lý Marketing (Marketing Manager)</span>
+                <button class="board-cta-btn" onclick="openCaseModal('bravigo')">
+                  <span>Xem Chi Tiết</span>
+                  <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Ô 5: LATH Group -->
+            <div class="company-board-card" data-company="lath">
+              <div class="board-card-header">
+                <div class="board-brand-info">
+                  <h4 class="board-brand-name">LATH Group</h4>
+                  <span class="board-brand-sub">Hạng mục: Công Ty Mỹ Phẩm &amp; Bán Lẻ Trực Tuyến</span>
+                </div>
+                <span class="board-period-badge">08/2020 – 02/2022</span>
+              </div>
+              
+              <div class="board-metrics-grid">
+                <div class="board-metric-box">
+                  <div class="box-metric-val pink">Tăng +40%</div>
+                  <div class="box-metric-label">Doanh Thu Quảng Cáo Mỹ Phẩm</div>
+                  <div class="box-metric-note">Tối ưu giá thầu Google &amp; Facebook</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val cyan">5.000+ Lượt/Tháng</div>
+                  <div class="box-metric-label">Lượt Xem Tự Nhiên (SEO)</div>
+                  <div class="box-metric-note">Từ khóa mỹ phẩm lên top tìm kiếm</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val emerald">200+ Đơn/Tháng</div>
+                  <div class="box-metric-label">Đơn Hàng Tự Nhiên</div>
+                  <div class="box-metric-note">Bán tự nhiên không tốn tiền ads</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val amber">Lotte Mart</div>
+                  <div class="box-metric-label">Phân Phối Siêu Thị</div>
+                  <div class="box-metric-note">Đưa mỹ phẩm vào chuỗi bán lẻ lớn</div>
+                </div>
+              </div>
+
+              <div class="board-card-footer">
+                <span class="board-role-tag">Trưởng Nhóm Marketing (Marketing Leader)</span>
+                <button class="board-cta-btn" onclick="openCaseModal('lath')">
+                  <span>Xem Chi Tiết</span>
+                  <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Khung Biểu Đồ Chuyên Biệt Khi Chọn Từng Công Ty -->
+          <div class="company-chart-spotlight" id="companyChartSpotlight" style="display: none;">
+            <div class="spotlight-header">
+              <div class="spotlight-title-wrap">
+                <i data-lucide="bar-chart-2" style="width: 18px; height: 18px; color: var(--accent-cyan);"></i>
+                <h4 id="spotlightChartTitle">Biểu Đồ Tăng Trưởng Chi Tiết</h4>
+              </div>
+              <span class="spotlight-badge" id="spotlightCompanyBadge">Doanh Nghiệp</span>
+            </div>
+            <div class="chart-canvas-wrapper" style="height: 280px;">
+              <canvas id="growthChart"></canvas>
             </div>
           </div>
+
         </div>
 
         <!-- Panel 2: Visual Growth Funnel -->
