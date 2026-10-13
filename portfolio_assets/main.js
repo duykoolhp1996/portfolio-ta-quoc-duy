@@ -303,6 +303,59 @@ const caseStudiesData = {
       "Tăng 25% tỷ lệ mua hàng khi vào chuỗi Lotte Mart; tăng 20% lượt tải ứng dụng."
     ],
     tech: ["Doanh Thu Ads +40%", "5.000 Khách Tự Nhiên", "200+ Đơn Miễn Phí", "Hệ Thống Lotte Mart", "Tối Ưu Ứng Dụng"]
+  },
+
+  brewbanhmi: {
+    category: "Chuỗi F&B Cà Phê & Bánh Mì Quốc Tế (California, USA)",
+    company: "Brew & Bánh Mì Cafe (Milpitas, CA, USA)",
+    logoUrl: "portfolio_assets/images/logo_brewbanhmi_wordmark_light.png",
+    websiteUrl: "https://brewbanhmicafe.com",
+    role: "Quản Lý Marketing & Phát Triển Kênh Số",
+    period: "2024 – 2025",
+    title: "Xây Dựng Website Song Ngữ & Tích Hợp Hệ Thống Đặt Món Online Toast Tab Tại Mỹ",
+    challenge: "Ra mắt thương hiệu F&B cà phê phin & bánh mì Việt Nam tại Milpitas (California). Cần tiếp cận hiệu quả khách hàng bản xứ lẫn cộng đồng người Việt, giải quyết bài toán đặt món trực tuyến nhanh chóng và tối ưu hóa vị trí tìm kiếm trên Google Maps (Local SEO).",
+    strategy: "Xây dựng toàn diện website brewbanhmicafe.com chuẩn song ngữ (Anh - Việt), tích hợp liền mạch hệ thống POS đặt món online Toast Tab, tối ưu hóa hiện diện Local SEO Google Maps và chuẩn hóa trải nghiệm F&B quốc tế.",
+    deliverables: [
+      {
+        title: "Xây Dựng Website Thương Hiệu brewbanhmicafe.com Song Ngữ",
+        tag: "Phát Triển Website",
+        desc: "Thiết kế và lập trình website thương hiệu chuẩn trải nghiệm người dùng F&B quốc tế.",
+        items: [
+          "Phát triển giao diện song ngữ (Tiếng Anh & Tiếng Việt) chuẩn mực, mượt mà trên di động",
+          "Trưng bày trực quan menu: Cà phê phin, Bánh mì giòn, Trà trái cây, Matcha và Bánh ngọt",
+          "Tối ưu tốc độ tải trang cao và cấu trúc thân thiện với công cụ tìm kiếm Google"
+        ],
+        attachment: "Website chính thức: brewbanhmicafe.com"
+      },
+      {
+        title: "Tích Hợp Cổng Đặt Món Trực Tuyến Toast Tab",
+        tag: "Chuyển Đổi Số F&B",
+        desc: "Kết nối hệ sinh thái bán hàng tự động phục vụ khách đặt mang về và tiệc sự kiện.",
+        items: [
+          "Tích hợp nút gọi món online trực tiếp với nền tảng Toast Tab POS phổ biến tại Mỹ",
+          "Tự động hóa luồng tiếp nhận đơn hàng mang đi (Pick-up) và dịch vụ suất ăn sự kiện (Catering)",
+          "Giảm thiểu sai sót khi gọi món và tiết kiệm tối đa thời gian vận hành cho quán"
+        ],
+        attachment: "Hệ thống đặt món trực tuyến Toast Tab"
+      },
+      {
+        title: "Tối Ưu Hiện Diện Local SEO & Google Maps Tại Mỹ",
+        tag: "Tiếp Thị Địa Phương",
+        desc: "Định vị thương hiệu vững chắc trên bản đồ số khu vực Milpitas, California.",
+        items: [
+          "Tối ưu hồ sơ Google Business Profile thu hút khách hàng tìm kiếm 'Coffee & Banh Mi near me'",
+          "Đạt hàng loạt đánh giá 5 sao từ khách hàng địa phương trên Google Reviews",
+          "Kết nối định vị chỉ đường và hotline đặt hàng thuận tiện cho cư dân và dân văn phòng"
+        ],
+        attachment: "Hồ sơ Local SEO Google Maps & Đánh giá 5 sao"
+      }
+    ],
+    results: [
+      "Vận hành thành công website thương hiệu brewbanhmicafe.com với 100% giao diện song ngữ mượt mà.",
+      "Tích hợp trơn tru hệ thống gọi món trực tuyến Toast Tab, thúc đẩy doanh thu đơn Pick-up & Catering.",
+      "Tối ưu Local SEO đạt vị trí tìm kiếm nổi bật tại khu vực Milpitas, California với phản hồi 5 sao xuất sắc."
+    ],
+    tech: ["Website Song Ngữ", "Đặt Món Toast Tab", "Local SEO Milpitas", "F&B Quốc Tế", "Dịch Vụ Catering", "Google Reviews 5*"]
   }
 };
 
@@ -444,6 +497,35 @@ const companyChartData = {
         borderWidth: 3,
         tension: 0.35,
         pointBackgroundColor: "#06B6D4",
+        pointBorderColor: "#FFFFFF",
+        pointBorderWidth: 2,
+        pointRadius: 6,
+        yAxisID: "y"
+      }
+    ],
+    yCallback: val => (val > 100 ? val + " Lượt" : val + "%")
+  },
+  brewbanhmi: {
+    title: "Hiệu Quả Hiện Diện Số & Đặt Món Trực Tuyến (Brew & Bánh Mì Cafe)",
+    badge: "F&B Quốc Tế (Milpitas, CA)",
+    labels: ["Khởi Tạo", "Ra Mắt Web Song Ngữ", "Tích Hợp Toast Tab", "Tối Ưu Local SEO"],
+    datasets: [
+      {
+        label: "Lượt Truy Cập Website / Tháng",
+        data: [600, 1900, 3400, 5000],
+        backgroundColor: "rgba(245, 158, 11, 0.8)",
+        borderRadius: 8,
+        yAxisID: "y"
+      },
+      {
+        label: "Tăng Trưởng Đơn Online & Catering (%)",
+        data: [10, 30, 55, 80],
+        type: "line",
+        borderColor: "#10B981",
+        backgroundColor: "#10B981",
+        borderWidth: 3,
+        tension: 0.35,
+        pointBackgroundColor: "#10B981",
         pointBorderColor: "#FFFFFF",
         pointBorderWidth: 2,
         pointRadius: 6,

@@ -52,6 +52,15 @@
 
 ---
 
+### DIGITAL MARKETING MANAGER | Brew & Bánh Mì Cafe (Chuỗi F&B Cà Phê & Bánh Mì Quốc Tế - California, USA)
+*2024 – 2025*
+- **Xây dựng hệ thống Website song ngữ:** Thiết kế và phát triển toàn diện website thương hiệu *brewbanhmicafe.com* với giao diện song ngữ (Anh - Việt), tối ưu hóa trải nghiệm gọi món trên di động và chuẩn SEO Google.
+- **Tích hợp cổng đặt món trực tuyến Toast Tab:** Kết nối nền tảng đặt món online trực tiếp qua hệ thống Toast Tab POS, tự động hóa luồng nhận đơn mang về (Pick-up) và tiệc sự kiện (Catering), giảm thiểu sai sót và tối ưu thời gian xử lý đơn.
+- **Tối ưu hóa Local SEO tại Mỹ:** Tối ưu Google Business Profile đạt thứ hạng tìm kiếm nổi bật tại khu vực Milpitas, California với phản hồi 5 sao xuất sắc; tiếp cận thành công tệp khách hàng bản xứ và kiều bào.
+- *Công nghệ & Kỹ năng:* Website Song Ngữ, Toast Tab POS, Local SEO California, F&B Global Branding, Mobile Ordering.
+
+---
+
 ### MARKETING MANAGER | Bravigo Việt Nam (Thiết bị công nghệ xe ô tô - B2B & B2C)
 *03/2022 – 04/2024*
 - **Chiến lược tiếp thị & Mở rộng thị phần:** Lập kế hoạch marketing ngắn và trung hạn cho hệ sinh thái công nghệ ô tô thông minh; thúc đẩy tăng trưởng nhận diện và chiếm lĩnh thị phần toàn quốc.

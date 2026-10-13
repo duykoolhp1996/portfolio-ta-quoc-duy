@@ -340,7 +340,7 @@
           <div class="company-board-nav">
             <button class="company-pill active" onclick="filterCompanyBoard('all', this)">
               <i data-lucide="layers" style="width: 13px; height: 13px; margin-right: 4px;"></i>
-              <span>Tất Cả (5 Ô Bảng)</span>
+              <span>Tất Cả (6 Ô Bảng)</span>
             </button>
             <button class="company-pill" onclick="filterCompanyBoard('sala', this)">
               <span class="pill-dot dot-emerald"></span>
@@ -354,6 +354,10 @@
               <span class="pill-dot dot-amber"></span>
               <span>Lục Lam</span>
             </button>
+            <button class="company-pill" onclick="filterCompanyBoard('brewbanhmi', this)">
+              <span class="pill-dot" style="background: #EA580C;"></span>
+              <span>Brew &amp; Bánh Mì</span>
+            </button>
             <button class="company-pill" onclick="filterCompanyBoard('bravigo', this)">
               <span class="pill-dot dot-blue"></span>
               <span>Bravigo</span>
@@ -364,7 +368,7 @@
             </button>
           </div>
 
-          <!-- 5 Ô BẢNG ĐỘC LẬP CHO TỪNG CÔNG TY -->
+          <!-- 6 Ô BẢNG ĐỘC LẬP CHO TỪNG CÔNG TY -->
           <div class="company-boards-grid" id="companyBoardsGrid">
             
             <!-- Ô 1: Sala Garden -->
@@ -577,6 +581,57 @@
                   <span>Xem Chi Tiết</span>
                   <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
                 </button>
+              </div>
+            </div>
+
+            <!-- Ô 6: Brew & Bánh Mì Cafe (USA) -->
+            <div class="company-board-card" data-company="brewbanhmi">
+              <div class="board-card-header">
+                <div class="board-brand-info">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <h4 class="board-brand-name">Brew &amp; Bánh Mì</h4>
+                    <img src="portfolio_assets/images/logo_brewbanhmi_wordmark_light.png" alt="Brew &amp; Bánh Mì Logo" style="height: 20px; width: auto; object-fit: contain;">
+                  </div>
+                  <span class="board-brand-sub">Hạng mục: Chuỗi F&amp;B Quốc Tế (Milpitas, California, USA)</span>
+                </div>
+                <span class="board-period-badge">2024 – 2025</span>
+              </div>
+              
+              <div class="board-metrics-grid">
+                <div class="board-metric-box">
+                  <div class="box-metric-val amber">Song Ngữ</div>
+                  <div class="box-metric-label">Hệ Thống Website</div>
+                  <div class="box-metric-note">brewbanhmicafe.com chuẩn di động</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val emerald">Toast Tab</div>
+                  <div class="box-metric-label">Đặt Món Trực Tuyến</div>
+                  <div class="box-metric-note">Tích hợp POS Pick-up &amp; Catering</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val cyan">Milpitas, CA</div>
+                  <div class="box-metric-label">Thị Trường Quốc Tế</div>
+                  <div class="box-metric-note">Local SEO Google Maps 5 Sao</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val purple">5.000+ Lượt</div>
+                  <div class="box-metric-label">Truy Cập / Tháng</div>
+                  <div class="box-metric-note">Tìm kiếm tự nhiên &amp; gọi món</div>
+                </div>
+              </div>
+
+              <div class="board-card-footer">
+                <span class="board-role-tag">Quản Lý Marketing &amp; Kênh Số</span>
+                <div style="display: flex; gap: 8px;">
+                  <a href="https://brewbanhmicafe.com" target="_blank" rel="noopener" class="board-cta-btn" style="background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.4); color: #FBBF24;">
+                    <span>Xem Web</span>
+                    <i data-lucide="external-link" style="width: 13px; height: 13px;"></i>
+                  </a>
+                  <button class="board-cta-btn" onclick="openCaseModal('brewbanhmi')">
+                    <span>Xem Chi Tiết</span>
+                    <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -1295,6 +1350,124 @@
           </div>
         </article>
 
+        <!-- CASE STUDY 06: BREW & BÁNH MÌ CAFE (USA) -->
+        <article class="case-study-item">
+          <div class="case-study-header">
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div class="case-company-logo-wrap" style="background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.35); padding: 6px;">
+                <img src="portfolio_assets/images/logo_brewbanhmi_mark_light.png" alt="Logo Brew &amp; Bánh Mì Cafe" class="case-company-logo" style="object-fit: contain;" />
+              </div>
+              <div>
+                <h3 class="case-project-title">Dự Án Brew &amp; Bánh Mì Cafe</h3>
+                <div class="case-company-name">Hạng mục: Chuỗi F&amp;B Quốc Tế • Website brewbanhmicafe.com &amp; Đặt Món Toast Tab (California, USA)</div>
+              </div>
+            </div>
+            <div class="case-meta-right">
+              <span class="case-role-badge">Quản Lý Marketing &amp; Kênh Số</span>
+              <span class="case-period-text">2024 – 2025</span>
+            </div>
+          </div>
+
+          <div class="case-metrics-banner">
+            <div class="case-metric-block">
+              <div class="case-metric-number">Song Ngữ</div>
+              <div class="case-metric-desc">Giao diện Tiếng Anh &amp; Tiếng Việt chuẩn trải nghiệm di động</div>
+            </div>
+            <div class="case-metric-block">
+              <div class="case-metric-number">Toast Tab POS</div>
+              <div class="case-metric-desc">Tích hợp hệ sinh thái đặt món trực tuyến Pick-up &amp; Catering</div>
+            </div>
+            <div class="case-metric-block">
+              <div class="case-metric-number">Top Google Maps</div>
+              <div class="case-metric-desc">Tối ưu Local SEO tại Milpitas, California với đánh giá 5 sao</div>
+            </div>
+            <div class="case-metric-block">
+              <div class="case-metric-number">5.000+ Lượt</div>
+              <div class="case-metric-desc">Lượng khách tìm kiếm và truy cập menu trực tuyến mỗi tháng</div>
+            </div>
+          </div>
+
+          <div class="case-split-grid">
+            <div class="case-narrative">
+              <h4>Bối Cảnh &amp; Thách Thức</h4>
+              <p>
+                Thương hiệu F&amp;B cà phê phin thủ công và bánh mì Việt Nam ra mắt tại thị trường Milpitas (California, Mỹ). Yêu cầu cấp thiết là tiếp cận cả tệp khách hàng bản xứ lẫn cộng đồng người Việt, có giải pháp đặt món trực tuyến nhanh chóng và định vị thương hiệu trên bản đồ số khu vực.
+              </p>
+              <h4>Cách Giải Quyết</h4>
+              <p>
+                Xây dựng toàn diện website thương hiệu <strong>brewbanhmicafe.com</strong> chuẩn song ngữ (Anh - Việt), tích hợp liền mạch hệ thống POS đặt món <strong>Toast Tab</strong> phục vụ khách mang về và đặt tiệc (Catering), đồng thời tối ưu hóa <strong>Local SEO Google Maps</strong> đạt thứ hạng cao tại khu vực Milpitas.
+              </p>
+
+              <div class="case-scope-box" style="margin-top: 18px;">
+                <div class="case-scope-title">
+                  <i data-lucide="check-square" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
+                  <span>Công Việc Trực Tiếp Triển Khai</span>
+                </div>
+                <ul class="case-scope-list">
+                  <li><i data-lucide="check"></i><span>Thiết kế &amp; lập trình website song ngữ Anh - Việt brewbanhmicafe.com</span></li>
+                  <li><i data-lucide="check"></i><span>Tích hợp cổng gọi món online Toast Tab phục vụ khách Pick-up &amp; Catering</span></li>
+                  <li><i data-lucide="check"></i><span>Tối ưu hóa Local SEO Google Business Profile đạt đánh giá 5 sao tại California</span></li>
+                  <li><i data-lucide="check"></i><span>Chuẩn hóa nhận diện thực đơn: Cà phê phin, Bánh mì giòn, Trà trái cây &amp; Matcha</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Visual: Mockup + Before vs After -->
+            <div class="case-visual-col">
+              <div class="case-mockup-frame">
+                <span class="case-mockup-badge">Website brewbanhmicafe.com &amp; Toast Tab</span>
+                <img src="portfolio_assets/images/mockup_brewbanhmi.jpg" alt="Brew &amp; Bánh Mì Cafe Website Showcase">
+              </div>
+
+              <div class="before-after-matrix">
+                <div class="ba-column">
+                  <div class="ba-header before">
+                    <i data-lucide="x-circle" style="width: 13px; height: 13px;"></i>
+                    <span>Trước Triển Khai</span>
+                  </div>
+                  <ul class="ba-points-list before">
+                    <li>Chưa có website chính thức và kênh bán hàng trực tuyến</li>
+                    <li>Khách hàng gặp khó khăn khi tìm kiếm menu và vị trí quán</li>
+                    <li>Quy trình nhận đơn đặt tiệc Catering hoàn toàn thủ công</li>
+                  </ul>
+                </div>
+                <div class="ba-column">
+                  <div class="ba-header after">
+                    <i data-lucide="check-circle-2" style="width: 13px; height: 13px;"></i>
+                    <span>Sau Khi Điều Hành</span>
+                  </div>
+                  <ul class="ba-points-list after">
+                    <li>Website song ngữ brewbanhmicafe.com vận hành mượt mà</li>
+                    <li>Khách đặt món online tự động qua Toast Tab không qua trung gian</li>
+                    <li>Định vị vững chắc trên Google Maps với hàng trăm lượt ghé mỗi tuần</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-footer-actions">
+            <div class="case-tech-tags">
+              <span class="case-tag-item">F&amp;B Quốc Tế</span>
+              <span class="case-tag-item">Website Song Ngữ</span>
+              <span class="case-tag-item">Toast Tab POS</span>
+              <span class="case-tag-item">Local SEO Milpitas</span>
+              <span class="case-tag-item">Đặt Hàng Trực Tuyến</span>
+              <span class="case-tag-item">Google Reviews 5*</span>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+              <a href="https://brewbanhmicafe.com" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.4); color: #FBBF24;">
+                <i data-lucide="globe" style="width: 14px; height: 14px;"></i>
+                <span>Xem brewbanhmicafe.com</span>
+              </a>
+              <button class="btn btn-outline btn-sm" onclick="openCaseModal('brewbanhmi')">
+                <span>Xem Toàn Bộ Hạng Mục Đã Làm</span>
+                <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -1759,6 +1932,21 @@
             </div>
             <p class="timeline-highlights">
               Đưa doanh thu chuỗi đạt mốc 40 tỷ VNĐ từ số 0, tự tay thiết kế và lập trình 4 website thương hiệu, tổ chức thành công sự kiện ra mắt tại TTTM Takashimaya.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content-card">
+            <div class="timeline-period-badge">2024 – 2025</div>
+            <h3 class="timeline-role-title">Quản Lý Marketing &amp; Phát Triển Kênh Số</h3>
+            <div class="timeline-company-text">
+              <img src="portfolio_assets/images/logo_brewbanhmi_mark_light.png" alt="Brew &amp; Bánh Mì Logo" class="timeline-company-logo">
+              Brew &amp; Bánh Mì Cafe • Chuỗi F&amp;B Quốc Tế (California, USA)
+            </div>
+            <p class="timeline-highlights">
+              Xây dựng hệ thống website thương hiệu song ngữ <a href="https://brewbanhmicafe.com" target="_blank" rel="noopener" style="color: var(--accent-cyan); text-decoration: underline;">brewbanhmicafe.com</a>, tích hợp nền tảng đặt món trực tuyến Toast Tab POS và tối ưu Local SEO Google Maps tại Milpitas, California.
             </p>
           </div>
         </div>
