@@ -577,10 +577,16 @@
 
               <div class="board-card-footer">
                 <span class="board-role-tag">Trưởng Nhóm Marketing (Marketing Leader)</span>
-                <button class="board-cta-btn" onclick="openCaseModal('lath')">
-                  <span>Xem Chi Tiết</span>
-                  <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
-                </button>
+                <div style="display: flex; gap: 8px;">
+                  <button class="board-cta-btn" onclick="openCaseModal('lath'); setTimeout(() => scrollModalTo('modalVideoContainer'), 300);" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5;">
+                    <i data-lucide="youtube" style="width: 13px; height: 13px;"></i>
+                    <span>6 Video Ads</span>
+                  </button>
+                  <button class="board-cta-btn" onclick="openCaseModal('lath')">
+                    <span>Xem Chi Tiết</span>
+                    <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -1302,12 +1308,104 @@
                   <li><i data-lucide="check"></i><span>Tối ưu các chiến dịch quảng cáo trực tuyến đóng góp 40% doanh thu</span></li>
                   <li><i data-lucide="check"></i><span>Triển khai chiến lược tối ưu Google (SEO) đạt 5.000+ lượt truy cập/tháng</span></li>
                   <li><i data-lucide="check"></i><span>Đưa sản phẩm mỹ phẩm vào chuỗi siêu thị Lotte Mart và các sàn thương mại điện tử</span></li>
+                  <li><i data-lucide="check"></i><span>Sản xuất loạt 6 video quảng cáo TVC, phỏng vấn và viral campaign (LATH, Wangta &amp; K-Cafe)</span></li>
                 </ul>
               </div>
             </div>
 
-            <!-- Right Visual: Before vs After Matrix -->
+            <!-- Right Visual: Video Showcase + Before vs After Matrix -->
             <div class="case-visual-col">
+              <div class="lath-video-showcase-card">
+                <div class="video-showcase-header">
+                  <div class="video-badge-group">
+                    <span class="video-red-badge"><i data-lucide="youtube"></i> 6 Video Chiến Dịch Truyền Thông</span>
+                    <span class="video-sub-badge">TVC &amp; Viral LATH Group</span>
+                  </div>
+                  <span class="video-channel-tag"><i data-lucide="sparkles"></i> Duy Hiền Agency</span>
+                </div>
+
+                <!-- Featured Player Box -->
+                <div class="video-featured-player" id="lathMainPlayer">
+                  <div class="video-poster-wrap" id="lathVideoPoster" onclick="playLathVideo('9EtwFvB1za8', 'Quảng cáo Kem đánh răng LATH (TVC)')">
+                    <img src="portfolio_assets/images/lath_video_1.jpg" alt="Quảng cáo Kem đánh răng LATH" id="lathCurrentPosterImg">
+                    <div class="video-poster-overlay">
+                      <div class="video-pulse-play-btn">
+                        <i data-lucide="play" style="width: 26px; height: 26px; fill: #ffffff; stroke: #ffffff;"></i>
+                      </div>
+                      <div class="video-poster-info">
+                        <span class="video-active-tag" id="lathCurrentTag">TVC Quảng Cáo</span>
+                        <h5 class="video-active-title" id="lathCurrentTitle">Quảng cáo Kem đánh răng LATH (TVC)</h5>
+                        <span class="video-click-hint"><i data-lucide="play-circle"></i> Nhấp để phát video trực tiếp</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="video-iframe-slot" id="lathIframeSlot" style="display: none;"></div>
+                </div>
+
+                <!-- Thumbnail Playlist Selector -->
+                <div class="video-playlist-bar">
+                  <div class="playlist-label">
+                    <span><i data-lucide="film"></i> Danh sách 6 video chiến dịch:</span>
+                    <span class="playlist-hint">Nhấp chọn video để xem</span>
+                  </div>
+                  <div class="video-thumbnails-grid">
+                    <!-- Item 1 -->
+                    <button type="button" class="video-thumb-btn active" onclick="selectLathVideo('9EtwFvB1za8', 'Quảng cáo Kem đánh răng LATH (TVC)', 'TVC Quảng Cáo', 'portfolio_assets/images/lath_video_1.jpg', this)" title="Quảng cáo Kem đánh răng LATH">
+                      <div class="thumb-img-wrap">
+                        <img src="portfolio_assets/images/lath_video_1.jpg" alt="Video 1" loading="lazy">
+                        <span class="thumb-play-icon"><i data-lucide="play"></i></span>
+                      </div>
+                      <span class="thumb-label">TVC Kem LATH</span>
+                    </button>
+
+                    <!-- Item 2 -->
+                    <button type="button" class="video-thumb-btn" onclick="selectLathVideo('AWXE9p1qRFA', 'Phỏng vấn người sử dụng Kem đánh răng LATH', 'Social Proof', 'portfolio_assets/images/lath_video_2.jpg', this)" title="Phỏng vấn người sử dụng Kem đánh răng LATH">
+                      <div class="thumb-img-wrap">
+                        <img src="portfolio_assets/images/lath_video_2.jpg" alt="Video 2" loading="lazy">
+                        <span class="thumb-play-icon"><i data-lucide="play"></i></span>
+                      </div>
+                      <span class="thumb-label">Phỏng Vấn Khách</span>
+                    </button>
+
+                    <!-- Item 3 -->
+                    <button type="button" class="video-thumb-btn" onclick="selectLathVideo('iUNuUEvbvww', 'Hành trình video đi tìm kem đánh răng LATH', 'Viral Story', 'portfolio_assets/images/lath_video_4.jpg', this)" title="Hành trình video đi tìm kem đánh răng LATH">
+                      <div class="thumb-img-wrap">
+                        <img src="portfolio_assets/images/lath_video_4.jpg" alt="Video 3" loading="lazy">
+                        <span class="thumb-play-icon"><i data-lucide="play"></i></span>
+                      </div>
+                      <span class="thumb-label">Hành Trình Tìm Kem</span>
+                    </button>
+
+                    <!-- Item 4 -->
+                    <button type="button" class="video-thumb-btn" onclick="selectLathVideo('nepsZmYowrQ', 'Bàn chải Wangta &amp; Kem đánh răng cao cấp', 'Hàn Quốc / Siêu Thị', 'portfolio_assets/images/lath_video_5.jpg', this)" title="Bàn chải Wangta &amp; Kem đánh răng cao cấp">
+                      <div class="thumb-img-wrap">
+                        <img src="portfolio_assets/images/lath_video_5.jpg" alt="Video 4" loading="lazy">
+                        <span class="thumb-play-icon"><i data-lucide="play"></i></span>
+                      </div>
+                      <span class="thumb-label">Bàn Chải Wangta</span>
+                    </button>
+
+                    <!-- Item 5 -->
+                    <button type="button" class="video-thumb-btn" onclick="selectLathVideo('c2M3sue3stE', 'Video giới thiệu Máy pha cafe cao cấp', 'Thiết Bị Cao Cấp', 'portfolio_assets/images/lath_video_3.jpg', this)" title="Máy pha cafe cao cấp LATH phân phối">
+                      <div class="thumb-img-wrap">
+                        <img src="portfolio_assets/images/lath_video_3.jpg" alt="Video 5" loading="lazy">
+                        <span class="thumb-play-icon"><i data-lucide="play"></i></span>
+                      </div>
+                      <span class="thumb-label">Máy Pha Cafe</span>
+                    </button>
+
+                    <!-- Item 6 -->
+                    <button type="button" class="video-thumb-btn" onclick="selectLathVideo('NMxCwslc6qc', 'Dự án quảng cáo K-Cafe Hàn Quốc', 'Quảng Cáo F&amp;B', 'portfolio_assets/images/lath_video_6.jpg', this)" title="Dự án quảng cáo K-Cafe Hàn Quốc">
+                      <div class="thumb-img-wrap">
+                        <img src="portfolio_assets/images/lath_video_6.jpg" alt="Video 6" loading="lazy">
+                        <span class="thumb-play-icon"><i data-lucide="play"></i></span>
+                      </div>
+                      <span class="thumb-label">K-Cafe Hàn Quốc</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
               <div class="before-after-matrix" style="margin-top: 10px;">
                 <div class="ba-column">
                   <div class="ba-header before">
@@ -1342,11 +1440,18 @@
               <span class="case-tag-item">+40% Doanh thu</span>
               <span class="case-tag-item">Quảng cáo trực tuyến</span>
               <span class="case-tag-item">Vào siêu thị Lotte Mart</span>
+              <span class="case-tag-item" style="border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5; background: rgba(239, 68, 68, 0.12);"><i data-lucide="youtube" style="width: 12px; height: 12px; margin-right: 4px; display: inline-block; vertical-align: middle;"></i>6 Video TVC &amp; Viral</span>
             </div>
-            <button class="btn btn-outline btn-sm" onclick="openCaseModal('lath')">
-              <span>Xem Toàn Bộ Hạng Mục Đã Làm</span>
-              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-            </button>
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+              <a href="https://www.youtube.com/watch?v=9EtwFvB1za8" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5;">
+                <i data-lucide="youtube" style="width: 14px; height: 14px;"></i>
+                <span>Xem Trên YouTube</span>
+              </a>
+              <button class="btn btn-outline btn-sm" onclick="openCaseModal('lath')">
+                <span>Xem Toàn Bộ Hạng Mục Đã Làm</span>
+                <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+              </button>
+            </div>
           </div>
         </article>
 
@@ -2169,6 +2274,10 @@
             <i data-lucide="presentation"></i>
             <span>Slide Ottocast P3 (Canva)</span>
           </button>
+          <button class="modal-nav-pill modal-nav-video-pill" id="modalNavVideoBtn" onclick="scrollModalTo('modalVideoContainer')" style="display: none;">
+            <i data-lucide="youtube"></i>
+            <span>6 Video Chiến Dịch (YouTube)</span>
+          </button>
           <button class="modal-nav-pill" onclick="scrollModalTo('modalDeliverablesSec')">
             <i data-lucide="list-checks"></i>
             <span>Các Hạng Mục Chi Tiết</span>
@@ -2192,6 +2301,9 @@
 
         <!-- Slide Embed for Keynote Projects (Placed prominently) -->
         <div id="modalSlideContainer"></div>
+
+        <!-- Video Embed for LATH / Media Projects -->
+        <div id="modalVideoContainer"></div>
 
         <div id="modalDeliverablesSec">
           <div class="modal-sec-header-row">

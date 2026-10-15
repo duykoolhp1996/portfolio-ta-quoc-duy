@@ -27,7 +27,7 @@
 4. **Bravigo Việt Nam** (Ngành Xe Ô Tô & Phụ Kiện Thông Minh - B2B & B2C) - *03/2022 – 04/2024*
    - Mở rộng thị phần toàn quốc qua mạng lưới hàng trăm đại lý phân phối và gara ủy quyền.
 5. **LATH Group / TSD Group** (Công Ty Mỹ Phẩm & Bán Lẻ TMĐT) - *2019 – 2022*
-   - Tăng trưởng doanh thu mỹ phẩm +40%, SEO đạt 5.000+ organic traffic/tháng với 200+ đơn tự nhiên, phủ hàng chuỗi siêu thị Lotte Mart.
+   - Tăng trưởng doanh thu mỹ phẩm +40%, sản xuất 6 video TVC & viral chiến dịch, SEO đạt 5.000+ organic traffic/tháng với 200+ đơn tự nhiên, phủ hàng chuỗi siêu thị Lotte Mart.
 6. **Brew & Bánh Mì Cafe** (Chuỗi F&B Cà Phê & Bánh Mì Quốc Tế - California, USA) - *2024 – 2025*
    - Xây dựng hệ thống website song ngữ brewbanhmicafe.com, tích hợp đặt món trực tuyến Toast Tab POS và tối ưu Local SEO Google Maps.
 

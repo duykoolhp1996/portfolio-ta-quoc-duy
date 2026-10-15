@@ -295,14 +295,71 @@ const caseStudiesData = {
           "Cải thiện giao diện ứng dụng KingPang giúp tăng 20% lượt tải"
         ],
         attachment: "Hồ sơ sản phẩm vào Lotte Mart & Cải tiến ứng dụng KingPang"
+      },
+      {
+        title: "Sản Xuất Loạt 6 Video TVC & Viral Chiến Dịch Truyền Thông",
+        tag: "Sản Xuất Video & TVC",
+        desc: "Lên ý tưởng, kịch bản, quay dựng loạt 6 video quảng cáo sản phẩm, phỏng vấn khách hàng và chiến dịch viral cho thương hiệu LATH, bàn chải Wangta Hàn Quốc và máy pha cafe (Duy Hiền Agency thực hiện).",
+        items: [
+          "Quảng cáo TVC Kem đánh răng LATH phục vụ chiến dịch digital ads đa kênh",
+          "Video phỏng vấn thực tế khách hàng sử dụng sản phẩm gia tăng uy tín (Social Proof)",
+          "Video viral 'Hành trình đi tìm kem đánh răng LATH' lan tỏa tương tác tự nhiên",
+          "Loạt video quảng bá Bàn chải Wangta Hàn Quốc, Máy pha cafe và Dự án quảng cáo K-Cafe"
+        ],
+        attachment: "Bộ 6 video TVC & Chiến dịch truyền thông YouTube (Duy Hiền Agency)"
+      }
+    ],
+    videos: [
+      {
+        id: "9EtwFvB1za8",
+        title: "Quảng Cáo Kem Đánh Răng LATH (TVC Chính)",
+        desc: "TVC quảng cáo chính thức cho dòng sản phẩm kem đánh răng cao cấp LATH, tối ưu chuyển đổi chiến dịch Ads.",
+        thumb: "portfolio_assets/images/lath_video_1.jpg",
+        tag: "TVC Quảng Cáo"
+      },
+      {
+        id: "AWXE9p1qRFA",
+        title: "Phỏng Vấn Người Sử Dụng Kem Đánh Răng LATH",
+        desc: "Video trải nghiệm thực tế từ khách hàng (Social Proof), gia tăng uy tín và tỷ lệ chốt đơn thương mại điện tử.",
+        thumb: "portfolio_assets/images/lath_video_2.jpg",
+        tag: "Social Proof / Phỏng Vấn"
+      },
+      {
+        id: "iUNuUEvbvww",
+        title: "Hành Trình Video Đi Tìm Kem Đánh Răng LATH",
+        desc: "Video viral dạng storytelling hấp dẫn, lan tỏa thương hiệu tự nhiên đến cộng đồng người tiêu dùng trẻ.",
+        thumb: "portfolio_assets/images/lath_video_4.jpg",
+        tag: "Viral Storytelling"
+      },
+      {
+        id: "nepsZmYowrQ",
+        title: "Bàn Chải Wangta & Kem Đánh Răng Cao Cấp LATH",
+        desc: "Giới thiệu bộ đôi chăm sóc răng miệng cao cấp Hàn Quốc phân phối vào hệ thống Lotte Mart và sàn TMĐT.",
+        thumb: "portfolio_assets/images/lath_video_5.jpg",
+        tag: "Sản Phẩm & Phân Phối"
+      },
+      {
+        id: "c2M3sue3stE",
+        title: "Video Giới Thiệu Máy Pha Cafe Cao Cấp",
+        desc: "Video quảng bá dòng máy pha cà phê hiện đại phân phối cho phân khúc gia đình và văn phòng cao cấp.",
+        thumb: "portfolio_assets/images/lath_video_3.jpg",
+        tag: "Thiết Bị & Đời Sống"
+      },
+      {
+        id: "NMxCwslc6qc",
+        title: "Dự Án Quảng Cáo K-Cafe Hàn Quốc",
+        desc: "Chiến dịch video quảng bá thương hiệu cà phê K-Cafe Hàn Quốc trong hệ sinh thái sản phẩm LATH Group.",
+        thumb: "portfolio_assets/images/lath_video_6.jpg",
+        tag: "Quảng Cáo F&B"
       }
     ],
     results: [
-      "Tăng 40% doanh thu từ quảng cáo so với kỳ trước.",
+      "Tăng 40% doanh thu từ quảng cáo so với kỳ trước nhờ loạt video TVC & Ads chuẩn chuyển đổi.",
       "Đạt hơn 5.000 lượt truy cập tự nhiên và hơn 200 đơn hàng miễn phí mỗi tháng.",
+      "Sản xuất thành công 6 video truyền thông chủ lực cho LATH, Wangta và K-Cafe.",
       "Tăng 25% tỷ lệ mua hàng khi vào chuỗi Lotte Mart; tăng 20% lượt tải ứng dụng."
     ],
-    tech: ["Doanh Thu Ads +40%", "5.000 Khách Tự Nhiên", "200+ Đơn Miễn Phí", "Hệ Thống Lotte Mart", "Tối Ưu Ứng Dụng"]
+    tech: ["Doanh Thu Ads +40%", "6 Video TVC & Viral", "5.000 Khách Tự Nhiên", "200+ Đơn Miễn Phí", "Hệ Thống Lotte Mart", "Tối Ưu Ứng Dụng"]
   },
 
   brewbanhmi: {
@@ -709,6 +766,8 @@ window.scrollModalTo = function(elementId) {
     pills[0]?.classList.add("active");
   } else if (elementId === "modalSlideContainer") {
     document.getElementById("modalNavSlideBtn")?.classList.add("active");
+  } else if (elementId === "modalVideoContainer") {
+    document.getElementById("modalNavVideoBtn")?.classList.add("active");
   } else if (elementId === "modalDeliverablesSec") {
     document.querySelector(".modal-nav-pill:nth-of-type(3)")?.classList.add("active");
   } else if (elementId === "modalResultsSec") {
@@ -800,6 +859,47 @@ window.openCaseModal = function(caseKey) {
     }
   }
 
+  // Render Video Showcase (if available, e.g. LATH Group)
+  const videoContainer = document.getElementById("modalVideoContainer");
+  const videoNavBtn = document.getElementById("modalNavVideoBtn");
+
+  if (videoContainer) {
+    if (data.videos && data.videos.length) {
+      videoContainer.innerHTML = `
+        <div class="modal-video-box" id="modalVideoSection" style="margin-top: 10px;">
+          <div class="modal-video-header">
+            <span class="modal-video-badge"><i data-lucide="youtube"></i> ${data.videos.length} Video Chiến Dịch Truyền Thông &amp; TVC (Duy Hiền Agency)</span>
+            <a href="https://www.youtube.com/watch?v=${data.videos[0].id}" target="_blank" rel="noopener" class="btn btn-outline btn-xs" style="font-size: 0.76rem; padding: 5px 10px; background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5;">
+              <i data-lucide="external-link" style="width: 13px; height: 13px;"></i>
+              <span>Xem Kênh YouTube</span>
+            </a>
+          </div>
+          <div class="modal-video-list">
+            ${data.videos.map(v => `
+              <a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener" class="modal-video-item" title="${v.title}">
+                <div class="modal-video-thumb">
+                  <img src="${v.thumb}" alt="${v.title}" loading="lazy">
+                  <span class="thumb-play-icon"><i data-lucide="play"></i></span>
+                </div>
+                <div class="modal-video-meta">
+                  <span class="modal-video-tag">${v.tag}</span>
+                  <div class="modal-video-title">${v.title}</div>
+                  <div class="modal-video-desc">${v.desc}</div>
+                </div>
+              </a>
+            `).join("")}
+          </div>
+        </div>
+      `;
+      videoContainer.style.display = "block";
+      if (videoNavBtn) videoNavBtn.style.display = "inline-flex";
+    } else {
+      videoContainer.innerHTML = "";
+      videoContainer.style.display = "none";
+      if (videoNavBtn) videoNavBtn.style.display = "none";
+    }
+  }
+
   // Render Results
   const resContainer = document.getElementById("modalResults");
   if (resContainer) {
@@ -830,6 +930,7 @@ window.openCaseModal = function(caseKey) {
       const sections = [
         { id: "modalOverview", pillIdx: 0 },
         { id: "modalSlideContainer", pillId: "modalNavSlideBtn" },
+        { id: "modalVideoContainer", pillId: "modalNavVideoBtn" },
         { id: "modalDeliverablesSec", pillIdx: 2 },
         { id: "modalResultsSec", pillIdx: 3 }
       ];
@@ -882,6 +983,42 @@ document.addEventListener("keydown", (e) => {
     window.closeCaseModal();
   }
 });
+
+// Interactive LATH Video Controller (Case Study 05)
+window.selectLathVideo = function(videoId, title, tag, posterUrl, btnElement) {
+  // Update active thumbnail
+  const thumbBtns = document.querySelectorAll(".video-thumb-btn");
+  thumbBtns.forEach(b => b.classList.remove("active"));
+  if (btnElement) btnElement.classList.add("active");
+
+  const titleEl = document.getElementById("lathCurrentTitle");
+  const tagEl = document.getElementById("lathCurrentTag");
+  const posterImg = document.getElementById("lathCurrentPosterImg");
+  const posterWrap = document.getElementById("lathVideoPoster");
+  const iframeSlot = document.getElementById("lathIframeSlot");
+
+  if (titleEl) titleEl.innerText = title;
+  if (tagEl) tagEl.innerText = tag;
+  if (posterImg) posterImg.src = posterUrl;
+
+  // If iframe is already playing, switch video immediately
+  if (iframeSlot && iframeSlot.style.display !== "none") {
+    iframeSlot.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>`;
+  } else if (posterWrap) {
+    posterWrap.onclick = () => window.playLathVideo(videoId, title);
+  }
+};
+
+window.playLathVideo = function(videoId, title) {
+  const posterWrap = document.getElementById("lathVideoPoster");
+  const iframeSlot = document.getElementById("lathIframeSlot");
+
+  if (posterWrap && iframeSlot) {
+    posterWrap.style.display = "none";
+    iframeSlot.style.display = "block";
+    iframeSlot.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>`;
+  }
+};
 
 // 4. FAQ Accordion Controller
 function initFaqAccordion() {

@@ -73,9 +73,10 @@
 ### MARKETING LEAD / DIGITAL MANAGER | LATH Group / TSD Group (Thương hiệu Mỹ phẩm & Bán lẻ / TMĐT)
 *2019 – 2022*
 - **Tăng trưởng doanh thu từ Ads +40%:** Triển khai Google Ads & Facebook Ads hiệu quả cao, giúp doanh thu từ quảng cáo **tăng trưởng 40%** so với kỳ trước.
+- **Sản xuất loạt 6 Video TVC & Viral Chiến dịch (Duy Hiền Agency):** Lên ý tưởng, kịch bản và sản xuất 6 video truyền thông chủ lực (TVC Kem đánh răng LATH, Phỏng vấn khách hàng Social Proof, Storytelling viral, Bàn chải Wangta Hàn Quốc, Máy pha cafe, K-Cafe Hàn Quốc) tối ưu tỷ lệ chuyển đổi cho các chiến dịch Ads.
 - **Phát triển kênh SEO tự nhiên:** Tối ưu SEO đưa website *lath.vn* đạt **5.000+ organic traffic/tháng** và phát sinh đều đặn **200+ đơn hàng tự nhiên/tháng**.
-- **Thương mại điện tử & Trade Marketing:** Đưa các dòng sản phẩm mỹ phẩm vào chuỗi siêu thị **Lotte Mart** và các sàn TMĐT lớn (tăng **25% tỷ lệ mua hàng**); tối ưu UX/UI app KingPang (tăng **20% lượt tải**); sản xuất chuỗi video review nhân đôi mức độ nhận diện.
-- *Công nghệ & Kỹ năng:* +40% Ads Rev, SEO 5k Traffic, Lotte Mart Trade, UX/UI KingPang.
+- **Thương mại điện tử & Trade Marketing:** Đưa các dòng sản phẩm mỹ phẩm vào chuỗi siêu thị **Lotte Mart** và các sàn TMĐT lớn (tăng **25% tỷ lệ mua hàng**); tối ưu UX/UI app KingPang (tăng **20% lượt tải**).
+- *Công nghệ & Kỹ năng:* +40% Ads Rev, 6 Video TVC & Viral, SEO 5k Traffic, Lotte Mart Trade, UX/UI KingPang.
 
 ---
 
