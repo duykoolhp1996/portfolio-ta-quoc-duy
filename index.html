@@ -496,7 +496,7 @@
                 <div style="display: flex; gap: 8px;">
                   <button class="board-cta-btn" onclick="openCaseModal('luclam'); setTimeout(() => scrollModalTo('modalVideoContainer'), 300);" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #6EE7B7;">
                     <i data-lucide="youtube" style="width: 13px; height: 13px;"></i>
-                    <span>Video BTS Tết</span>
+                    <span>2 Video Lục Lam</span>
                   </button>
                   <button class="board-cta-btn" onclick="openCaseModal('luclam')">
                     <span>Xem Chi Tiết</span>
@@ -1090,45 +1090,73 @@
                   <li><i data-lucide="check"></i><span>Trực tiếp thiết kế và lập trình trọn bộ hệ thống 4 website thương hiệu</span></li>
                   <li><i data-lucide="check"></i><span>Tổ chức sự kiện ra mắt chi nhánh tại TTTM Takashimaya</span></li>
                   <li><i data-lucide="check"></i><span>Điều hành các chiến dịch quảng cáo và chương trình thúc đẩy bán lẻ</span></li>
-                  <li><i data-lucide="check"></i><span>Chỉ đạo sản xuất video Behind The Scenes (BTS) chiến dịch Hộp Quà Tết Lục Lam</span></li>
+                  <li><i data-lucide="check"></i><span>Sản xuất video dự án Trà Hoa Lục Lam &amp; video Behind The Scenes (BTS) Hộp Quà Tết</span></li>
                 </ul>
               </div>
             </div>
 
-            <!-- Right Visual: Mockup + BTS Video + Before vs After -->
+            <!-- Right Visual: Mockup + 2-Video Showcase + Before vs After -->
             <div class="case-visual-col">
               <div class="case-mockup-frame">
                 <span class="case-mockup-badge">Tăng Trưởng Bán Lẻ Đạt 40 Tỷ</span>
                 <img src="portfolio_assets/images/mockup_luclam.jpg" alt="Lục Lam F&B Revenue Analytics">
               </div>
 
-              <!-- BTS Video Card: Hộp Quà Tết Lục Lam -->
+              <!-- 2-Video Showcase Card: Lục Lam (Trà Hoa & BTS Quà Tết) -->
               <div class="lath-video-showcase-card" style="border-color: rgba(16, 185, 129, 0.35); margin-top: 14px;">
                 <div class="video-showcase-header" style="background: linear-gradient(90deg, rgba(16, 185, 129, 0.15), rgba(15, 23, 42, 0.6));">
                   <div class="video-badge-group">
                     <span class="video-red-badge" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.45); color: #6EE7B7;">
-                      <i data-lucide="clapperboard" style="color: #10B981;"></i> Behind The Scenes
+                      <i data-lucide="clapperboard" style="color: #10B981;"></i> 2 Video Chiến Dịch Truyền Thông
                     </span>
-                    <span class="video-sub-badge">Dự Án Hộp Quà Tết Lục Lam</span>
+                    <span class="video-sub-badge">Trà Hoa &amp; Hộp Quà Tết Lục Lam</span>
                   </div>
                   <span class="video-channel-tag"><i data-lucide="sparkles"></i> Duy Hiền Agency</span>
                 </div>
 
+                <!-- Featured Player Box -->
                 <div class="video-featured-player" id="luclamMainPlayer">
-                  <div class="video-poster-wrap" id="luclamVideoPoster" onclick="playLuclamVideo('7kSgznq7ly8')">
-                    <img src="portfolio_assets/images/luclam_bts_video.jpg" alt="Behind The Scenes Hộp Quà Tết Lục Lam" id="luclamCurrentPosterImg">
+                  <div class="video-poster-wrap" id="luclamVideoPoster" onclick="playLuclamVideo('8WTAEo6BWiY', 'Dự Án Trà Hoa Lục Lam (Video Giới Thiệu Sản Phẩm)')">
+                    <img src="portfolio_assets/images/luclam_trahoa_video.jpg" alt="Dự Án Trà Hoa Lục Lam" id="luclamCurrentPosterImg">
                     <div class="video-poster-overlay">
                       <div class="video-pulse-play-btn" style="background: rgba(16, 185, 129, 0.92); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7), 0 8px 24px rgba(0, 0, 0, 0.6);">
                         <i data-lucide="play" style="width: 26px; height: 26px; fill: #ffffff; stroke: #ffffff;"></i>
                       </div>
                       <div class="video-poster-info">
-                        <span class="video-active-tag" style="background: rgba(16, 185, 129, 0.25); color: #6EE7B7; border-color: rgba(16, 185, 129, 0.4);">Video Hậu Trường (BTS)</span>
-                        <h5 class="video-active-title">Behind The Scenes — Dự Án Hộp Quà Tết Lục Lam</h5>
-                        <span class="video-click-hint"><i data-lucide="play-circle"></i> Nhấp để phát video hậu trường trực tiếp</span>
+                        <span class="video-active-tag" id="luclamCurrentTag" style="background: rgba(16, 185, 129, 0.25); color: #6EE7B7; border-color: rgba(16, 185, 129, 0.4);">Dự Án Trà Hoa</span>
+                        <h5 class="video-active-title" id="luclamCurrentTitle">Dự Án Trà Hoa Lục Lam (Video Giới Thiệu Sản Phẩm)</h5>
+                        <span class="video-click-hint"><i data-lucide="play-circle"></i> Nhấp để phát video trực tiếp</span>
                       </div>
                     </div>
                   </div>
                   <div class="video-iframe-slot" id="luclamIframeSlot" style="display: none;"></div>
+                </div>
+
+                <!-- 2-Video Playlist Selector -->
+                <div class="video-playlist-bar">
+                  <div class="playlist-label">
+                    <span><i data-lucide="film"></i> Danh sách 2 video chiến dịch:</span>
+                    <span class="playlist-hint">Nhấp chọn video để xem</span>
+                  </div>
+                  <div class="video-thumbnails-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <!-- Video 1 -->
+                    <button type="button" class="video-thumb-btn active" onclick="selectLuclamVideo('8WTAEo6BWiY', 'Dự Án Trà Hoa Lục Lam (Video Giới Thiệu Sản Phẩm)', 'Dự Án Trà Hoa', 'portfolio_assets/images/luclam_trahoa_video.jpg', this)" title="Dự Án Trà Hoa Lục Lam">
+                      <div class="thumb-img-wrap">
+                        <img src="portfolio_assets/images/luclam_trahoa_video.jpg" alt="Video 1" loading="lazy">
+                        <span class="thumb-play-icon" style="background: rgba(16, 185, 129, 0.7);"><i data-lucide="play"></i></span>
+                      </div>
+                      <span class="thumb-label">Trà Hoa Lục Lam</span>
+                    </button>
+
+                    <!-- Video 2 -->
+                    <button type="button" class="video-thumb-btn" onclick="selectLuclamVideo('7kSgznq7ly8', 'Behind The Scenes — Dự Án Hộp Quà Tết Lục Lam', 'Video Hậu Trường (BTS)', 'portfolio_assets/images/luclam_bts_video.jpg', this)" title="Behind The Scenes Hộp Quà Tết Lục Lam">
+                      <div class="thumb-img-wrap">
+                        <img src="portfolio_assets/images/luclam_bts_video.jpg" alt="Video 2" loading="lazy">
+                        <span class="thumb-play-icon" style="background: rgba(16, 185, 129, 0.7);"><i data-lucide="play"></i></span>
+                      </div>
+                      <span class="thumb-label">BTS Hộp Quà Tết</span>
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -1166,12 +1194,12 @@
               <span class="case-tag-item">Ra mắt thương hiệu</span>
               <span class="case-tag-item">Quảng cáo đa kênh</span>
               <span class="case-tag-item">Sự kiện Takashimaya</span>
-              <span class="case-tag-item" style="border-color: rgba(16, 185, 129, 0.4); color: #6EE7B7; background: rgba(16, 185, 129, 0.12);"><i data-lucide="youtube" style="width: 12px; height: 12px; margin-right: 4px; display: inline-block; vertical-align: middle;"></i>Video BTS Hộp Quà Tết</span>
+              <span class="case-tag-item" style="border-color: rgba(16, 185, 129, 0.4); color: #6EE7B7; background: rgba(16, 185, 129, 0.12);"><i data-lucide="youtube" style="width: 12px; height: 12px; margin-right: 4px; display: inline-block; vertical-align: middle;"></i>2 Video Chiến Dịch (Trà Hoa &amp; BTS Tết)</span>
             </div>
             <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-              <a href="https://www.youtube.com/watch?v=7kSgznq7ly8" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #6EE7B7;">
+              <a href="https://www.youtube.com/watch?v=8WTAEo6BWiY" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #6EE7B7;">
                 <i data-lucide="youtube" style="width: 14px; height: 14px;"></i>
-                <span>Xem Video BTS Quà Tết</span>
+                <span>Xem 2 Video Lục Lam</span>
               </a>
               <button class="btn btn-outline btn-sm" onclick="openCaseModal('luclam')">
                 <span>Xem Toàn Bộ Hạng Mục Đã Làm</span>

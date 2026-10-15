@@ -23,7 +23,7 @@
 2. **Công ty Fclick** (Ứng dụng di động - Mobile App & Công nghệ) - *06/2025 – 02/2026*
    - Cắt giảm 25% CPI tải ứng dụng, tự động hóa bằng AI tiết kiệm 30% thời gian, cải thiện 20% Retention rate.
 3. **Công Ty TNHH TM DV SX Lục Lam** (Chuỗi Trà Thảo Mộc & Quà Tặng Cao Cấp) - *04/2024 – 04/2025*
-   - Tăng trưởng doanh thu 40 Tỷ từ số 0, sản xuất video Behind The Scenes (BTS) Hộp Quà Tết, hệ sinh thái 4 websites, Activation Takashimaya, Gala 200+ khách.
+   - Tăng trưởng doanh thu 40 Tỷ từ số 0, sản xuất 2 video chiến dịch (Trà hoa & BTS Hộp Quà Tết), hệ sinh thái 4 websites, Activation Takashimaya, Gala 200+ khách.
 4. **Bravigo Việt Nam** (Ngành Xe Ô Tô & Phụ Kiện Thông Minh - B2B & B2C) - *03/2022 – 04/2024*
    - Mở rộng thị phần toàn quốc qua mạng lưới hàng trăm đại lý phân phối và gara ủy quyền.
 5. **LATH Group / TSD Group** (Công Ty Mỹ Phẩm & Bán Lẻ TMĐT) - *2019 – 2022*

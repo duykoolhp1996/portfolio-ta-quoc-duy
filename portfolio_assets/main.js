@@ -167,17 +167,25 @@ const caseStudiesData = {
       {
         title: "Chiến Dịch Bứt Phá Doanh Thu 40 Tỷ & Hộp Quà Tết",
         tag: "Tăng Trưởng Bán Hàng",
-        desc: "Kết hợp quảng cáo online và bán quà tặng mùa Tết đạt mốc doanh thu 40 tỷ, trực tiếp chỉ đạo sản xuất video Behind The Scenes (BTS) quảng bá quy trình làm hộp quà Tết thủ công cao cấp.",
+        desc: "Kết hợp quảng cáo online và bán quà tặng mùa Tết đạt mốc doanh thu 40 tỷ, sản xuất loạt video quảng bá dòng sản phẩm Trà hoa Lục Lam và video Behind The Scenes (BTS) hoàn thiện hộp quà Tết thủ công cao cấp.",
         items: [
           "Chạy quảng cáo mục tiêu trên Facebook và Google cho các set trà hoa cao cấp",
           "Đẩy mạnh gói quà Tết cho doanh nghiệp B2B và khách hàng bán lẻ",
+          "Sản xuất video dự án Trà Hoa Lục Lam giới thiệu các dòng sản phẩm thảo mộc thượng hạng",
           "Chỉ đạo sản xuất video Behind The Scenes (BTS) quy trình hoàn thiện Hộp Quà Tết Lục Lam (Duy Hiền Agency)",
           "Trưng bày đồng bộ tài liệu bán hàng tại tất cả các điểm bán và sự kiện"
         ],
-        attachment: "Kế hoạch chiến dịch Quà Tết & Video Behind The Scenes (YouTube)"
+        attachment: "Kế hoạch chiến dịch Quà Tết & 2 Video Truyền Thông (YouTube)"
       }
     ],
     videos: [
+      {
+        id: "8WTAEo6BWiY",
+        title: "Dự Án Trà Hoa Lục Lam (Video Giới Thiệu Sản Phẩm)",
+        desc: "Thước phim giới thiệu nhận diện thương hiệu và các dòng sản phẩm trà hoa thảo mộc thượng hạng Lục Lam (Duy Hiền Agency thực hiện).",
+        thumb: "portfolio_assets/images/luclam_trahoa_video.jpg",
+        tag: "Dự Án Trà Hoa"
+      },
       {
         id: "7kSgznq7ly8",
         title: "Behind The Scenes (BTS) — Dự Án Hộp Quà Tết Lục Lam",
@@ -188,11 +196,11 @@ const caseStudiesData = {
     ],
     results: [
       "Đưa doanh thu từ con số 0 đạt mốc 40 tỷ đồng.",
-      "Sản xuất thành công video Behind The Scenes (BTS) Hộp Quà Tết Lục Lam lan tỏa mạnh mẽ hình ảnh thương hiệu.",
+      "Sản xuất thành công 2 video chiến dịch (Trà hoa & BTS Hộp Quà Tết) lan tỏa mạnh mẽ hình ảnh thương hiệu.",
       "Xây dựng và đào tạo đội ngũ 8 nhân sự Marketing vận hành độc lập.",
       "Hoàn thiện hệ sinh thái 4 website và hệ thống quản lý dữ liệu khách hàng."
     ],
-    tech: ["Doanh Thu 40 Tỷ", "Video BTS Hộp Quà Tết", "Ra Mắt Thương Hiệu", "Đội Ngũ 8 Người", "4 Website", "Quản Lý Khách Hàng", "Sự Kiện Takashimaya"]
+    tech: ["Doanh Thu 40 Tỷ", "2 Video Lục Lam", "Video BTS Quà Tết", "Ra Mắt Thương Hiệu", "Đội Ngũ 8 Người", "4 Website", "Quản Lý Khách Hàng", "Sự Kiện Takashimaya"]
   },
 
   bravigo: {
@@ -1042,8 +1050,34 @@ window.playLathVideo = function(videoId, title) {
   }
 };
 
-// Interactive Lục Lam BTS Video Controller (Case Study 03)
-window.playLuclamVideo = function(videoId = "7kSgznq7ly8") {
+// Interactive Lục Lam Video Controller (Case Study 03)
+window.selectLuclamVideo = function(videoId, title, tag, posterUrl, btnElement) {
+  if (btnElement) {
+    const parentGrid = btnElement.closest(".video-thumbnails-grid");
+    if (parentGrid) {
+      parentGrid.querySelectorAll(".video-thumb-btn").forEach(b => b.classList.remove("active"));
+      btnElement.classList.add("active");
+    }
+  }
+
+  const titleEl = document.getElementById("luclamCurrentTitle");
+  const tagEl = document.getElementById("luclamCurrentTag");
+  const posterImg = document.getElementById("luclamCurrentPosterImg");
+  const posterWrap = document.getElementById("luclamVideoPoster");
+  const iframeSlot = document.getElementById("luclamIframeSlot");
+
+  if (titleEl) titleEl.innerText = title;
+  if (tagEl) tagEl.innerText = tag;
+  if (posterImg) posterImg.src = posterUrl;
+
+  if (iframeSlot && iframeSlot.style.display !== "none") {
+    iframeSlot.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>`;
+  } else if (posterWrap) {
+    posterWrap.onclick = () => window.playLuclamVideo(videoId, title);
+  }
+};
+
+window.playLuclamVideo = function(videoId = "8WTAEo6BWiY", title = "Dự Án Trà Hoa Lục Lam") {
   const posterWrap = document.getElementById("luclamVideoPoster");
   const iframeSlot = document.getElementById("luclamIframeSlot");
 
