@@ -493,10 +493,16 @@
 
               <div class="board-card-footer">
                 <span class="board-role-tag">Quản Lý Marketing (Marketing Manager)</span>
-                <button class="board-cta-btn" onclick="openCaseModal('luclam')">
-                  <span>Xem Chi Tiết</span>
-                  <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
-                </button>
+                <div style="display: flex; gap: 8px;">
+                  <button class="board-cta-btn" onclick="openCaseModal('luclam'); setTimeout(() => scrollModalTo('modalVideoContainer'), 300);" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #6EE7B7;">
+                    <i data-lucide="youtube" style="width: 13px; height: 13px;"></i>
+                    <span>Video BTS Tết</span>
+                  </button>
+                  <button class="board-cta-btn" onclick="openCaseModal('luclam')">
+                    <span>Xem Chi Tiết</span>
+                    <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -1084,15 +1090,46 @@
                   <li><i data-lucide="check"></i><span>Trực tiếp thiết kế và lập trình trọn bộ hệ thống 4 website thương hiệu</span></li>
                   <li><i data-lucide="check"></i><span>Tổ chức sự kiện ra mắt chi nhánh tại TTTM Takashimaya</span></li>
                   <li><i data-lucide="check"></i><span>Điều hành các chiến dịch quảng cáo và chương trình thúc đẩy bán lẻ</span></li>
+                  <li><i data-lucide="check"></i><span>Chỉ đạo sản xuất video Behind The Scenes (BTS) chiến dịch Hộp Quà Tết Lục Lam</span></li>
                 </ul>
               </div>
             </div>
 
-            <!-- Right Visual: Mockup + Before vs After -->
+            <!-- Right Visual: Mockup + BTS Video + Before vs After -->
             <div class="case-visual-col">
               <div class="case-mockup-frame">
                 <span class="case-mockup-badge">Tăng Trưởng Bán Lẻ Đạt 40 Tỷ</span>
                 <img src="portfolio_assets/images/mockup_luclam.jpg" alt="Lục Lam F&B Revenue Analytics">
+              </div>
+
+              <!-- BTS Video Card: Hộp Quà Tết Lục Lam -->
+              <div class="lath-video-showcase-card" style="border-color: rgba(16, 185, 129, 0.35); margin-top: 14px;">
+                <div class="video-showcase-header" style="background: linear-gradient(90deg, rgba(16, 185, 129, 0.15), rgba(15, 23, 42, 0.6));">
+                  <div class="video-badge-group">
+                    <span class="video-red-badge" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.45); color: #6EE7B7;">
+                      <i data-lucide="clapperboard" style="color: #10B981;"></i> Behind The Scenes
+                    </span>
+                    <span class="video-sub-badge">Dự Án Hộp Quà Tết Lục Lam</span>
+                  </div>
+                  <span class="video-channel-tag"><i data-lucide="sparkles"></i> Duy Hiền Agency</span>
+                </div>
+
+                <div class="video-featured-player" id="luclamMainPlayer">
+                  <div class="video-poster-wrap" id="luclamVideoPoster" onclick="playLuclamVideo('7kSgznq7ly8')">
+                    <img src="portfolio_assets/images/luclam_bts_video.jpg" alt="Behind The Scenes Hộp Quà Tết Lục Lam" id="luclamCurrentPosterImg">
+                    <div class="video-poster-overlay">
+                      <div class="video-pulse-play-btn" style="background: rgba(16, 185, 129, 0.92); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7), 0 8px 24px rgba(0, 0, 0, 0.6);">
+                        <i data-lucide="play" style="width: 26px; height: 26px; fill: #ffffff; stroke: #ffffff;"></i>
+                      </div>
+                      <div class="video-poster-info">
+                        <span class="video-active-tag" style="background: rgba(16, 185, 129, 0.25); color: #6EE7B7; border-color: rgba(16, 185, 129, 0.4);">Video Hậu Trường (BTS)</span>
+                        <h5 class="video-active-title">Behind The Scenes — Dự Án Hộp Quà Tết Lục Lam</h5>
+                        <span class="video-click-hint"><i data-lucide="play-circle"></i> Nhấp để phát video hậu trường trực tiếp</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="video-iframe-slot" id="luclamIframeSlot" style="display: none;"></div>
+                </div>
               </div>
 
               <div class="before-after-matrix">
@@ -1129,11 +1166,18 @@
               <span class="case-tag-item">Ra mắt thương hiệu</span>
               <span class="case-tag-item">Quảng cáo đa kênh</span>
               <span class="case-tag-item">Sự kiện Takashimaya</span>
+              <span class="case-tag-item" style="border-color: rgba(16, 185, 129, 0.4); color: #6EE7B7; background: rgba(16, 185, 129, 0.12);"><i data-lucide="youtube" style="width: 12px; height: 12px; margin-right: 4px; display: inline-block; vertical-align: middle;"></i>Video BTS Hộp Quà Tết</span>
             </div>
-            <button class="btn btn-outline btn-sm" onclick="openCaseModal('luclam')">
-              <span>Xem Toàn Bộ Hạng Mục Đã Làm</span>
-              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-            </button>
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+              <a href="https://www.youtube.com/watch?v=7kSgznq7ly8" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #6EE7B7;">
+                <i data-lucide="youtube" style="width: 14px; height: 14px;"></i>
+                <span>Xem Video BTS Quà Tết</span>
+              </a>
+              <button class="btn btn-outline btn-sm" onclick="openCaseModal('luclam')">
+                <span>Xem Toàn Bộ Hạng Mục Đã Làm</span>
+                <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+              </button>
+            </div>
           </div>
         </article>
 

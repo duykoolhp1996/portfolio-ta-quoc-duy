@@ -165,23 +165,34 @@ const caseStudiesData = {
         attachment: "Hình ảnh sự kiện Takashimaya & Kế hoạch trải nghiệm"
       },
       {
-        title: "Chiến Dịch Bứt Phá Doanh Thu 40 Tỷ",
+        title: "Chiến Dịch Bứt Phá Doanh Thu 40 Tỷ & Hộp Quà Tết",
         tag: "Tăng Trưởng Bán Hàng",
-        desc: "Kết hợp quảng cáo online và bán quà tặng mùa Tết đạt mốc doanh thu 40 tỷ.",
+        desc: "Kết hợp quảng cáo online và bán quà tặng mùa Tết đạt mốc doanh thu 40 tỷ, trực tiếp chỉ đạo sản xuất video Behind The Scenes (BTS) quảng bá quy trình làm hộp quà Tết thủ công cao cấp.",
         items: [
-          "Chạy quảng cáo mục tiêu trên Facebook và Google",
-          "Đẩy mạnh gói quà Tết cho doanh nghiệp và khách lẻ",
-          "Trưng bày đồng bộ tài liệu bán hàng tại tất cả các điểm bán"
+          "Chạy quảng cáo mục tiêu trên Facebook và Google cho các set trà hoa cao cấp",
+          "Đẩy mạnh gói quà Tết cho doanh nghiệp B2B và khách hàng bán lẻ",
+          "Chỉ đạo sản xuất video Behind The Scenes (BTS) quy trình hoàn thiện Hộp Quà Tết Lục Lam (Duy Hiền Agency)",
+          "Trưng bày đồng bộ tài liệu bán hàng tại tất cả các điểm bán và sự kiện"
         ],
-        attachment: "Kế hoạch chiến dịch Quà Tết & Báo cáo doanh số"
+        attachment: "Kế hoạch chiến dịch Quà Tết & Video Behind The Scenes (YouTube)"
+      }
+    ],
+    videos: [
+      {
+        id: "7kSgznq7ly8",
+        title: "Behind The Scenes (BTS) — Dự Án Hộp Quà Tết Lục Lam",
+        desc: "Thước phim hậu trường ghi lại quá trình sản xuất, thiết kế bao bì và đóng gói thủ công tỉ mỉ bộ sưu tập Hộp Quà Tết Lục Lam cao cấp (Duy Hiền Agency thực hiện).",
+        thumb: "portfolio_assets/images/luclam_bts_video.jpg",
+        tag: "Behind The Scenes (BTS)"
       }
     ],
     results: [
       "Đưa doanh thu từ con số 0 đạt mốc 40 tỷ đồng.",
+      "Sản xuất thành công video Behind The Scenes (BTS) Hộp Quà Tết Lục Lam lan tỏa mạnh mẽ hình ảnh thương hiệu.",
       "Xây dựng và đào tạo đội ngũ 8 nhân sự Marketing vận hành độc lập.",
       "Hoàn thiện hệ sinh thái 4 website và hệ thống quản lý dữ liệu khách hàng."
     ],
-    tech: ["Doanh Thu 40 Tỷ", "Ra Mắt Thương Hiệu", "Đội Ngũ 8 Người", "4 Website", "Quản Lý Khách Hàng", "Sự Kiện Takashimaya"]
+    tech: ["Doanh Thu 40 Tỷ", "Video BTS Hộp Quà Tết", "Ra Mắt Thương Hiệu", "Đội Ngũ 8 Người", "4 Website", "Quản Lý Khách Hàng", "Sự Kiện Takashimaya"]
   },
 
   bravigo: {
@@ -859,25 +870,32 @@ window.openCaseModal = function(caseKey) {
     }
   }
 
-  // Render Video Showcase (if available, e.g. LATH Group)
+  // Render Video Showcase (if available, e.g. LATH Group, Lục Lam)
   const videoContainer = document.getElementById("modalVideoContainer");
   const videoNavBtn = document.getElementById("modalNavVideoBtn");
 
   if (videoContainer) {
     if (data.videos && data.videos.length) {
+      const isSingleBts = data.videos.length === 1 && data.videos[0].tag.includes("BTS");
+      const badgeTitle = isSingleBts
+        ? `Video Behind The Scenes (BTS) Hộp Quà Tết (Duy Hiền Agency)`
+        : `${data.videos.length} Video Chiến Dịch Truyền Thông &amp; TVC (Duy Hiền Agency)`;
+      const navBtnText = isSingleBts ? `Video BTS Quà Tết (YouTube)` : `${data.videos.length} Video Chiến Dịch (YouTube)`;
+      const actionText = isSingleBts ? `Xem Video YouTube` : `Xem Kênh YouTube`;
+
       videoContainer.innerHTML = `
         <div class="modal-video-box" id="modalVideoSection" style="margin-top: 10px;">
           <div class="modal-video-header">
-            <span class="modal-video-badge"><i data-lucide="youtube"></i> ${data.videos.length} Video Chiến Dịch Truyền Thông &amp; TVC (Duy Hiền Agency)</span>
+            <span class="modal-video-badge"><i data-lucide="youtube"></i> ${badgeTitle}</span>
             <a href="https://www.youtube.com/watch?v=${data.videos[0].id}" target="_blank" rel="noopener" class="btn btn-outline btn-xs" style="font-size: 0.76rem; padding: 5px 10px; background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5;">
               <i data-lucide="external-link" style="width: 13px; height: 13px;"></i>
-              <span>Xem Kênh YouTube</span>
+              <span>${actionText}</span>
             </a>
           </div>
-          <div class="modal-video-list">
+          <div class="modal-video-list" style="${isSingleBts ? 'grid-template-columns: 1fr;' : ''}">
             ${data.videos.map(v => `
               <a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener" class="modal-video-item" title="${v.title}">
-                <div class="modal-video-thumb">
+                <div class="modal-video-thumb" style="${isSingleBts ? 'width: 130px; height: 74px;' : ''}">
                   <img src="${v.thumb}" alt="${v.title}" loading="lazy">
                   <span class="thumb-play-icon"><i data-lucide="play"></i></span>
                 </div>
@@ -892,7 +910,11 @@ window.openCaseModal = function(caseKey) {
         </div>
       `;
       videoContainer.style.display = "block";
-      if (videoNavBtn) videoNavBtn.style.display = "inline-flex";
+      if (videoNavBtn) {
+        const textSpan = videoNavBtn.querySelector("span");
+        if (textSpan) textSpan.innerText = navBtnText;
+        videoNavBtn.style.display = "inline-flex";
+      }
     } else {
       videoContainer.innerHTML = "";
       videoContainer.style.display = "none";
@@ -1012,6 +1034,18 @@ window.selectLathVideo = function(videoId, title, tag, posterUrl, btnElement) {
 window.playLathVideo = function(videoId, title) {
   const posterWrap = document.getElementById("lathVideoPoster");
   const iframeSlot = document.getElementById("lathIframeSlot");
+
+  if (posterWrap && iframeSlot) {
+    posterWrap.style.display = "none";
+    iframeSlot.style.display = "block";
+    iframeSlot.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>`;
+  }
+};
+
+// Interactive Lục Lam BTS Video Controller (Case Study 03)
+window.playLuclamVideo = function(videoId = "7kSgznq7ly8") {
+  const posterWrap = document.getElementById("luclamVideoPoster");
+  const iframeSlot = document.getElementById("luclamIframeSlot");
 
   if (posterWrap && iframeSlot) {
     posterWrap.style.display = "none";
