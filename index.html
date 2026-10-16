@@ -373,7 +373,7 @@
           <div class="company-boards-grid" id="companyBoardsGrid">
             
             <!-- Ô 1: Sala Garden -->
-            <div class="company-board-card" data-company="sala">
+            <div class="company-board-card" data-company="sala" onclick="openCaseModal('sala')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCaseModal('sala');}">
               <div class="board-card-header">
                 <div class="board-brand-info">
                   <h4 class="board-brand-name">Sala Garden</h4>
@@ -415,7 +415,7 @@
             </div>
 
             <!-- Ô 2: Fclick -->
-            <div class="company-board-card" data-company="fclick">
+            <div class="company-board-card" data-company="fclick" onclick="openCaseModal('fclick')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCaseModal('fclick');}">
               <div class="board-card-header">
                 <div class="board-brand-info">
                   <div style="display: flex; align-items: center; gap: 10px;">
@@ -460,7 +460,7 @@
             </div>
 
             <!-- Ô 3: Lục Lam -->
-            <div class="company-board-card" data-company="luclam">
+            <div class="company-board-card" data-company="luclam" onclick="openCaseModal('luclam')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCaseModal('luclam');}">
               <div class="board-card-header">
                 <div class="board-brand-info">
                   <h4 class="board-brand-name">Lục Lam</h4>
@@ -495,7 +495,7 @@
               <div class="board-card-footer">
                 <span class="board-role-tag">Quản Lý Marketing (Marketing Manager)</span>
                 <div style="display: flex; gap: 8px;">
-                  <button class="board-cta-btn" onclick="openCaseModal('luclam'); setTimeout(() => scrollModalTo('modalVideoContainer'), 300);" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #6EE7B7;">
+                  <button class="board-cta-btn" onclick="event.stopPropagation(); openCaseModal('luclam'); setTimeout(() => scrollModalTo('modalVideoContainer'), 300);" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #6EE7B7;">
                     <i data-lucide="youtube" style="width: 13px; height: 13px;"></i>
                     <span>2 Video Lục Lam</span>
                   </button>
@@ -508,7 +508,7 @@
             </div>
 
             <!-- Ô 4: Bravigo -->
-            <div class="company-board-card" data-company="bravigo">
+            <div class="company-board-card" data-company="bravigo" onclick="openCaseModal('bravigo')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCaseModal('bravigo');}">
               <div class="board-card-header">
                 <div class="board-brand-info">
                   <h4 class="board-brand-name">Bravigo</h4>
@@ -550,7 +550,7 @@
             </div>
 
             <!-- Ô 5: LATH Group -->
-            <div class="company-board-card" data-company="lath">
+            <div class="company-board-card" data-company="lath" onclick="openCaseModal('lath')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCaseModal('lath');}">
               <div class="board-card-header">
                 <div class="board-brand-info">
                   <h4 class="board-brand-name">LATH Group</h4>
@@ -585,7 +585,7 @@
               <div class="board-card-footer">
                 <span class="board-role-tag">Trưởng Nhóm Marketing (Marketing Leader)</span>
                 <div style="display: flex; gap: 8px;">
-                  <button class="board-cta-btn" onclick="openCaseModal('lath'); setTimeout(() => scrollModalTo('modalVideoContainer'), 300);" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5;">
+                  <button class="board-cta-btn" onclick="event.stopPropagation(); openCaseModal('lath'); setTimeout(() => scrollModalTo('modalVideoContainer'), 300);" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5;">
                     <i data-lucide="youtube" style="width: 13px; height: 13px;"></i>
                     <span>6 Video Ads</span>
                   </button>
@@ -598,7 +598,7 @@
             </div>
 
             <!-- Ô 6: Brew & Bánh Mì Cafe (USA) -->
-            <div class="company-board-card" data-company="brewbanhmi">
+            <div class="company-board-card" data-company="brewbanhmi" onclick="openCaseModal('brewbanhmi')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCaseModal('brewbanhmi');}">
               <div class="board-card-header">
                 <div class="board-brand-info">
                   <div style="display: flex; align-items: center; gap: 10px;">
@@ -636,7 +636,7 @@
               <div class="board-card-footer">
                 <span class="board-role-tag">Quản Lý Marketing &amp; Kênh Số</span>
                 <div style="display: flex; gap: 8px;">
-                  <a href="https://brewbanhmicafe.com" target="_blank" rel="noopener" class="board-cta-btn" style="background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.4); color: #FBBF24;">
+                  <a href="https://brewbanhmicafe.com" target="_blank" rel="noopener" class="board-cta-btn" onclick="event.stopPropagation();" style="background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.4); color: #FBBF24;">
                     <span>Xem Web</span>
                     <i data-lucide="external-link" style="width: 13px; height: 13px;"></i>
                   </a>
