@@ -1,0 +1,10 @@
+# Robots.txt for Tạ Quốc Duy Portfolio
+# Website: https://portfolio.duyhiendigi.com/
+
+User-agent: *
+Allow: /
+Allow: /portfolio_assets/
+Allow: /CV_Ta_Quoc_Duy_Marketing_Manager.pdf
+
+# Sitemaps
+Sitemap: https://portfolio.duyhiendigi.com/sitemap.xml
