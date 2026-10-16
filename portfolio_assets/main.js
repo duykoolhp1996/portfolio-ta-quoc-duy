@@ -619,14 +619,12 @@ window.filterCompanyBoard = function(companyKey, btn) {
   if (btn) btn.classList.add("active");
 
   const cards = document.querySelectorAll(".company-board-card");
-  const spotlight = document.getElementById("companyChartSpotlight");
 
   if (companyKey === "all") {
     cards.forEach(c => {
       c.style.display = "flex";
       c.classList.remove("highlighted");
     });
-    if (spotlight) spotlight.style.display = "none";
   } else {
     cards.forEach(c => {
       if (c.getAttribute("data-company") === companyKey) {
@@ -637,11 +635,6 @@ window.filterCompanyBoard = function(companyKey, btn) {
         c.classList.remove("highlighted");
       }
     });
-
-    if (spotlight) {
-      spotlight.style.display = "block";
-      renderCompanySpecificChart(companyKey);
-    }
   }
 
   // Refresh lucide icons
