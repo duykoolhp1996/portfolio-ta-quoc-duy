@@ -2147,6 +2147,17 @@ section {
   border-radius: var(--radius-full);
 }
 
+.case-footer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 /* ================= 08. SECTION 05: MARTECH & AI AUTOMATION ================= */
 .martech-section {
   background: var(--bg-main);
@@ -3010,9 +3021,20 @@ footer {
   .martech-layers-grid,
   .deliverables-grid,
   .about-editorial-wrap,
-  .case-body-grid,
+  .case-split-grid,
   .contact-card-wrap {
     grid-template-columns: 1fr;
+  }
+  .case-split-grid {
+    gap: 28px;
+  }
+  .pipeline-5step-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px;
+  }
+  .before-after-matrix {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
   }
   .case-metrics-banner {
     grid-template-columns: repeat(2, 1fr);
@@ -3044,6 +3066,38 @@ footer {
   }
   .cursor-badge {
     display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Navbar action buttons: hide redundant text buttons to prevent header horizontal overflow */
+  .nav-actions-box .nav-link-text,
+  .nav-actions-box .nav-btn-contact {
+    display: none !important;
+  }
+
+  /* Reduce Case Study item padding on mobile to eliminate horizontal overflow */
+  .case-study-item {
+    padding: 24px 16px !important;
+  }
+
+  /* Single column for 5-stage pipeline on mobile */
+  .pipeline-5step-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+
+  /* Case study footer actions wrapping and stacking */
+  .case-footer-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .case-footer-actions .btn {
+    width: 100%;
+    justify-content: center;
+    white-space: normal !important;
   }
 }
 

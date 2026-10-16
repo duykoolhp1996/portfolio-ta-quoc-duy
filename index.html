@@ -78,10 +78,41 @@
 
   <!-- Lucide Icons & Chart.js -->
   <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    // Lucide icon registration for YouTube (prevents console warning)
+    if (window.lucide) {
+      window.lucide.icons = window.lucide.icons || {};
+      window.lucide.icons.youtube = [
+        ['path', { d: 'M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17' }],
+        ['polygon', { points: '10 15 15 12 10 9' }]
+      ];
+    }
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Dark Studio Stylesheet -->
   <link rel="stylesheet" href="portfolio_assets/style.css?v=2.5">
+
+  <!-- Hotjar Tracking Code per Global Rule (hjid: 6791459, hjsv: 6) -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:6791459,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- Google tag (gtag.js) per Global Rule (ID: G-9KQYN3R3X2) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KQYN3R3X2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9KQYN3R3X2');
+  </script>
 </head>
 <body>
 
@@ -152,6 +183,7 @@
     </div>
   </div>
 
+  <main id="main-content">
   <!-- ================= 02. HERO SECTION / CENTERED STUDIO ================= -->
   <header class="hero-stage" id="hero">
     
@@ -582,7 +614,7 @@
                 <span class="board-role-tag">Quản Lý Marketing (Marketing Manager)</span>
                 <div style="display: flex; gap: 8px;">
                   <button class="board-cta-btn" onclick="event.stopPropagation(); openCaseModal('luclam'); setTimeout(() => scrollModalTo('modalVideoContainer'), 300);" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #6EE7B7;">
-                    <i data-lucide="youtube" style="width: 13px; height: 13px;"></i>
+                    <svg class="lucide lucide-youtube" viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9"/></svg>
                     <span>2 Video Lục Lam</span>
                   </button>
                   <button class="board-cta-btn" onclick="openCaseModal('luclam')">
@@ -672,7 +704,7 @@
                 <span class="board-role-tag">Trưởng Nhóm Marketing (Marketing Leader)</span>
                 <div style="display: flex; gap: 8px;">
                   <button class="board-cta-btn" onclick="event.stopPropagation(); openCaseModal('lath'); setTimeout(() => scrollModalTo('modalVideoContainer'), 300);" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5;">
-                    <i data-lucide="youtube" style="width: 13px; height: 13px;"></i>
+                    <svg class="lucide lucide-youtube" viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 21.5 17"/><polygon points="10 15 15 12 10 9"/></svg>
                     <span>6 Video Ads</span>
                   </button>
                   <button class="board-cta-btn" onclick="openCaseModal('lath')">
@@ -1442,11 +1474,11 @@
               <span class="case-tag-item">Ra mắt thương hiệu</span>
               <span class="case-tag-item">Quảng cáo đa kênh</span>
               <span class="case-tag-item">Sự kiện Takashimaya</span>
-              <span class="case-tag-item" style="border-color: rgba(16, 185, 129, 0.4); color: #6EE7B7; background: rgba(16, 185, 129, 0.12);"><i data-lucide="youtube" style="width: 12px; height: 12px; margin-right: 4px; display: inline-block; vertical-align: middle;"></i>2 Video Chiến Dịch (Trà Hoa &amp; BTS Tết)</span>
+              <span class="case-tag-item" style="border-color: rgba(16, 185, 129, 0.4); color: #6EE7B7; background: rgba(16, 185, 129, 0.12);"><svg class="lucide lucide-youtube" viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; display: inline-block; vertical-align: middle;"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9"/></svg>2 Video Chiến Dịch (Trà Hoa &amp; BTS Tết)</span>
             </div>
             <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
               <a href="https://www.youtube.com/watch?v=8WTAEo6BWiY" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #6EE7B7;">
-                <i data-lucide="youtube" style="width: 14px; height: 14px;"></i>
+                <svg class="lucide lucide-youtube" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9"/></svg>
                 <span>Xem 2 Video Lục Lam</span>
               </a>
               <button class="btn btn-outline btn-sm" onclick="openCaseModal('luclam')">
@@ -1638,7 +1670,7 @@
               <div class="lath-video-showcase-card">
                 <div class="video-showcase-header">
                   <div class="video-badge-group">
-                    <span class="video-red-badge"><i data-lucide="youtube"></i> 6 Video Chiến Dịch Truyền Thông</span>
+                    <span class="video-red-badge"><svg class="lucide lucide-youtube" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 4px;"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9"/></svg>6 Video Chiến Dịch Truyền Thông</span>
                     <span class="video-sub-badge">TVC &amp; Viral LATH Group</span>
                   </div>
                   <span class="video-channel-tag"><i data-lucide="sparkles"></i> Duy Hiền Agency</span>
@@ -1760,11 +1792,11 @@
               <span class="case-tag-item">+40% Doanh thu</span>
               <span class="case-tag-item">Quảng cáo trực tuyến</span>
               <span class="case-tag-item">Vào siêu thị Lotte Mart</span>
-              <span class="case-tag-item" style="border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5; background: rgba(239, 68, 68, 0.12);"><i data-lucide="youtube" style="width: 12px; height: 12px; margin-right: 4px; display: inline-block; vertical-align: middle;"></i>6 Video TVC &amp; Viral</span>
+              <span class="case-tag-item" style="border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5; background: rgba(239, 68, 68, 0.12);"><svg class="lucide lucide-youtube" viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; display: inline-block; vertical-align: middle;"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9"/></svg>6 Video TVC &amp; Viral</span>
             </div>
             <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
               <a href="https://www.youtube.com/watch?v=9EtwFvB1za8" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5;">
-                <i data-lucide="youtube" style="width: 14px; height: 14px;"></i>
+                <svg class="lucide lucide-youtube" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9"/></svg>
                 <span>Xem Trên YouTube</span>
               </a>
               <button class="btn btn-outline btn-sm" onclick="openCaseModal('lath')">
@@ -2502,6 +2534,7 @@
       </div>
     </div>
   </section>
+  </main>
 
   <!-- Footer -->
   <footer>
@@ -2540,7 +2573,7 @@
             <span>Slide Ottocast P3 (Canva)</span>
           </button>
           <button class="modal-nav-pill modal-nav-video-pill" id="modalNavVideoBtn" onclick="scrollModalTo('modalVideoContainer')" style="display: none;">
-            <i data-lucide="youtube"></i>
+            <svg class="lucide lucide-youtube" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9"/></svg>
             <span>6 Video Chiến Dịch (YouTube)</span>
           </button>
           <button class="modal-nav-pill" onclick="scrollModalTo('modalDeliverablesSec')">
