@@ -66,6 +66,12 @@ const caseStudiesData = {
       "Vận hành cỗ máy sản xuất 130+ video/tháng, tăng trưởng mạnh tương tác tự nhiên.",
       "Tối ưu chi phí tìm khách và nâng cao tỷ lệ chuyển đổi sang lịch hẹn tham quan thực tế."
     ],
+    measurement: {
+      before: "Quy trình giữa Marketing và Sales rời rạc; sản xuất video thủ công chỉ 20-30 video/tháng; tỷ lệ Lead VIP đạt dưới 20 leads/tháng; chi phí CPL cao do quảng cáo dàn trải.",
+      after: "Chuẩn hóa cỗ máy sản xuất 130+ video/tháng phủ TikTok, Reels, Shorts. Quản trị ngân sách 300Tr/tháng đem về 50+ khách VIP/tháng, tỷ lệ chuyển đổi hẹn tham quan thực tế tăng 45%.",
+      kpis: ["130+ Video Đa Nền Tảng / Tháng", "50+ Khách VIP Tiềm Năng / Tháng", "Ngân Sách 300Tr Ads / Tháng (Kiểm Soát CPL Chặt Chẽ)"]
+    },
+    learnings: "Trong phân khúc BĐS cao cấp, khách hàng không ra quyết định vì quảng cáo hạ giá hay giật gân, mà mua bằng niềm tin tâm linh, sự uy nghiêm và phong thủy sinh thái. Do đó, cỗ máy video ngắn chân thực kết hợp trải nghiệm thực địa tiếp đón chu đáo chính là đòn bẩy then chốt để chuyển đổi từ Lead sang Hợp đồng.",
     tech: ["Quản Trị Đội Ngũ", "Chỉ Tiêu KPI", "130+ Video/Tháng", "300Tr Ads/Tháng", "50+ Khách VIP", "Zalo OA", "Facebook & Google"]
   },
 
@@ -118,6 +124,12 @@ const caseStudiesData = {
       "Tiết kiệm 30% thời gian sản xuất và vận hành nội dung nhờ AI.",
       "Tăng 20% tỷ lệ người dùng tiếp tục gắn bó với ứng dụng sau khi cài đặt."
     ],
+    measurement: {
+      before: "Chi phí CPI leo thang do cạnh tranh hiển thị trên App Store & Google Play; việc sản xuất ý tưởng và visual thử nghiệm thủ công mất 3-4 ngày/bộ; dữ liệu rời rạc giữa các kênh khiến việc ra quyết định bị chậm trễ.",
+      after: "Cắt giảm 25% chi phí CPI; ứng dụng AI tự động hóa sản xuất nội dung giúp đội ngũ tiết kiệm 30% thời gian; hệ thống báo cáo tập trung giúp theo dõi thời gian thực và tăng 20% tỷ lệ giữ chân người dùng.",
+      kpis: ["-25% Chi Phí Tải Ứng Dụng (CPI)", "Tiết Kiệm 30% Thời Gian Nhờ AI", "+20% Tỷ Lệ Giữ Chân Người Dùng"]
+    },
+    learnings: "Giá trị thực sự của MarTech và AI trong Growth Marketing không phải là 'thay thế' nhân sự, mà là giải phóng đội ngũ khỏi các việc cơ bắp lặp đi lặp lại để họ có thể tập trung phân tích sâu tâm lý người dùng và thiết kế những phễu kích hoạt giữ chân (retention hooks) mang lại LTV cao.",
     tech: ["Tự Động Hóa AI", "Giảm 25% Chi Phí Cài Đặt", "Giữ Chân +20%", "Báo Cáo Tự Động", "Quản Lý MarTech"]
   },
 
@@ -200,6 +212,12 @@ const caseStudiesData = {
       "Xây dựng và đào tạo đội ngũ 8 nhân sự Marketing vận hành độc lập.",
       "Hoàn thiện hệ sinh thái 4 website và hệ thống quản lý dữ liệu khách hàng."
     ],
+    measurement: {
+      before: "Thương hiệu trà thảo mộc mới thành lập từ số 0; chưa có kênh bán hàng trực tuyến; bao bì và nhận diện chưa đồng nhất; chưa có hệ thống CRM quản lý khách hàng; doanh thu khởi điểm 0 VNĐ.",
+      after: "Cán mốc 40 Tỷ VNĐ doanh thu lũy kế; hoàn thiện hệ sinh thái 4 website vệ tinh kết nối CRM; sự kiện trải nghiệm Takashimaya tiếp cận hơn 200 khách VIP & đối tác B2B; 2 video chiến dịch truyền thông lan tỏa mạnh mẽ.",
+      kpis: ["Doanh Thu 40 Tỷ Đồng Lũy Kế", "Hệ Sinh Thái 4 Website Bán Hàng & CRM", "Đội Ngũ 8 Nhân Sự Vận Hành Độc Lập", "Sự Kiện Trải Nghiệm Takashimaya 200+ Khách"]
+    },
+    learnings: "Với ngành trà thảo mộc & quà tặng cao cấp, niềm tin của khách hàng doanh nghiệp B2B không đến từ quảng cáo giảm giá sốc, mà đến từ trải nghiệm trực giác (offline sampling tại TTTM hạng sang như Takashimaya) kết hợp với nhận diện bao bì thủ công tinh xảo và câu chuyện thương hiệu trung thực được ghi lại qua video hậu trường (Behind The Scenes).",
     tech: ["Doanh Thu 40 Tỷ", "2 Video Lục Lam", "Video BTS Quà Tết", "Ra Mắt Thương Hiệu", "Đội Ngũ 8 Người", "4 Website", "Quản Lý Khách Hàng", "Sự Kiện Takashimaya"]
   },
 
@@ -270,6 +288,12 @@ const caseStudiesData = {
       "Tổ chức thành công sự kiện ra mắt Ottocast P3, thúc đẩy hàng loạt đơn đặt hàng từ đại lý.",
       "Quản lý hiệu quả đội ngũ 8 chuyên viên và các đối tác truyền thông ngành xe."
     ],
+    measurement: {
+      before: "Phụ thuộc vào các bài PR kỹ thuật nặng nề, thiếu công cụ bán hàng trực quan tại điểm bán (POSM); hệ thống đại lý chưa được trang bị tài liệu giới thiệu đồng bộ khiến tỷ lệ chuyển đổi tại gara thấp.",
+      after: "Phủ sóng hình ảnh và kệ trải nghiệm tại hàng trăm đại lý toàn quốc; sự kiện ra mắt Ottocast P3 quy tụ đông đảo chủ gara tạo cú hích doanh số đặt cọc lớn ngay trong đêm ra mắt; điều hành trơn tru đội ngũ 8 nhân sự.",
+      kpis: ["Mạng Lưới Hàng Trăm Đại Lý / Gara Phủ Sóng", "Quản Lý Đội Ngũ 8 Chuyên Viên", "Chủ Trì Ra Mắt Flagship Ottocast P3 & Thiết Kế Slide Canva"]
+    },
+    learnings: "Mô hình kinh doanh B2B2C ngành phụ tùng xe hơi đòi hỏi chiến lược đẩy - kéo nhịp nhàng (Push - Pull Strategy): Kéo người dùng cuối (B2C) bằng các video trải nghiệm thực tế của các KOC/Reviewer xe hơi uy tín, đồng thời Đẩy cho các gara (B2B) bằng tài liệu bán hàng trực quan, chính sách hoa hồng rõ ràng và hỗ trợ kỹ thuật tận nơi.",
     tech: ["Công Nghệ Ô Tô", "Ra Mắt Ottocast P3", "Tự Thiết Kế Slide Canva", "Tiếp Thị Điểm Bán", "Đội Ngũ 8 Người", "Hàng Trăm Đại Lý"]
   },
 
@@ -378,6 +402,12 @@ const caseStudiesData = {
       "Sản xuất thành công 6 video truyền thông chủ lực cho LATH, Wangta và K-Cafe.",
       "Tăng 25% tỷ lệ mua hàng khi vào chuỗi Lotte Mart; tăng 20% lượt tải ứng dụng."
     ],
+    measurement: {
+      before: "Chi phí Ads cao nhưng biên lợi nhuận mỏng; 100% khách vào website đến từ quảng cáo trả phí; chưa có sự hiện diện tại chuỗi bán lẻ hiện đại; ứng dụng di động KingPang tỷ lệ thoát trang cao.",
+      after: "Doanh thu quảng cáo tăng trưởng 40%; kênh SEO tự nhiên vượt 5.000 lượt xem/tháng mang về đều đặn hơn 200 đơn hàng miễn phí; đưa sản phẩm thành công vào hệ thống siêu thị Lotte Mart (tăng 25% tỷ lệ mua); sản xuất 6 TVC & Viral video hoàn chỉnh.",
+      kpis: ["Doanh Thu Ads Tăng Trưởng +40%", "5.000+ Lượt Xem SEO / Tháng (200+ Đơn Miễn Phí)", "Phân Phối Chuỗi Siêu Thị Lotte Mart", "Sản Xuất 6 Video TVC & Viral Truyền Thông"]
+    },
+    learnings: "Chiến lược Digital Marketing bền vững cho ngành mỹ phẩm & tiêu dùng là mô hình kiềng 3 chân: Kết hợp Performance Ads chuyển đổi nhanh + SEO nội dung thu hút khách hàng miễn phí trọn đời + Độ phủ kệ hàng siêu thị (Lotte Mart) để củng cố tối đa lòng tin của người tiêu dùng.",
     tech: ["Doanh Thu Ads +40%", "6 Video TVC & Viral", "5.000 Khách Tự Nhiên", "200+ Đơn Miễn Phí", "Hệ Thống Lotte Mart", "Tối Ưu Ứng Dụng"]
   },
 
@@ -431,6 +461,12 @@ const caseStudiesData = {
       "Tích hợp trơn tru hệ thống gọi món trực tuyến Toast Tab, thúc đẩy doanh thu đơn Pick-up & Catering.",
       "Tối ưu Local SEO đạt vị trí tìm kiếm nổi bật tại khu vực Milpitas, California với phản hồi 5 sao xuất sắc."
     ],
+    measurement: {
+      before: "Thương hiệu F&B mới khai trương tại California chưa có tên tuổi trên bản đồ số; chưa có luồng đặt hàng trực tuyến; khách gọi món qua điện thoại dễ nhầm lẫn vào khung giờ ăn trưa cao điểm.",
+      after: "Vận hành hoàn chỉnh website song ngữ brewbanhmicafe.com; tự động hóa 100% đơn đặt hàng mang về (Pick-up) và tiệc sự kiện (Catering) qua Toast Tab POS; xác lập vị trí Local SEO vững chắc trên Google Maps với đánh giá 5 sao tích cực.",
+      kpis: ["100% Giao Diện Song Ngữ Anh — Việt", "Tích Hợp Tự Động Toast Tab POS (Pick-up & Catering)", "Local SEO Google Maps Đánh Giá 5 Sao"]
+    },
+    learnings: "Tại thị trường dịch vụ ẩm thực Bắc Mỹ, khách hàng văn phòng đặc biệt ưu tiên tốc độ và sự tiện lợi. Trải nghiệm số 1-chạm (One-tap ordering qua Toast Tab) kết hợp danh tiếng uy tín trên Google Maps Reviews là yếu tố sống còn để chuyển đổi khách vãng lai thành khách hàng thân thiết mỗi ngày.",
     tech: ["Website Song Ngữ", "Đặt Món Toast Tab", "Local SEO Milpitas", "F&B Quốc Tế", "Dịch Vụ Catering", "Google Reviews 5*"]
   }
 };
@@ -934,6 +970,62 @@ window.openCaseModal = function(caseKey) {
     `).join("");
   }
 
+  // Render Measurement (Before — After)
+  const measurementSec = document.getElementById("modalMeasurementSec");
+  const measurementContainer = document.getElementById("modalMeasurement");
+  if (measurementSec && measurementContainer) {
+    if (data.measurement) {
+      measurementContainer.innerHTML = `
+        <div class="modal-compare-grid">
+          <div class="modal-compare-card before">
+            <div class="modal-compare-header">
+              <i data-lucide="alert-circle"></i>
+              <span>Trước Khi Tối Ưu</span>
+            </div>
+            <p>${data.measurement.before}</p>
+          </div>
+          <div class="modal-compare-card after">
+            <div class="modal-compare-header">
+              <i data-lucide="check-circle-2"></i>
+              <span>Sau Khi Triển Khai Thực Tế</span>
+            </div>
+            <p>${data.measurement.after}</p>
+          </div>
+        </div>
+        ${data.measurement.kpis && data.measurement.kpis.length ? `
+          <div class="modal-kpis-strip">
+            ${data.measurement.kpis.map(k => `
+              <div class="modal-kpi-chip">
+                <i data-lucide="target"></i>
+                <span>${k}</span>
+              </div>
+            `).join("")}
+          </div>
+        ` : ''}
+      `;
+      measurementSec.style.display = "block";
+    } else {
+      measurementSec.style.display = "none";
+    }
+  }
+
+  // Render Learnings
+  const learningsSec = document.getElementById("modalLearningsSec");
+  const learningsContainer = document.getElementById("modalLearnings");
+  if (learningsSec && learningsContainer) {
+    if (data.learnings) {
+      learningsContainer.innerHTML = `
+        <div class="modal-learnings-card">
+          <i data-lucide="quote" class="quote-icon"></i>
+          <p>${data.learnings}</p>
+        </div>
+      `;
+      learningsSec.style.display = "block";
+    } else {
+      learningsSec.style.display = "none";
+    }
+  }
+
   // Reset scroll position & activate first tab
   const modalBody = document.getElementById("modalBody");
   if (modalBody) {
@@ -1006,6 +1098,28 @@ document.addEventListener("keydown", (e) => {
     window.closeCaseModal();
   }
 });
+
+// Interactive Case Studies Filter Controller
+window.filterCaseStudies = function(category, btn) {
+  // Update active state of buttons
+  const filterBtns = document.querySelectorAll(".case-filter-btn");
+  filterBtns.forEach(b => b.classList.remove("active"));
+  if (btn) btn.classList.add("active");
+
+  // Filter items based on data-tags
+  const items = document.querySelectorAll(".case-study-item");
+  items.forEach(item => {
+    const tags = item.getAttribute("data-tags") || "";
+    if (category === "all" || tags.toLowerCase().includes(category.toLowerCase())) {
+      item.classList.remove("filtered-out");
+    } else {
+      item.classList.add("filtered-out");
+    }
+  });
+
+  // Re-initialize Lucide icons in case
+  initLucide();
+};
 
 // Interactive LATH Video Controller (Case Study 05)
 window.selectLathVideo = function(videoId, title, tag, posterUrl, btnElement) {
@@ -1150,10 +1264,13 @@ function initSmoothScroll() {
   const sections = [
     { id: "about", link: document.querySelector(".nav-pill-links a[href='#about']") },
     { id: "impact", link: document.querySelector(".nav-pill-links a[href='#impact']") },
+    { id: "leadership", link: document.querySelector(".nav-pill-links a[href='#leadership']") },
     { id: "cases", link: document.querySelector(".nav-pill-links a[href='#cases']") },
     { id: "martech", link: document.querySelector(".nav-pill-links a[href='#martech']") },
+    { id: "timeline", link: document.querySelector(".nav-pill-links a[href='#timeline']") },
     { id: "capabilities", link: document.querySelector(".nav-pill-links a[href='#capabilities']") },
-    { id: "deliverables", link: document.querySelector(".nav-pill-links a[href='#deliverables']") }
+    { id: "deliverables", link: document.querySelector(".nav-pill-links a[href='#deliverables']") },
+    { id: "contact", link: document.querySelector(".nav-pill-links a[href='#contact']") }
   ];
 
   window.addEventListener("scroll", () => {
@@ -1178,13 +1295,65 @@ function initSmoothScroll() {
   }, { passive: true });
 }
 
-// 6. Contact Form Submit Handler
+// 6. Contact Form Submit Handler (Chuyên nghiệp & Xác thực dữ liệu chuẩn)
 window.handleFormSubmit = function(e) {
   e.preventDefault();
-  const name = document.getElementById("senderName").value;
-  const email = document.getElementById("senderEmail").value;
-  const subject = document.getElementById("senderSubject").value;
+  const nameInput = document.getElementById("senderName");
+  const emailInput = document.getElementById("senderEmail");
+  const subjectInput = document.getElementById("senderSubject");
+  const phoneInput = document.getElementById("senderPhone");
+  const msgInput = document.getElementById("senderMessage");
+  const statusContainer = document.getElementById("contactFormStatus");
 
-  alert(`Cảm ơn anh/chị ${name}!\nLời nhắn về chủ đề "${subject}" đã được ghi nhận. Tạ Quốc Duy sẽ phản hồi lại qua email ${email} trong thời gian sớm nhất.`);
+  const name = nameInput ? nameInput.value.trim() : "";
+  const email = emailInput ? emailInput.value.trim() : "";
+  const subject = subjectInput ? subjectInput.value.trim() : "Trao đổi công việc";
+  const phone = phoneInput ? phoneInput.value.trim() : "";
+  const message = msgInput ? msgInput.value.trim() : "";
+
+  // Validate form
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!name) {
+    if (statusContainer) {
+      statusContainer.style.display = "block";
+      statusContainer.className = "contact-status-error";
+      statusContainer.innerHTML = '<i data-lucide="alert-triangle" style="width:16px;height:16px;display:inline-block;vertical-align:middle;margin-right:6px;"></i> Vui lòng nhập họ và tên của anh/chị.';
+      initLucide();
+    }
+    return;
+  }
+
+  if (!email || !emailRegex.test(email)) {
+    if (statusContainer) {
+      statusContainer.style.display = "block";
+      statusContainer.className = "contact-status-error";
+      statusContainer.innerHTML = '<i data-lucide="alert-triangle" style="width:16px;height:16px;display:inline-block;vertical-align:middle;margin-right:6px;"></i> Vui lòng nhập địa chỉ email hợp lệ để nhận phản hồi.';
+      initLucide();
+    }
+    return;
+  }
+
+  // Display success feedback
+  if (statusContainer) {
+    statusContainer.style.display = "block";
+    statusContainer.className = "contact-status-success";
+    statusContainer.innerHTML = `
+      <div style="font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+        <i data-lucide="check-circle" style="width:18px;height:18px;color:#10B981;"></i>
+        <span>Gửi Lời Nhắn Thành Công!</span>
+      </div>
+      <div>Cảm ơn anh/chị <strong>${name}</strong> đã quan tâm. Thông tin về chủ đề <em>"${subject}"</em> đã được chuyển tới Tạ Quốc Duy. Tôi sẽ phản hồi lại qua email <strong>${email}</strong> hoặc SĐT trong thời gian sớm nhất!</div>
+    `;
+    initLucide();
+  }
+
   e.target.reset();
+
+  // Tự ẩn sau 10 giây
+  setTimeout(() => {
+    if (statusContainer) {
+      statusContainer.style.display = "none";
+    }
+  }, 10000);
 };
+
