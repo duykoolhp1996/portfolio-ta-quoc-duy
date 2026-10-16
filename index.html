@@ -314,27 +314,28 @@
 
       </div>
 
-      <!-- ================= INTERACTIVE CHART & FUNNEL HUB ================= -->
-      <div class="interactive-chart-hub">
+      <!-- ================= BẢNG 1: HIỆU QUẢ TĂNG TRƯỞNG TỪNG DOANH NGHIỆP ================= -->
+      <div class="interactive-chart-hub" id="companies-growth-hub">
         <div class="chart-hub-header">
           <div class="chart-hub-title">
-            <i data-lucide="line-chart" style="width: 22px; height: 22px; color: var(--accent-cyan);"></i>
-            <h3>Hiệu Quả Tăng Trưởng &amp; Vận Hành</h3>
+            <i data-lucide="layout-grid" style="width: 22px; height: 22px; color: var(--accent-cyan);"></i>
+            <div>
+              <h3 style="margin: 0; line-height: 1.2;">Hiệu Quả Tăng Trưởng Từng Doanh Nghiệp</h3>
+              <p style="margin: 4px 0 0; font-size: 0.84rem; color: var(--text-secondary); font-weight: 400;">
+                Số liệu thực chiến &amp; vai trò quản lý điều hành tại 6 doanh nghiệp
+              </p>
+            </div>
           </div>
-          <div class="chart-hub-tabs">
-            <button class="chart-tab-btn active" onclick="switchChartTab('chart-view', this)">
-              <i data-lucide="layout-grid" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i>
-              Bảng Hiệu Quả Từng Công Ty
-            </button>
-            <button class="chart-tab-btn" onclick="switchChartTab('funnel-view', this)">
-              <i data-lucide="filter" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i>
-              Quy Trình 4 Bước Tạo Doanh Thu
-            </button>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 0.82rem; color: var(--text-secondary); background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-glass); padding: 6px 14px; border-radius: var(--radius-full); display: inline-flex; align-items: center; gap: 6px;">
+              <span class="pill-dot" style="background: var(--accent-emerald);"></span>
+              6 Doanh Nghiệp / Case Studies
+            </span>
           </div>
         </div>
 
         <!-- Panel 1: Bảng Hiệu Quả & Số Liệu Riêng Cho Từng Công Ty -->
-        <div class="chart-view-panel active" id="chart-view">
+        <div class="chart-view-panel active" id="chart-view" style="display: block;">
           
           <!-- Thanh Chọn Công Ty Nhanh -->
           <div class="company-board-nav">
@@ -664,62 +665,79 @@
           </div>
 
         </div>
+      </div>
 
-        <!-- Panel 2: Visual Growth Funnel -->
-        <div class="chart-view-panel" id="funnel-view">
-          <div class="growth-funnel-wrapper">
-            
-            <div class="funnel-layer-card">
-              <div class="funnel-layer-step">01</div>
-              <div class="funnel-layer-content">
-                <div class="funnel-layer-title">Bước 1: Tiếp Cận &amp; Lan Tỏa Thương Hiệu</div>
-                <div class="funnel-layer-desc">Sản xuất 130+ video ngắn mỗi tháng (TikTok, Reels, Shorts), quản lý ngân sách quảng cáo tới 700 triệu/tháng để tiếp cận hàng triệu khách hàng.</div>
-              </div>
-              <div class="funnel-progress-bar-wrap">
-                <span class="funnel-pct-text">100% Phủ Sóng</span>
-                <div class="funnel-track"><div class="funnel-fill" style="width: 100%;"></div></div>
-              </div>
+      <!-- ================= BẢNG 2: QUY TRÌNH 4 BƯỚC TẠO DOANH THU (BẢNG RIÊNG) ================= -->
+      <div class="interactive-chart-hub" style="margin-top: 36px;" id="growth-funnel-hub">
+        <div class="chart-hub-header">
+          <div class="chart-hub-title">
+            <i data-lucide="filter" style="width: 22px; height: 22px; color: var(--accent-cyan);"></i>
+            <div>
+              <h3 style="margin: 0; line-height: 1.2;">Quy Trình 4 Bước Tạo Doanh Thu</h3>
+              <p style="margin: 4px 0 0; font-size: 0.84rem; color: var(--text-secondary); font-weight: 400;">
+                Hệ thống phễu chuyển đổi toàn diện từ tiếp cận đa kênh đến doanh thu thực tế &amp; mở rộng quy mô
+              </p>
             </div>
-
-            <div class="funnel-layer-card">
-              <div class="funnel-layer-step">02</div>
-              <div class="funnel-layer-content">
-                <div class="funnel-layer-title">Bước 2: Thu Hút Quan Tâm &amp; Tương Tác</div>
-                <div class="funnel-layer-desc">Đạt 5.000 lượt truy cập web/tháng từ Google (SEO), xây dựng 4 website giới thiệu sản phẩm và giảm 25% chi phí thu hút khách hàng mới.</div>
-              </div>
-              <div class="funnel-progress-bar-wrap">
-                <span class="funnel-pct-text">72% Quan Tâm</span>
-                <div class="funnel-track"><div class="funnel-fill" style="width: 72%;"></div></div>
-              </div>
-            </div>
-
-            <div class="funnel-layer-card">
-              <div class="funnel-layer-step">03</div>
-              <div class="funnel-layer-content">
-                <div class="funnel-layer-title">Bước 3: Khách Hàng Tiềm Năng Chất Lượng</div>
-                <div class="funnel-layer-desc">Tạo đều đặn 50+ khách VIP bất động sản mỗi tháng, đơn đặt bàn sự kiện Takashimaya và đại lý đăng ký nhập phụ kiện ô tô.</div>
-              </div>
-              <div class="funnel-progress-bar-wrap">
-                <span class="funnel-pct-text">38% Khách Thực</span>
-                <div class="funnel-track"><div class="funnel-fill" style="width: 38%;"></div></div>
-              </div>
-            </div>
-
-            <div class="funnel-layer-card">
-              <div class="funnel-layer-step">04</div>
-              <div class="funnel-layer-content">
-                <div class="funnel-layer-title">Bước 4: Doanh Thu Thực Tế &amp; Mở Rộng</div>
-                <div class="funnel-layer-desc">Đưa doanh thu chuỗi trà thảo mộc đạt 40 tỷ VNĐ từ số 0, mở rộng mạng lưới hàng trăm đại lý toàn quốc và tiết kiệm 30% thời gian vận hành nhờ AI.</div>
-              </div>
-              <div class="funnel-progress-bar-wrap">
-                <span class="funnel-pct-text">20% Chốt Đơn</span>
-                <div class="funnel-track"><div class="funnel-fill" style="width: 20%;"></div></div>
-              </div>
-            </div>
-
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 0.82rem; color: #090B10; background: var(--accent-cyan); font-weight: 700; padding: 6px 14px; border-radius: var(--radius-full); box-shadow: 0 2px 10px rgba(6, 182, 212, 0.35); display: inline-flex; align-items: center; gap: 6px;">
+              <i data-lucide="trending-up" style="width: 14px; height: 14px;"></i>
+              Phễu Tăng Trưởng Toàn Diện
+            </span>
           </div>
         </div>
 
+        <div class="growth-funnel-wrapper">
+          
+          <div class="funnel-layer-card">
+            <div class="funnel-layer-step">01</div>
+            <div class="funnel-layer-content">
+              <div class="funnel-layer-title">Bước 1: Tiếp Cận &amp; Lan Tỏa Thương Hiệu</div>
+              <div class="funnel-layer-desc">Sản xuất 130+ video ngắn mỗi tháng (TikTok, Reels, Shorts), quản lý ngân sách quảng cáo tới 700 triệu/tháng để tiếp cận hàng triệu khách hàng.</div>
+            </div>
+            <div class="funnel-progress-bar-wrap">
+              <span class="funnel-pct-text">100% Phủ Sóng</span>
+              <div class="funnel-track"><div class="funnel-fill" style="width: 100%;"></div></div>
+            </div>
+          </div>
+
+          <div class="funnel-layer-card">
+            <div class="funnel-layer-step">02</div>
+            <div class="funnel-layer-content">
+              <div class="funnel-layer-title">Bước 2: Thu Hút Quan Tâm &amp; Tương Tác</div>
+              <div class="funnel-layer-desc">Đạt 5.000 lượt truy cập web/tháng từ Google (SEO), xây dựng 4 website giới thiệu sản phẩm và giảm 25% chi phí thu hút khách hàng mới.</div>
+            </div>
+            <div class="funnel-progress-bar-wrap">
+              <span class="funnel-pct-text">72% Quan Tâm</span>
+              <div class="funnel-track"><div class="funnel-fill" style="width: 72%;"></div></div>
+            </div>
+          </div>
+
+          <div class="funnel-layer-card">
+            <div class="funnel-layer-step">03</div>
+            <div class="funnel-layer-content">
+              <div class="funnel-layer-title">Bước 3: Khách Hàng Tiềm Năng Chất Lượng</div>
+              <div class="funnel-layer-desc">Tạo đều đặn 50+ khách VIP bất động sản mỗi tháng, đơn đặt bàn sự kiện Takashimaya và đại lý đăng ký nhập phụ kiện ô tô.</div>
+            </div>
+            <div class="funnel-progress-bar-wrap">
+              <span class="funnel-pct-text">38% Khách Thực</span>
+              <div class="funnel-track"><div class="funnel-fill" style="width: 38%;"></div></div>
+            </div>
+          </div>
+
+          <div class="funnel-layer-card">
+            <div class="funnel-layer-step">04</div>
+            <div class="funnel-layer-content">
+              <div class="funnel-layer-title">Bước 4: Doanh Thu Thực Tế &amp; Mở Rộng</div>
+              <div class="funnel-layer-desc">Đưa doanh thu chuỗi trà thảo mộc đạt 40 tỷ VNĐ từ số 0, mở rộng mạng lưới hàng trăm đại lý toàn quốc và tiết kiệm 30% thời gian vận hành nhờ AI.</div>
+            </div>
+            <div class="funnel-progress-bar-wrap">
+              <span class="funnel-pct-text">20% Chốt Đơn</span>
+              <div class="funnel-track"><div class="funnel-fill" style="width: 20%;"></div></div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </div>
