@@ -4340,6 +4340,481 @@ footer {
   }
 }
 
+/* ============================================================
+   SHOWCASE DỰ ÁN MỚI: THIÊN PHÚC VĨNH HẰNG VIÊN (SALA GARDEN)
+   ============================================================ */
+
+/* 1. Banner ngoài thẻ Case Study Sala Garden */
+.case-subproject-banner {
+  margin: 18px 0;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.09) 0%, rgba(16, 185, 129, 0.06) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: var(--radius-md, 12px);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.case-subproject-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #F59E0B 0%, #10B981 100%);
+}
+
+.case-subproject-banner:hover {
+  transform: translateY(-2px);
+  border-color: rgba(245, 158, 11, 0.6);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.14) 0%, rgba(16, 185, 129, 0.1) 100%);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.12);
+}
+
+.subproject-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #FBBF24;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.subproject-badge i {
+  width: 14px;
+  height: 14px;
+}
+
+.subproject-content h5 {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.subproject-content p {
+  margin: 0 0 10px 0;
+  font-size: 0.85rem;
+  color: #CBD5E1;
+  line-height: 1.5;
+}
+
+.subproject-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(245, 158, 11, 0.18);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  color: #FDE68A;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm, 6px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.subproject-cta-btn:hover {
+  background: #F59E0B;
+  color: #0F172A;
+}
+
+/* 2. Modal Launch Box (Trưng bày chi tiết trong Modal) */
+.modal-launch-box {
+  margin: 22px 0 20px 0;
+  background: var(--bg-surface-elevated, #0F172A);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: var(--radius-lg, 16px);
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-launch-header {
+  padding: 16px 22px;
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.16) 0%, rgba(16, 185, 129, 0.1) 100%);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.modal-launch-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-launch-badge {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #FBBF24;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.modal-launch-badge i {
+  width: 16px;
+  height: 16px;
+}
+
+.modal-launch-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.modal-launch-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted, #94A3B8);
+}
+
+.modal-launch-body {
+  padding: 22px;
+}
+
+/* 4 Thẻ chỉ số nổi bật của dự án Thiên Phúc */
+.launch-metrics-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.launch-metric-chip {
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md, 10px);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.launch-metric-chip:hover {
+  transform: translateY(-2px);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.launch-metric-chip.gold {
+  border-left: 3px solid #F59E0B;
+}
+
+.launch-metric-chip.emerald {
+  border-left: 3px solid #10B981;
+}
+
+.launch-metric-chip.cyan {
+  border-left: 3px solid #06B6D4;
+}
+
+.launch-metric-chip.purple {
+  border-left: 3px solid #A855F7;
+}
+
+.launch-chip-val {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+}
+
+.launch-chip-label {
+  font-size: 0.72rem;
+  color: var(--text-muted, #94A3B8);
+  line-height: 1.35;
+}
+
+/* Photo Gallery 4 ảnh tương tác */
+.launch-gallery-section {
+  margin-bottom: 24px;
+}
+
+.launch-gallery-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #F8FAFC;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.launch-gallery-title i {
+  width: 15px;
+  height: 15px;
+  color: #FBBF24;
+}
+
+.launch-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.launch-photo-card {
+  position: relative;
+  border-radius: var(--radius-md, 12px);
+  overflow: hidden;
+  background: #090D16;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  aspect-ratio: 16 / 10;
+}
+
+.launch-photo-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(245, 158, 11, 0.6);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
+}
+
+.launch-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+  display: block;
+}
+
+.launch-photo-card:hover .launch-photo-img {
+  transform: scale(1.04);
+}
+
+.launch-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(9, 13, 22, 0.95) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 14px 16px;
+  transition: background 0.2s ease;
+}
+
+.launch-photo-card:hover .launch-photo-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 20%, rgba(9, 13, 22, 0.98) 100%);
+}
+
+.launch-photo-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #FBBF24;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+
+.launch-photo-name {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.launch-photo-zoom-icon {
+  font-size: 0.72rem;
+  color: #94A3B8;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Tabs tài liệu kế hoạch chiến lược */
+.launch-doc-section {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md, 12px);
+  padding: 18px;
+}
+
+.launch-tabs-nav {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 16px;
+}
+
+.launch-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94A3B8;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: var(--radius-full, 9999px);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.launch-tab-btn:hover {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.3);
+  color: #FDE68A;
+}
+
+.launch-tab-btn.active {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: #F59E0B;
+  color: #FFFFFF;
+  font-weight: 700;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.2);
+}
+
+.launch-tab-pane {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.launch-tab-pane.active {
+  display: block;
+}
+
+.launch-pane-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.launch-pane-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.launch-pane-badge {
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(16, 185, 129, 0.15);
+  color: #6EE7B7;
+  font-weight: 600;
+}
+
+.launch-doc-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.launch-timeline-item {
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 3px solid #F59E0B;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #CBD5E1;
+}
+
+.launch-timeline-item strong {
+  color: #FFFFFF;
+}
+
+.launch-quotes-box {
+  padding: 12px 16px;
+  background: rgba(245, 158, 11, 0.06);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: #FDE68A;
+  font-style: italic;
+  margin-top: 10px;
+  line-height: 1.55;
+  border: 1px dashed rgba(245, 158, 11, 0.3);
+}
+
+/* Lightbox Preview Modal cho ảnh */
+.launch-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(8px);
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.launch-lightbox-overlay.active {
+  display: flex;
+}
+
+.launch-lightbox-box {
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.launch-lightbox-img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.launch-lightbox-caption {
+  margin-top: 12px;
+  color: #F1F5F9;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.launch-lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px;
+}
+
+@media (max-width: 800px) {
+  .launch-metrics-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .launch-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 
 

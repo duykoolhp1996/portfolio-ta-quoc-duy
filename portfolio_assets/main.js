@@ -59,8 +59,168 @@ const caseStudiesData = {
           "Gia tăng niềm tin và tỷ lệ đặt lịch hẹn tham quan thực tế"
         ],
         attachment: "Tài liệu trưng bày thực tế & Không gian sự kiện"
+      },
+      {
+        title: "Kế Hoạch Ra Mắt Dự Án Thiên Phúc Vĩnh Hằng Viên (Yên Tử)",
+        tag: "Dự Án Mở Rộng 450 Tỷ",
+        desc: "Xây dựng toàn diện kế hoạch truyền thông tích hợp (IMC Plan), kịch bản sự kiện khởi động 200+ VIP, video teaser và trọn bộ ấn phẩm POSM in ấn.",
+        items: [
+          "Kế hoạch truyền thông 3 giai đoạn (Teasing ➔ Launching ➔ Chuyển đổi bán hàng)",
+          "Kịch bản sản xuất Video Teaser 45s cảm xúc và Phối cảnh 3D 2m30s màn hình LED",
+          "Kịch bản tiến trình sự kiện khởi động chi tiết từng phút và lời dẫn MC",
+          "Thông cáo báo chí và trọn bộ ấn phẩm in ấn POSM, thư mời VIP ép kim sang trọng"
+        ],
+        attachment: "Kế hoạch IMC Plan • Kịch bản sự kiện • Bộ ấn phẩm POSM"
       }
     ],
+    // DỰ ÁN MỞ RỘNG MỚI: THIÊN PHÚC VĨNH HẰNG VIÊN (YÊN TỬ — QUẢNG NINH)
+    launchProject: {
+      badge: "Dự Án Mở Rộng Chiến Lược 2026 (Sala Garden & Faraland VN)",
+      title: "Công Viên Nghĩa Trang Sinh Thái Thiên Phúc Vĩnh Hằng Viên (Yên Tử — Quảng Ninh)",
+      subtitle: "Quy mô 32,54 ha • Tổng vốn đầu tư 450+ Tỷ VNĐ • Vị trí Bãi Dài kế cận Chùa Ba Vàng",
+      scale: "32,54 Hecta",
+      investment: "450+ Tỷ VNĐ",
+      location: "Bãi Dài, P. Uông Bí & Yên Tử, Tỉnh Quảng Ninh",
+      theme: "“Gìn Giữ Hiếu Đạo — Kiến Tạo Vĩnh Hằng”",
+      role: "Trưởng Phòng Marketing (Marketing Manager) — Trực tiếp lập Kế hoạch truyền thông tổng thể (IMC Plan), kịch bản sự kiện, kịch bản video teaser & bộ nhận diện POSM",
+      gallery: [
+        {
+          src: "portfolio_assets/images/sala_thienphuc_render.jpg",
+          tag: "Phối Cảnh Tổng Thể 3D",
+          name: "Quy Hoạch Sinh Thái 5 Sao (32,54 ha)",
+          caption: "Phối cảnh tổng thể Công viên nghĩa trang sinh thái Thiên Phúc Vĩnh Hằng Viên kế cận Chùa Ba Vàng và non thiêng Yên Tử."
+        },
+        {
+          src: "portfolio_assets/images/sala_thienphuc_invitation.jpg",
+          tag: "Ấn Phẩm VIP",
+          name: "Thư Mời Sự Kiện Khởi Động Trang Trọng",
+          caption: "Thư mời cao cấp gửi tặng 200+ đại biểu chính quyền địa phương, ban lãnh đạo Faraland VN và khách hàng VIP."
+        },
+        {
+          src: "portfolio_assets/images/sala_thienphuc_backdrop.jpg",
+          tag: "Sân Khấu Sự Kiện",
+          name: "Backdrop Lễ Khởi Động & Ký Kết Chiến Lược",
+          caption: "Thiết kế nhận diện sân khấu Lễ khởi động dự án Thiên Phúc Vĩnh Hằng Viên mang sắc vàng hoàng kim và non thiêng Yên Tử."
+        },
+        {
+          src: "portfolio_assets/images/sala_thienphuc_posm.jpg",
+          tag: "Nhận Diện POSM",
+          name: "Bộ Ấn Phẩm In Ấn Khổ Lớn & Standee",
+          caption: "Bộ ấn phẩm in ấn kích thước lớn, standee đón tiếp và tài liệu bán hàng Sales Kit chuẩn nhận diện Sala Garden."
+        }
+      ],
+      tabs: [
+        {
+          id: "imc",
+          title: "Kế Hoạch Truyền Thông (IMC Plan)",
+          icon: "book-open",
+          badge: "Chiến Lược 3 Giai Đoạn",
+          content: `
+            <div class="launch-pane-header">
+              <h4 class="launch-pane-title"><i data-lucide="compass" style="color: #F59E0B;"></i> Kế Hoạch Truyền Thông Tích Hợp (IMC Plan)</h4>
+              <span class="launch-pane-badge">3 Giai Đoạn • Phủ Đông Bắc</span>
+            </div>
+            <div class="launch-doc-timeline">
+              <div class="launch-timeline-item">
+                <strong>Giai Đoạn 1: Teasing Khởi Sinh (15 Ngày Trước Sự Kiện)</strong><br>
+                Lan tỏa video teaser cảm xúc 45s về non thiêng Yên Tử và chữ Hiếu gia tộc. Phóng sự văn hóa báo hiếu, seeding cộng đồng Phật tử và tiếp cận danh sách VIP Quảng Ninh, Hải Phòng, Hà Nội.
+              </div>
+              <div class="launch-timeline-item">
+                <strong>Giai Đoạn 2: Bùng Nổ Lễ Khởi Động (Ngày D-Day 02/06/2026)</strong><br>
+                Tổ chức sự kiện tiếp đón 200+ đại biểu VIP, nghi thức tâm linh cầu an, trình chiếu phim phối cảnh 3D màn hình LED, lễ ký kết phân phối chiến lược Faraland VN và phát hành thông cáo báo chí.
+              </div>
+              <div class="launch-timeline-item">
+                <strong>Giai Đoạn 3: Chuyển Đổi &amp; Bán Hàng (Sustaining 30 Ngày Tiếp Theo)</strong><br>
+                Chạy quảng cáo chuyển đổi đa kênh (Meta Ads, Google Search, Zalo OA), tổ chức tour đón khách VIP tham quan thực địa dự án kết hợp chiêm bái Chùa Ba Vàng. Mục tiêu: 50+ cọc giữ chỗ tháng đầu.
+              </div>
+            </div>
+            <div class="launch-quotes-box">
+              “Thông điệp cốt lõi: Gìn Giữ Hiếu Đạo — Kiến Tạo Vĩnh Hằng. Nơi linh khí non thiêng Yên Tử giao hòa cùng chuẩn mực hoa viên sinh thái 5 sao, mang lại phúc lộc trường tồn cho muôn đời sau.”
+            </div>
+          `
+        },
+        {
+          id: "video",
+          title: "Kịch Bản Video Teaser & Phối Cảnh",
+          icon: "clapperboard",
+          badge: "2 Sản Phẩm Media",
+          content: `
+            <div class="launch-pane-header">
+              <h4 class="launch-pane-title"><i data-lucide="video" style="color: #06B6D4;"></i> Kịch Bản Sản Xuất Video Truyền Thông</h4>
+              <span class="launch-pane-badge" style="background: rgba(6, 182, 212, 0.15); color: #67E8F9;">Teaser 45s &amp; Phối Cảnh 2m30s</span>
+            </div>
+            <div class="launch-doc-timeline">
+              <div class="launch-timeline-item">
+                <strong>1. Video Teaser 45s — “Nơi Non Thiêng Giao Hòa” (Reels / TikTok / Shorts)</strong><br>
+                Cảnh mở đầu flycam mây vờn đỉnh Yên Tử và tiếng chuông Chùa Ba Vàng ngân vang. Dẫn dắt cảm xúc: “Chữ Hiếu trọn đời không chỉ là phụng dưỡng sớm hôm, mà là chuẩn bị chốn an nghỉ an lạc vĩnh hằng cho cha mẹ.”
+              </div>
+              <div class="launch-timeline-item">
+                <strong>2. Phim Phối Cảnh 3D &amp; Triết Lý 2 Phút 30 Giây (LED Sự Kiện &amp; Ads)</strong><br>
+                Giới thiệu trọn vẹn vị trí Bãi Dài (Tựa Sơn Hướng Thủy), quy hoạch 32,54 ha chuẩn resort sinh thái, công viên mặt nước ngũ hành, khu mộ gia tộc bề thế và dịch vụ chăm sóc hương khói 365 ngày trọn đời.
+              </div>
+            </div>
+            <div class="launch-quotes-box">
+              “Kịch bản định hướng khơi gợi lòng hiếu đạo và văn hóa cội nguồn, nói không với quảng cáo giật gân, chạm sâu vào tâm thức của những người con hiếu thảo và gia chủ thượng lưu.”
+            </div>
+          `
+        },
+        {
+          id: "event",
+          title: "Kịch Bản Sự Kiện Khởi Động & MC",
+          icon: "mic",
+          badge: "200+ Đại Biểu VIP",
+          content: `
+            <div class="launch-pane-header">
+              <h4 class="launch-pane-title"><i data-lucide="calendar" style="color: #10B981;"></i> Tiến Trình Sự Kiện &amp; Lời Dẫn MC Chi Tiết</h4>
+              <span class="launch-pane-badge">08:30 – 11:30 • 02/06/2026</span>
+            </div>
+            <div class="launch-doc-timeline">
+              <div class="launch-timeline-item">
+                <strong>08:30 – 09:00 | Đón Tiếp Đại Biểu &amp; Check-in Photo VIP</strong><br>
+                Đội ngũ lễ tân trang phục nhã nhặn đón tiếp đại biểu, trao tặng hoa cài ngực và tài liệu Sales Kit, check-in tại Backdrop nhận diện hoàng kim.
+              </div>
+              <div class="launch-timeline-item">
+                <strong>09:00 – 09:30 | Nghi Lễ Khởi Động &amp; Trình Chiếu Phim Dự Án</strong><br>
+                Tiết mục múa nghệ thuật “Khởi Sinh An Lạc”, lời phát biểu của Ban Lãnh Đạo Sala Garden &amp; Faraland VN, công chiếu phim 3D dự án trên màn hình LED.
+              </div>
+              <div class="launch-timeline-item">
+                <strong>09:30 – 10:30 | Lễ Ký Kết Phân Phối Chiến Lược &amp; Công Bố Chính Sách</strong><br>
+                Lễ ký kết giữa Chủ đầu tư và các đại lý chiến lược, công bố bảng hàng đợt 1 và chương trình tri ân 50 khách hàng đầu tiên.
+              </div>
+              <div class="launch-timeline-item">
+                <strong>10:30 – 11:30 | Tham Quan Thực Địa &amp; Tiệc Trà Giao Lưu</strong><br>
+                Đưa đón khách VIP tham quan sa bàn và vị trí dự án thực tế, tư vấn chuyên sâu về phong thủy sinh phần.
+              </div>
+            </div>
+          `
+        },
+        {
+          id: "pr",
+          title: "Thông Cáo Báo Chí & POSM",
+          icon: "newspaper",
+          badge: "Báo Uy Tín & In Ấn",
+          content: `
+            <div class="launch-pane-header">
+              <h4 class="launch-pane-title"><i data-lucide="file-text" style="color: #A855F7;"></i> Thông Cáo Báo Chí &amp; Bộ Ấn Phẩm In Ấn (POSM)</h4>
+              <span class="launch-pane-badge" style="background: rgba(168, 85, 247, 0.15); color: #D8B4FE;">Phát Hành Ngay</span>
+            </div>
+            <div class="launch-doc-timeline">
+              <div class="launch-timeline-item">
+                <strong>Thông Cáo Báo Chí Chính Thức:</strong><br>
+                Tiêu đề: <em>“Chính Thức Khởi Động Công Viên Nghĩa Trang Sinh Thái Thiên Phúc Vĩnh Hằng Viên Tại Quảng Ninh: Gìn Giữ Hiếu Đạo — Kiến Tạo Vĩnh Hằng”</em>. Phủ sóng trên các đầu báo lớn: Báo Quảng Ninh, VnExpress, Dân Trí, Batdongsan.com.vn.
+              </div>
+              <div class="launch-timeline-item">
+                <strong>Trọn Bộ Ấn Phẩm POSM Thiết Kế Đồng Bộ:</strong><br>
+                Bao gồm Thư mời VIP ép kim sang trọng, Backdrop sân khấu 8x4m, Standee thông điệp, Sách giới thiệu dự án (Brochure 24 trang) và Thẻ đeo Ban tổ chức.
+              </div>
+            </div>
+            <div class="launch-quotes-box">
+              “Bộ ấn phẩm được thiết kế với chuẩn mực nhận diện thương hiệu cao cấp nhất, kết hợp giữa gam màu vàng cát phong thủy và xanh ngọc sinh thái của Sala Garden.”
+            </div>
+          `
+        }
+      ]
+    },
     // Dữ liệu Báo Cáo Thực Chiến từ Google Sheet (Quy đổi từ báo cáo 1 tuần sang trung bình 1 tháng ~ 30 ngày)
     campaignReport: {
       badge: "Báo Cáo Hiệu Quả Quảng Cáo Thực Chiến (Meta Ads)",
@@ -891,6 +1051,8 @@ window.scrollModalTo = function(elementId) {
   pills.forEach(p => p.classList.remove("active"));
   if (elementId === "modalOverview") {
     pills[0]?.classList.add("active");
+  } else if (elementId === "modalLaunchProjectContainer") {
+    document.getElementById("modalNavLaunchBtn")?.classList.add("active");
   } else if (elementId === "modalSlideContainer") {
     document.getElementById("modalNavSlideBtn")?.classList.add("active");
   } else if (elementId === "modalVideoContainer") {
@@ -898,13 +1060,13 @@ window.scrollModalTo = function(elementId) {
   } else if (elementId === "modalCampaignContainer") {
     document.getElementById("modalNavCampaignBtn")?.classList.add("active");
   } else if (elementId === "modalDeliverablesSec") {
-    document.getElementById("modalNavDelivBtn")?.classList.add("active") || document.querySelector(".modal-nav-pill:nth-of-type(4)")?.classList.add("active");
+    document.getElementById("modalNavDelivBtn")?.classList.add("active") || document.querySelector(".modal-nav-pill:nth-of-type(5)")?.classList.add("active");
   } else if (elementId === "modalResultsSec") {
     document.getElementById("modalNavResultsBtn")?.classList.add("active") || document.querySelector(".modal-nav-pill:last-of-type")?.classList.add("active");
   }
 };
 
-window.openCaseModal = function(caseKey) {
+window.openCaseModal = function(caseKey, targetSection = null) {
   const data = caseStudiesData[caseKey];
   if (!data) return;
 
@@ -953,6 +1115,99 @@ window.openCaseModal = function(caseKey) {
   const countBadge = document.getElementById("modalDelivCount");
   if (countBadge && data.deliverables) {
     countBadge.innerText = `${data.deliverables.length} Hạng Mục`;
+  }
+
+  // Render Launch Project Showcase (Dự án mở rộng Thiên Phúc Vĩnh Hằng Viên)
+  const launchContainer = document.getElementById("modalLaunchProjectContainer");
+  const launchNavBtn = document.getElementById("modalNavLaunchBtn");
+
+  if (launchContainer) {
+    if (data.launchProject) {
+      const lp = data.launchProject;
+      launchContainer.innerHTML = `
+        <div class="modal-launch-box" id="modalLaunchSection" style="margin-top: 14px;">
+          <div class="modal-launch-header">
+            <div class="modal-launch-title-wrap">
+              <span class="modal-launch-badge">
+                <i data-lucide="sparkles"></i>
+                ${lp.badge}
+              </span>
+              <h3 class="modal-launch-title">${lp.title}</h3>
+              <span class="modal-launch-sub">${lp.subtitle}</span>
+            </div>
+          </div>
+
+          <div class="modal-launch-body">
+            <!-- 4 Thẻ chỉ số dự án -->
+            <div class="launch-metrics-strip">
+              <div class="launch-metric-chip gold">
+                <div class="launch-chip-val" style="color: #FBBF24;">${lp.scale}</div>
+                <div class="launch-chip-label">Quy Mô Quần Thể Sinh Thái</div>
+              </div>
+              <div class="launch-metric-chip emerald">
+                <div class="launch-chip-val" style="color: #34D399;">${lp.investment}</div>
+                <div class="launch-chip-label">Tổng Vốn Đầu Tư Dự Kiến</div>
+              </div>
+              <div class="launch-metric-chip cyan">
+                <div class="launch-chip-val" style="color: #67E8F9;">Tựa Sơn Hướng Thủy</div>
+                <div class="launch-chip-label">Đất Non Thiêng Cạnh Ba Vàng</div>
+              </div>
+              <div class="launch-metric-chip purple">
+                <div class="launch-chip-val" style="color: #D8B4FE;">200+ Khách VIP</div>
+                <div class="launch-chip-label">Sự Kiện Khởi Động &amp; Đối Tác</div>
+              </div>
+            </div>
+
+            <!-- Gallery 4 ảnh tương tác -->
+            <div class="launch-gallery-section">
+              <div class="launch-gallery-title">
+                <i data-lucide="image"></i>
+                <span>Bộ Nhận Diện, Phối Cảnh &amp; Ấn Phẩm Thực Tế (Bấm để phóng to)</span>
+              </div>
+              <div class="launch-gallery-grid">
+                ${lp.gallery.map(img => `
+                  <div class="launch-photo-card" onclick="openLaunchLightbox('${img.src}', '${img.caption}')" title="Bấm để xem ảnh phóng to">
+                    <img src="${img.src}" alt="${img.name}" class="launch-photo-img" loading="lazy">
+                    <div class="launch-photo-overlay">
+                      <span class="launch-photo-tag">${img.tag}</span>
+                      <div class="launch-photo-name">
+                        <span>${img.name}</span>
+                        <span class="launch-photo-zoom-icon"><i data-lucide="maximize-2" style="width: 12px; height: 12px;"></i> Xem lớn</span>
+                      </div>
+                    </div>
+                  </div>
+                `).join("")}
+              </div>
+            </div>
+
+            <!-- 4 Tab Tài liệu chiến lược -->
+            <div class="launch-doc-section">
+              <div class="launch-tabs-nav">
+                ${lp.tabs.map((tab, idx) => `
+                  <button type="button" class="launch-tab-btn ${idx === 0 ? 'active' : ''}" onclick="switchLaunchTab('${tab.id}', this)">
+                    <i data-lucide="${tab.icon}"></i>
+                    <span>${tab.title}</span>
+                  </button>
+                `).join("")}
+              </div>
+              <div class="launch-tabs-content">
+                ${lp.tabs.map((tab, idx) => `
+                  <div class="launch-tab-pane ${idx === 0 ? 'active' : ''}" data-tab-pane="${tab.id}">
+                    ${tab.content}
+                  </div>
+                `).join("")}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      launchContainer.style.display = "block";
+      if (launchNavBtn) launchNavBtn.style.display = "inline-flex";
+    } else {
+      launchContainer.innerHTML = "";
+      launchContainer.style.display = "none";
+      if (launchNavBtn) launchNavBtn.style.display = "none";
+    }
   }
 
   // Render Slide Embed (if available)
@@ -1249,6 +1504,7 @@ window.openCaseModal = function(caseKey) {
       const scrollPos = modalBody.scrollTop + 90;
       const sections = [
         { id: "modalOverview", pillIdx: 0 },
+        { id: "modalLaunchProjectContainer", pillId: "modalNavLaunchBtn" },
         { id: "modalSlideContainer", pillId: "modalNavSlideBtn" },
         { id: "modalVideoContainer", pillId: "modalNavVideoBtn" },
         { id: "modalCampaignContainer", pillId: "modalNavCampaignBtn" },
@@ -1283,6 +1539,60 @@ window.openCaseModal = function(caseKey) {
   modal.classList.add("active");
   document.body.style.overflow = "hidden";
   initLucide();
+
+  // If a specific section was targeted (e.g. from subproject banner click)
+  if (targetSection) {
+    setTimeout(() => {
+      window.scrollModalTo(targetSection);
+    }, 180);
+  }
+};
+
+window.switchLaunchTab = function(tabId, btn) {
+  const parent = btn.closest(".launch-doc-section");
+  if (!parent) return;
+  parent.querySelectorAll(".launch-tab-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  parent.querySelectorAll(".launch-tab-pane").forEach(p => {
+    if (p.getAttribute("data-tab-pane") === tabId) {
+      p.classList.add("active");
+    } else {
+      p.classList.remove("active");
+    }
+  });
+  if (window.lucide) window.lucide.createIcons();
+};
+
+window.openLaunchLightbox = function(imgSrc, caption) {
+  let lb = document.getElementById("launchLightboxOverlay");
+  if (!lb) {
+    lb = document.createElement("div");
+    lb.id = "launchLightboxOverlay";
+    lb.className = "launch-lightbox-overlay";
+    lb.onclick = function(e) {
+      if (e.target === lb || e.target.classList.contains("launch-lightbox-close")) {
+        window.closeLaunchLightbox();
+      }
+    };
+    lb.innerHTML = `
+      <div class="launch-lightbox-box">
+        <button class="launch-lightbox-close" aria-label="Đóng">&times;</button>
+        <img class="launch-lightbox-img" src="" alt="Preview">
+        <div class="launch-lightbox-caption"></div>
+      </div>
+    `;
+    document.body.appendChild(lb);
+  }
+  const imgEl = lb.querySelector(".launch-lightbox-img");
+  const capEl = lb.querySelector(".launch-lightbox-caption");
+  if (imgEl) imgEl.src = imgSrc;
+  if (capEl) capEl.innerText = caption || "";
+  lb.classList.add("active");
+};
+
+window.closeLaunchLightbox = function() {
+  const lb = document.getElementById("launchLightboxOverlay");
+  if (lb) lb.classList.remove("active");
 };
 
 window.closeCaseModal = function() {

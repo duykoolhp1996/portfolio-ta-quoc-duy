@@ -91,7 +91,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Dark Studio Stylesheet -->
-  <link rel="stylesheet" href="portfolio_assets/style.css?v=2.6">
+  <link rel="stylesheet" href="portfolio_assets/style.css?v=2.7">
 
   <!-- Hotjar Tracking Code per Global Rule (hjid: 6791459, hjsv: 6) -->
   <script>
@@ -1136,6 +1136,22 @@
               <p>
                 Trực tiếp dẫn dắt 2 nhóm: <strong>Quảng cáo số &amp; Sáng tạo nội dung</strong> (10 nhân sự). Giao chỉ tiêu KPI rõ ràng cho từng vị trí, sản xuất <strong>130+ video/tháng</strong> phủ sóng đa nền tảng. Thực chiến chiến dịch Video Storytelling đạt <strong>CTR 6.14%</strong>, <strong>CPC 1.205 VNĐ</strong> (rẻ hơn 65% thị trường BĐS), tiếp cận <strong>250.000+ người/tháng</strong> và tập trung 80.5% ngân sách vào tệp gia chủ 55+ tuổi.
               </p>
+
+              <!-- Hoạt Động Trọng Điểm: Dự Án Mới Ra Mắt Thiên Phúc Vĩnh Hằng Viên -->
+              <div class="case-subproject-banner" onclick="openCaseModal('sala', 'modalLaunchProjectContainer')" role="button" tabindex="0" title="Bấm để xem chi tiết dự án ra mắt mới">
+                <div class="subproject-badge">
+                  <i data-lucide="sparkles"></i>
+                  <span>Hoạt Động Trọng Điểm: Ra Mắt Dự Án Mới</span>
+                </div>
+                <div class="subproject-content">
+                  <h5>Công Viên Nghĩa Trang Thiên Phúc Vĩnh Hằng Viên (Yên Tử — Quảng Ninh)</h5>
+                  <p>Quy mô <strong>32,54 ha</strong> • Tổng vốn đầu tư <strong>450+ Tỷ VNĐ</strong>. Trực tiếp lập Kế hoạch truyền thông tích hợp (IMC Plan), kịch bản sự kiện khởi động 200+ VIP, video teaser và trọn bộ ấn phẩm POSM in ấn.</p>
+                </div>
+                <button type="button" class="subproject-cta-btn" onclick="event.stopPropagation(); openCaseModal('sala', 'modalLaunchProjectContainer');">
+                  <span>Khám Phá Kế Hoạch &amp; Ấn Phẩm Dự Án</span>
+                  <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
+                </button>
+              </div>
               
               <div class="case-scope-box" style="margin-top: 18px;">
                 <div class="case-scope-title">
@@ -1147,6 +1163,7 @@
                   <li><i data-lucide="check"></i><span>Thiết lập chỉ tiêu KPI/OKR chi tiết cho từng thành viên</span></li>
                   <li><i data-lucide="check"></i><span>Quản trị ngân sách 300 triệu VNĐ/tháng &amp; tối ưu chiến dịch video tiếp cận 250.000+ người/tháng</span></li>
                   <li><i data-lucide="check"></i><span>Phân tích dữ liệu thực tế: Target nhóm 55+ tuổi (chiếm 80.5% ngân sách) đem về 86.9% lượt click chất lượng</span></li>
+                  <li><i data-lucide="check"></i><span>Lập Kế hoạch truyền thông IMC &amp; Kịch bản sự kiện khởi động dự án Thiên Phúc Vĩnh Hằng Viên (450+ Tỷ)</span></li>
                 </ul>
               </div>
             </div>
@@ -2570,6 +2587,10 @@
             <i data-lucide="compass"></i>
             <span>Tổng Quan</span>
           </button>
+          <button class="modal-nav-pill modal-nav-launch-pill" id="modalNavLaunchBtn" onclick="scrollModalTo('modalLaunchProjectContainer')" style="display: none;">
+            <i data-lucide="sparkles"></i>
+            <span>Dự Án Mới (Yên Tử - 32.54ha)</span>
+          </button>
           <button class="modal-nav-pill modal-nav-slide-pill" id="modalNavSlideBtn" onclick="scrollModalTo('modalSlideContainer')" style="display: none;">
             <i data-lucide="presentation"></i>
             <span>Slide Ottocast P3 (Canva)</span>
@@ -2602,6 +2623,9 @@
           <h3 class="modal-section-title">Chiến Lược &amp; Phương Pháp Triển Khai</h3>
           <p id="modalStrategy" style="color: var(--text-secondary); line-height: 1.65; margin-bottom: 24px;"></p>
         </div>
+
+        <!-- Launch Project Showcase (Dự án mở rộng Thiên Phúc Vĩnh Hằng Viên) -->
+        <div id="modalLaunchProjectContainer"></div>
 
         <!-- Slide Embed for Keynote Projects (Placed prominently) -->
         <div id="modalSlideContainer"></div>
@@ -2668,6 +2692,6 @@
   </div>
 
   <!-- Main JavaScript File -->
-  <script src="portfolio_assets/main.js?v=2.6"></script>
+  <script src="portfolio_assets/main.js?v=2.7"></script>
 </body>
 </html>

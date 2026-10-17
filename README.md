@@ -3,7 +3,7 @@
 > **Senior Marketing Manager | Growth & MarTech Lead**  
 > Nền tảng tư duy CNTT Bách Khoa TP.HCM (HCMUT) × Nghệ thuật quản trị tiếp thị đa kênh & kiến tạo thương hiệu từ số 0.
 
-🌐 **Website Portfolio Trực Tuyến:** [https://duykoolhp1996.github.io/portfolio-ta-quoc-duy/](https://duykoolhp1996.github.io/portfolio-ta-quoc-duy/)  
+🌐 **Website Portfolio Trực Tuyến:** [https://portfolio.duyhiendigi.com](https://portfolio.duyhiendigi.com)  
 📄 **Bản CV A4 Chuẩn In Ấn:** [Xem CV HTML](CV_Ta_Quoc_Duy_Marketing_Manager.html) | [Tải CV PDF](CV_Ta_Quoc_Duy_Marketing_Manager.pdf)
 
 ---
