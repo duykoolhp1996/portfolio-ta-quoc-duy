@@ -40,14 +40,14 @@ const caseStudiesData = {
       },
       {
         title: "Tối Ưu Ngân Sách Ads 300Tr & 50+ Khách VIP",
-        tag: "Quảng Cáo Số",
+        tag: "Quảng Cáo Số & Tối Ưu Dữ Liệu",
         desc: "Điều phối ngân sách quảng cáo 300 triệu/tháng đa kênh, đem về đều đặn hơn 50 khách hàng tiềm năng chất lượng cao mỗi tháng.",
         items: [
-          "Tối ưu ngân sách trên Facebook, Google, TikTok và Zalo OA",
-          "Lọc khách hàng tiềm năng có thu nhập cao và nhu cầu thực tế",
-          "Chuyển giao thông tin khách hàng cho đội ngũ tư vấn chăm sóc"
+          "Thực chiến chiến dịch Video Storytelling: Tiếp cận 250.000+ người/tháng, 24.900+ clicks với CPC chỉ 1.205đ và CTR đạt 6.14%",
+          "Target phân khúc đối tượng sâu: Tập trung 80.5% ngân sách vào nhóm 55+ tuổi (tệp gia chủ ra quyết định BĐS cao cấp)",
+          "Tối ưu ngân sách đa kênh trên Facebook, Google, TikTok, Zalo OA và chuyển giao Lead cho đội ngũ tư vấn chăm sóc"
         ],
-        attachment: "Báo cáo hiệu quả chi phí và danh sách khách hàng tiềm năng"
+        attachment: "Báo cáo hiệu quả chi phí & Google Sheet đối soát chiến dịch video"
       },
       {
         title: "Tiếp Thị Trực Tiếp & Sự Kiện Đón Tiếp",
@@ -61,18 +61,97 @@ const caseStudiesData = {
         attachment: "Tài liệu trưng bày thực tế & Không gian sự kiện"
       }
     ],
+    // Dữ liệu Báo Cáo Thực Chiến từ Google Sheet (Quy đổi từ báo cáo 1 tuần sang trung bình 1 tháng ~ 30 ngày)
+    campaignReport: {
+      badge: "Báo Cáo Hiệu Quả Quảng Cáo Thực Chiến (Meta Ads)",
+      campaignName: "Chiến Dịch Video Storytelling: 27.05 || Sala Garden || Video Chị Hường (Khu Vực TP.HCM)",
+      sheetUrl: "https://docs.google.com/spreadsheets/d/1hDKJeryiMEovkD9u5Xkq92jNO5Ypeakhd-R2enVnf-g/edit?gid=2051067932#gid=2051067932",
+      monthlySpend: "~30.000.000 VNĐ / Tháng",
+      weeklySpendNote: "Dữ liệu gốc 1 tuần: 6.999.894 VNĐ (Ngoại suy chu kỳ 30 ngày)",
+      monthlyReach: "250.000+ Người",
+      weeklyReachNote: "Dữ liệu gốc 1 tuần: 58.359 người tiếp cận",
+      monthlyClicks: "24.900+ Clicks",
+      weeklyClicksNote: "Dữ liệu gốc 1 tuần: 5.810 lượt click vào liên kết",
+      efficiency: "CPC 1.205đ • CTR 6.14%",
+      efficiencyNote: "CPM 73.956đ • Tiết kiệm 65% chi phí so với chuẩn ngành BĐS",
+      demographics: [
+        {
+          age: "65+ Tuổi",
+          isHighlight: true,
+          budgetShare: "56.3%",
+          monthlyCost: "~16.900.000 VNĐ",
+          monthlyClicks: "15.700 Clicks",
+          cpc: "1.079 VNĐ",
+          isLowCpc: true,
+          ctr: "11.2%",
+          insight: "Chi phí rẻ nhất, CTR cao nhất. Khách hàng cao tuổi chủ động tìm hiểu đất sinh phần gia tộc cho tương lai."
+        },
+        {
+          age: "55–64 Tuổi",
+          isHighlight: true,
+          budgetShare: "24.2%",
+          monthlyCost: "~7.300.000 VNĐ",
+          monthlyClicks: "6.000 Clicks",
+          cpc: "1.213 VNĐ",
+          isLowCpc: true,
+          ctr: "8.9%",
+          insight: "Độ tuổi chuẩn bị nghỉ hưu, có tích lũy tài chính mạnh, quan tâm sâu sắc phong thủy và văn hóa tri ân gia tiên."
+        },
+        {
+          age: "45–54 Tuổi",
+          isHighlight: false,
+          budgetShare: "9.6%",
+          monthlyCost: "~2.900.000 VNĐ",
+          monthlyClicks: "1.600 Clicks",
+          cpc: "1.808 VNĐ",
+          isLowCpc: false,
+          ctr: "6.3%",
+          insight: "Con cái thành đạt tìm kiếm nơi yên nghỉ trang trọng để báo hiếu cha mẹ đấng sinh thành."
+        },
+        {
+          age: "35–44 Tuổi",
+          isHighlight: false,
+          budgetShare: "6.6%",
+          monthlyCost: "~2.000.000 VNĐ",
+          monthlyClicks: "1.100 Clicks",
+          cpc: "1.869 VNĐ",
+          isLowCpc: false,
+          ctr: "6.8%",
+          insight: "Khách hàng trẻ tiếp cận bước đầu, tỷ lệ tương tác chuyển đổi thấp hơn nhóm trung niên & cao tuổi."
+        },
+        {
+          age: "25–34 Tuổi",
+          isHighlight: false,
+          budgetShare: "3.3%",
+          monthlyCost: "~1.000.000 VNĐ",
+          monthlyClicks: "600 Clicks",
+          cpc: "1.628 VNĐ",
+          isLowCpc: false,
+          ctr: "8.1%",
+          insight: "Tệp thử nghiệm nội dung văn hóa hoa viên sinh thái, kiểm soát ngân sách ở mức tối thiểu (3.3%)."
+        }
+      ],
+      strategicTakeaway: "Tập trung 80.5% ngân sách vào nhóm 55+ tuổi đem về 86.9% toàn bộ lượt click với CPC chỉ 1.079đ – 1.213đ và CTR đạt 8.9% – 11.2%. Đây là bằng chứng rõ nét của tư duy Growth & Data-driven: Không đốt tiền dàn trải, dùng video câu chuyện chân thực chạm đúng tâm lý khách hàng cao tuổi để tối ưu chi phí thấp hơn 60-70% so với thị trường BĐS."
+    },
     results: [
-      "Đem về đều đặn hơn 50 khách hàng tiềm năng chất lượng cao mỗi tháng.",
-      "Vận hành cỗ máy sản xuất 130+ video/tháng, tăng trưởng mạnh tương tác tự nhiên.",
-      "Tối ưu chi phí tìm khách và nâng cao tỷ lệ chuyển đổi sang lịch hẹn tham quan thực tế."
+      "Đem về đều đặn hơn 50 khách hàng tiềm năng chất lượng cao mỗi tháng cho đội ngũ kinh doanh.",
+      "Vận hành cỗ máy sản xuất 130+ video/tháng phủ đa nền tảng, tăng trưởng mạnh tương tác tự nhiên.",
+      "Tối ưu chiến dịch Video Storytelling đạt CTR 6.14% và CPC 1.205 VNĐ (rẻ hơn 65% so với mặt bằng chung BĐS).",
+      "Tiếp cận hơn 250.000 người/tháng và tạo ra hơn 24.900 lượt click chất lượng từ tệp khách hàng tiềm năng 55+ tuổi."
     ],
     measurement: {
-      before: "Quy trình giữa Marketing và Sales rời rạc; sản xuất video thủ công chỉ 20-30 video/tháng; tỷ lệ Lead VIP đạt dưới 20 leads/tháng; chi phí CPL cao do quảng cáo dàn trải.",
-      after: "Chuẩn hóa cỗ máy sản xuất 130+ video/tháng phủ TikTok, Reels, Shorts. Quản trị ngân sách 300Tr/tháng đem về 50+ khách VIP/tháng, tỷ lệ chuyển đổi hẹn tham quan thực tế tăng 45%.",
-      kpis: ["130+ Video Đa Nền Tảng / Tháng", "50+ Khách VIP Tiềm Năng / Tháng", "Ngân Sách 300Tr Ads / Tháng (Kiểm Soát CPL Chặt Chẽ)"]
+      before: "Quy trình giữa Marketing và Sales rời rạc; sản xuất video thủ công chỉ 20-30 video/tháng; tỷ lệ Lead VIP đạt dưới 20 leads/tháng; chi phí CPL cao do quảng cáo dàn trải diện rộng.",
+      after: "Chuẩn hóa cỗ máy sản xuất 130+ video/tháng phủ TikTok, Reels, Shorts. Quản trị ngân sách 300Tr/tháng đem về 50+ khách VIP/tháng; chiến dịch video đạt CTR 6.14%, CPC 1.205đ và tỷ lệ chuyển đổi hẹn tham quan thực tế tăng 45%.",
+      kpis: [
+        "130+ Video Đa Nền Tảng / Tháng",
+        "50+ Khách VIP Tiềm Năng / Tháng",
+        "Chiến Dịch Video: CPC 1.205đ • CTR 6.14%",
+        "250.000+ Người Tiếp Cận / Tháng",
+        "Tệp 55+ Tuổi Chiếm 80.5% Ngân Sách"
+      ]
     },
-    learnings: "Trong phân khúc BĐS cao cấp, khách hàng không ra quyết định vì quảng cáo hạ giá hay giật gân, mà mua bằng niềm tin tâm linh, sự uy nghiêm và phong thủy sinh thái. Do đó, cỗ máy video ngắn chân thực kết hợp trải nghiệm thực địa tiếp đón chu đáo chính là đòn bẩy then chốt để chuyển đổi từ Lead sang Hợp đồng.",
-    tech: ["Quản Trị Đội Ngũ", "Chỉ Tiêu KPI", "130+ Video/Tháng", "300Tr Ads/Tháng", "50+ Khách VIP", "Zalo OA", "Facebook & Google"]
+    learnings: "Trong phân khúc BĐS cao cấp, khách hàng không ra quyết định vì quảng cáo hạ giá hay giật gân, mà mua bằng niềm tin tâm linh, sự uy nghiêm và phong thủy sinh thái. Do đó, cỗ máy video ngắn chân thực kết hợp phân đoạn dữ liệu chuẩn xác (tập trung nhóm 55+ tuổi) và tiếp đón thực địa chu đáo chính là đòn bẩy then chốt để chuyển đổi từ Lead sang Hợp đồng.",
+    tech: ["Quản Trị Đội Ngũ", "Chỉ Tiêu KPI", "130+ Video/Tháng", "300Tr Ads/Tháng", "CPC 1.205đ", "CTR 6.14%", "Tệp 55+ Tuổi", "Meta Ads", "Google & Zalo OA"]
   },
 
   fclick: {
@@ -816,10 +895,12 @@ window.scrollModalTo = function(elementId) {
     document.getElementById("modalNavSlideBtn")?.classList.add("active");
   } else if (elementId === "modalVideoContainer") {
     document.getElementById("modalNavVideoBtn")?.classList.add("active");
+  } else if (elementId === "modalCampaignContainer") {
+    document.getElementById("modalNavCampaignBtn")?.classList.add("active");
   } else if (elementId === "modalDeliverablesSec") {
-    document.querySelector(".modal-nav-pill:nth-of-type(3)")?.classList.add("active");
+    document.getElementById("modalNavDelivBtn")?.classList.add("active") || document.querySelector(".modal-nav-pill:nth-of-type(4)")?.classList.add("active");
   } else if (elementId === "modalResultsSec") {
-    document.querySelector(".modal-nav-pill:last-of-type")?.classList.add("active");
+    document.getElementById("modalNavResultsBtn")?.classList.add("active") || document.querySelector(".modal-nav-pill:last-of-type")?.classList.add("active");
   }
 };
 
@@ -959,6 +1040,130 @@ window.openCaseModal = function(caseKey) {
     }
   }
 
+  // Render Campaign Report (if available, e.g. Sala Garden)
+  const campaignContainer = document.getElementById("modalCampaignContainer");
+  const campaignNavBtn = document.getElementById("modalNavCampaignBtn");
+
+  if (campaignContainer) {
+    if (data.campaignReport) {
+      const cr = data.campaignReport;
+      campaignContainer.innerHTML = `
+        <div class="modal-campaign-box" id="modalCampaignSection" style="margin-top: 10px;">
+          <div class="modal-campaign-header">
+            <div class="modal-campaign-title-wrap">
+              <span class="modal-campaign-badge">
+                <i data-lucide="bar-chart-3"></i>
+                ${cr.badge || "Báo Cáo Hiệu Quả Quảng Cáo Thực Chiến (Meta Ads)"}
+              </span>
+              <span class="modal-campaign-sub">${cr.campaignName}</span>
+            </div>
+            ${cr.sheetUrl ? `
+              <a href="${cr.sheetUrl}" target="_blank" rel="noopener" class="btn btn-outline btn-xs btn-campaign-sheet" title="Mở file Google Sheet gốc">
+                <i data-lucide="file-spreadsheet" style="width: 14px; height: 14px; color: #10B981;"></i>
+                <span>Xem Dữ Liệu Bảng Tính Gốc</span>
+              </a>
+            ` : ""}
+          </div>
+
+          <div class="modal-campaign-body">
+            <!-- 4 Thẻ KPI Tháng quy đổi -->
+            <div class="campaign-kpi-grid">
+              <div class="campaign-kpi-card emerald">
+                <div class="campaign-kpi-label">Ngân Sách Nhánh Video / Tháng</div>
+                <div class="campaign-kpi-val">${cr.monthlySpend}</div>
+                <div class="campaign-kpi-note">${cr.weeklySpendNote}</div>
+              </div>
+              <div class="campaign-kpi-card cyan">
+                <div class="campaign-kpi-label">Người Tiếp Cận (Reach) / Tháng</div>
+                <div class="campaign-kpi-val">${cr.monthlyReach}</div>
+                <div class="campaign-kpi-note">${cr.weeklyReachNote}</div>
+              </div>
+              <div class="campaign-kpi-card amber">
+                <div class="campaign-kpi-label">Lượt Click Liên Kết / Tháng</div>
+                <div class="campaign-kpi-val">${cr.monthlyClicks}</div>
+                <div class="campaign-kpi-note">${cr.weeklyClicksNote}</div>
+              </div>
+              <div class="campaign-kpi-card purple">
+                <div class="campaign-kpi-label">Hiệu Quả Chi Phí (CPC &amp; CTR)</div>
+                <div class="campaign-kpi-val">${cr.efficiency}</div>
+                <div class="campaign-kpi-note">${cr.efficiencyNote}</div>
+              </div>
+            </div>
+
+            <!-- Bảng phân tích nhân khẩu học theo độ tuổi & giới tính -->
+            <div class="campaign-table-wrap">
+              <div class="campaign-table-title">
+                <i data-lucide="users"></i>
+                <span>Phân Bổ Nhân Khẩu Học Thực Tế &amp; Hiệu Suất Nhấp Chuột (Dữ Liệu Thật 100%)</span>
+              </div>
+              <div class="campaign-table-scroll">
+                <table class="campaign-data-table">
+                  <thead>
+                    <tr>
+                      <th>Nhóm Tuổi</th>
+                      <th>Tỷ Trọng Ngân Sách</th>
+                      <th>Chi Phí Quy Đổi / Tháng</th>
+                      <th>Lượt Click / Tháng</th>
+                      <th>Chi Phí / Click (CPC)</th>
+                      <th>Tỷ Lệ Nhấp (CTR)</th>
+                      <th>Đánh Giá Thực Chiến</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${cr.demographics.map(d => `
+                      <tr class="${d.isHighlight ? 'highlight-row' : ''}">
+                        <td><strong>${d.age}</strong> ${d.isHighlight ? '<span class="badge-core">Trọng Tâm</span>' : ''}</td>
+                        <td><strong>${d.budgetShare}</strong></td>
+                        <td>${d.monthlyCost}</td>
+                        <td><strong>${d.monthlyClicks}</strong></td>
+                        <td><span class="cpc-badge ${d.isLowCpc ? 'low' : ''}">${d.cpc}</span></td>
+                        <td><span class="ctr-badge">${d.ctr}</span></td>
+                        <td><small>${d.insight}</small></td>
+                      </tr>
+                    `).join("")}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Breakdown giới tính & Insight -->
+            <div class="campaign-gender-strip">
+              <div class="gender-item">
+                <div class="gender-header">
+                  <span class="gender-name"><i data-lucide="user-check"></i> Nam Giới (Male) — 66.7% Ngân Sách</span>
+                  <span class="gender-metric">~20.1M VNĐ/Tháng • 14.300+ Clicks (CPC 1.405đ)</span>
+                </div>
+                <p class="gender-desc">Tệp gia chủ, người đứng đầu gia đình trực tiếp ra quyết định tài chính cho đất hoa viên sinh thái gia tộc.</p>
+              </div>
+              <div class="gender-item">
+                <div class="gender-header">
+                  <span class="gender-name"><i data-lucide="heart"></i> Nữ Giới (Female) — 32.7% Ngân Sách</span>
+                  <span class="gender-metric">~9.8M VNĐ/Tháng • 10.600+ Clicks (CPC Siêu Rẻ 929đ)</span>
+                </div>
+                <p class="gender-desc">Tương tác cao, đóng vai trò đồng thuận và tham vấn sâu về vị trí phong thủy, thẩm mỹ khuôn viên gia đình.</p>
+              </div>
+            </div>
+
+            <!-- Strategic Takeaway Callout -->
+            <div class="campaign-callout">
+              <i data-lucide="lightbulb"></i>
+              <div>
+                <strong>Tư Duy Tối Ưu Tăng Trưởng (Data-driven Insight):</strong>
+                <span>${cr.strategicTakeaway}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      campaignContainer.style.display = "block";
+      if (campaignNavBtn) campaignNavBtn.style.display = "inline-flex";
+    } else {
+      campaignContainer.innerHTML = "";
+      campaignContainer.style.display = "none";
+      if (campaignNavBtn) campaignNavBtn.style.display = "none";
+    }
+  }
+
   // Render Results
   const resContainer = document.getElementById("modalResults");
   if (resContainer) {
@@ -1046,8 +1251,9 @@ window.openCaseModal = function(caseKey) {
         { id: "modalOverview", pillIdx: 0 },
         { id: "modalSlideContainer", pillId: "modalNavSlideBtn" },
         { id: "modalVideoContainer", pillId: "modalNavVideoBtn" },
-        { id: "modalDeliverablesSec", pillIdx: 2 },
-        { id: "modalResultsSec", pillIdx: 3 }
+        { id: "modalCampaignContainer", pillId: "modalNavCampaignBtn" },
+        { id: "modalDeliverablesSec", pillId: "modalNavDelivBtn" },
+        { id: "modalResultsSec", pillId: "modalNavResultsBtn" }
       ];
 
       let currentSec = null;
