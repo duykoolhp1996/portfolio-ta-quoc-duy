@@ -710,6 +710,9 @@ const caseStudiesData = {
   }
 };
 
+// Gắn caseStudiesData vào window để dùng chung cho trang chi tiết case-study.html
+window.caseStudiesData = caseStudiesData;
+
 // Initialize Application
 document.addEventListener("DOMContentLoaded", () => {
   initLucide();
@@ -1067,11 +1070,26 @@ window.scrollModalTo = function(elementId) {
 };
 
 window.openCaseModal = function(caseKey, targetSection = null) {
-  const data = caseStudiesData[caseKey];
-  if (!data) return;
+  let url = `case-study.html?case=${caseKey || 'sala'}`;
+  if (targetSection === "modalLaunchProjectContainer" || targetSection === "launch-project") {
+    url += "#launch-project";
+  } else if (targetSection === "modalCampaignContainer" || targetSection === "campaign-report") {
+    url += "#campaign-report";
+  } else if (targetSection === "modalSlideContainer" || targetSection === "slide-presentation") {
+    url += "#slide-presentation";
+  } else if (targetSection === "modalVideoContainer" || targetSection === "video-showcase") {
+    url += "#video-showcase";
+  } else if (targetSection === "modalDeliverablesSec" || targetSection === "deliverables") {
+    url += "#deliverables";
+  } else if (targetSection === "modalResultsSec" || targetSection === "results") {
+    url += "#results";
+  }
+  window.location.href = url;
+  return;
+};
 
-  const modal = document.getElementById("caseModalOverlay");
-  if (!modal) return;
+// Hàm cũ mở Modal Popup dự phòng nếu người dùng cần
+window.openCaseModalLegacy = function(caseKey, targetSection = null) {
 
   // Populate data
   document.getElementById("modalCategory").innerText = `Hạng mục: ${data.category}`;

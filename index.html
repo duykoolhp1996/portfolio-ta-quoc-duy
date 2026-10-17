@@ -257,7 +257,7 @@
         <div class="fanned-deck-container">
           
           <!-- Card 1: LATH Group -->
-          <div class="fan-card fan-card-1" onclick="openCaseModal('lath')">
+          <div class="fan-card fan-card-1" onclick="window.location.href='case-study.html?case=lath'">
             <div class="fan-card-top">
               <div class="fan-card-brand-group">
                 <span class="fan-card-brand">LATH Group</span>
@@ -274,7 +274,7 @@
           </div>
 
           <!-- Card 2: Sala Garden -->
-          <div class="fan-card fan-card-2" onclick="openCaseModal('sala')">
+          <div class="fan-card fan-card-2" onclick="window.location.href='case-study.html?case=sala'">
             <div class="fan-card-top">
               <div class="fan-card-brand-group">
                 <span class="fan-card-brand">Sala Garden</span>
@@ -291,7 +291,7 @@
           </div>
 
           <!-- Card 3: Fclick & AI Tech -->
-          <div class="fan-card fan-card-3" onclick="openCaseModal('fclick')">
+          <div class="fan-card fan-card-3" onclick="window.location.href='case-study.html?case=fclick'">
             <div class="fan-card-top">
               <div class="fan-card-brand-group">
                 <span class="fan-card-brand">Fclick</span>
@@ -309,7 +309,7 @@
           </div>
 
           <!-- Card 4: Lục Lam Group -->
-          <div class="fan-card fan-card-4" onclick="openCaseModal('luclam')">
+          <div class="fan-card fan-card-4" onclick="window.location.href='case-study.html?case=luclam'">
             <div class="fan-card-top">
               <div class="fan-card-brand-group">
                 <span class="fan-card-brand">Lục Lam Group</span>
@@ -327,7 +327,7 @@
           </div>
 
           <!-- Card 5: Bravigo -->
-          <div class="fan-card fan-card-5" onclick="openCaseModal('bravigo')">
+          <div class="fan-card fan-card-5" onclick="window.location.href='case-study.html?case=bravigo'">
             <div class="fan-card-top">
               <div class="fan-card-brand-group">
                 <span class="fan-card-brand">Bravigo</span>
@@ -491,7 +491,7 @@
           <div class="company-boards-grid" id="companyBoardsGrid">
             
             <!-- Ô 1: Sala Garden -->
-            <div class="company-board-card" data-company="sala" onclick="openCaseModal('sala')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCaseModal('sala');}">
+            <div class="company-board-card" data-company="sala" onclick="window.location.href='case-study.html?case=sala'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='case-study.html?case=sala';}">
               <div class="board-card-header">
                 <div class="board-brand-info">
                   <h4 class="board-brand-name">Sala Garden</h4>
@@ -525,15 +525,15 @@
 
               <div class="board-card-footer">
                 <span class="board-role-tag">Quản Lý Marketing (Marketing Manager)</span>
-                <button class="board-cta-btn" onclick="openCaseModal('sala')">
+                <a href="case-study.html?case=sala" class="board-cta-btn" onclick="event.stopPropagation();">
                   <span>Xem Chi Tiết</span>
                   <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
-                </button>
+                </a>
               </div>
             </div>
 
             <!-- Ô 2: Fclick -->
-            <div class="company-board-card" data-company="fclick" onclick="openCaseModal('fclick')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCaseModal('fclick');}">
+            <div class="company-board-card" data-company="fclick" onclick="window.location.href='case-study.html?case=fclick'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='case-study.html?case=fclick';}">
               <div class="board-card-header">
                 <div class="board-brand-info">
                   <div style="display: flex; align-items: center; gap: 10px;">
@@ -570,15 +570,15 @@
 
               <div class="board-card-footer">
                 <span class="board-role-tag">Quản Lý Marketing &amp; Trưởng Nhóm MarTech</span>
-                <button class="board-cta-btn" onclick="openCaseModal('fclick')">
+                <a href="case-study.html?case=fclick" class="board-cta-btn" onclick="event.stopPropagation();">
                   <span>Xem Chi Tiết</span>
                   <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
-                </button>
+                </a>
               </div>
             </div>
 
             <!-- Ô 3: Lục Lam -->
-            <div class="company-board-card" data-company="luclam" onclick="openCaseModal('luclam')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCaseModal('luclam');}">
+            <div class="company-board-card" data-company="luclam" onclick="window.location.href='case-study.html?case=luclam'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='case-study.html?case=luclam';}">
               <div class="board-card-header">
                 <div class="board-brand-info">
                   <h4 class="board-brand-name">Lục Lam</h4>
@@ -613,20 +613,20 @@
               <div class="board-card-footer">
                 <span class="board-role-tag">Quản Lý Marketing (Marketing Manager)</span>
                 <div style="display: flex; gap: 8px;">
-                  <button class="board-cta-btn" onclick="event.stopPropagation(); openCaseModal('luclam'); setTimeout(() => scrollModalTo('modalVideoContainer'), 300);" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #6EE7B7;">
+                  <a href="case-study.html?case=luclam#video-showcase" class="board-cta-btn" onclick="event.stopPropagation();" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #6EE7B7;">
                     <svg class="lucide lucide-youtube" viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9"/></svg>
                     <span>2 Video Lục Lam</span>
-                  </button>
-                  <button class="board-cta-btn" onclick="openCaseModal('luclam')">
+                  </a>
+                  <a href="case-study.html?case=luclam" class="board-cta-btn" onclick="event.stopPropagation();">
                     <span>Xem Chi Tiết</span>
                     <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
 
             <!-- Ô 4: Bravigo -->
-            <div class="company-board-card" data-company="bravigo" onclick="openCaseModal('bravigo')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCaseModal('bravigo');}">
+            <div class="company-board-card" data-company="bravigo" onclick="window.location.href='case-study.html?case=bravigo'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='case-study.html?case=bravigo';}">
               <div class="board-card-header">
                 <div class="board-brand-info">
                   <h4 class="board-brand-name">Bravigo</h4>
@@ -660,15 +660,15 @@
 
               <div class="board-card-footer">
                 <span class="board-role-tag">Quản Lý Marketing (Marketing Manager)</span>
-                <button class="board-cta-btn" onclick="openCaseModal('bravigo')">
+                <a href="case-study.html?case=bravigo" class="board-cta-btn" onclick="event.stopPropagation();">
                   <span>Xem Chi Tiết</span>
                   <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
-                </button>
+                </a>
               </div>
             </div>
 
             <!-- Ô 5: LATH Group -->
-            <div class="company-board-card" data-company="lath" onclick="openCaseModal('lath')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCaseModal('lath');}">
+            <div class="company-board-card" data-company="lath" onclick="window.location.href='case-study.html?case=lath'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='case-study.html?case=lath';}">
               <div class="board-card-header">
                 <div class="board-brand-info">
                   <h4 class="board-brand-name">LATH Group</h4>
@@ -703,20 +703,20 @@
               <div class="board-card-footer">
                 <span class="board-role-tag">Trưởng Nhóm Marketing (Marketing Leader)</span>
                 <div style="display: flex; gap: 8px;">
-                  <button class="board-cta-btn" onclick="event.stopPropagation(); openCaseModal('lath'); setTimeout(() => scrollModalTo('modalVideoContainer'), 300);" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5;">
-                    <svg class="lucide lucide-youtube" viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 21.5 17"/><polygon points="10 15 15 12 10 9"/></svg>
+                  <a href="case-study.html?case=lath#video-showcase" class="board-cta-btn" onclick="event.stopPropagation();" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5;">
+                    <svg class="lucide lucide-youtube" viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9"/></svg>
                     <span>6 Video Ads</span>
-                  </button>
-                  <button class="board-cta-btn" onclick="openCaseModal('lath')">
+                  </a>
+                  <a href="case-study.html?case=lath" class="board-cta-btn" onclick="event.stopPropagation();">
                     <span>Xem Chi Tiết</span>
                     <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
 
             <!-- Ô 6: Brew & Bánh Mì Cafe (USA) -->
-            <div class="company-board-card" data-company="brewbanhmi" onclick="openCaseModal('brewbanhmi')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCaseModal('brewbanhmi');}">
+            <div class="company-board-card" data-company="brewbanhmi" onclick="window.location.href='case-study.html?case=brewbanhmi'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='case-study.html?case=brewbanhmi';}">
               <div class="board-card-header">
                 <div class="board-brand-info">
                   <div style="display: flex; align-items: center; gap: 10px;">
@@ -758,10 +758,10 @@
                     <span>Xem Web</span>
                     <i data-lucide="external-link" style="width: 13px; height: 13px;"></i>
                   </a>
-                  <button class="board-cta-btn" onclick="openCaseModal('brewbanhmi')">
+                  <a href="case-study.html?case=brewbanhmi" class="board-cta-btn" onclick="event.stopPropagation();">
                     <span>Xem Chi Tiết</span>
                     <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1138,7 +1138,7 @@
               </p>
 
               <!-- Hoạt Động Trọng Điểm: Dự Án Mới Ra Mắt Thiên Phúc Vĩnh Hằng Viên -->
-              <div class="case-subproject-banner" onclick="openCaseModal('sala', 'modalLaunchProjectContainer')" role="button" tabindex="0" title="Bấm để xem chi tiết dự án ra mắt mới">
+              <div class="case-subproject-banner" onclick="window.location.href='case-study.html?case=sala#launch-project'" role="button" tabindex="0" title="Bấm để xem chi tiết dự án ra mắt mới">
                 <div class="subproject-badge">
                   <i data-lucide="sparkles"></i>
                   <span>Hoạt Động Trọng Điểm: Ra Mắt Dự Án Mới</span>
@@ -1147,10 +1147,10 @@
                   <h5>Công Viên Nghĩa Trang Thiên Phúc Vĩnh Hằng Viên (Yên Tử — Quảng Ninh)</h5>
                   <p>Quy mô <strong>32,54 ha</strong> • Tổng vốn đầu tư <strong>450+ Tỷ VNĐ</strong>. Trực tiếp lập Kế hoạch truyền thông tích hợp (IMC Plan), kịch bản sự kiện khởi động 200+ VIP, video teaser và trọn bộ ấn phẩm POSM in ấn.</p>
                 </div>
-                <button type="button" class="subproject-cta-btn" onclick="event.stopPropagation(); openCaseModal('sala', 'modalLaunchProjectContainer');">
+                <a href="case-study.html?case=sala#launch-project" class="subproject-cta-btn" onclick="event.stopPropagation();">
                   <span>Khám Phá Kế Hoạch &amp; Ấn Phẩm Dự Án</span>
                   <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
-                </button>
+                </a>
               </div>
               
               <div class="case-scope-box" style="margin-top: 18px;">
@@ -1213,10 +1213,10 @@
               <span class="case-tag-item">50+ Khách VIP</span>
               <span class="case-tag-item">Meta Ads &amp; Google</span>
             </div>
-            <button class="btn btn-outline btn-sm" onclick="openCaseModal('sala')">
+            <a href="case-study.html?case=sala" class="btn btn-outline btn-sm">
               <span>Xem Toàn Bộ Hạng Mục Đã Làm</span>
               <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-            </button>
+            </a>
           </div>
         </article>
 
@@ -1324,10 +1324,10 @@
               <span class="case-tag-item">Báo cáo tự động</span>
               <span class="case-tag-item">Thử nghiệm quảng cáo</span>
             </div>
-            <button class="btn btn-outline btn-sm" onclick="openCaseModal('fclick')">
+            <a href="case-study.html?case=fclick" class="btn btn-outline btn-sm">
               <span>Xem Toàn Bộ Hạng Mục Đã Làm</span>
               <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-            </button>
+            </a>
           </div>
         </article>
 
@@ -1500,10 +1500,10 @@
                 <svg class="lucide lucide-youtube" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9"/></svg>
                 <span>Xem 2 Video Lục Lam</span>
               </a>
-              <button class="btn btn-outline btn-sm" onclick="openCaseModal('luclam')">
+              <a href="case-study.html?case=luclam" class="btn btn-outline btn-sm">
                 <span>Xem Toàn Bộ Hạng Mục Đã Làm</span>
                 <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-              </button>
+              </a>
             </div>
           </div>
         </article>
@@ -1618,10 +1618,10 @@
                 <i data-lucide="presentation"></i>
                 <span>Xem Slide Ra Mắt Ottocast P3 (Canva)</span>
               </a>
-              <button class="btn btn-outline btn-sm" onclick="openCaseModal('bravigo')">
+              <a href="case-study.html?case=bravigo" class="btn btn-outline btn-sm">
                 <span>Xem Toàn Bộ Hạng Mục Đã Làm</span>
                 <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-              </button>
+              </a>
             </div>
           </div>
         </article>
@@ -1818,10 +1818,10 @@
                 <svg class="lucide lucide-youtube" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9"/></svg>
                 <span>Xem Trên YouTube</span>
               </a>
-              <button class="btn btn-outline btn-sm" onclick="openCaseModal('lath')">
+              <a href="case-study.html?case=lath" class="btn btn-outline btn-sm">
                 <span>Xem Toàn Bộ Hạng Mục Đã Làm</span>
                 <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-              </button>
+              </a>
             </div>
           </div>
         </article>
@@ -1936,10 +1936,10 @@
                 <i data-lucide="globe" style="width: 14px; height: 14px;"></i>
                 <span>Xem brewbanhmicafe.com</span>
               </a>
-              <button class="btn btn-outline btn-sm" onclick="openCaseModal('brewbanhmi')">
+              <a href="case-study.html?case=brewbanhmi" class="btn btn-outline btn-sm">
                 <span>Xem Toàn Bộ Hạng Mục Đã Làm</span>
                 <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-              </button>
+              </a>
             </div>
           </div>
         </article>
