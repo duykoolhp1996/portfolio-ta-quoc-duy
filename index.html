@@ -91,7 +91,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Dark Studio Stylesheet -->
-  <link rel="stylesheet" href="portfolio_assets/style.css?v=2.9">
+  <link rel="stylesheet" href="portfolio_assets/style.css?v=3.0">
 
   <!-- Hotjar Tracking Code per Global Rule (hjid: 6791459, hjsv: 6) -->
   <script>
@@ -489,9 +489,13 @@
               <span class="pill-dot" style="background: #38BDF8;"></span>
               <span>Mắt Kính Pháp Việt</span>
             </button>
+            <button class="company-pill" onclick="filterCompanyBoard('namtien', this)">
+              <span class="pill-dot" style="background: #EF4444;"></span>
+              <span>Xe Máy Nam Tiến</span>
+            </button>
           </div>
 
-          <!-- 7 Ô BẢNG ĐỘC LẬP CHO TỪNG DOANH NGHIỆP & DỰ ÁN -->
+          <!-- 8 Ô BẢNG ĐỘC LẬP CHO TỪNG DOANH NGHIỆP & DỰ ÁN -->
           <div class="company-boards-grid" id="companyBoardsGrid">
             
             <!-- Ô 1: Sala Garden -->
@@ -813,6 +817,51 @@
               <div class="board-card-footer">
                 <span class="board-role-tag">Quản Lý Social Media &amp; Build Marketing</span>
                 <a href="case-study.html?case=phapviet" class="board-cta-btn" onclick="event.stopPropagation();">
+                  <span>Xem Chi Tiết</span>
+                  <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Ô 8: Xe Máy Nam Tiến -->
+            <div class="company-board-card" data-company="namtien" onclick="window.location.href='case-study.html?case=namtien'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='case-study.html?case=namtien';}">
+              <div class="board-card-header">
+                <div class="board-brand-info">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <h4 class="board-brand-name">Xe Máy Nam Tiến</h4>
+                    <span class="badge badge-accent" style="font-size: 0.68rem; padding: 2px 7px; background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border-color: rgba(239, 68, 68, 0.35);">Showroom O2O</span>
+                  </div>
+                  <span class="board-brand-sub">Hạng mục: Chuỗi Bán Lẻ Xe Máy Chính Hãng &amp; Nhập Khẩu</span>
+                </div>
+                <span class="board-period-badge">2023 – 2024</span>
+              </div>
+              
+              <div class="board-metrics-grid">
+                <div class="board-metric-box">
+                  <div class="box-metric-val emerald">1.500+</div>
+                  <div class="box-metric-label">Leads Khách / Tháng</div>
+                  <div class="box-metric-note">Phễu trả góp 0đ Meta/Google Ads</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val cyan">5M+ Lượt</div>
+                  <div class="box-metric-label">Xem Video / Tháng</div>
+                  <div class="box-metric-note">Review xe &amp; giá lăn bánh đa kênh</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val amber">-32%</div>
+                  <div class="box-metric-label">Chi Phí CPL</div>
+                  <div class="box-metric-note">Tối ưu chi phí mỗi lead mua xe</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val purple">35% Hẹn</div>
+                  <div class="box-metric-label">Chuyển Đổi Showroom</div>
+                  <div class="box-metric-note">Đồng bộ O2O liên kết phòng Sales</div>
+                </div>
+              </div>
+
+              <div class="board-card-footer">
+                <span class="board-role-tag">Trưởng Phòng Marketing (Marketing Manager)</span>
+                <a href="case-study.html?case=namtien" class="board-cta-btn" onclick="event.stopPropagation();">
                   <span>Xem Chi Tiết</span>
                   <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
                 </a>
@@ -2060,6 +2109,137 @@
           </div>
         </article>
 
+        <!-- CASE STUDY 08: HỆ THỐNG XE MÁY NAM TIẾN -->
+        <article class="case-study-item" data-tags="performance brand strategy data martech" onclick="if (!event.target.closest('a, button')) window.location.href='case-study.html?case=namtien'" style="cursor: pointer;">
+          <div class="case-study-header">
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div class="case-company-logo-wrap" style="background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.35); padding: 6px;">
+                <img src="portfolio_assets/images/logo_namtien.png" alt="Logo Hệ Thống Xe Máy Nam Tiến" class="case-company-logo" style="object-fit: contain;" />
+              </div>
+              <div>
+                <h3 class="case-project-title">
+                  <span>Dự Án Hệ Thống Xe Máy Nam Tiến</span>
+                  <span class="badge badge-accent" style="margin-left: 8px; font-size: 0.72rem; padding: 2px 8px; vertical-align: middle; background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border-color: rgba(239, 68, 68, 0.35);">
+                    <i data-lucide="award"></i> Showroom O2O
+                  </span>
+                </h3>
+                <div class="case-company-name">Hạng mục: Bán Lẻ Xe Máy Chính Hãng &amp; Nhập Khẩu • 1.500+ Leads/Tháng &amp; Video Review 5M+ View</div>
+              </div>
+            </div>
+            <div class="case-meta-right">
+              <span class="case-role-badge">Trưởng Phòng Marketing</span>
+              <span class="case-period-text">2023 – 2024</span>
+            </div>
+          </div>
+
+          <div class="case-metrics-banner">
+            <div class="case-metric-block">
+              <div class="case-metric-number">1.500+</div>
+              <div class="case-metric-desc">Leads khách hàng có nhu cầu mua xe &amp; trả góp mỗi tháng</div>
+            </div>
+            <div class="case-metric-block">
+              <div class="case-metric-number">5M+ Lượt</div>
+              <div class="case-metric-desc">Lượt xem video review xe, so sánh giá lăn bánh hàng tháng</div>
+            </div>
+            <div class="case-metric-block">
+              <div class="case-metric-number">-32% CPL</div>
+              <div class="case-metric-desc">Chi phí trên mỗi khách hàng tiềm năng được tối ưu hiệu quả</div>
+            </div>
+            <div class="case-metric-block">
+              <div class="case-metric-number">35% Hẹn</div>
+              <div class="case-metric-desc">Tỷ lệ chuyển đổi khách hàng từ Online đến trải nghiệm showroom</div>
+            </div>
+          </div>
+
+          <!-- Ma Trận Phân Môn: Công Việc Trực Tiếp Triển Khai ↔ Hiệu Quả Tương Ứng -->
+          <div class="case-workstream-matrix">
+            <!-- Row 1: Performance Ads & Lead Gen -->
+            <div class="cwm-row">
+              <div class="cwm-pillar">
+                <span class="cwm-tag performance">
+                  <i data-lucide="target"></i>
+                  <span>Performance Ads</span>
+                </span>
+              </div>
+              <div class="cwm-scope">
+                <strong>Chiến dịch Performance Ads phễu Trả góp 0đ &amp; Duyệt hồ sơ nhanh:</strong> Quản lý ngân sách quảng cáo Meta &amp; Google Ads nhắm trúng tệp khách hàng mua xe máy tại TP.HCM, Bình Dương và Đồng Nai; A/B testing thông điệp giá xe lăn bánh và quà tặng phụ kiện.
+              </div>
+              <div class="cwm-impact">
+                <span class="cwm-impact-metric">1.500+ Leads/Tháng • -32% CPL</span>
+                <span class="cwm-impact-desc">Cung cấp nguồn khách hàng tiềm năng dồi dào, ổn định cho từng chi nhánh showroom</span>
+              </div>
+            </div>
+
+            <!-- Row 2: Content & Video Production -->
+            <div class="cwm-row">
+              <div class="cwm-pillar">
+                <span class="cwm-tag content">
+                  <i data-lucide="video"></i>
+                  <span>Video Production</span>
+                </span>
+              </div>
+              <div class="cwm-scope">
+                <strong>Sản xuất loạt video review xe, so sánh tính năng &amp; cập nhật giá lăn bánh:</strong> Xây dựng format video ngắn triệu view trên TikTok &amp; Reels (Vario, Scoopy, Vision, SH...) và video dài chuyên sâu trên YouTube phân tích cảm giác lái, thủ tục sang tên.
+              </div>
+              <div class="cwm-impact">
+                <span class="cwm-impact-metric">5M+ Lượt Xem/Tháng • Top Search</span>
+                <span class="cwm-impact-desc">Xác lập kênh tham khảo giá xe uy tín hàng đầu cho giới trẻ và công nhân viên</span>
+              </div>
+            </div>
+
+            <!-- Row 3: Marketing-Sales Alignment O2O -->
+            <div class="cwm-row">
+              <div class="cwm-pillar">
+                <span class="cwm-tag leadership">
+                  <i data-lucide="handshake"></i>
+                  <span>O2O &amp; Sales Link</span>
+                </span>
+              </div>
+              <div class="cwm-scope">
+                <strong>Chuẩn hóa quy trình chuyển giao Leads &amp; kết nối tư vấn tại Showroom:</strong> Phân bổ dữ liệu theo địa bàn về showroom gần nhất; phối hợp chặt chẽ cùng Giám đốc showroom và nhân viên kinh doanh để theo dõi tỷ lệ chốt xe thực tế.
+              </div>
+              <div class="cwm-impact">
+                <span class="cwm-impact-metric">35% Tỷ Lệ Đến Showroom</span>
+                <span class="cwm-impact-desc">Rút ngắn khoảng cách giữa Marketing và Sales, tối đa hóa doanh số bán xe</span>
+              </div>
+            </div>
+
+            <!-- Row 4: Trade Marketing & POSM -->
+            <div class="cwm-row">
+              <div class="cwm-pillar">
+                <span class="cwm-tag brand">
+                  <i data-lucide="sparkles"></i>
+                  <span>Trade &amp; Event</span>
+                </span>
+              </div>
+              <div class="cwm-scope">
+                <strong>Triển khai Trade Marketing điểm bán &amp; ngày hội kích cầu showroom:</strong> Thiết kế đồng bộ POSM bảng giá, backdrop giao xe; tổ chức sự kiện lái thử xe mới, ngày hội thay nhớt miễn phí tri ân khách hàng địa phương.
+              </div>
+              <div class="cwm-impact">
+                <span class="cwm-impact-metric">Hàng Ngàn Lượt Khách • 100% Đồng Bộ</span>
+                <span class="cwm-impact-desc">Tạo ấn tượng thương hiệu tận tâm, củng cố uy tín dịch vụ hậu mãi vững chắc</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-footer-actions">
+            <div class="case-tech-tags">
+              <span class="case-tag-item">Marketing Manager</span>
+              <span class="case-tag-item">Bán Lẻ Xe Máy O2O</span>
+              <span class="case-tag-item">Performance Ads Trả Góp</span>
+              <span class="case-tag-item">1.500+ Leads/Tháng</span>
+              <span class="case-tag-item">Video Review Xe (5M+ View)</span>
+              <span class="case-tag-item">Kết Nối Sales Showroom</span>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+              <a href="case-study.html?case=namtien" class="btn btn-outline btn-sm">
+                <span>Xem Chi Tiết Số Liệu &amp; Hồ Sơ Dự Án</span>
+                <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -2488,6 +2668,36 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content-card">
+            <div class="timeline-period-badge">2024 – 2025</div>
+            <h3 class="timeline-role-title">Tư Vấn Marketing &amp; Quản Lý Kênh Số (Freelance)</h3>
+            <div class="timeline-company-text">
+              <img src="portfolio_assets/images/logo_phapviet.png" alt="Mắt Kính Pháp Việt Logo" class="timeline-company-logo">
+              Hệ Thống Mắt Kính Pháp Việt • Chuỗi Bán Lẻ &amp; Chuyên Khoa Khúc Xạ
+            </div>
+            <p class="timeline-highlights">
+              Tái định hình kênh Social Media với tuyến video thị lực đạt +180% tương tác, triển khai Local Meta Ads bán kính 3-5km hạ 28% chi phí tin nhắn và tăng 35% lượt khách trực tiếp đến đo mắt, cắt kính.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content-card">
+            <div class="timeline-period-badge">2023 – 2024</div>
+            <h3 class="timeline-role-title">Trưởng Phòng Marketing</h3>
+            <div class="timeline-company-text">
+              <img src="portfolio_assets/images/logo_namtien.png" alt="Xe Máy Nam Tiến Logo" class="timeline-company-logo">
+              Hệ Thống Xe Máy Nam Tiến • Chuỗi Showroom Xe Máy &amp; Dịch Vụ O2O
+            </div>
+            <p class="timeline-highlights">
+              Tối ưu chiến dịch Performance Ads đa kênh giảm 32% CPL, mang về hơn 1.500 Qualified Leads/tháng và sản xuất chuỗi video review xe, so sánh giá lăn bánh đạt 5M+ lượt xem/tháng trên TikTok &amp; YouTube.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content-card">
             <div class="timeline-period-badge">11/2022 – 08/2023</div>
             <h3 class="timeline-role-title">Trưởng Nhóm Marketing Số</h3>
             <div class="timeline-company-text">Công Ty Bravigo • Thiết Bị Công Nghệ Xe Ô Tô</div>
@@ -2808,6 +3018,6 @@
   </div>
 
   <!-- Main JavaScript File -->
-  <script src="portfolio_assets/main.js?v=3.0"></script>
+  <script src="portfolio_assets/main.js?v=3.1"></script>
 </body>
 </html>

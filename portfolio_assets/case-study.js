@@ -5,7 +5,7 @@
  */
 
 (function () {
-  const CASE_ORDER = ["sala", "fclick", "luclam", "brewbanhmi", "bravigo", "lath", "phapviet"];
+  const CASE_ORDER = ["sala", "fclick", "luclam", "brewbanhmi", "bravigo", "lath", "phapviet", "namtien"];
 
   const CASE_META = {
     sala: { name: "Sala Garden", tag: "BĐS Sinh Thái Cao Cấp", icon: "trees" },
@@ -14,7 +14,8 @@
     brewbanhmi: { name: "Brew & Bánh Mì", tag: "F&B Bắc Mỹ", icon: "coffee" },
     bravigo: { name: "Bravigo", tag: "Phụ Kiện Ô Tô", icon: "car" },
     lath: { name: "LATH Group", tag: "Mỹ Phẩm & SEO", icon: "trending-up" },
-    phapviet: { name: "Mắt Kính Pháp Việt", tag: "Social & O2O Freelance", icon: "glasses" }
+    phapviet: { name: "Mắt Kính Pháp Việt", tag: "Social & O2O Freelance", icon: "glasses" },
+    namtien: { name: "Xe Máy Nam Tiến", tag: "Showroom O2O & Ads", icon: "bike" }
   };
 
   function getQueryCase() {

@@ -1493,7 +1493,6 @@ async function loadAccounts() {
     const badgeAll = document.getElementById("tab-count-all");
     const badgeFbPage = document.getElementById("tab-count-facebook_page");
     const badgeFbProfile = document.getElementById("tab-count-facebook_profile");
-    const badgeFbGroup = document.getElementById("tab-count-facebook_group");
     const badgeZaloOA = document.getElementById("tab-count-zalo_oa");
     const badgeZaloProfile = document.getElementById("tab-count-zalo_profile");
     const badgeOther = document.getElementById("tab-count-other");
@@ -1501,12 +1500,11 @@ async function loadAccounts() {
     if (badgeAll) badgeAll.textContent = totalCount;
     if (badgeFbPage) badgeFbPage.textContent = allAccountsData.filter(a => a.category === "facebook_page").length;
     if (badgeFbProfile) badgeFbProfile.textContent = allAccountsData.filter(a => a.category === "facebook_profile").length;
-    if (badgeFbGroup) badgeFbGroup.textContent = allAccountsData.filter(a => a.category === "facebook_group").length;
     if (badgeZaloOA) badgeZaloOA.textContent = allAccountsData.filter(a => a.category === "zalo_oa").length;
     if (badgeZaloProfile) badgeZaloProfile.textContent = allAccountsData.filter(a => a.category === "zalo_profile").length;
     if (badgeOther) {
       badgeOther.textContent = allAccountsData.filter(a => 
-        !["facebook_page", "facebook_profile", "facebook_group", "zalo_oa", "zalo_profile"].includes(a.category)
+        !["facebook_page", "facebook_profile", "zalo_oa", "zalo_profile"].includes(a.category)
       ).length;
     }
 
@@ -1543,7 +1541,7 @@ function renderAccountsGrid() {
   if (currentAccountFilter !== "ALL") {
     if (currentAccountFilter === "other") {
       filtered = allAccountsData.filter(a => 
-        !["facebook_page", "facebook_profile", "facebook_group", "zalo_oa", "zalo_profile"].includes(a.category)
+        !["facebook_page", "facebook_profile", "zalo_oa", "zalo_profile"].includes(a.category)
       );
     } else {
       filtered = allAccountsData.filter(a => a.category === currentAccountFilter);
@@ -1551,7 +1549,19 @@ function renderAccountsGrid() {
   }
 
   if (filtered.length === 0) {
-    grid.innerHTML = `<div class="col-span-2 text-center py-12 text-xs text-slate-400 bg-[#FCFAF7] rounded-3xl border border-[#E7E1D4]">Không có kênh nào trong mục lọc này. Bấm <strong>+ Kết nối kênh mới</strong> để thêm.</div>`;
+    grid.innerHTML = `
+      <div class="col-span-1 md:col-span-2 py-14 px-6 text-center bg-[#FCFAF7] rounded-3xl border border-dashed border-[#DDD5C4] space-y-3">
+        <div class="w-12 h-12 rounded-2xl bg-white border border-[#E7E1D4] text-[#063E9E] flex items-center justify-center mx-auto shadow-sm">
+          <i data-lucide="plug-2" class="w-6 h-6"></i>
+        </div>
+        <div class="text-sm font-bold text-slate-800">Chưa có kênh nào được cấu hình trong mục này</div>
+        <p class="text-xs text-slate-500 max-w-sm mx-auto">Hệ thống đang hiển thị dữ liệu thực tế từ cơ sở dữ liệu. Hãy bấm nút dưới đây để kết nối kênh thật của bạn.</p>
+        <button onclick="openConnectChannelModal()" class="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl bg-[#063E9E] text-white text-xs font-bold hover:bg-[#05317C] transition shadow-sm cursor-pointer">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+          <span>+ Kết nối kênh ngay</span>
+        </button>
+      </div>`;
+    lucide.createIcons();
     return;
   }
 
@@ -1574,7 +1584,7 @@ function renderAccountsGrid() {
         <div class="w-5 h-5 rounded-full bg-[#1877F2] text-white flex items-center justify-center font-bold text-[10px] shadow-sm">
           <span>🚩</span>
         </div>`;
-    } else if (acc.category === "facebook_profile" || acc.category === "facebook_group") {
+    } else if (acc.category === "facebook_profile") {
       platformBgColor = "#1877F2";
       platformIconHtml = `
         <div class="w-5 h-5 rounded-full bg-[#1877F2] text-white flex items-center justify-center font-bold text-[11px] shadow-sm font-sans">
@@ -1732,6 +1742,18 @@ function renderAccountsGrid() {
             <span>Đồng bộ lần cuối:</span>
             <span class="font-medium text-slate-600">${lastSynced}</span>
           </div>
+
+          ${acc.groups_count !== undefined ? `
+          <div class="mt-2.5 p-3 rounded-2xl bg-blue-50/70 border border-blue-200/60 flex items-center justify-between text-xs">
+            <div class="flex items-center space-x-2 text-slate-700 min-w-0">
+              <i data-lucide="folder-check" class="w-4 h-4 text-[#1877F2] shrink-0"></i>
+              <span class="text-[11px] font-semibold truncate">Đang quản lý <b>${acc.groups_count} nhóm Facebook</b> đã thu thập</span>
+            </div>
+            <button type="button" onclick="switchView('groups')" class="shrink-0 ml-2 text-[11px] font-bold text-[#1877F2] hover:underline flex items-center space-x-1 cursor-pointer">
+              <span>Xem nhóm</span>
+              <i data-lucide="arrow-right" class="w-3 h-3"></i>
+            </button>
+          </div>` : ''}
         </div>
 
         <!-- Footer Thẻ: Nút Hành Động -->
@@ -1743,10 +1765,10 @@ function renderAccountsGrid() {
               <span class="btn-text">Kiểm tra kết nối</span>
             </button>
 
-            <!-- Nút Làm mới Token hoặc Kết nối lại -->
+            <!-- Nút Làm mới Token / Cookie / Quét lại QR -->
             <button onclick="reconnectAccount('${channelKey}')" class="px-3.5 py-2 rounded-xl bg-blue-50 border border-blue-200 hover:bg-blue-100 text-[#063E9E] text-xs font-bold transition flex items-center space-x-1.5 cursor-pointer">
-              <i data-lucide="key" class="w-3.5 h-3.5"></i>
-              <span>Làm mới Token</span>
+              <i data-lucide="${acc.category === 'facebook_profile' ? 'log-in' : (acc.category === 'zalo_profile' ? 'qr-code' : 'key')}" class="w-3.5 h-3.5"></i>
+              <span>${acc.category === 'facebook_profile' ? 'Làm mới Cookie' : (acc.category === 'zalo_profile' ? 'Quét lại QR' : 'Làm mới Token')}</span>
             </button>
           </div>
 
@@ -1885,29 +1907,21 @@ async function submitFbPageConnect() {
 
   showToast(`Đang kết nối Fanpage "${name}"...`, "info");
   try {
-    // Add to local state and notify
-    const newPage = {
-      id: `fb_page_${Date.now()}`,
-      platform_key: "facebook_page",
-      platform_name: "Facebook Page",
-      account_name: name,
-      name: name,
-      avatar_url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=150&auto=format&fit=crop&q=80",
-      category: "facebook_page",
-      status: "connected",
-      identifier: `Fanpage • ID: ${Math.floor(100000000000000 + Math.random() * 900000000000000)}`,
-      auth_method: "Graph API v19.0",
-      permissions: ["Đăng bài viết", "Thước phim Reels", "Album ảnh HD", "Quản lý tương tác"],
-      permissions_granted: "Đăng bài viết, Thước phim Reels, Album ảnh HD, Quản lý tương tác",
-      token_expiry: "Còn 60 ngày",
-      token_expiry_days: 60,
-      last_synced_at: "Vừa xong",
-      capabilities: ["Bản tin Facebook", "Video Reels 9:16", "Album ảnh HD"]
-    };
-    allAccountsData.unshift(newPage);
-    renderAccountsGrid();
-    showToast(`Đã kết nối Fanpage "${name}" thành công!`, "success");
+    const res = await fetch("/api/settings", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        settings: {
+          facebook_page_name: name,
+          facebook_page_id: pageId || `page_${Date.now()}`,
+          facebook_page_access_token: token
+        }
+      })
+    });
+    if (!res.ok) throw new Error("Không thể lưu cấu hình Fanpage");
+    showToast(`Đã lưu kết nối Fanpage "${name}" thành công!`, "success");
     closeFbPageConnectModal();
+    loadAccounts();
   } catch (err) {
     showToast("Không thể lưu kết nối Fanpage: " + err.message, "error");
   }
@@ -1971,8 +1985,9 @@ async function submitFbGroupConnect() {
   loadAccounts();
 }
 
-// ================= MODAL ZALO CONNECT (OA & PROFILE) =================
+// ================= MODAL ZALO CONNECT (OA & REAL QR) =================
 let zaloQrInterval = null;
+let zaloPollInterval = null;
 
 function openZaloConnectModal(defaultTab = "oa") {
   const modal = document.getElementById("zalo-connect-modal");
@@ -1981,10 +1996,15 @@ function openZaloConnectModal(defaultTab = "oa") {
   lucide.createIcons();
 }
 
-function closeZaloConnectModal() {
+async function closeZaloConnectModal() {
   const modal = document.getElementById("zalo-connect-modal");
   if (modal) modal.classList.add("hidden");
   if (zaloQrInterval) clearInterval(zaloQrInterval);
+  if (zaloPollInterval) clearInterval(zaloPollInterval);
+  // Hủy tiến trình background browser nếu đang mở
+  try {
+    await fetch("/api/zalo/qr/cancel", { method: "POST" });
+  } catch(e) {}
 }
 
 function switchZaloTab(tab) {
@@ -1999,56 +2019,153 @@ function switchZaloTab(tab) {
     if (btnOa) btnOa.className = "pb-2.5 px-3 border-b-2 border-[#0068FF] text-[#0068FF] flex items-center space-x-1.5 transition";
     if (btnProfile) btnProfile.className = "pb-2.5 px-3 border-b-2 border-transparent text-slate-500 hover:text-slate-800 flex items-center space-x-1.5 transition";
     if (zaloQrInterval) clearInterval(zaloQrInterval);
+    if (zaloPollInterval) clearInterval(zaloPollInterval);
   } else {
     if (tabOa) tabOa.classList.add("hidden");
     if (tabProfile) tabProfile.classList.remove("hidden");
     if (btnOa) btnOa.className = "pb-2.5 px-3 border-b-2 border-transparent text-slate-500 hover:text-slate-800 flex items-center space-x-1.5 transition";
     if (btnProfile) btnProfile.className = "pb-2.5 px-3 border-b-2 border-[#0068FF] text-[#0068FF] flex items-center space-x-1.5 transition";
-    startZaloQrTimer();
+    fetchZaloLiveQr();
   }
   lucide.createIcons();
 }
 
-function startZaloQrTimer() {
-  if (zaloQrInterval) clearInterval(zaloQrInterval);
-  let seconds = 120;
-  const timerEl = document.getElementById("zalo-qr-timer");
-  if (timerEl) timerEl.textContent = `${seconds}s`;
-
-  zaloQrInterval = setInterval(() => {
-    seconds--;
-    if (timerEl) timerEl.textContent = `${seconds}s`;
-    if (seconds <= 0) {
-      clearInterval(zaloQrInterval);
-      if (timerEl) timerEl.textContent = "Hết hạn";
-    }
-  }, 1000);
-}
-
-function refreshZaloQrCode() {
+async function fetchZaloLiveQr() {
+  const loading = document.getElementById("zalo-qr-loading");
   const qrImg = document.getElementById("zalo-qr-image");
-  if (qrImg) {
-    qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=BLEU_ZALO_LOGIN_QR_${Date.now()}`;
+  const expiredOverlay = document.getElementById("zalo-qr-expired");
+  const statusText = document.getElementById("zalo-qr-status-text");
+  const timerEl = document.getElementById("zalo-qr-timer");
+
+  if (zaloQrInterval) clearInterval(zaloQrInterval);
+  if (zaloPollInterval) clearInterval(zaloPollInterval);
+
+  if (loading) loading.classList.remove("hidden");
+  if (qrImg) qrImg.classList.add("hidden");
+  if (expiredOverlay) expiredOverlay.classList.add("hidden");
+  if (statusText) statusText.innerHTML = `Đang kết nối tới Zalo Web...`;
+
+  try {
+    const res = await fetch("/api/zalo/qr/generate", { method: "POST" });
+    const data = await res.json();
+
+    if (!data.success || !data.qr_image) {
+      throw new Error(data.error || "Không thể lấy mã QR từ Zalo Web");
+    }
+
+    if (qrImg) {
+      qrImg.src = data.qr_image;
+      qrImg.classList.remove("hidden");
+    }
+    if (loading) loading.classList.add("hidden");
+
+    let seconds = data.expires_in || 120;
+    if (statusText) statusText.innerHTML = `Mã QR có hiệu lực trong: <span id="zalo-qr-timer" class="text-[#0068FF] font-mono">${seconds}s</span>`;
+
+    zaloQrInterval = setInterval(() => {
+      seconds--;
+      const t = document.getElementById("zalo-qr-timer");
+      if (t) t.textContent = `${seconds}s`;
+      if (seconds <= 0) {
+        clearInterval(zaloQrInterval);
+        clearInterval(zaloPollInterval);
+        if (expiredOverlay) expiredOverlay.classList.remove("hidden");
+      }
+    }, 1000);
+
+    // Lắng nghe trạng thái quét mã mỗi 2s
+    zaloPollInterval = setInterval(async () => {
+      try {
+        const sRes = await fetch("/api/zalo/qr/status");
+        if (!sRes.ok) return;
+        const sData = await sRes.json();
+
+        if (sData.status === "logged_in") {
+          clearInterval(zaloQrInterval);
+          clearInterval(zaloPollInterval);
+          showToast(`🎉 Đăng nhập Zalo thành công: ${sData.user_info?.name || 'Tài khoản cá nhân'}!`, "success");
+          closeZaloConnectModal();
+          loadAccounts();
+        } else if (sData.status === "expired") {
+          clearInterval(zaloQrInterval);
+          clearInterval(zaloPollInterval);
+          if (expiredOverlay) expiredOverlay.classList.remove("hidden");
+        }
+      } catch (err) {
+        console.warn("Poll status check failed:", err);
+      }
+    }, 2000);
+
+  } catch (err) {
+    if (loading) loading.classList.add("hidden");
+    if (statusText) statusText.innerHTML = `<span class="text-rose-600 font-bold">Lỗi: ${escapeHtml(err.message)}</span>`;
+    showToast("Lỗi nạp mã QR: " + err.message, "error");
   }
-  startZaloQrTimer();
-  showToast("Đã tạo mới mã QR đăng nhập Zalo!", "info");
 }
 
-function submitZaloConnect(type = "oa") {
+function toggleZaloCookieManual() {
+  const box = document.getElementById("zalo-cookie-manual-box");
+  const chevron = document.getElementById("zalo-cookie-chevron");
+  if (box) {
+    box.classList.toggle("hidden");
+    if (chevron) {
+      chevron.style.transform = box.classList.contains("hidden") ? "rotate(0deg)" : "rotate(180deg)";
+    }
+  }
+}
+
+async function submitZaloCookieManual() {
+  const val = document.getElementById("zalo-cookie-input")?.value?.trim();
+  if (!val) {
+    showToast("Vui lòng dán Cookie Zalo hoặc zpw_sek!", "error");
+    return;
+  }
+  showToast("Đang xác thực Cookie Zalo...", "info");
+  try {
+    const res = await fetch("/api/zalo/import-cookie", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ cookie_string: val })
+    });
+    if (!res.ok) throw new Error("Cookie Zalo không hợp lệ");
+    showToast("Đã lưu Cookie Zalo thành công!", "success");
+    closeZaloConnectModal();
+    loadAccounts();
+  } catch (err) {
+    showToast(err.message, "error");
+  }
+}
+
+async function submitZaloConnect(type = "oa") {
   if (type === "oa") {
     const oaId = document.getElementById("zalo-oa-id-input")?.value?.trim();
+    const secret = document.getElementById("zalo-app-secret-input")?.value?.trim();
     const token = document.getElementById("zalo-token-input")?.value?.trim();
 
     if (!oaId && !token) {
       showToast("Vui lòng nhập Zalo OA ID hoặc Access Token!", "error");
       return;
     }
-    showToast("Đã lưu kết nối Zalo Official Account thành công!", "success");
-  } else {
-    showToast("Đã xác nhận phiên làm việc Zalo Cá nhân qua mã QR!", "success");
+
+    try {
+      await fetch("/api/settings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          settings: {
+            zalo_oa_id: oaId || "",
+            zalo_app_secret: secret || "",
+            zalo_oa_access_token: token || ""
+          }
+        })
+      });
+      showToast("Đã lưu kết nối Zalo Official Account thành công!", "success");
+      closeZaloConnectModal();
+      loadAccounts();
+    } catch (e) {
+      showToast("Lỗi khi lưu Zalo OA: " + e.message, "error");
+    }
   }
-  closeZaloConnectModal();
-  loadAccounts();
 }
 
 // ================= MODAL THREADS & X (TWITTER) =================
@@ -2102,7 +2219,7 @@ async function submitOtherApisConnect() {
     await fetch("/api/settings", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+      body: JSON.stringify({ settings: payload })
     });
     showToast("Đã lưu thông tin chìa khóa API Threads & X thành công!", "success");
     closeOtherApisModal();

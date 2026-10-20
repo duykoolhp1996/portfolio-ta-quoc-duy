@@ -1106,6 +1106,120 @@ const caseStudiesData = {
     },
     learnings: "Với mô hình bán lẻ mắt kính và đo khúc xạ địa phương, khách hàng không mua kính online mà chỉ đưa ra quyết định khi trực tiếp đo khám thị lực và thử gọng kính lên mặt. Do đó, chiến lược tiếp thị thành công là tập trung 100% vào mô hình Online-to-Offline (O2O): dùng nội dung hữu ích trên Social để xây dựng niềm tin chuyên khoa, kết hợp Meta Ads theo bán kính 3-5km để kéo khách đến cửa hàng trải nghiệm thực tế.",
     tech: ["Quản Lý Social Media", "Tư Vấn Marketing Freelance", "Mô Hình O2O (Online-To-Offline)", "Quảng Cáo Meta Ads", "Video Ngắn Reels & TikTok", "Chatbot Phản Hồi Tự Động", "Tối Ưu Điểm Bán POSM"]
+  },
+
+  namtien: {
+    category: "Chuỗi Bán Lẻ Xe Máy Chính Hãng & Nhập Khẩu (Showroom O2O)",
+    company: "Hệ Thống Xe Máy Nam Tiến",
+    logoUrl: "portfolio_assets/images/logo_namtien.png",
+    role: "Trưởng Phòng Marketing (Marketing Manager)",
+    period: "2023 – 2024",
+    title: "Tối Ưu Performance Ads & Sản Xuất Loạt Video Đa Kênh Thúc Đẩy Doanh Số Chuỗi Showroom",
+    challenge: "Ngành bán lẻ xe máy và xe nhập khẩu cạnh tranh gay gắt về giá và chính sách khuyến mãi giữa các đại lý; chi phí chạy quảng cáo Facebook/Google ngày càng tăng; khách hàng có nhu cầu mua xe trả góp cao nhưng e ngại thủ tục rườm rà; các chi nhánh showroom tại TP.HCM và Bình Dương cần nguồn khách hàng tiềm năng (Leads) chất lượng ổn định mỗi ngày.",
+    strategy: "Định hình chiến lược tiếp thị đa kênh tích hợp: Tập trung mũi nhọn vào Chiến dịch Performance Ads phễu Trả góp 0% / Trả trước 0 đồng nhắm theo địa bàn showroom; kết hợp xây dựng kênh Social Media sản xuất loạt video review xe thực tế, so sánh giá lăn bánh và phân tích xe nhập khẩu (Vario, Scoopy, Vision, SH...) trên TikTok, YouTube và Reels; thiết lập luồng phân phối data tự động từ online về nhân viên bán hàng tại từng showroom giúp nâng cao tỷ lệ chốt đơn.",
+    deliverables: [
+      {
+        pillar: "Performance Ads",
+        pillarTag: "Quảng Cáo Lead Gen & Trả Góp 0đ",
+        icon: "target",
+        title: "Chiến Dịch Performance Ads (Meta & Google Ads) Phễu Khách Trả Góp Showroom",
+        tag: "Performance Marketing & Lead Gen",
+        desc: "Thiết lập và quản lý ngân sách quảng cáo đa kênh nhắm mục tiêu chuẩn xác tệp khách hàng mua xe máy và xe nhập khẩu tại khu vực TP.HCM, Bình Dương và Đồng Nai.",
+        items: [
+          "Thiết kế phễu quảng cáo chuyên sâu: 'Mua xe trả góp duyệt hồ sơ online trong 15 phút' và 'Trả trước 0 đồng nhận xe ngay'",
+          "A/B testing hàng loạt thông điệp giá xe lăn bánh, quà tặng phụ kiện và chương trình hỗ trợ biển số các tỉnh",
+          "Tối ưu chi phí trên mỗi khách hàng tiềm năng (CPL), cung cấp hơn 1.500+ data khách có nhu cầu mua xe thực tế mỗi tháng"
+        ],
+        impact: {
+          metrics: [
+            { val: "1.500+", label: "Leads Mua Xe/Tháng" },
+            { val: "-32%", label: "Chi Phí Trên Mỗi Lead (CPL)" },
+            { val: "O2O", label: "Chuyển Đổi Về Showroom" }
+          ],
+          summary: "Tạo dòng khách hàng tiềm năng dồi dào, ổn định cho đội ngũ tư vấn viên và trực tiếp thúc đẩy doanh số bàn giao xe tại hệ thống showroom."
+        },
+        attachment: "Kế hoạch phân bổ ngân sách Performance Ads & Báo cáo CPL"
+      },
+      {
+        pillar: "Social Media & Video",
+        pillarTag: "Sản Xuất Video Review Xe & Social",
+        icon: "video",
+        title: "Quản Lý Kênh Social Media & Sản Xuất Loạt Video Review Xe, So Sánh Giá Lăn Bánh",
+        tag: "Content & Video Production",
+        desc: "Chỉ đạo đội ngũ sáng tạo nội dung sản xuất đều đặn các video review chi tiết tính năng xe, bảng giá lăn bánh cập nhật hàng tuần và mẹo bảo dưỡng xe máy.",
+        items: [
+          "Xây dựng format video ngắn triệu view trên TikTok & Reels: 'Cầm 10 triệu mua được xe gì?', 'So sánh Vario 125 vs 160'",
+          "Sản xuất các video dài trên YouTube đánh giá chi tiết độ tiêu hao nhiên liệu, cảm giác lái và thủ tục sang tên đổi chủ",
+          "Quản lý lịch xuất bản đa kênh Facebook, TikTok, YouTube đạt hơn 5 triệu lượt xem mỗi tháng"
+        ],
+        impact: {
+          metrics: [
+            { val: "5M+", label: "Lượt Xem Video/Tháng" },
+            { val: "Top Search", label: "Bảng Giá Xe Lăn Bánh" },
+            { val: "+65%", label: "Tương Tác Kênh Thương Hiệu" }
+          ],
+          summary: "Biến Xe Máy Nam Tiến thành kênh tham khảo giá và tư vấn xe máy uy tín hàng đầu khu vực phía Nam đối với người tiêu dùng trẻ và công nhân viên."
+        },
+        attachment: "Kế hoạch sản xuất video ngắn TikTok & YouTube Review"
+      },
+      {
+        pillar: "O2O & Sales Alignment",
+        pillarTag: "Liên Kết Tiếp Thị & Bán Hàng",
+        icon: "handshake",
+        title: "Chuẩn Hóa Quy Trình Bàn Giao Leads & Phối Hợp Bán Hàng Tại Showroom",
+        tag: "Marketing-Sales Alignment",
+        desc: "Thiết lập quy trình chuyển giao dữ liệu từ tin nhắn/quảng cáo về trực tiếp đội ngũ nhân viên kinh doanh showroom để gọi điện và đón tiếp khách.",
+        items: [
+          "Phân bổ dữ liệu khách hàng theo địa lý về showroom gần nhất (Nam Tiến Dĩ An, Thuận An, Bình Tân, Hóc Môn...)",
+          "Chuẩn hóa kịch bản telesales tư vấn hồ sơ trả góp ngân hàng, giảm tỷ lệ rớt hồ sơ xuống mức thấp nhất",
+          "Tổ chức họp giao ban định kỳ giữa phòng Marketing và Giám đốc Showroom để bám sát tỷ lệ chuyển đổi chốt xe"
+        ],
+        impact: {
+          metrics: [
+            { val: "100%", label: "Showroom Phủ Khách" },
+            { val: "35%", label: "Tỷ Lệ Chuyển Đổi Hẹn Khách" },
+            { val: "Real-time", label: "Đồng Bộ Data Tiếp Nhận" }
+          ],
+          summary: "Rút ngắn khoảng cách giữa Marketing và Sales, đảm bảo 100% chi phí quảng cáo đều được tối ưu hóa thành cơ hội bán hàng thực tế tại điểm bán."
+        },
+        attachment: "SOP quy trình bàn giao Lead & Kịch bản tư vấn trả góp"
+      },
+      {
+        pillar: "Trade & Events",
+        pillarTag: "Tiếp Thị Điểm Bán & Kích Cầu",
+        icon: "sparkles",
+        title: "Triển Khai Trade Marketing Điểm Bán & Các Chương Trình Khuyến Mãi Mùa Vụ",
+        tag: "Trade Marketing & Showroom",
+        desc: "Tổ chức các chương trình ưu đãi đổi xe cũ lấy xe mới, ngày hội thay nhớt miễn phí và quà tặng mũ bảo hiểm/áo mưa thương hiệu.",
+        items: [
+          "Thiết kế đồng bộ ấn phẩm POSM, standee bảng giá, backdrop giao xe chụp ảnh lưu niệm cùng khách hàng",
+          "Tổ chức sự kiện lái thử các dòng xe mới và ngày hội chăm sóc bảo dưỡng xe định kỳ tại showroom",
+          "Chương trình kích cầu mùa tựu trường dành cho học sinh - sinh viên và công nhân các khu công nghiệp"
+        ],
+        impact: {
+          metrics: [
+            { val: "Hàng Ngàn", label: "Lượt Khách Ghé Showroom" },
+            { val: "100%", label: "Chuẩn Hóa Hình Ảnh Giao Xe" },
+            { val: "Lan Tỏa", label: "Hiệu Ứng Truyền Miệng Địa Bàn" }
+          ],
+          summary: "Xây dựng hình ảnh chuỗi showroom xe máy tận tâm, dịch vụ bảo hành chu đáo và chiếm trọn niềm tin của cộng đồng dân cư địa phương."
+        },
+        attachment: "Bộ ấn phẩm Trade Marketing POSM & Kế hoạch sự kiện điểm bán"
+      }
+    ],
+    results: [
+      "Đạt mức tăng trưởng vượt bậc về số lượng khách hàng tiềm năng với hơn 1.500+ leads mua xe máy và đăng ký trả góp mỗi tháng.",
+      "Xây dựng thành công kênh truyền thông video ngắn triệu view trên TikTok & Reels, đưa thương hiệu Xe Máy Nam Tiến phủ sóng toàn khu vực phía Nam.",
+      "Tối ưu giảm 32% chi phí trên mỗi khách hàng tiềm năng (CPL) từ các chiến dịch Performance Ads (Meta & Google).",
+      "Hoàn thiện quy trình phối hợp nhịp nhàng giữa phòng Marketing và khối Showroom bán lẻ, nâng tỷ lệ hẹn khách đến xem xe đạt 35%."
+    ],
+    measurement: {
+      before: "Quảng cáo chủ yếu đăng bài bán xe đơn thuần, chi phí tin nhắn cao; thiếu các định dạng video ngắn hấp dẫn; dữ liệu khách hàng từ online đổ về showroom bị chậm trễ và tỷ lệ hẹn gặp thấp.",
+      after: "Triển khai thành công loạt chiến dịch Performance Ads phễu trả góp đạt 1.500+ leads/tháng; kênh video review xe đạt hơn 5 triệu lượt xem/tháng; quy trình O2O đồng bộ thời gian thực giúp tỷ lệ hẹn khách đến showroom đạt 35%.",
+      kpis: ["1.500+ Leads Khách Mua Xe / Tháng", "5M+ Lượt Xem Video Review / Tháng", "-32% Chi Phí / Khách Tiềm Năng (CPL)", "35% Tỷ Lệ Hẹn Khách Đến Showroom"]
+    },
+    learnings: "Trong ngành bán lẻ xe máy, khách hàng không chỉ quan tâm đến giá bán mà còn cực kỳ nhạy cảm với thủ tục thanh toán trả góp và uy tín dịch vụ hậu mãi. Thành công đột phá đến từ việc kết hợp giữa Video Review khách quan tạo độ tin cậy, thông điệp trả trước 0 đồng giải tỏa rào cản tài chính, và quy trình kết nối tức thì giữa Marketing với Showroom để chăm sóc khách hàng ngay khi họ có nhu cầu.",
+    tech: ["Marketing Manager", "Chiến Dịch Performance Ads", "Video Review Xe (TikTok/Reels)", "Mô Hình Bán Lẻ O2O", "Quản Trị Leads Trả Góp", "Meta & Google Ads", "Trade Marketing Showroom"]
   }
 };
 
@@ -1315,6 +1429,35 @@ const companyChartData = {
       }
     ],
     yCallback: val => (val > 100 ? val + " Lượt" : val + "%")
+  },
+  namtien: {
+    title: "Hiệu Quả Leads Mua Xe & Lượt Xem Video Review (Xe Máy Nam Tiến)",
+    badge: "Chuỗi Showroom Bán Lẻ Xe Máy",
+    labels: ["Quý 1", "Quý 2 (Tối Ưu Ads)", "Quý 3 (Viral Video)", "Quý 4 (Bứt Phá Showroom)"],
+    datasets: [
+      {
+        label: "Lượng Leads Mua Xe & Trả Góp / Tháng",
+        data: [650, 950, 1250, 1600],
+        backgroundColor: "rgba(239, 68, 68, 0.8)",
+        borderRadius: 8,
+        yAxisID: "y"
+      },
+      {
+        label: "Lượt Xem Video Hàng Tháng (Triệu Lượt)",
+        data: [0.8, 2.2, 3.8, 5.2],
+        type: "line",
+        borderColor: "#38BDF8",
+        backgroundColor: "#38BDF8",
+        borderWidth: 3,
+        tension: 0.35,
+        pointBackgroundColor: "#38BDF8",
+        pointBorderColor: "#FFFFFF",
+        pointBorderWidth: 2,
+        pointRadius: 6,
+        yAxisID: "y"
+      }
+    ],
+    yCallback: val => (val > 100 ? val + " Leads" : val + "M View")
   }
 };
 

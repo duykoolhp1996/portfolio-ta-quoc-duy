@@ -982,12 +982,6 @@
                 <span id="tab-count-facebook_profile" class="px-1.5 py-0.2 rounded-full text-[10px] bg-slate-200 text-slate-700 font-mono">0</span>
               </button>
 
-              <button onclick="filterAccountsTab('facebook_group')" id="tab-acc-facebook_group" class="acc-tab-btn flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-[#FCFAF7] border border-[#E7E1D4] text-slate-700 hover:bg-[#F4F1EA] transition">
-                <span class="w-2.5 h-2.5 rounded-full bg-[#1877F2]"></span>
-                <span>Facebook Group</span>
-                <span id="tab-count-facebook_group" class="px-1.5 py-0.2 rounded-full text-[10px] bg-slate-200 text-slate-700 font-mono">0</span>
-              </button>
-
               <button onclick="filterAccountsTab('zalo_oa')" id="tab-acc-zalo_oa" class="acc-tab-btn flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-[#FCFAF7] border border-[#E7E1D4] text-slate-700 hover:bg-[#F4F1EA] transition">
                 <span class="w-2.5 h-2.5 rounded-full bg-[#0068FF]"></span>
                 <span>Zalo OA</span>
@@ -1560,20 +1554,20 @@ Nhập chủ đề và bấm một trong các nút tính năng bên trên để 
           </div>
         </div>
 
-        <!-- 3. Facebook Groups -->
-        <div onclick="selectConnectorType('facebook_group')" class="p-4 rounded-2xl border-2 border-[#E7E1D4] bg-[#FCFAF7] hover:border-[#1877F2] hover:bg-white cursor-pointer transition space-y-2 group shadow-sm">
+        <!-- 3. Thu thập Facebook Groups -->
+        <div onclick="closeConnectChannelModal(); switchView('groups')" class="p-4 rounded-2xl border-2 border-dashed border-[#DDD5C4] bg-[#FCFAF7] hover:border-[#1877F2] hover:bg-white cursor-pointer transition space-y-2 group shadow-sm">
           <div class="flex items-center space-x-3">
             <div class="w-10 h-10 rounded-xl bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center font-bold text-lg">
-              <i data-lucide="users" class="w-5 h-5"></i>
+              <i data-lucide="folder-plus" class="w-5 h-5"></i>
             </div>
             <div>
-              <h4 class="text-xs font-bold text-slate-900 group-hover:text-[#1877F2] transition">Facebook Groups</h4>
-              <span class="text-[10px] text-slate-500">Thêm Link / ID nhóm mục tiêu</span>
+              <h4 class="text-xs font-bold text-slate-900 group-hover:text-[#1877F2] transition">Thu thập Facebook Groups</h4>
+              <span class="text-[10px] text-slate-500">Mục tiêu đăng (Không phải tài khoản)</span>
             </div>
           </div>
-          <p class="text-[11px] text-slate-600 leading-relaxed">Đăng bài hàng loạt vào các hội nhóm theo chủ đề với cơ chế giãn cách 3-5 phút chống checkpoint.</p>
+          <p class="text-[11px] text-slate-600 leading-relaxed">Hội nhóm được thu thập làm đích đến để nick Facebook cá nhân đăng bài tự động hàng loạt.</p>
           <div class="flex items-center space-x-1 text-[10px] text-[#1877F2] font-semibold pt-1">
-            <span>Xem hướng dẫn thêm nhóm</span>
+            <span>Mở trang Quản lý Facebook Groups</span>
             <i data-lucide="arrow-right" class="w-3 h-3"></i>
           </div>
         </div>
@@ -1912,26 +1906,59 @@ Nhập chủ đề và bấm một trong các nút tính năng bên trên để 
           </div>
         </div>
 
-        <!-- Khung hiển thị QR Code -->
+        <!-- Khung hiển thị QR Code Thực Tế -->
         <div class="p-6 rounded-2xl bg-[#FCFAF7] border border-[#E7E1D4] flex flex-col items-center justify-center text-center space-y-3">
-          <div class="relative w-44 h-44 bg-white p-3 rounded-2xl border-2 border-dashed border-[#0068FF] flex items-center justify-center shadow-inner">
-            <img id="zalo-qr-image" src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=BLEU_ZALO_LOGIN_SESSION_ACTIVE" alt="Zalo Login QR" class="w-full h-full object-contain">
+          <div id="zalo-qr-box" class="relative w-52 h-52 bg-white p-3 rounded-2xl border-2 border-dashed border-[#0068FF] flex items-center justify-center shadow-inner overflow-hidden">
+            <!-- Loading Spinner -->
+            <div id="zalo-qr-loading" class="flex flex-col items-center justify-center text-center p-4 space-y-2">
+              <div class="w-8 h-8 border-3 border-[#0068FF] border-t-transparent rounded-full animate-spin"></div>
+              <span class="text-xs font-semibold text-slate-600">Đang khởi tạo mã QR từ Zalo Web...</span>
+              <span class="text-[10px] text-slate-400">Trình duyệt an toàn đang mở phiên</span>
+            </div>
+            <!-- Real QR Image -->
+            <img id="zalo-qr-image" src="" alt="Zalo Login QR" class="hidden w-full h-full object-contain">
+            <!-- Expired Overlay -->
+            <div id="zalo-qr-expired" class="hidden absolute inset-0 bg-white/95 backdrop-blur-xs flex flex-col items-center justify-center p-3 text-center space-y-2">
+              <i data-lucide="alert-circle" class="w-7 h-7 text-rose-500"></i>
+              <span class="text-xs font-bold text-rose-600">Mã QR đã hết hạn</span>
+              <p class="text-[10px] text-slate-500">Mã QR của Zalo có thời gian chờ 120 giây</p>
+              <button type="button" onclick="fetchZaloLiveQr()" class="px-3.5 py-1.5 bg-[#0068FF] hover:bg-blue-700 text-white rounded-xl text-xs font-bold shadow-sm transition">
+                Tạo mã mới ngay
+              </button>
+            </div>
           </div>
+
           <div>
-            <span class="text-xs font-bold text-slate-800 block">Mã QR có hiệu lực trong: <span id="zalo-qr-timer" class="text-[#0068FF] font-mono">120s</span></span>
-            <span class="text-[11px] text-slate-400">Đang lắng nghe tín hiệu quét từ thiết bị...</span>
+            <span id="zalo-qr-status-text" class="text-xs font-bold text-slate-800 block">Mã QR có hiệu lực trong: <span id="zalo-qr-timer" class="text-[#0068FF] font-mono">120s</span></span>
+            <span id="zalo-qr-subtext" class="text-[11px] text-slate-400">Hướng camera Zalo vào mã trên để đăng nhập</span>
           </div>
-          <button type="button" onclick="refreshZaloQrCode()" class="px-4 py-2 rounded-xl bg-white border border-[#DDD5C4] hover:bg-[#F4F1EA] text-xs font-bold text-slate-700 transition flex items-center space-x-1.5 shadow-sm">
+
+          <button type="button" onclick="fetchZaloLiveQr()" class="px-4 py-2 rounded-xl bg-white border border-[#DDD5C4] hover:bg-[#F4F1EA] text-xs font-bold text-slate-700 transition flex items-center space-x-1.5 shadow-sm cursor-pointer">
             <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-[#0068FF]"></i>
             <span>Làm mới mã QR</span>
           </button>
         </div>
 
+        <!-- Phương Án Dự Phòng: Nhập Cookie Zalo -->
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-2">
+          <div class="flex items-center justify-between cursor-pointer" onclick="toggleZaloCookieManual()">
+            <span class="font-bold text-slate-700 flex items-center space-x-1.5 text-[11px]">
+              <i data-lucide="key" class="w-3.5 h-3.5 text-slate-500"></i>
+              <span>Hoặc nhập Cookie Zalo thủ công (Dự phòng)</span>
+            </span>
+            <i id="zalo-cookie-chevron" data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400 transition-transform"></i>
+          </div>
+          <div id="zalo-cookie-manual-box" class="hidden space-y-2 pt-2 border-t border-slate-200">
+            <p class="text-[10px] text-slate-500">Nếu quét QR gặp mạng chậm, bạn có thể dán Cookie <code class="bg-slate-200 text-slate-800 px-1 py-0.5 rounded font-mono">zpw_sek</code> từ trình duyệt (F12 > Application > Cookies):</p>
+            <input id="zalo-cookie-input" type="text" placeholder="Dán cookie zpw_sek=... hoặc chuỗi cookie đầy đủ" class="w-full text-xs p-2 rounded-xl border border-slate-300 font-mono bg-white outline-none focus:border-[#0068FF]">
+            <button type="button" onclick="submitZaloCookieManual()" class="px-3.5 py-1.5 bg-slate-800 hover:bg-slate-900 text-white rounded-lg text-xs font-bold shadow-sm transition">
+              Lưu Cookie Zalo
+            </button>
+          </div>
+        </div>
+
         <div class="flex justify-end space-x-2 pt-2 border-t border-[#E7E1D4]">
-          <button onclick="closeZaloConnectModal()" class="px-4 py-2 rounded-xl bg-[#F4F1EA] text-xs font-bold text-slate-600">Hủy</button>
-          <button onclick="submitZaloConnect('profile')" class="px-5 py-2 rounded-xl bg-[#0068FF] hover:bg-blue-700 text-xs font-bold text-white transition shadow-sm">
-            Xác nhận đã quét mã
-          </button>
+          <button onclick="closeZaloConnectModal()" class="px-4 py-2 rounded-xl bg-[#F4F1EA] text-xs font-bold text-slate-600 hover:bg-[#EAE4D6]">Hủy / Đóng</button>
         </div>
       </div>
     </div>
@@ -2140,6 +2167,6 @@ Nhập chủ đề và bấm một trong các nút tính năng bên trên để 
     </div>
   </div>
 
-  <script src="app.js?v=3.2"></script>
+  <script src="app.js?v=3.4"></script>
 </body>
 </html>

@@ -8,7 +8,10 @@ browser_data/
 *.session.json
 *session*.json
 
-# Automation scripts, scrapers & application rules
+# Database
+*.db
+*.sqlite
+*.sqlite3
 AUTOMATION_RULES.md
 *.py
 *.json

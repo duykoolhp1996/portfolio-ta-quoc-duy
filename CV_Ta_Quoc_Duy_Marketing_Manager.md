@@ -70,6 +70,15 @@
 
 ---
 
+### MARKETING MANAGER | Hệ Thống Xe Máy Nam Tiến (Chuỗi Showroom Bán Lẻ Xe Máy & Dịch Vụ Xe O2O)
+*2023 – 2024*
+- **Sản xuất chuỗi Video Review xe & Viral Short-form:** Dẫn dắt đội ngũ sáng tạo sản xuất hàng loạt video ngắn (TikTok, Reels, YouTube Shorts) về so sánh giá lăn bánh, tư vấn chọn xe và chính sách trả góp 0đ, đạt trung bình **5M+ lượt xem/tháng** và định vị kênh lọt top ngành xe máy khu vực.
+- **Chiến dịch Performance Ads kéo khách O2O Showroom:** Quản trị ngân sách Performance Ads (Meta & Google Ads) chuyển đổi trực tiếp, tối ưu hóa CPL giảm **-32%**, thu về **1.500+ Qualified Leads/tháng** với tỷ lệ đặt hẹn đến showroom đạt **35%**.
+- **Chuẩn hóa quy trình Lead-to-Showroom & POSM:** Phối hợp khối kinh doanh xây dựng quy trình phản hồi tức thì qua Hotline/Zalo OA; triển khai đồng bộ ấn phẩm POSM và sự kiện kích cầu tại chuỗi showroom giúp tăng **22% tỷ lệ chốt đơn xe**.
+- *Công nghệ & Kỹ năng:* Performance Ads O2O, 5M+ Views/Tháng, -32% CPL, 1.500+ Leads/Tháng, Video Review Xe Máy, Trả Góp 0đ Showroom.
+
+---
+
 ### MARKETING MANAGER | Bravigo Việt Nam (Thiết bị công nghệ xe ô tô - B2B & B2C)
 *03/2022 – 04/2024*
 - **Chiến lược tiếp thị & Mở rộng thị phần:** Lập kế hoạch marketing ngắn và trung hạn cho hệ sinh thái công nghệ ô tô thông minh; thúc đẩy tăng trưởng nhận diện và chiếm lĩnh thị phần toàn quốc.
