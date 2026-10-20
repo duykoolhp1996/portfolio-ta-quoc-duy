@@ -411,45 +411,103 @@
       `;
     }
 
-    // === DELIVERABLES (Toàn bộ các hạng mục công việc đã làm) ===
+    // === WORKSTREAMS: CÔNG VIỆC CHUYÊN MÔN & HIỆU QUẢ TƯƠNG ỨNG (Content - Ads - SEO...) ===
     html += `
       <section class="case-section-box" id="deliverables" style="margin-bottom: 32px;">
         <div class="case-section-header">
-          <div class="case-section-badge">
-            <i data-lucide="check-square"></i>
-            <span>Năng Lực Triển Khai Thực Chiến (${data.deliverables ? data.deliverables.length : 0} Hạng Mục)</span>
+          <div class="case-section-badge" style="background: rgba(6, 182, 212, 0.12); color: #06B6D4; border-color: rgba(6, 182, 212, 0.25);">
+            <i data-lucide="layers"></i>
+            <span>Phân Chia Công Việc Chuyên Môn &amp; Hiệu Quả Tương Ứng (${data.deliverables ? data.deliverables.length : 0} Nhóm Hạng Mục)</span>
           </div>
-          <h2 class="case-section-title">Các Hạng Mục Trực Tiếp Phụ Trách &amp; Vận Hành</h2>
+          <h2 class="case-section-title">Chi Tiết Từng Công Việc &amp; Hiệu Quả Đo Lường Được (Content — Ads — SEO — Tech)</h2>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 6px; margin-bottom: 0;">
+            Minh bạch hóa phạm vi trách nhiệm trực tiếp song hành cùng chỉ số kinh doanh định lượng tương ứng cho từng phân môn.
+          </p>
         </div>
 
-        <div class="case-deliverables-grid">
+        <div class="case-workstreams-list">
           ${
             data.deliverables && data.deliverables.length
               ? data.deliverables
                   .map(
-                    (d) => `
-              <div class="case-deliv-card">
-                <div class="deliv-card-top">
-                  <span class="deliv-card-tag">${d.tag}</span>
+                    (d, idx) => `
+              <div class="workstream-matrix-card">
+                <!-- Card Header -->
+                <div class="ws-card-header">
+                  <div class="ws-header-left">
+                    <span class="ws-pillar-pill ${d.pillar ? d.pillar.toLowerCase().replace(/[^a-z0-9]/g, '') : 'default'}">
+                      <i data-lucide="${d.icon || 'briefcase'}"></i>
+                      <span>${d.pillarTag || d.tag || 'Hạng Mục'}</span>
+                    </span>
+                    <h3 class="ws-card-title">${d.title}</h3>
+                  </div>
+                  ${d.tag ? `<span class="ws-tag-badge">${d.tag}</span>` : ''}
                 </div>
-                <h3 class="deliv-card-title">${d.title}</h3>
-                <p class="deliv-card-desc">${d.desc}</p>
-                <ul class="deliv-card-list">
-                  ${d.items
-                    .map(
-                      (item) => `
-                    <li>
-                      <i data-lucide="check-circle-2"></i>
-                      <span>${item}</span>
-                    </li>
-                  `
-                    )
-                    .join("")}
-                </ul>
+
+                <!-- Split Body: Công Việc ↔ Hiệu Quả Tương Ứng -->
+                <div class="ws-card-split-body">
+                  <!-- Cột 1: Công Việc Thực Hiện -->
+                  <div class="ws-col ws-col-scope">
+                    <div class="ws-col-label">
+                      <i data-lucide="check-square" style="color: #06B6D4;"></i>
+                      <span>Công Việc Trực Tiếp Triển Khai</span>
+                    </div>
+                    <ul class="ws-scope-list">
+                      ${d.items
+                        .map(
+                          (item) => `
+                        <li>
+                          <i data-lucide="check"></i>
+                          <span>${item}</span>
+                        </li>
+                      `
+                        )
+                        .join("")}
+                    </ul>
+                  </div>
+
+                  <!-- Cột 2: Hiệu Quả Công Việc Tương Ứng -->
+                  <div class="ws-col ws-col-impact">
+                    <div class="ws-col-label">
+                      <i data-lucide="trending-up" style="color: #10B981;"></i>
+                      <span>Hiệu Quả Công Việc Tương Ứng</span>
+                    </div>
+                    ${
+                      d.impact && d.impact.metrics && d.impact.metrics.length
+                        ? `
+                      <div class="ws-metrics-grid">
+                        ${d.impact.metrics
+                          .map(
+                            (m) => `
+                          <div class="ws-metric-item">
+                            <span class="ws-metric-val">${m.val}</span>
+                            <span class="ws-metric-lbl">${m.label}</span>
+                          </div>
+                        `
+                          )
+                          .join("")}
+                      </div>
+                    `
+                        : ''
+                    }
+                    ${
+                      d.impact && d.impact.summary
+                        ? `
+                      <div class="ws-impact-summary">
+                        <i data-lucide="award"></i>
+                        <p>${d.impact.summary}</p>
+                      </div>
+                    `
+                        : (d.desc ? `<p class="ws-impact-desc">${d.desc}</p>` : '')
+                    }
+                  </div>
+                </div>
+
+                <!-- Card Footer Attachment -->
                 ${
                   d.attachment
                     ? `
-                  <div class="deliv-card-attach">
+                  <div class="ws-card-footer">
                     <i data-lucide="paperclip"></i>
                     <span>Tài liệu kiểm chứng: <strong>${d.attachment}</strong></span>
                   </div>

@@ -17,59 +17,93 @@ const caseStudiesData = {
     strategy: "Điều hành 2 nhóm chuyên biệt: Nhóm Quảng cáo số (chuyển đổi và đo lường) và Nhóm Thương hiệu (nội dung, hình ảnh). Chuẩn hóa quy trình phối hợp nhịp nhàng giữa Marketing và Kinh doanh.",
     deliverables: [
       {
-        title: "Giao Kế Hoạch & Chỉ Tiêu Cho 2 Nhóm",
-        tag: "Quản Trị Đội Ngũ",
-        desc: "Vận hành song song 2 nhóm (10 nhân sự) với chỉ tiêu công việc định lượng rõ ràng từng vị trí.",
+        pillar: "Ads",
+        pillarTag: "Quảng Cáo Số & Tối Ưu Dữ Liệu",
+        icon: "target",
+        title: "Quản Trị Ngân Sách Ads 300Tr/Tháng & Tạo 50+ Khách VIP",
+        tag: "Paid Ads & Performance",
+        desc: "Điều phối ngân sách quảng cáo đa kênh, tập trung sâu vào nhóm đối tượng gia chủ ra quyết định BĐS cao cấp.",
         items: [
-          "Bộ chỉ tiêu cụ thể cho từng chuyên viên quảng cáo, nội dung, dựng video và thiết kế",
-          "Chuẩn hóa quy trình phối hợp nhịp nhàng giữa Marketing, Kinh doanh và CSKH",
-          "Kiểm soát ngân sách chi phí và hiệu quả đầu tư theo thời gian thực"
+          "Quản trị và điều phối ngân sách 300 triệu VNĐ/tháng đa kênh (Meta Ads, Google, TikTok, Zalo OA)",
+          "Target phân khúc đối tượng sâu: Tập trung 80.5% ngân sách vào nhóm 55+ tuổi (tệp gia chủ BĐS cao cấp)",
+          "Thực chiến chiến dịch Video Storytelling tiếp cận và chuyển giao dữ liệu khách hàng cho khối Sales"
         ],
-        attachment: "Quy trình phối hợp liên phòng ban & Bảng theo dõi chỉ tiêu"
-      },
-      {
-        title: "Quy Trình Sản Xuất 130+ Video/Tháng",
-        tag: "Sản Xuất Nội Dung",
-        desc: "Xây dựng luồng sản xuất nội dung quy mô lớn đạt 130+ video/tháng phủ khắp TikTok, Reels, Shorts và phóng sự.",
-        items: [
-          "Chuẩn hóa kịch bản video ngắn thu hút người xem ngay 3 giây đầu",
-          "Sản xuất chuỗi phóng sự văn hóa tri ân và trải nghiệm hoa viên sinh thái",
-          "Phân phối đa kênh để tăng tương tác và nhận diện tự nhiên"
-        ],
-        attachment: "Bộ kịch bản video ngắn & Phân luồng sản xuất"
-      },
-      {
-        title: "Tối Ưu Ngân Sách Ads 300Tr & 50+ Khách VIP",
-        tag: "Quảng Cáo Số & Tối Ưu Dữ Liệu",
-        desc: "Điều phối ngân sách quảng cáo 300 triệu/tháng đa kênh, đem về đều đặn hơn 50 khách hàng tiềm năng chất lượng cao mỗi tháng.",
-        items: [
-          "Thực chiến chiến dịch Video Storytelling: Tiếp cận 250.000+ người/tháng, 24.900+ clicks với CPC chỉ 1.205đ và CTR đạt 6.14%",
-          "Target phân khúc đối tượng sâu: Tập trung 80.5% ngân sách vào nhóm 55+ tuổi (tệp gia chủ ra quyết định BĐS cao cấp)",
-          "Tối ưu ngân sách đa kênh trên Facebook, Google, TikTok, Zalo OA và chuyển giao Lead cho đội ngũ tư vấn chăm sóc"
-        ],
+        impact: {
+          metrics: [
+            { val: "CPC 1.205đ", label: "Chi Phí / Click" },
+            { val: "CTR 6.14%", label: "Tỷ Lệ Nhấp Video" },
+            { val: "250K+ Reach", label: "Tiếp Cận / Tháng" },
+            { val: "50+ Khách VIP", label: "Khách Tiềm Năng / Tháng" }
+          ],
+          summary: "Chiến dịch video đạt CTR 6.14% và CPC 1.205đ rẻ hơn 65% thị trường BĐS; duy trì đều đặn 50+ khách VIP chất lượng mỗi tháng."
+        },
         attachment: "Báo cáo hiệu quả chi phí & Google Sheet đối soát chiến dịch video"
       },
       {
-        title: "Tiếp Thị Trực Tiếp & Sự Kiện Đón Tiếp",
-        tag: "Tiếp Thị Thực Địa",
-        desc: "Gắn kết quảng cáo online với trải nghiệm thực tế tại dự án để tăng tỷ lệ chốt đơn.",
+        pillar: "Content",
+        pillarTag: "Sản Xuất Nội Dung & Video Ngắn",
+        icon: "video",
+        title: "Vận Hành Cỗ Máy Sản Xuất 130+ Video/Tháng Đa Kênh",
+        tag: "Content & Video Production",
+        desc: "Xây dựng luồng sản xuất nội dung quy mô lớn phủ khắp TikTok, Reels, Shorts và phóng sự sinh thái.",
         items: [
-          "Trang trí không gian đón tiếp và tài liệu giới thiệu cho khách VIP",
-          "Phát hành phiếu ưu đãi và tài liệu giới thiệu tại sự kiện",
-          "Gia tăng niềm tin và tỷ lệ đặt lịch hẹn tham quan thực tế"
+          "Chuẩn hóa kịch bản video ngắn thu hút người xem ngay 3 giây đầu",
+          "Sản xuất chuỗi phóng sự văn hóa tri ân và trải nghiệm thực tế hoa viên sinh thái",
+          "Phân phối đa kênh TikTok, Reels, Shorts tăng tương tác và nhận diện tự nhiên"
         ],
-        attachment: "Tài liệu trưng bày thực tế & Không gian sự kiện"
+        impact: {
+          metrics: [
+            { val: "130+ Video", label: "Sản Xuất / Tháng" },
+            { val: "3 Kênh", label: "TikTok, Reels & Shorts" },
+            { val: "+300%", label: "Độ Phủ Nhận Diện Tự Nhiên" }
+          ],
+          summary: "Vận hành cỗ máy video ngắn đạt 130+ video/tháng phủ khắp mạng xã hội, tạo dòng nhận diện thương hiệu tự nhiên khổng lồ mà không tốn chi phí thuê ngoài."
+        },
+        attachment: "Bộ kịch bản video ngắn & Phân luồng sản xuất"
       },
       {
-        title: "Kế Hoạch Ra Mắt Dự Án Thiên Phúc Vĩnh Hằng Viên (Yên Tử)",
-        tag: "Dự Án Mở Rộng 450 Tỷ",
+        pillar: "Leadership",
+        pillarTag: "Quản Trị Đội Ngũ & Bán Hàng",
+        icon: "users",
+        title: "Giao Kế Hoạch & Chỉ Tiêu Cho 2 Nhóm (10 Nhân Sự)",
+        tag: "Leadership & Sales Alignment",
+        desc: "Vận hành song song 2 nhóm chuyên môn với chỉ tiêu công việc định lượng rõ ràng từng vị trí.",
+        items: [
+          "Vận hành song song 2 nhóm: Nhóm Quảng cáo số & Nhóm Thương hiệu nội dung (10 nhân sự)",
+          "Thiết lập bộ chỉ tiêu KPI/OKR định lượng cụ thể cho từng chuyên viên (Ads, Content, Video, Design)",
+          "Chuẩn hóa quy trình phối hợp nhịp nhàng giữa Marketing, Kinh doanh và CSKH"
+        ],
+        impact: {
+          metrics: [
+            { val: "10 Nhân Sự", label: "2 Teams Chuyên Biệt" },
+            { val: "100% KPI", label: "Định Lượng Từng Vị Trí" },
+            { val: "+45%", label: "Tăng Tỷ Lệ Hẹn Tham Quan" }
+          ],
+          summary: "Đội ngũ vận hành tự chủ theo quy trình SOP, luồng Lead-to-Order bàn giao minh bạch giúp tăng 45% tỷ lệ khách đặt lịch hẹn tham quan thực tế dự án."
+        },
+        attachment: "Quy trình phối hợp liên phòng ban & Bảng theo dõi chỉ tiêu"
+      },
+      {
+        pillar: "Event",
+        pillarTag: "Ra Mắt Dự Án Mới & Truyền Thông",
+        icon: "sparkles",
+        title: "Kế Hoạch Ra Mắt Đại Dự Án Thiên Phúc Vĩnh Hằng Viên (450 Tỷ)",
+        tag: "Event & Launch Campaign",
         desc: "Xây dựng toàn diện kế hoạch truyền thông tích hợp (IMC Plan), kịch bản sự kiện khởi động 200+ VIP, video teaser và trọn bộ ấn phẩm POSM in ấn.",
         items: [
           "Kế hoạch truyền thông 3 giai đoạn (Teasing ➔ Launching ➔ Chuyển đổi bán hàng)",
-          "Kịch bản sản xuất Video Teaser 45s cảm xúc và Phối cảnh 3D 2m30s màn hình LED",
-          "Kịch bản tiến trình sự kiện khởi động chi tiết từng phút và lời dẫn MC",
+          "Kịch bản sản xuất Video Teaser 45s cảm xúc và Phối cảnh 3D 2m30s màn hình LED sự kiện",
+          "Kịch bản tiến trình sự kiện khởi động chi tiết từng phút cho 200+ khách VIP và lời dẫn MC",
           "Thông cáo báo chí và trọn bộ ấn phẩm in ấn POSM, thư mời VIP ép kim sang trọng"
         ],
+        impact: {
+          metrics: [
+            { val: "32,54 Ha", label: "Quy Mô Đại Dự Án" },
+            { val: "450+ Tỷ", label: "Tổng Vốn Đầu Tư" },
+            { val: "200+ VIP", label: "Đại Biểu Đón Tiếp" }
+          ],
+          summary: "Hoàn thiện 100% tài liệu truyền thông tích hợp (IMC Plan), kịch bản sự kiện và bộ nhận diện POSM chuẩn bị mở bán đại dự án hoa viên sinh thái lớn nhất miền Bắc."
+        },
         attachment: "Kế hoạch IMC Plan • Kịch bản sự kiện • Bộ ấn phẩm POSM"
       }
     ],
@@ -325,36 +359,69 @@ const caseStudiesData = {
     strategy: "Điều chỉnh tệp khách hàng, thử nghiệm liên tục các mẫu quảng cáo và đo lường chính xác từng bước. Ứng dụng AI tự động hóa khâu lên ý tưởng nội dung và kết nối số liệu về một bảng theo dõi chung.",
     deliverables: [
       {
-        title: "Tối Ưu Quảng Cáo & Cắt Giảm 25% Chi Phí",
-        tag: "Tăng Trưởng Người Dùng",
-        desc: "Tái cấu trúc nhóm đối tượng và cải thiện tỷ lệ chuyển đổi trên các kênh quảng cáo.",
+        pillar: "Ads",
+        pillarTag: "Tăng Trưởng & Quảng Cáo App",
+        icon: "target",
+        title: "Tối Ưu Phễu Chuyển Đổi & Cắt Giảm 25% Chi Phí Tải App (CPI)",
+        tag: "Paid Ads & Growth",
+        desc: "Tái cấu trúc nhóm đối tượng và cải thiện tỷ lệ chuyển đổi trên các kênh quảng cáo trả phí.",
         items: [
           "Đo lường hành vi người dùng từ lúc thấy quảng cáo đến khi cài ứng dụng",
           "Thử nghiệm liên tục các mẫu tiêu đề, hình ảnh và video thu hút nhất",
           "Cắt giảm 25% chi phí trên mỗi lượt cài đặt ứng dụng"
         ],
+        impact: {
+          metrics: [
+            { val: "-25% CPI", label: "Chi Phí Tải App" },
+            { val: "3 Kênh Ads", label: "Meta, Google & TikTok" },
+            { val: "+35%", label: "Tỷ Lệ Chuyển Đổi Cài Đặt" }
+          ],
+          summary: "Tối ưu hóa giá thầu và thông điệp thử nghiệm giúp hạ 25% chi phí cài đặt ứng dụng (CPI), mở rộng tệp người dùng thực chất lượng."
+        },
         attachment: "Báo cáo thử nghiệm quảng cáo & Phân tích hành vi người dùng"
       },
       {
-        title: "Ứng Dụng AI Giảm 30% Thời Gian Vận Hành",
-        tag: "Tự Động Hóa AI",
+        pillar: "Tech",
+        pillarTag: "Tự Động Hóa Bằng AI",
+        icon: "cpu",
+        title: "Ứng Dụng AI Vào Vận Hành Tiết Kiệm 30% Thời Gian",
+        tag: "AI & Workflow Automation",
         desc: "Đưa các công cụ AI vào quy trình làm việc hằng ngày của đội ngũ Marketing.",
         items: [
           "Dùng AI hỗ trợ nghiên cứu xu hướng và lập dàn ý nội dung nhanh",
           "Tiết kiệm 30% thời gian sáng tạo và sản xuất nội dung cho nhóm",
           "Tăng tốc độ thử nghiệm các mẫu thông điệp quảng cáo mới"
         ],
+        impact: {
+          metrics: [
+            { val: "-30%", label: "Thời Gian Sản Xuất" },
+            { val: "x3 Lần", label: "Tốc Độ Thử Nghiệm Mẫu Ads" },
+            { val: "100%", label: "Ứng Dụng AI Vào Quy Trình" }
+          ],
+          summary: "Quy trình AI hóa giúp đội ngũ tự động hóa khâu phác thảo nội dung và hình ảnh, tăng gấp 3 tốc độ A/B testing mẫu quảng cáo."
+        },
         attachment: "Tài liệu quy trình sản xuất nội dung bằng AI"
       },
       {
-        title: "Xây Dựng 4 Website & Báo Cáo Số Liệu Tự Động",
-        tag: "Hạ Tầng Dữ Liệu",
+        pillar: "Data",
+        pillarTag: "Dữ Liệu & Báo Cáo Tập Trung",
+        icon: "bar-chart-2",
+        title: "Xây Dựng 4 Website Vệ Tinh & Báo Cáo Số Liệu Tự Động",
+        tag: "Data Infrastructure & Retention",
         desc: "Thiết lập các trang thông tin vệ tinh và bảng theo dõi hiệu quả đa kênh.",
         items: [
           "Hoàn thiện 4 website thông tin hỗ trợ giới thiệu sản phẩm",
           "Kết nối số liệu quảng cáo Facebook, Google, TikTok về một báo cáo chung",
           "Tăng 20% tỷ lệ người dùng tiếp tục gắn bó với ứng dụng"
         ],
+        impact: {
+          metrics: [
+            { val: "+20%", label: "Tỷ Lệ Giữ Chân Người Dùng" },
+            { val: "4 Website", label: "Hệ Sinh Thái Vệ Tinh" },
+            { val: "Real-time", label: "Báo Cáo Số Liệu Đa Kênh" }
+          ],
+          summary: "Kết nối dữ liệu đa kênh về một Dashboard tập trung và xây 4 website vệ tinh giúp tăng 20% tỷ lệ người dùng tiếp tục gắn bó với app."
+        },
         attachment: "Sơ đồ 4 website vệ tinh & Báo cáo số liệu thời gian thực"
       }
     ],
@@ -383,50 +450,92 @@ const caseStudiesData = {
     strategy: "Xây dựng trọn bộ nhận diện thương hiệu cao cấp, phát triển hệ thống 4 website kết nối phần mềm quản lý khách hàng, kết hợp quảng cáo mùa vụ với sự kiện trải nghiệm tại trung tâm thương mại Takashimaya.",
     deliverables: [
       {
-        title: "Xây Dựng Nhận Diện Thương Hiệu Từ Đầu",
-        tag: "Xây Dựng Thương Hiệu",
+        pillar: "Strategy",
+        pillarTag: "Chiến Lược & Định Vị Thương Hiệu",
+        icon: "compass",
+        title: "Xây Dựng Nhận Diện & Định Vị Thương Hiệu Đạt Doanh Thu 40 Tỷ",
+        tag: "Brand Strategy & Growth",
         desc: "Định vị phong cách chuỗi trà hoa thảo mộc và quà tặng cao cấp từ con số 0.",
         items: [
-          "Thiết lập bộ quy chuẩn nhận diện, màu sắc và phong cách thương hiệu",
+          "Thiết lập bộ quy chuẩn nhận diện, màu sắc và phong cách thương hiệu cao cấp",
           "Thiết kế toàn bộ bao bì, menu và ấn phẩm truyền thông đồng bộ",
-          "Tuyển dụng, đào tạo và dẫn dắt đội ngũ 8 nhân sự marketing"
+          "Tuyển dụng, đào tạo và dẫn dắt đội ngũ 8 nhân sự marketing vận hành độc lập"
         ],
+        impact: {
+          metrics: [
+            { val: "40 Tỷ VNĐ", label: "Doanh Thu Đạt Mốc" },
+            { val: "8 Nhân Sự", label: "Đội Ngũ Vận Hành" },
+            { val: "100%", label: "Nhận Diện Đồng Bộ" }
+          ],
+          summary: "Xây dựng thương hiệu từ số 0 cán mốc 40 tỷ đồng doanh thu lũy kế, xác lập chỗ đứng vững chắc trong phân khúc quà tặng doanh nghiệp B2B."
+        },
         attachment: "Bộ quy chuẩn thương hiệu & Phong cách thiết kế Lục Lam"
       },
       {
-        title: "Hệ Thống 4 Website & Quản Lý Khách Hàng",
-        tag: "Hệ Thống Bán Hàng",
+        pillar: "Web & CRM",
+        pillarTag: "Hệ Sinh Thái Web & Chuyển Đổi Số",
+        icon: "globe",
+        title: "Phát Triển Hệ Thống 4 Website & Quản Lý Đơn Hàng Tự Động",
+        tag: "E-Commerce & CRM",
         desc: "Phát triển hệ thống website chuyên biệt kết nối dữ liệu đơn hàng và chăm sóc khách hàng.",
         items: [
           "Xây dựng 4 website bán lẻ, trà hoa, quà tặng và du lịch",
           "Tự động lưu trữ thông tin khách hàng và kích hoạt chăm sóc tự động",
           "Ứng dụng công nghệ hỗ trợ trả lời và phân loại đơn hàng nhanh"
         ],
+        impact: {
+          metrics: [
+            { val: "4 Website", label: "Hệ Sinh Thái Kênh Bán" },
+            { val: "-50%", label: "Thời Gian Xử Lý Đơn" },
+            { val: "Tự Động", label: "Lưu Trữ & Phân Loại CRM" }
+          ],
+          summary: "Tự động hóa luồng tiếp nhận đơn hàng online đa kênh, giảm 50% thời gian xử lý thủ công và nâng cao trải nghiệm mua hàng cho khách VIP."
+        },
         attachment: "Sơ đồ kiến trúc 4 website & Quy trình chăm sóc khách hàng"
       },
       {
-        title: "Sự Kiện Takashimaya & Hợp Tác Người Nổi Tiếng",
-        tag: "Trải Nghiệm & Sự Kiện",
+        pillar: "Content & Video",
+        pillarTag: "Sản Xuất Video TVC & Hậu Trường BTS",
+        icon: "video",
+        title: "Sản Xuất Loạt Video TVC Giới Thiệu & Behind The Scenes Hộp Quà Tết",
+        tag: "Content & Video Production",
+        desc: "Sản xuất loạt video quảng bá dòng sản phẩm Trà hoa Lục Lam và video Behind The Scenes (BTS) hoàn thiện hộp quà Tết thủ công cao cấp.",
+        items: [
+          "Sản xuất video dự án Trà Hoa Lục Lam giới thiệu các dòng sản phẩm thảo mộc thượng hạng",
+          "Chỉ đạo sản xuất video Behind The Scenes (BTS) quy trình hoàn thiện Hộp Quà Tết Lục Lam (Duy Hiền Agency)",
+          "Chạy quảng cáo mục tiêu trên Facebook và Google cho các set trà hoa cao cấp mùa Tết"
+        ],
+        impact: {
+          metrics: [
+            { val: "2 Video", label: "TVC & Behind The Scenes" },
+            { val: "YouTube", label: "Phủ Sóng Đa Kênh" },
+            { val: "Uy Tín B2B", label: "Thuyết Phục Khách Đặt Quà Tết" }
+          ],
+          summary: "Thước phim hậu trường BTS chân thực tạo bước đột phá niềm tin cho khách hàng B2B, thúc đẩy hàng loạt đơn đặt hàng quà Tết số lượng lớn."
+        },
+        attachment: "Kế hoạch chiến dịch Quà Tết & 2 Video Truyền Thông (YouTube)"
+      },
+      {
+        pillar: "Event",
+        pillarTag: "Tiếp Thị Điểm Bán & Trải Nghiệm Khách Hàng",
+        icon: "sparkles",
+        title: "Sự Kiện Trải Nghiệm Takashimaya & Hợp Tác Người Nổi Tiếng",
+        tag: "Event & Offline Experience",
         desc: "Tổ chức hoạt động trải nghiệm thực tế khẳng định chất lượng thương hiệu cao cấp.",
         items: [
           "Tổ chức chuỗi hoạt động dùng thử trà tại TTTM Takashimaya",
-          "Tổ chức sự kiện tri ân hơn 200 khách mời và đối tác",
+          "Tổ chức sự kiện tri ân hơn 200 khách mời và đối tác chiến lược",
           "Hợp tác cùng người có ảnh hưởng (KOLs) để lan tỏa thương hiệu"
         ],
+        impact: {
+          metrics: [
+            { val: "Takashimaya", label: "TTTM Hạng Sang" },
+            { val: "200+ Khách", label: "Đối Tác & Khách VIP" },
+            { val: "B2B Deals", label: "Mở Rộng Kênh Phân Phối" }
+          ],
+          summary: "Trực tiếp thúc đẩy doanh số bán lẻ tại trung tâm thương mại cao cấp và ký kết hợp đồng phân phối quà tặng với hàng chục đối tác doanh nghiệp lớn."
+        },
         attachment: "Hình ảnh sự kiện Takashimaya & Kế hoạch trải nghiệm"
-      },
-      {
-        title: "Chiến Dịch Bứt Phá Doanh Thu 40 Tỷ & Hộp Quà Tết",
-        tag: "Tăng Trưởng Bán Hàng",
-        desc: "Kết hợp quảng cáo online và bán quà tặng mùa Tết đạt mốc doanh thu 40 tỷ, sản xuất loạt video quảng bá dòng sản phẩm Trà hoa Lục Lam và video Behind The Scenes (BTS) hoàn thiện hộp quà Tết thủ công cao cấp.",
-        items: [
-          "Chạy quảng cáo mục tiêu trên Facebook và Google cho các set trà hoa cao cấp",
-          "Đẩy mạnh gói quà Tết cho doanh nghiệp B2B và khách hàng bán lẻ",
-          "Sản xuất video dự án Trà Hoa Lục Lam giới thiệu các dòng sản phẩm thảo mộc thượng hạng",
-          "Chỉ đạo sản xuất video Behind The Scenes (BTS) quy trình hoàn thiện Hộp Quà Tết Lục Lam (Duy Hiền Agency)",
-          "Trưng bày đồng bộ tài liệu bán hàng tại tất cả các điểm bán và sự kiện"
-        ],
-        attachment: "Kế hoạch chiến dịch Quà Tết & 2 Video Truyền Thông (YouTube)"
       }
     ],
     videos: [
@@ -470,49 +579,92 @@ const caseStudiesData = {
     strategy: "Hoạch định chiến lược tiếp thị, quản lý đội ngũ 8 chuyên viên, phối hợp cùng các kênh đánh giá xe uy tín và phủ sóng tài liệu trưng bày tại hàng trăm đại lý. Đảm nhiệm vai trò Trưởng Ban Tổ Chức sự kiện và tự thiết kế toàn bộ Slide thuyết trình giới thiệu Ottocast P3.",
     deliverables: [
       {
-        title: "Chiến Lược Phân Phối Đại Lý & Người Tiêu Dùng",
-        tag: "Chiến Lược Thị Phần",
+        pillar: "B2B Channel",
+        pillarTag: "Mở Rộng Kênh Đại Lý & Điểm Bán",
+        icon: "store",
+        title: "Chiến Lược Mở Rộng Thị Phần & Phủ Sóng Hàng Trăm Đại Lý",
+        tag: "Channel Strategy & POSM",
         desc: "Kết hợp quảng bá thương hiệu đến tài xế với chính sách hỗ trợ bán hàng cho hệ thống đại lý.",
         items: [
           "Lãnh đạo và phân bổ ngân sách cho nhóm 8 chuyên viên marketing",
           "Kết hợp giữa truyền thông thương hiệu và chính sách đẩy hàng đại lý",
-          "Phối hợp với các đối tác truyền thông chuyên sâu về ô tô"
+          "Lắp đặt bảng biển, tài liệu giới thiệu và kệ trưng bày tại hàng trăm gara toàn quốc"
         ],
-        attachment: "Kế hoạch tiếp thị mở rộng thị phần Bravigo"
+        impact: {
+          metrics: [
+            { val: "Hàng Trăm", label: "Đại Lý & Gara Ô Tô" },
+            { val: "Toàn Quốc", label: "Mạng Lưới Phân Phối" },
+            { val: "100%", label: "POSM Đồng Bộ Tại Điểm Bán" }
+          ],
+          summary: "Mở rộng và phủ sóng nhận diện tại hàng trăm đại lý, gara ô tô ủy quyền trên toàn quốc; thiết lập luồng chuyển giao Lead khách hàng theo từng khu vực."
+        },
+        attachment: "Kế hoạch tiếp thị mở rộng thị phần Bravigo & Tài liệu POSM"
       },
       {
-        title: "Phủ Sóng Ấn Phẩm Trưng Bày Tại Hàng Trăm Đại Lý",
-        tag: "Tiếp Thị Điểm Bán",
-        desc: "Đồng bộ nhận diện thương hiệu tại các gara và đại lý phân phối toàn quốc.",
-        items: [
-          "Lắp đặt bảng biển, tài liệu giới thiệu tại hàng trăm đại lý và gara",
-          "Chuyển giao khách hàng tiềm năng theo đúng khu vực cho đại lý xử lý",
-          "Hỗ trợ tổ chức các buổi trải nghiệm và lái thử sản phẩm tại chỗ"
-        ],
-        attachment: "Tài liệu trưng bày tại đại lý & Gara ô tô"
-      },
-      {
-        title: "Hợp Tác Với Các Kênh Đánh Giá Xe Uy Tín",
-        tag: "Truyền Thông Chuyên Môn",
-        desc: "Hợp tác với các chuyên gia và reviewer xe hơi hàng đầu tạo lòng tin với khách hàng.",
-        items: [
-          "Hợp tác sản xuất video trải nghiệm với các reviewer xe hàng đầu",
-          "Sản xuất chuỗi video giới thiệu tính năng trên YouTube và TikTok",
-          "Đưa thương hiệu trở thành lựa chọn hàng đầu trong phân khúc thiết bị ô tô"
-        ],
-        attachment: "Danh sách hợp tác reviewer & Kịch bản video trải nghiệm"
-      },
-      {
-        title: "Chủ Trì Ra Mắt Ottocast P3 & Thiết Kế Slide Thuyết Trình",
-        tag: "Sự Kiện Ra Mắt",
+        pillar: "Event",
+        pillarTag: "Sự Kiện Ra Mắt & Keynote",
+        icon: "presentation",
+        title: "Chủ Trì Ra Mắt Flagship Ottocast P3 & Tự Thiết Kế 100% Slide Canva",
+        tag: "Product Launch & Keynote",
         desc: "Trưởng Ban Tổ Chức sự kiện ra mắt Flagship Ottocast P3; tự tay cấu trúc và thiết kế 100% Slide thuyết trình trên Canva.",
         items: [
           "Lên kế hoạch sự kiện và điều phối khu vực trải nghiệm thực tế cho đại lý",
           "Tự tay thiết kế toàn bộ Slide thuyết trình trên Canva với hình ảnh sắc nét, hiện đại",
-          "Làm rõ các tính năng nổi bật (Chip Snapdragon, Hệ điều hành OttoDrive, Đèn viền nội thất)",
-          "Quy tụ đông đảo đại lý, gara ô tô và các chuyên gia đánh giá xe hàng đầu"
+          "Làm rõ các tính năng nổi bật: Chip Snapdragon, Hệ điều hành OttoDrive, Đèn viền nội thất"
         ],
+        impact: {
+          metrics: [
+            { val: "Keynote", label: "Ra Mắt Ottocast P3" },
+            { val: "100%", label: "Tự Thiết Kế Trên Canva" },
+            { val: "Kỷ Lục", label: "Đơn Đặt Cọc Tại Sự Kiện" }
+          ],
+          summary: "Chủ trì thành công sự kiện quy tụ đông đảo đại lý, gara ô tô và chuyên gia xe hàng đầu, tạo cú hích doanh số đặt cọc sản phẩm kỷ lục ngay trong đêm ra mắt."
+        },
         attachment: "Slide thuyết trình Canva & Kịch bản chương trình ra mắt"
+      },
+      {
+        pillar: "PR & KOC",
+        pillarTag: "Truyền Thông Ngành Xe & KOC",
+        icon: "video",
+        title: "Hợp Tác Dàn Reviewer Xe Uy Tín Hàng Đầu (YouTube & TikTok)",
+        tag: "Influencer & Community Marketing",
+        desc: "Hợp tác với các chuyên gia và reviewer xe hơi hàng đầu tạo lòng tin với khách hàng.",
+        items: [
+          "Hợp tác sản xuất video trải nghiệm với các reviewer xe hàng đầu",
+          "Sản xuất chuỗi video giới thiệu tính năng trên YouTube và TikTok",
+          "Đưa thương hiệu trở thành lựa chọn hàng đầu trong phân khúc thiết bị ô tô thông minh"
+        ],
+        impact: {
+          metrics: [
+            { val: "Top Reviewers", label: "Chuyên Gia Ô Tô Hàng Đầu" },
+            { val: "YouTube/TikTok", label: "Độ Phủ Video Đa Kênh" },
+            { val: "Top 1", label: "Lựa Chọn Phụ Kiện Xe Hơi" }
+          ],
+          summary: "Xây dựng niềm tin vững chắc cho người lái xe qua các bài đánh giá độc lập của KOC uy tín, thúc đẩy lượng khách hàng chủ động tìm mua tại đại lý."
+        },
+        attachment: "Danh sách hợp tác reviewer & Kịch bản video trải nghiệm"
+      },
+      {
+        pillar: "Leadership",
+        pillarTag: "Quản Trị Đội Ngũ Marketing",
+        icon: "users",
+        title: "Lãnh Đạo & Điều Phối Nhóm 8 Chuyên Viên Ngành Xe",
+        tag: "Team Leadership",
+        desc: "Quản trị đội ngũ chuyên trách truyền thông, thiết kế và hỗ trợ kỹ thuật đại lý.",
+        items: [
+          "Phân công và giám sát KPI định lượng cho 8 nhân sự marketing",
+          "Phối hợp chặt chẽ với khối Kinh doanh B2B để thúc đẩy doanh số từng dòng sản phẩm",
+          "Kiểm soát ngân sách tiếp thị và bảo đảm mục tiêu tăng trưởng thị phần"
+        ],
+        impact: {
+          metrics: [
+            { val: "8 Nhân Sự", label: "Chuyên Viên Ngành Xe" },
+            { val: "B2B & B2C", label: "Phối Hợp Tiếp Thị Nhịp Nhàng" },
+            { val: "Tối Ưu P&L", label: "Kiểm Soát Chi Phí Hiệu Quả" }
+          ],
+          summary: "Bộ máy marketing vận hành nhịp nhàng giữa chiến lược Kéo người tiêu dùng cuối (B2C) và Đẩy đại lý (B2B), tối ưu hóa từng đồng ngân sách chi trả."
+        },
+        attachment: "Cơ cấu tổ chức nhóm Marketing Bravigo & Bảng KPI"
       }
     ],
     embedSlide: {
@@ -546,41 +698,55 @@ const caseStudiesData = {
     strategy: "Tối ưu hóa quảng cáo Google và Facebook cho các dòng mỹ phẩm, đẩy mạnh từ khóa website lath.vn lên top tìm kiếm tự nhiên, đưa sản phẩm mỹ phẩm vào chuỗi siêu thị Lotte Mart và cải thiện trải nghiệm ứng dụng mua sắm KingPang.",
     deliverables: [
       {
-        title: "Tăng Trưởng 40% Doanh Thu Quảng Cáo Mỹ Phẩm",
-        tag: "Quảng Cáo Trực Tuyến",
-        desc: "Tối ưu ngân sách quảng cáo để tăng doanh số bán lẻ mỹ phẩm vượt bậc.",
-        items: [
-          "Tối ưu giá thầu thông minh trên Google Ads và Facebook Ads",
-          "Tăng trưởng doanh thu từ quảng cáo 40% so với kỳ trước",
-          "Điều phối các chương trình quảng bá hỗ trợ hệ thống showroom"
-        ],
-        attachment: "Báo cáo tăng trưởng doanh thu quảng cáo & Hiệu quả chi phí"
-      },
-      {
-        title: "Đưa Website Lên Top Google (5.000 Lượt Xem/Tháng)",
-        tag: "Tìm Kiếm Tự Nhiên",
+        pillar: "SEO",
+        pillarTag: "Tối Ưu Hóa Tìm Kiếm Tự Nhiên (SEO)",
+        icon: "search",
+        title: "Tối Ưu SEO Đạt 5.000+ Lượt Xem/Tháng & 200+ Đơn Hàng Tự Nhiên",
+        tag: "Organic Growth & SEO",
         desc: "Tối ưu nội dung và cấu trúc website để thu hút khách hàng miễn phí từ Google.",
         items: [
-          "Đưa website lath.vn đạt hơn 5.000 lượt truy cập tự nhiên mỗi tháng",
-          "Tạo ra hơn 200 đơn hàng tự nhiên mỗi tháng không tốn chi phí quảng cáo",
-          "Cải thiện nội dung và trải nghiệm mua sắm trên website"
+          "Nghiên cứu bộ từ khóa mỹ phẩm, chăm sóc răng miệng và tối ưu SEO Onpage/Technical",
+          "Đưa website lath.vn đạt hơn 5.000 lượt truy cập tự nhiên mỗi tháng từ Google",
+          "Tạo ra hơn 200 đơn hàng tự nhiên mỗi tháng hoàn toàn không tốn tiền quảng cáo"
         ],
+        impact: {
+          metrics: [
+            { val: "5.000+", label: "Lượt Xem Tự Nhiên/Tháng" },
+            { val: "200+ Đơn", label: "Đơn Hàng Tự Nhiên Miễn Phí" },
+            { val: "0đ Chi Phí", label: "Không Tốn Ngân Sách Ads" }
+          ],
+          summary: "Xây dựng dòng traffic tự nhiên bền vững từ Google, giảm phụ thuộc vào quảng cáo trả phí và tạo biên lợi nhuận ròng vượt trội."
+        },
         attachment: "Báo cáo lượng khách hàng tự nhiên & Xếp hạng từ khóa"
       },
       {
-        title: "Đưa Hàng Vào Chuỗi Siêu Thị Lotte Mart & Sàn Online",
-        tag: "Kênh Phân Phối",
-        desc: "Mở rộng kênh bán hàng sang hệ thống siêu thị lớn và các sàn thương mại điện tử.",
+        pillar: "Ads",
+        pillarTag: "Quảng Cáo Số Mỹ Phẩm Đa Kênh",
+        icon: "target",
+        title: "Tối Ưu Quảng Cáo Số Đa Kênh Tăng Trưởng +40% Doanh Thu",
+        tag: "Paid Performance Ads",
+        desc: "Tối ưu ngân sách quảng cáo để tăng doanh số bán lẻ mỹ phẩm vượt bậc.",
         items: [
-          "Đưa sản phẩm thành công vào hệ thống siêu thị Lotte Mart (tăng 25% tỷ lệ mua)",
-          "Vận hành bán hàng trên các sàn Shopee, Lazada và Tiki",
-          "Cải thiện giao diện ứng dụng KingPang giúp tăng 20% lượt tải"
+          "Tối ưu giá thầu thông minh trên Google Ads và Facebook Ads cho các dòng mỹ phẩm",
+          "Tăng trưởng doanh thu từ quảng cáo 40% so với kỳ trước",
+          "Điều phối các chương trình quảng bá hỗ trợ hệ thống showroom và kênh trực tuyến"
         ],
-        attachment: "Hồ sơ sản phẩm vào Lotte Mart & Cải tiến ứng dụng KingPang"
+        impact: {
+          metrics: [
+            { val: "+40%", label: "Tăng Trưởng Doanh Thu Ads" },
+            { val: "ROAS Cao", label: "Tối Ưu Giá Thầu Thông Minh" },
+            { val: "Đa Kênh", label: "Google, Facebook & Showroom" }
+          ],
+          summary: "Chiến dịch quảng cáo số tăng trưởng 40% doanh thu bán lẻ mỹ phẩm, hạ giá thành thu hút khách hàng và kéo khách đến trải nghiệm tại showroom."
+        },
+        attachment: "Báo cáo tăng trưởng doanh thu quảng cáo & Hiệu quả chi phí"
       },
       {
+        pillar: "Content & TVC",
+        pillarTag: "Sản Xuất Loạt 6 Video TVC & Viral",
+        icon: "video",
         title: "Sản Xuất Loạt 6 Video TVC & Viral Chiến Dịch Truyền Thông",
-        tag: "Sản Xuất Video & TVC",
+        tag: "TVC & Video Production",
         desc: "Lên ý tưởng, kịch bản, quay dựng loạt 6 video quảng cáo sản phẩm, phỏng vấn khách hàng và chiến dịch viral cho thương hiệu LATH, bàn chải Wangta Hàn Quốc và máy pha cafe (Duy Hiền Agency thực hiện).",
         items: [
           "Quảng cáo TVC Kem đánh răng LATH phục vụ chiến dịch digital ads đa kênh",
@@ -588,7 +754,37 @@ const caseStudiesData = {
           "Video viral 'Hành trình đi tìm kem đánh răng LATH' lan tỏa tương tác tự nhiên",
           "Loạt video quảng bá Bàn chải Wangta Hàn Quốc, Máy pha cafe và Dự án quảng cáo K-Cafe"
         ],
+        impact: {
+          metrics: [
+            { val: "6 Video", label: "TVC & Viral Hoàn Chỉnh" },
+            { val: "Social Proof", label: "Gia Tăng Uy Tín Chốt Đơn" },
+            { val: "Viral Video", label: "Tương Tác Tự Nhiên Giới Trẻ" }
+          ],
+          summary: "Bộ 6 video TVC chuyên nghiệp và phỏng vấn thực tế củng cố niềm tin khách hàng, đưa tỷ lệ chuyển đổi đơn hàng tăng vọt trên các kênh số."
+        },
         attachment: "Bộ 6 video TVC & Chiến dịch truyền thông YouTube (Duy Hiền Agency)"
+      },
+      {
+        pillar: "Distribution",
+        pillarTag: "Mở Rộng Kênh Siêu Thị & Bán Lẻ",
+        icon: "store",
+        title: "Đưa Hàng Vào Chuỗi Siêu Thị Lotte Mart & Ứng Dụng KingPang",
+        tag: "Retail Distribution & App",
+        desc: "Mở rộng kênh bán hàng sang hệ thống siêu thị lớn và các sàn thương mại điện tử.",
+        items: [
+          "Đưa sản phẩm thành công vào hệ thống siêu thị Lotte Mart toàn quốc",
+          "Vận hành bán hàng trên các sàn Shopee, Lazada và Tiki",
+          "Cải thiện giao diện ứng dụng KingPang giúp tăng 20% lượt tải"
+        ],
+        impact: {
+          metrics: [
+            { val: "Lotte Mart", label: "Chuỗi Siêu Thị Lớn" },
+            { val: "+25%", label: "Tỷ Lệ Mua Tại Điểm Bán" },
+            { val: "+20%", label: "Tăng Lượt Tải App KingPang" }
+          ],
+          summary: "Mở rộng sự hiện diện của thương hiệu vào chuỗi siêu thị Lotte Mart giúp tăng 25% tỷ lệ mua hàng và củng cố uy tín sản phẩm trên toàn quốc."
+        },
+        attachment: "Hồ sơ sản phẩm vào Lotte Mart & Cải tiến ứng dụng KingPang"
       }
     ],
     videos: [
@@ -662,36 +858,69 @@ const caseStudiesData = {
     strategy: "Xây dựng toàn diện website brewbanhmicafe.com chuẩn song ngữ (Anh - Việt), tích hợp liền mạch hệ thống POS đặt món online Toast Tab, tối ưu hóa hiện diện Local SEO Google Maps và chuẩn hóa trải nghiệm F&B quốc tế.",
     deliverables: [
       {
+        pillar: "Website",
+        pillarTag: "Website Song Ngữ Anh — Việt",
+        icon: "globe",
         title: "Xây Dựng Website Thương Hiệu brewbanhmicafe.com Song Ngữ",
-        tag: "Phát Triển Website",
+        tag: "Web & Mobile Experience",
         desc: "Thiết kế và lập trình website thương hiệu chuẩn trải nghiệm người dùng F&B quốc tế.",
         items: [
           "Phát triển giao diện song ngữ (Tiếng Anh & Tiếng Việt) chuẩn mực, mượt mà trên di động",
           "Trưng bày trực quan menu: Cà phê phin, Bánh mì giòn, Trà trái cây, Matcha và Bánh ngọt",
           "Tối ưu tốc độ tải trang cao và cấu trúc thân thiện với công cụ tìm kiếm Google"
         ],
+        impact: {
+          metrics: [
+            { val: "100%", label: "Song Ngữ Anh — Việt" },
+            { val: "Mobile-First", label: "Tối Ưu Trải Nghiệm Di Động" },
+            { val: "95+", label: "Điểm Tốc Độ Tải Trang" }
+          ],
+          summary: "Vận hành hoàn chỉnh website brewbanhmicafe.com, đem lại trải nghiệm trực quan sang trọng cho cả thực khách bản xứ Mỹ và cộng đồng kiều bào."
+        },
         attachment: "Website chính thức: brewbanhmicafe.com"
       },
       {
-        title: "Tích Hợp Cổng Đặt Món Trực Tuyến Toast Tab",
-        tag: "Chuyển Đổi Số F&B",
+        pillar: "Tech & POS",
+        pillarTag: "Chuyển Đổi Số & Đặt Món Online",
+        icon: "cpu",
+        title: "Tích Hợp Cổng Đặt Món Trực Tuyến Toast Tab POS Tại Mỹ",
+        tag: "Digital F&B & Online Ordering",
         desc: "Kết nối hệ sinh thái bán hàng tự động phục vụ khách đặt mang về và tiệc sự kiện.",
         items: [
           "Tích hợp nút gọi món online trực tiếp với nền tảng Toast Tab POS phổ biến tại Mỹ",
           "Tự động hóa luồng tiếp nhận đơn hàng mang đi (Pick-up) và dịch vụ suất ăn sự kiện (Catering)",
           "Giảm thiểu sai sót khi gọi món và tiết kiệm tối đa thời gian vận hành cho quán"
         ],
+        impact: {
+          metrics: [
+            { val: "Toast Tab", label: "POS Chuẩn Nhà Hàng Mỹ" },
+            { val: "100%", label: "Tự Động Đơn Pick-up & Catering" },
+            { val: "0 Sai Sót", label: "Quy Trình Order Tự Động" }
+          ],
+          summary: "Tự động hóa 100% luồng đơn hàng trực tuyến qua Toast Tab POS, xóa bỏ tình trạng nhầm lẫn đơn qua hotline và tăng tốc độ phục vụ giờ cao điểm."
+        },
         attachment: "Hệ thống đặt món trực tuyến Toast Tab"
       },
       {
-        title: "Tối Ưu Hiện Diện Local SEO & Google Maps Tại Mỹ",
-        tag: "Tiếp Thị Địa Phương",
+        pillar: "SEO & Maps",
+        pillarTag: "Local SEO Google Maps & Uy Tín",
+        icon: "map-pin",
+        title: "Tối Ưu Hiện Diện Local SEO & Đánh Giá 5 Sao Tại California",
+        tag: "Local SEO & Reputation",
         desc: "Định vị thương hiệu vững chắc trên bản đồ số khu vực Milpitas, California.",
         items: [
           "Tối ưu hồ sơ Google Business Profile thu hút khách hàng tìm kiếm 'Coffee & Banh Mi near me'",
           "Đạt hàng loạt đánh giá 5 sao từ khách hàng địa phương trên Google Reviews",
           "Kết nối định vị chỉ đường và hotline đặt hàng thuận tiện cho cư dân và dân văn phòng"
         ],
+        impact: {
+          metrics: [
+            { val: "Top Maps", label: "Khu Vực Milpitas, CA" },
+            { val: "5 Sao", label: "Đánh Giá Google Reviews" },
+            { val: "5.000+", label: "Lượt Tìm Kiếm & Xem Menu/Tháng" }
+          ],
+          summary: "Xác lập vị trí uy tín hàng đầu trên Google Maps tại Milpitas (California), thu hút hàng ngàn lượt khách văn phòng và cư dân địa phương ghé quán mỗi tháng."
+        },
         attachment: "Hồ sơ Local SEO Google Maps & Đánh giá 5 sao"
       }
     ],

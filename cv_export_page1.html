@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Tạ Quốc Duy - Senior Marketing Manager</title>
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --primary: #111827;         /* Deep Slate Black */
+      --secondary: #374151;       /* Dark Gray */
+      --muted: #6b7280;           /* Neutral Gray */
+      --light-gray: #f3f4f6;      /* Slate 100 / Gray block */
+      --border-color: #e5e7eb;    /* Divider gray */
+      --accent-yellow: #f59e0b;    /* Warm Amber / Golden Accent */
+      --accent-yellow-light: #fef3c7;
+      --white: #ffffff;
+      --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--secondary);
+      background-color: #94a3b8;
+      line-height: 1.38;
+      font-size: 11.8px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Screen Action Bar */
+    .action-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(17, 24, 39, 0.96);
+      backdrop-filter: blur(10px);
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 9999;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .action-bar-title {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 13.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-heading);
+    }
+
+    .action-badge {
+      background: var(--accent-yellow);
+      color: #111827;
+      padding: 2.5px 9px;
+      border-radius: 4px;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 18px;
+      font-size: 12.5px;
+      font-weight: 700;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      background: var(--accent-yellow);
+      color: #111827;
+      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #d97706;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    /* Page container: Exact A4 sizing */
+    .a4-page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      margin: 60px auto 25px;
+      background: var(--white);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px 28px 16px;
+    }
+
+    .a4-page:last-of-type {
+      margin-top: 25px;
+      margin-bottom: 50px;
+    }
+
+    /* ====================================================
+       TOP HEADER (ALEXANDER HINDERLON STYLE)
+       ==================================================== */
+    .header-top {
+      display: grid;
+      grid-template-columns: 145px 1fr;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    /* Avatar Box with Light Gray BG and Yellow Corner Accent */
+    .avatar-wrapper {
+      position: relative;
+      width: 145px;
+      height: 165px;
+      background: #f1f3f5;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .avatar-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    /* Signature Yellow Corner Cut / Accent */
+    .avatar-corner-accent {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 34px solid var(--accent-yellow);
+      border-right: 34px solid transparent;
+      z-index: 2;
+    }
+
+    /* Header Main Info */
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .header-meta-row {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 16px;
+      align-items: start;
+    }
+
+    /* Candidate Name & Title */
+    .name-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .name-lead {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .accent-slash {
+      display: inline-block;
+      width: 9px;
+      height: 24px;
+      background: var(--accent-yellow);
+      transform: skewX(-20deg);
+      border-radius: 1px;
+    }
+
+    .first-name {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.3px;
+      line-height: 1.1;
+    }
+
+    .last-name {
+      font-family: var(--font-heading);
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.8px;
+      line-height: 1;
+      margin-top: 2px;
+      text-transform: uppercase;
+    }
+
+    .target-role-bar {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 7px;
+    }
+
+    .role-v-line {
+      display: inline-block;
+      width: 1.5px;
+      height: 14px;
+      background: #9ca3af;
+    }
+
+    .role-text {
+      font-family: var(--font-heading);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #1f2937;
+    }
+
+    /* Contact Details with Vertical Divider */
+    .contact-box {
+      border-left: 1px solid var(--border-color);
+      padding-left: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 3.5px;
+      font-size: 10.8px;
+      color: #4b5563;
+    }
+
+    .contact-line {
+      display: flex;
+      gap: 5px;
+      align-items: baseline;
+      line-height: 1.25;
+    }
+
+    .contact-line .prefix {
+      font-weight: 700;
+      color: var(--primary);
+      min-width: 14px;
+    }
+
+    .contact-line a {
+      color: #374151;
+      text-decoration: none;
+    }
+
+    .contact-line a:hover {
+      color: #d97706;
+      text-decoration: underline;
+    }
+
+    /* Executive Summary paragraph */
+    .summary-text {
+      font-size: 11px;
+      line-height: 1.45;
+      color: #4b5563;
+      text-align: justify;
+      margin-top: 3px;
+    }
+
+    .summary-text strong {
+      color: #111827;
+      font-weight: 700;
+    }
+
+    /* ====================================================
+       PAGE 2 SLIM HEADER
+       ==================================================== */
+    .p2-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid var(--border-color);
+      margin-bottom: 12px;
+    }
+
+    .p2-name-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .p2-name {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .p2-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .p2-contacts {
+      font-size: 10px;
+      color: var(--muted);
+      display: flex;
+      gap: 12px;
+    }
+
+    /* ====================================================
+       BODY 2-COLUMN LAYOUT
+       ==================================================== */
+    .body-grid {
+      display: grid;
+      grid-template-columns: 195px 1fr;
+      gap: 24px;
+      flex: 1;
+    }
+
+    /* Left Column (Skills, Education) */
+    .left-col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-right: 1px solid transparent;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 12.8px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--primary);
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Skill Sub-categories with // prefix */
+    .skill-subgroup {
+      margin-bottom: 6px;
+    }
+
+    .skill-subgroup-title {
+      font-family: var(--font-heading);
+      font-size: 10.4px;
+      font-weight: 700;
+      color: #1f2937;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 2.5px;
+    }
+
+    .skill-subgroup-title span.slash-prefix {
+      color: var(--accent-yellow);
+      margin-right: 2px;
+      font-weight: 800;
+    }
+
+    .skill-item-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding-left: 2px;
+    }
+
+    .skill-item-list li {
+      font-size: 10.4px;
+      color: #4b5563;
+      position: relative;
+      padding-left: 9px;
+      line-height: 1.34;
+    }
+
+    .skill-item-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      top: -0.5px;
+      color: #9ca3af;
+      font-size: 10px;
+    }
+
+    .skill-item-list li.highlight {
+      color: #111827;
+      font-weight: 600;
+    }
+
+    /* Education Item */
+    .edu-block {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: 4px;
+    }
+
+    .edu-degree {
+      font-size: 10.8px;
+      font-weight: 700;
+      color: #111827;
+      text-transform: uppercase;
+    }
+
+    .edu-school {
+      font-size: 10.4px;
+      font-weight: 600;
+      color: #4b5563;
+    }
+
+    .edu-year {
+      font-size: 9.6px;
+      color: var(--muted);
+      margin-bottom: 1px;
+    }
+
+    .edu-desc {
+      font-size: 9.8px;
+      line-height: 1.36;
+      color: #6b7280;
+    }
+
+    /* Right Column (Work Experience Timeline) */
+    .right-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Timeline styling */
+    .timeline-container {
+      position: relative;
+      border-left: 1.5px solid #d1d5db;
+      padding-left: 15px;
+      margin-left: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .timeline-job {
+      position: relative;
+    }
+
+    /* Timeline Dot */
+    .timeline-dot {
+      position: absolute;
+      left: -19.5px;
+      top: 4px;
+      width: 7.5px;
+      height: 7.5px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 1.5px solid var(--white);
+      box-shadow: 0 0 0 1.5px var(--accent-yellow);
+    }
+
+    .job-header {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      margin-bottom: 3px;
+    }
+
+    .job-title {
+      font-family: var(--font-heading);
+      font-size: 12.8px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.1px;
+    }
+
+    .job-meta {
+      font-size: 10.8px;
+      color: #4b5563;
+      font-style: italic;
+    }
+
+    .job-meta strong {
+      font-style: normal;
+      color: #1f2937;
+      font-weight: 600;
+    }
+
+    .job-overview {
+      font-size: 10.6px;
+      color: #4b5563;
+      margin-bottom: 3px;
+      line-height: 1.35;
+    }
+
+    .job-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2.8px;
+    }
+
+    .job-bullets li {
+      font-size: 10.6px;
+      color: #374151;
+      position: relative;
+      padding-left: 10px;
+      line-height: 1.38;
+      text-align: justify;
+    }
+
+    .job-bullets li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      top: -0.5px;
+      color: var(--primary);
+      font-size: 10px;
+    }
+
+    .job-bullets strong {
+      color: #0f172a;
+      font-weight: 750;
+    }
+
+    /* Tags inside job */
+    .job-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+      margin-top: 3px;
+    }
+
+    .job-tag {
+      background: #f3f4f6;
+      color: #4b5563;
+      font-size: 8.5px;
+      padding: 1px 4.5px;
+      border-radius: 3px;
+      font-weight: 500;
+    }
+
+    /* QR Portfolio Box on Page 2 */
+    .portfolio-qr-box {
+      background: #f9fafb;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 7px;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    .portfolio-qr-title {
+      font-size: 9.8px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .portfolio-qr-img {
+      width: 72px;
+      height: 72px;
+      margin: 4px auto 3px;
+      background: #fff;
+      padding: 2px;
+      border: 1px solid #e5e7eb;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .portfolio-qr-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .portfolio-qr-link {
+      font-size: 9px;
+      font-weight: 700;
+      color: #d97706;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    /* ====================================================
+       BOTTOM SECTION: 4-COLUMN SKILL & IMPACT MATRIX
+       ==================================================== */
+    .bottom-section {
+      border-top: 1.5px solid var(--border-color);
+      padding-top: 10px;
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: 195px repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .bottom-col-title {
+      font-family: var(--font-heading);
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 5px;
+    }
+
+    /* Rating Rows with Dots */
+    .rating-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .rating-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      color: #374151;
+    }
+
+    .rating-label {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 105px;
+    }
+
+    .rating-dots {
+      display: flex;
+      gap: 2.5px;
+    }
+
+    .dot {
+      width: 5.5px;
+      height: 5.5px;
+      border-radius: 50%;
+      background: #e5e7eb;
+    }
+
+    .dot.filled {
+      background: var(--primary);
+    }
+
+    .dot.accent {
+      background: var(--accent-yellow);
+    }
+
+    /* Stat Card in Bottom Col 1 */
+    .stat-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5px;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
+      font-size: 10px;
+    }
+
+    .stat-val {
+      font-weight: 800;
+      color: var(--primary);
+      font-family: var(--font-heading);
+    }
+
+    .stat-lbl {
+      color: #6b7280;
+      font-size: 8.8px;
+    }
+
+    /* Page Footer */
+    .page-footer-bar {
+      margin-top: 8px;
+      padding-top: 4px;
+      border-top: 1px solid #f3f4f6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 8.8px;
+      color: #9ca3af;
+    }
+
+    /* ====================================================
+       PRINT STYLES FOR EXACT 2-PAGE A4 PERFECTION
+       ==================================================== */
+    @media print {
+      body {
+        background: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .action-bar {
+        display: none !important;
+      }
+
+      .a4-page {
+        margin: 0 !important;
+        box-shadow: none !important;
+        width: 100% !important;
+        height: 297mm !important;
+        min-height: 297mm !important;
+        max-height: 297mm !important;
+        padding: 24px 30px 18px !important;
+        page-break-after: always !important;
+        break-after: page !important;
+      }
+
+      .a4-page:last-of-type {
+        page-break-after: auto !important;
+        break-after: auto !important;
+      }
+
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
+    }
+
+    /* ====================================================
+       RESPONSIVE MOBILE STYLES (< 860px)
+       ==================================================== */
+    @media screen and (max-width: 100px) {
+      body {
+        background-color: #f3f4f6;
+        padding-bottom: 25px;
+      }
+
+      .action-bar {
+        padding: 8px 12px;
+      }
+
+      .action-badge {
+        display: none;
+      }
+
+      .a4-page {
+        width: calc(100% - 16px) !important;
+        max-width: 650px !important;
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+        margin: 52px auto 16px !important;
+        padding: 20px 16px !important;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      .a4-page:last-of-type {
+        margin-top: 16px;
+        margin-bottom: 25px;
+      }
+
+      .header-top {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        text-align: center;
+      }
+
+      .avatar-wrapper {
+        margin: 0 auto;
+        width: 125px;
+        height: 145px;
+        border-radius: 8px;
+      }
+
+      .header-meta-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .name-lead {
+        justify-content: center;
+      }
+
+      .target-role-bar {
+        justify-content: center;
+      }
+
+      .contact-box {
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+        padding-left: 0;
+        padding-top: 8px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        text-align: left;
+      }
+
+      .body-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .a4-page:first-of-type .right-col {
+        order: 1;
+      }
+
+      .a4-page:first-of-type .left-col {
+        order: 2;
+        border-top: 1px solid var(--border-color);
+        padding-top: 14px;
+      }
+
+      .a4-page:last-of-type .right-col {
+        order: 1;
+      }
+
+      .a4-page:last-of-type .left-col {
+        order: 2;
+        border-top: 1px solid var(--border-color);
+        padding-top: 14px;
+      }
+
+      .bottom-section {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .p2-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+    }
+  </style>
+
+<style>
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    overflow: hidden !important;
+  }
+  .a4-page {
+    margin: 0 !important;
+    box-shadow: none !important;
+    width: 794px !important;
+    height: 1123px !important;
+    max-height: 1123px !important;
+    border-radius: 0 !important;
+  }
+  .mobile-nav-bar { display: none !important; }
+</style>
+</head><body>
+<div class="a4-page">
+
+    <!-- Top Header (Alexander Hinderlon Style) -->
+    <header class="header-top">
+      
+      <!-- Avatar with light gray background and signature yellow corner cut -->
+      <div class="avatar-wrapper">
+        <img src="avatar.png" alt="Tạ Quốc Duy">
+        <div class="avatar-corner-accent"></div>
+      </div>
+
+      <!-- Header Content -->
+      <div class="header-content">
+        <div class="header-meta-row">
+          
+          <!-- Name & Role Title -->
+          <div class="name-block">
+            <div class="name-lead">
+              <span class="accent-slash"></span>
+              <span class="first-name">Tạ Quốc</span>
+            </div>
+            <h1 class="last-name">DUY</h1>
+            <div class="target-role-bar">
+              <span class="role-v-line"></span>
+              <span class="role-text">SENIOR MARKETING MANAGER / GROWTH & MARTECH LEAD</span>
+            </div>
+          </div>
+
+          <!-- Contact Details with Vertical Divider -->
+          <div class="contact-box">
+            <div class="contact-line">
+              <span class="prefix">P:</span>
+              <a href="tel:0392225986">039 222 5986</a>
+            </div>
+            <div class="contact-line">
+              <span class="prefix">E:</span>
+              <a href="mailto:admin@duyhiendigi.com">admin@duyhiendigi.com</a>
+            </div>
+            <div class="contact-line">
+              <span class="prefix">S:</span>
+              <a href="https://luclam.short.gy/bVFpqw" target="_blank">luclam.short.gy/bVFpqw</a>
+            </div>
+            <div class="contact-line">
+              <span class="prefix">A:</span>
+              <span>Đường Bà Hom, TP. Hồ Chí Minh</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Executive Summary -->
+        <p class="summary-text">
+          <strong>Senior Marketing Manager</strong> với <strong>8+ năm kinh nghiệm</strong> thực chiến trong hoạch định chiến lược tiếp thị đa kênh (Omnichannel), xây dựng thương hiệu từ <strong>số 0 (Zero to Hero)</strong> và dẫn dắt song song <strong>2 Teams chuyên biệt</strong> (Team Digital Marketing & Team Branding) quy mô <strong>10 nhân sự</strong>. Thế mạnh độc nhất kết hợp giữa <strong>tư duy logic Bách Khoa (CNTT)</strong> với năng lực quản trị hiệu suất cao: điều hành ngân sách ads đạt đỉnh <strong>lên tới 700 triệu/tháng</strong> (hiện quản lý <strong>300 triệu/tháng</strong> tại Sala Garden, đem về đều đặn <strong>50+ Qualified Leads/tháng</strong>), chỉ đạo cỗ máy sản xuất nội dung quy mô lớn <strong>130+ videos/tháng</strong>, tiên phong <strong>tự xây dựng AI Agents tự hành & Vibe Coding phát triển SaaS tools</strong> nội bộ giải phóng <strong>30% thời gian</strong> vận hành và dẫn dắt các chiến dịch đạt doanh thu <strong>40 tỷ VNĐ</strong> trong các ngành Bất động sản sinh thái, Trà thảo mộc, Công nghệ & Mỹ phẩm bán lẻ.
+        </p>
+
+      </div>
+    </header>
+
+    <!-- Main Body 2-Column Layout -->
+    <div class="body-grid">
+      
+      <!-- Left Column: Skills & Education -->
+      <aside class="left-col">
+        
+        <div>
+          <h2 class="section-title">SKILLS</h2>
+
+          <!-- Subgroup 1 -->
+          <div class="skill-subgroup">
+            <div class="skill-subgroup-title">
+              <span class="slash-prefix">//</span> CHIẾN LƯỢC & QUẢN TRỊ
+            </div>
+            <ul class="skill-item-list">
+              <li class="highlight">Marketing Strategy & P&L</li>
+              <li class="highlight">Xây dựng hình ảnh thương hiệu (Branding)</li>
+              <li class="highlight">Quản lý 2 Teams (10 nhân sự)</li>
+              <li class="highlight">Setup KPI / OKRs từng vị trí</li>
+              <li>Định vị & Nhận diện thương hiệu</li>
+              <li>Omnichannel Marketing</li>
+              <li>B2B & B2C Go-to-market</li>
+              <li>Insight & Nghiên cứu thị trường</li>
+              <li>Chuẩn hóa quy trình SOP</li>
+            </ul>
+          </div>
+
+          <!-- Subgroup 2 -->
+          <div class="skill-subgroup">
+            <div class="skill-subgroup-title">
+              <span class="slash-prefix">//</span> MARTECH, AI AGENT & SAAS
+            </div>
+            <ul class="skill-item-list">
+              <li class="highlight">Build AI Agents (Multi-Agent)</li>
+              <li class="highlight">SaaS Product & Vibe Coding</li>
+              <li class="highlight">AI Content Engine (LLMs)</li>
+              <li>CRM & Lead-to-Order</li>
+              <li>Tracking Pixel & CPL/CPA</li>
+              <li>Zalo OA & Funnel Automation</li>
+              <li>CMS & Web Architecture</li>
+            </ul>
+          </div>
+
+          <!-- Subgroup 3 -->
+          <div class="skill-subgroup">
+            <div class="skill-subgroup-title">
+              <span class="slash-prefix">//</span> DIGITAL & PERFORMANCE
+            </div>
+            <ul class="skill-item-list">
+              <li class="highlight">High-budget Ads (Peak 700Tr)</li>
+              <li>Facebook, TikTok & Google Ads</li>
+              <li>High-volume Video Distribution</li>
+              <li>SEO On-page & Off-page</li>
+              <li>E-commerce / Sàn TMĐT</li>
+              <li>Push Notification & In-app</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Education -->
+        <div>
+          <h2 class="section-title">EDUCATION</h2>
+          <div class="edu-block">
+            <div class="edu-degree">CỬ NHÂN CÔNG NGHỆ THÔNG TIN</div>
+            <div class="edu-school">Đại Học Bách Khoa TP.HCM (HCMUT)</div>
+            <div class="edu-year">2014 – 2018</div>
+            <p class="edu-desc">
+              Tư duy logic Bách Khoa làm chủ công nghệ cao: tự xây AI Agents, Vibe Coding phát triển web tools/SaaS, phân tích dữ liệu định lượng vượt trội.
+            </p>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- Right Column: Work Experience Timeline -->
+      <main class="right-col">
+        <h2 class="section-title">WORK EXPERIENCE</h2>
+
+        <div class="timeline-container">
+          
+          <!-- Job 1: Sala Garden -->
+          <div class="timeline-job">
+            <div class="timeline-dot"></div>
+            <div class="job-header">
+              <h3 class="job-title">MARKETING MANAGER</h3>
+              <div class="job-meta">
+                <strong>Công Ty Cổ Phần TM & DV Sala Garden</strong> (BĐS Hoa viên sinh thái 5 sao) | <em>03/2026 – Hiện tại</em>
+              </div>
+            </div>
+            <div class="job-overview">
+              Chỉ đạo chiến lược tiếp thị tổng thể, trực tiếp điều hành 2 Teams chuyên biệt và tối ưu hóa ngân sách đa kênh.
+            </div>
+            <ul class="job-bullets">
+              <li>
+                <strong>Lãnh đạo 2 Teams & Thiết lập KPI từng vị trí:</strong> Trực tiếp chỉ đạo song song <strong>2 Teams chuyên biệt</strong> (Team Digital Marketing và Team Branding); chuẩn hóa quy trình vận hành và xây dựng bộ khung <strong>KPIs / OKRs định lượng cho từng vị trí</strong> (Ads, Content, Video Editor, Graphic Designer) nhằm tối ưu hiệu suất và gắn kết mục tiêu chung.
+              </li>
+              <li>
+                <strong>Dẫn dắt Brand Team sản xuất 130+ Videos/tháng:</strong> Xây dựng cỗ máy sản xuất nội dung quy mô lớn, đạt công suất ấn tượng <strong>130+ video/tháng</strong> (TikTok, YouTube, Facebook Reels, phóng sự văn hóa tri ân), tạo độ phủ nhận diện thương hiệu vượt bậc trên mọi nền tảng số.
+              </li>
+              <li>
+                <strong>Quản trị ngân sách 300Tr/tháng & Tạo 50+ Q.Leads/tháng:</strong> Trực tiếp hoạch định và tối ưu ngân sách quảng cáo số <strong>300.000.000 VNĐ/tháng</strong> (Facebook Ads, Google Ads, TikTok Ads, Zalo OA); duy trì đều đặn <strong>50+ Qualified Leads chất lượng cao/tháng</strong> phục vụ đội ngũ tư vấn chốt đơn các sản phẩm hoa viên sinh thái cao cấp.
+              </li>
+              <li>
+                <strong>Chiến lược tiếp thị Omnichannel & Trải nghiệm điểm chạm:</strong> Kết nối tiếp thị số với hoạt động tại chỗ (Decor không gian sự kiện Nhà tròn, Voucher sự kiện, Standee đối tác), nâng cao trải nghiệm và niềm tin cho khách hàng phân khúc cao cấp.
+              </li>
+            </ul>
+            <div class="job-tags">
+              <span class="job-tag">Team Leadership</span>
+              <span class="job-tag">Setup KPI từng vị trí</span>
+              <span class="job-tag">130+ Videos/Tháng</span>
+              <span class="job-tag">300Tr Ads/Tháng</span>
+              <span class="job-tag">50 Q.Leads/Tháng</span>
+            </div>
+          </div>
+
+          <!-- Job 2: Fclick -->
+          <div class="timeline-job">
+            <div class="timeline-dot"></div>
+            <div class="job-header">
+              <h3 class="job-title">MARKETING MANAGER</h3>
+              <div class="job-meta">
+                <strong>Công ty Fclick</strong> (Ứng dụng di động - Mobile App) | <em>06/2025 – 02/2026</em>
+              </div>
+            </div>
+            <div class="job-overview">
+              Lãnh đạo tăng trưởng người dùng, chuyển đổi số quy trình tiếp thị và tối ưu hiệu suất chuyển đổi ứng dụng.
+            </div>
+            <ul class="job-bullets">
+              <li>
+                <strong>Tối ưu hóa chi phí quảng cáo (Cost Efficiency):</strong> Cắt giảm thành công <strong>25% CPI (Cost Per Install)</strong> thông qua tái cấu trúc tệp khách hàng mục tiêu, tối ưu thông điệp A/B testing và chuẩn hóa hệ thống tracking phễu chuyển đổi.
+              </li>
+              <li>
+                <strong>Số hóa & Tự động hóa bằng AI (MarTech Lead):</strong> Tiên phong ứng dụng các công cụ AI Automation vào quy trình làm việc của team, <strong>tiết kiệm 30% thời gian</strong> triển khai sáng tạo và sản xuất nội dung.
+              </li>
+              <li>
+                <strong>Phát triển thương hiệu số & Dashboard tập trung:</strong> Xây dựng hoàn thiện hệ thống nhận diện số, <strong>4 website vệ tinh</strong> và Dashboard đo lường thời gian thực (Facebook, Google, TikTok); cải thiện <strong>20% tỷ lệ giữ chân (Retention)</strong> nhờ cá nhân hóa Push Notification.
+              </li>
+            </ul>
+            <div class="job-tags">
+              <span class="job-tag">AI Automation</span>
+              <span class="job-tag">CPI -25%</span>
+              <span class="job-tag">App Retention</span>
+              <span class="job-tag">Real-time Dashboard</span>
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <!-- Bottom Section: 4-Column Rating Matrix & Stats (Alexander Hinderlon Footer) -->
+    <div class="bottom-section">
+      
+      <!-- Col 1: Impact Stats -->
+      <div>
+        <div class="bottom-col-title">IMPACT STATS</div>
+        <div class="stat-list">
+          <div class="stat-item">
+            <span class="stat-val">130+ Videos/Th</span>
+            <span class="stat-lbl">(Brand Team)</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">Peak 700Tr Ads</span>
+            <span class="stat-lbl">(Ngân sách đỉnh cao)</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">40 Tỷ Doanh Thu</span>
+            <span class="stat-lbl">(F&B Scale từ 0)</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">10 Nhân Sự</span>
+            <span class="stat-lbl">(Quản lý 2 Teams)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Col 2: MarTech & AI (5 Dots) -->
+      <div>
+        <div class="bottom-col-title">MARTECH & AI</div>
+        <div class="rating-list">
+          <div class="rating-row">
+            <span class="rating-label">AI Multi-Agents</span>
+            <div class="rating-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot accent"></span>
+            </div>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">SaaS Vibe Coding</span>
+            <div class="rating-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot accent"></span>
+            </div>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">AI Content LLMs</span>
+            <div class="rating-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+            </div>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Funnels & Zalo OA</span>
+            <div class="rating-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Col 3: Performance Ads (5 Dots) -->
+      <div>
+        <div class="bottom-col-title">PERFORMANCE</div>
+        <div class="rating-list">
+          <div class="rating-row">
+            <span class="rating-label">Ads (Peak 700Tr)</span>
+            <div class="rating-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot accent"></span>
+            </div>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Facebook Ads</span>
+            <div class="rating-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+            </div>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">TikTok Ads</span>
+            <div class="rating-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+            </div>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Google Ads & SEO</span>
+            <div class="rating-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Col 4: Brand & Media (5 Dots) -->
+      <div>
+        <div class="bottom-col-title">BRAND & MEDIA</div>
+        <div class="rating-list">
+          <div class="rating-row">
+            <span class="rating-label">130+ Videos Prod</span>
+            <div class="rating-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot accent"></span>
+            </div>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Brand Guidelines</span>
+            <div class="rating-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+            </div>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Event & Activation</span>
+            <div class="rating-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+            </div>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">KOLs & PR Media</span>
+            <div class="rating-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Page 1 Footer -->
+    <div class="page-footer-bar">
+      <span>Tạ Quốc Duy • Senior Marketing Manager / Growth & MarTech Lead</span>
+      <span>Trang 1 / 2</span>
+    </div>
+
+  </div>
+<script src="https://unpkg.com/lucide@latest"></script><script>lucide.createIcons();</script></body>
+</html>

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Senior Marketing Manager - Confidential Profile Card (Square)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      width: 1200px;
+      height: 1200px;
+      overflow: hidden;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #090d16;
+      color: #f1f5f9;
+      position: relative;
+    }
+
+    /* Ambient Glowing Background */
+    .bg-glow-1 {
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.16) 0%, rgba(245, 158, 11, 0) 70%);
+      pointer-events: none;
+    }
+
+    .bg-glow-2 {
+      position: absolute;
+      bottom: -120px;
+      left: -80px;
+      width: 650px;
+      height: 650px;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.16) 0%, rgba(14, 165, 233, 0) 70%);
+      pointer-events: none;
+    }
+
+    .bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      padding: 38px 46px 34px 46px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Header Profile Section */
+    .header-row {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      background: rgba(30, 41, 59, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border-radius: 24px;
+      padding: 22px 28px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+    }
+
+    .avatar-wrapper {
+      position: relative;
+      width: 135px;
+      height: 135px;
+      flex-shrink: 0;
+    }
+
+    .anonymous-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+      border: 2.5px solid #f59e0b;
+      box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #38bdf8;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .anonymous-avatar svg {
+      width: 58px;
+      height: 58px;
+      stroke: #f59e0b;
+      filter: drop-shadow(0 4px 10px rgba(245, 158, 11, 0.4));
+    }
+
+    .badge-open {
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      padding: 4px 12px;
+      border-radius: 18px;
+      white-space: nowrap;
+      text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4);
+      border: 2px solid #090d16;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .header-info {
+      flex: 1;
+    }
+
+    .sub-tagline {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #f59e0b;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+    }
+
+    .candidate-name {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-bottom: 5px;
+    }
+
+    .candidate-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-bottom: 10px;
+      letter-spacing: 0.2px;
+    }
+
+    .header-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .pill strong {
+      color: #f8fafc;
+    }
+
+    .pill.tech-pill {
+      background: rgba(14, 165, 233, 0.15);
+      border-color: rgba(14, 165, 233, 0.35);
+      color: #38bdf8;
+    }
+
+    /* Key Metrics 4-Box Bar */
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin: 12px 0;
+    }
+
+    .metric-card {
+      background: linear-gradient(180deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.8));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 12px 10px;
+      text-align: center;
+    }
+
+    .metric-card.highlight {
+      border-color: rgba(245, 158, 11, 0.4);
+      background: linear-gradient(180deg, rgba(245, 158, 11, 0.12), rgba(15, 23, 42, 0.8));
+    }
+
+    .metric-val {
+      font-size: 24px;
+      font-weight: 900;
+      color: #f59e0b;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .metric-card:nth-child(2) .metric-val { color: #38bdf8; }
+    .metric-card:nth-child(3) .metric-val { color: #10b981; }
+    .metric-card:nth-child(4) .metric-val { color: #ec4899; }
+
+    .metric-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    /* Section Title */
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .section-tag {
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #f59e0b;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      padding: 3px 10px;
+      border-radius: 6px;
+    }
+
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.15), transparent);
+    }
+
+    /* 5 Core Industries Grid */
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .industry-item {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 11px 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      backdrop-filter: blur(8px);
+    }
+
+    .industry-item.full-width {
+      grid-column: span 2;
+      background: linear-gradient(90deg, rgba(30, 41, 59, 0.6), rgba(30, 41, 59, 0.3));
+    }
+
+    .industry-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .industry-name {
+      font-size: 14px;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .industry-role {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .industry-desc {
+      font-size: 12px;
+      color: #cbd5e1;
+      line-height: 1.35;
+    }
+
+    .industry-desc strong {
+      color: #f59e0b;
+      font-weight: 700;
+    }
+
+    /* Core Differentiator: Tech-driven Marketer */
+    .usp-box {
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.12), rgba(99, 102, 241, 0.12));
+      border: 1.5px solid rgba(56, 189, 248, 0.35);
+      border-radius: 16px;
+      padding: 13px 20px;
+      margin-bottom: 12px;
+    }
+
+    .usp-title {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+    }
+
+    .usp-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      font-size: 12px;
+      color: #e2e8f0;
+      line-height: 1.4;
+    }
+
+    .usp-content div {
+      position: relative;
+      padding-left: 16px;
+    }
+
+    .usp-content div::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #10b981;
+      font-weight: 900;
+      font-size: 11px;
+    }
+
+    .usp-content strong { color: #ffffff; }
+
+    /* Salary & Expectations Banner: 25.000.000 VNĐ */
+    .salary-banner {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      border-radius: 18px;
+      padding: 13px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #0f172a;
+      box-shadow: 0 10px 24px rgba(245, 158, 11, 0.35);
+      margin-bottom: 12px;
+    }
+
+    .salary-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .salary-icon {
+      font-size: 26px;
+      background: rgba(255, 255, 255, 0.25);
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+    }
+
+    .salary-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      opacity: 0.9;
+    }
+
+    .salary-amount {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+
+    .salary-right {
+      text-align: right;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .salary-badge {
+      display: inline-block;
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-top: 3px;
+    }
+
+    /* Footer Contact Row (Confidential) */
+    .footer-bar {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      padding: 13px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+
+    .contact-item .icon {
+      width: 32px;
+      height: 32px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #38bdf8;
+    }
+
+    .contact-item strong { color: #38bdf8; }
+  </style>
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+  <div class="bg-grid"></div>
+
+  <div class="container">
+    
+    <!-- Top Candidate Header (CONFIDENTIAL) -->
+    <div class="header-row">
+      <div class="avatar-wrapper">
+        <div class="anonymous-avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+            <path d="M12 11v4l2 1.5"></path>
+            <path d="M12 15l-2 1.5"></path>
+          </svg>
+        </div>
+        <div class="badge-open">ẨN DANH • CONFIDENTIAL</div>
+      </div>
+      <div class="header-info">
+        <span class="sub-tagline">🔒 HỒ SƠ ỨNG VIÊN SENIOR (CONFIDENTIAL)</span>
+        <h1 class="candidate-name">SENIOR MARKETING MANAGER</h1>
+        <div class="candidate-title">GROWTH, BRANDING & MARTECH LEAD</div>
+        <div class="header-pills">
+          <div class="pill">📍 <strong>TP. Hồ Chí Minh</strong></div>
+          <div class="pill">⏱️ <strong>8+ Năm Thực Chiến</strong></div>
+          <div class="pill tech-pill">🎓 <strong>Cử nhân CNTT - Bách Khoa HCMUT</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 Impact Metrics -->
+    <div class="metrics-bar">
+      <div class="metric-card highlight">
+        <div class="metric-val">130+</div>
+        <div class="metric-label">Videos / Tháng</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val">300M - 700M</div>
+        <div class="metric-label">Ngân Sách Ads/Tháng</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val">40 TỶ</div>
+        <div class="metric-label">Doanh Thu Đạt Được</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val">10 Mems</div>
+        <div class="metric-label">Lãnh Đạo 2 Teams</div>
+      </div>
+    </div>
+
+    <!-- 5 Core Industries -->
+    <div>
+      <div class="section-head">
+        <span class="section-tag">KINH NGHIỆM ĐA NGÀNH NGHỀ THỰC CHIẾN</span>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="industries-grid">
+        <!-- 1. Car / Phụ Kiện Ô Tô -->
+        <div class="industry-item">
+          <div class="industry-top">
+            <div class="industry-name">🚗 Car & Công Nghệ Ô Tô</div>
+            <span class="industry-role">Bravigo Việt Nam</span>
+          </div>
+          <p class="industry-desc">
+            Lãnh đạo team <strong>8 chuyên viên</strong>; mở rộng <strong>hàng trăm đại lý toàn quốc</strong>, tối ưu chiến dịch KOLs/KOCs xe hơi.
+          </p>
+        </div>
+
+        <!-- 2. Bất Động Sản Cao Cấp -->
+        <div class="industry-item">
+          <div class="industry-top">
+            <div class="industry-name">🏛️ Bất Động Sản Cao Cấp</div>
+            <span class="industry-role">Sala Garden</span>
+          </div>
+          <p class="industry-desc">
+            Chỉ đạo 2 Teams; ngân sách <strong>300Tr ads/tháng</strong> đem về <strong>50+ Qualified Leads/tháng</strong>; sản xuất <strong>130+ videos/tháng</strong>.
+          </p>
+        </div>
+
+        <!-- 3. F&B Chuỗi & F&B Global -->
+        <div class="industry-item">
+          <div class="industry-top">
+            <div class="industry-name">🧋 F&B Chuỗi & Global Cafe</div>
+            <span class="industry-role">Lục Lam & Brew Bánh Mì (Mỹ)</span>
+          </div>
+          <p class="industry-desc">
+            Xây từ 0 mốc <strong>40 tỷ doanh thu</strong>, sự kiện <strong>Takashimaya</strong>; tích hợp Toast Tab POS & Local SEO California.
+          </p>
+        </div>
+
+        <!-- 4. FMCG, Bán Lẻ & Mỹ Phẩm -->
+        <div class="industry-item">
+          <div class="industry-top">
+            <div class="industry-name">📦 FMCG, Mỹ Phẩm & Bán Lẻ</div>
+            <span class="industry-role">LATH Group & TMĐT</span>
+          </div>
+          <p class="industry-desc">
+            Đưa hàng vào chuỗi <strong>Lotte Mart</strong>; doanh thu ads <strong>tăng +40%</strong>; SEO kéo <strong>5.000+ organic traffic/tháng</strong>.
+          </p>
+        </div>
+
+        <!-- 5. Mobile App & Edu (Full width) -->
+        <div class="industry-item full-width">
+          <div class="industry-top">
+            <div class="industry-name">🎓 Edu, Đào Tạo & Mobile App Công Nghệ</div>
+            <span class="industry-role">Fclick & Dự án Giáo Dục</span>
+          </div>
+          <p class="industry-desc">
+            Cắt giảm <strong>25% CPI</strong> chuyển đổi app; tiết kiệm <strong>30% thời gian</strong> qua AI Automation; phễu đào tạo & website vệ tinh.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core Differentiator: Tech-Driven Marketer -->
+    <div class="usp-box">
+      <div class="usp-title">⚡ LỢI THẾ KHÁC BIỆT: TƯ DUY CÔNG NGHỆ BÁCH KHOA & AI AUTOMATION</div>
+      <div class="usp-content">
+        <div>
+          <strong>Tự xây dựng AI Agents & Vibe Coding:</strong> Trực tiếp phát triển tools nội bộ, tự động hóa phễu và báo cáo real-time, giải phóng 30% thời gian.
+        </div>
+        <div>
+          <strong>Data-Driven & Tối ưu hóa ROI:</strong> Phân tích định lượng CPL/CPA/Retention; điều hành ngân sách ads lớn với tư duy logic số liệu vững chắc.
+        </div>
+      </div>
+    </div>
+
+    <!-- Salary & Target Banner: 25.000.000 VNĐ -->
+    <div class="salary-banner">
+      <div class="salary-left">
+        <div class="salary-icon">💼</div>
+        <div>
+          <div class="salary-title">MỨC LƯƠNG MONG MUỐN</div>
+          <div class="salary-amount">25.000.000 VNĐ / THÁNG</div>
+        </div>
+      </div>
+      <div class="salary-right">
+        <div>Hình thức: <strong>Full-time / Hybrid (TP.HCM)</strong></div>
+        <div class="salary-badge">SẴN SÀNG PHỎNG VẤN & NHẬN VIỆC</div>
+      </div>
+    </div>
+
+    <!-- Footer Contact Row (Confidential) -->
+    <div class="footer-bar">
+      <div class="contact-item">
+        <div class="icon">💬</div>
+        <div>Liên hệ trao đổi: <strong>Inbox trực tiếp qua Facebook</strong></div>
+      </div>
+      <div class="contact-item">
+        <div class="icon">📍</div>
+        <div>Khu vực: <strong>TP. Hồ Chí Minh</strong></div>
+      </div>
+      <div class="contact-item">
+        <div class="icon">📁</div>
+        <div>Hồ sơ & Portfolio chi tiết: <strong>Gửi khi trao đổi</strong></div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
