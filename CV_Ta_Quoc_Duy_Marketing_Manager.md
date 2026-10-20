@@ -42,13 +42,13 @@
 
 ---
 
-### MARKETING MANAGER | Công Ty TNHH TM DV SX Lục Lam (Chuỗi Trà Thảo Mộc & Quà Tặng)
+### MARKETING MANAGER | Công Ty TNHH TM DV SX Lục Lam (Chuỗi Trà Thảo Mộc & Quà Tặng Doanh Nghiệp)
 *04/2024 – 04/2025*
-- **Tăng trưởng doanh thu 40 Tỷ từ số 0:** Dẫn dắt chiến lược marketing đưa thương hiệu trà hoa thảo mộc & quà tặng cao cấp đạt mốc **doanh thu 40 tỷ VNĐ** từ con số 0; trực tiếp tuyển dụng, đào tạo và quản lý **4–5 nhân sự Marketing** tinh gọn.
+- **Tăng trưởng doanh thu 40 Tỷ từ số 0 qua 2 Dự Án Trọng Điểm:** Dẫn dắt chiến lược marketing đưa thương hiệu đạt mốc **doanh thu 40 tỷ VNĐ**; trực tiếp tuyển dụng, đào tạo và quản lý **4–5 nhân sự Marketing** tinh gọn; chủ trì 2 dự án cốt lõi: **Dự án 1 (Hộp Quà Tết B2B)** và **Dự án 2 (Dòng Trà Hoa Đà Lạt & Kênh Số)**.
 - **Kiến tạo thương hiệu & Hệ sinh thái 4 Websites:** Hoàn thiện trọn bộ Brand Guideline, moodboard định vị chuỗi; phát triển **4 website chuyên biệt** (*store.luclam.vn, trahoa.luclam.vn, gift.luclam.vn, vietnamtravel.com*) và hệ thống CRM quản trị khép kín từ data đến giao hàng.
-- **Ứng dụng AI Automation, CRM & 2 Video Chiến Dịch (Trà Hoa & BTS Hộp Quà Tết):** Tích hợp các luồng tự động hóa bằng AI vào quy trình chăm sóc khách hàng; điều hành chiến dịch đa kênh Google & Facebook Ads; chỉ đạo sản xuất video **Trà Hoa Lục Lam** và **Behind The Scenes (BTS) Hộp Quà Tết** thúc đẩy nhận diện và bùng nổ doanh số.
+- **2 Dự Án Video TVC & Behind The Scenes (BTS):** Tích hợp các luồng tự động hóa bằng AI vào quy trình chăm sóc khách hàng; điều hành chiến dịch quảng cáo đa kênh; chỉ đạo sản xuất TVC **Dự án Trà Hoa Đà Lạt** và thước phim hậu trường **Behind The Scenes (BTS) Hộp Quà Tết** thuyết phục hàng loạt hợp đồng quà tặng B2B lớn (100% quà Tết bán sạch trước hạn).
 - **Activation & Sự kiện quy mô lớn:** Tổ chức chuỗi Activation tại **TTTM Takashimaya**; triển khai ấn phẩm POSM Trade Marketing tại điểm bán; chủ trì sự kiện tri ân quy mô **200+ khách mời**; quản lý quan hệ KOLs/KOCs.
-- *Công nghệ & Kỹ năng:* Doanh thu 40 Tỷ, 2 Video Lục Lam, Brand Launching, Team 8 Mems, CRM & AI System, Takashimaya Activation.
+- *Công nghệ & Kỹ năng:* Doanh thu 40 Tỷ, Dự Án 1: Hộp Quà Tết, Dự Án 2: Trà Hoa Đà Lạt, 2 Video TVC & BTS, Hệ Sinh Thái 4 Website, Team 4–5 Mems, CRM & AI System, Takashimaya.
 
 ---
 

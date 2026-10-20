@@ -5256,3 +5256,421 @@ footer {
 
 
 
+
+
+/* ============================================================
+   LỤC LAM GROUP — DUAL SUB-PROJECTS SHOWCASE
+   (Dự án 1: Hộp Quà Tết & Dự án 2: Trà Hoa Đà Lạt)
+   ============================================================ */
+
+/* 1. Dual Projects Grid trên Trang Chủ (index.html) */
+.luclam-dual-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 18px 0;
+}
+
+@media (max-width: 768px) {
+  .luclam-dual-projects-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+.luclam-subproject-card {
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.luclam-subproject-card.amber {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(217, 119, 6, 0.05) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.luclam-subproject-card.amber::before {
+  background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%);
+}
+
+.luclam-subproject-card.amber:hover {
+  border-color: rgba(245, 158, 11, 0.7);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.18);
+}
+
+.luclam-subproject-card.emerald {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(5, 150, 105, 0.05) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.luclam-subproject-card.emerald::before {
+  background: linear-gradient(180deg, #10B981 0%, #059669 100%);
+}
+
+.luclam-subproject-card.emerald:hover {
+  border-color: rgba(16, 185, 129, 0.7);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.18);
+}
+
+.luclam-subproject-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.subproject-tag-pill {
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #E2E8F0;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.subproject-tag-pill i {
+  width: 12px;
+  height: 12px;
+}
+
+.subproject-cta-inline {
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #FBBF24;
+  transition: transform 0.2s ease;
+}
+
+.luclam-subproject-card.emerald .subproject-cta-inline {
+  color: #34D399;
+}
+
+.luclam-subproject-card:hover .subproject-cta-inline {
+  transform: translateX(3px);
+}
+
+/* 2. Modal Subprojects Box (Trang case-study.html) */
+.modal-subprojects-box {
+  background: var(--bg-surface-elevated, #0F172A);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg, 16px);
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+}
+
+.modal-subprojects-header {
+  padding: 18px 24px;
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.14) 0%, rgba(16, 185, 129, 0.12) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.modal-subprojects-badge {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #FBBF24;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.modal-subprojects-badge i {
+  width: 14px;
+  height: 14px;
+}
+
+.modal-subprojects-heading {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 4px 0 0 0;
+}
+
+.subprojects-nav-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.subproject-nav-pill {
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.subproject-nav-pill.amber {
+  background: rgba(245, 158, 11, 0.18);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #FDE68A;
+}
+
+.subproject-nav-pill.amber:hover {
+  background: #F59E0B;
+  color: #0F172A;
+}
+
+.subproject-nav-pill.emerald {
+  background: rgba(16, 185, 129, 0.18);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #A7F3D0;
+}
+
+.subproject-nav-pill.emerald:hover {
+  background: #10B981;
+  color: #0F172A;
+}
+
+.subprojects-cards-list {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.subproject-detail-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md, 12px);
+  padding: 22px;
+  transition: all 0.25s ease;
+  scroll-margin-top: 100px;
+}
+
+.subproject-detail-card.amber {
+  border-left: 4px solid #F59E0B;
+}
+
+.subproject-detail-card.emerald {
+  border-left: 4px solid #10B981;
+}
+
+.subproject-detail-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.sp-card-top {
+  margin-bottom: 18px;
+}
+
+.sp-num-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.sp-num-badge.amber {
+  background: rgba(245, 158, 11, 0.18);
+  color: #FBBF24;
+}
+
+.sp-num-badge.emerald {
+  background: rgba(16, 185, 129, 0.18);
+  color: #34D399;
+}
+
+.sp-num-badge i {
+  width: 14px;
+  height: 14px;
+}
+
+.sp-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 4px 0;
+}
+
+.sp-card-subtitle {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.sp-card-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr;
+  gap: 22px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .sp-card-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+.sp-video-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.sp-video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.sp-video-meta {
+  margin-top: 10px;
+}
+
+.sp-video-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #F1F5F9;
+  display: block;
+}
+
+.sp-video-desc {
+  font-size: 0.75rem;
+  color: #94A3B8;
+  display: block;
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.sp-desc-box {
+  font-size: 0.86rem;
+  color: #CBD5E1;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+.sp-scope-block {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+}
+
+.sp-scope-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #F1F5F9;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.sp-scope-title i {
+  width: 14px;
+  height: 14px;
+  color: #06B6D4;
+}
+
+.sp-scope-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sp-scope-list li {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.sp-scope-list li i {
+  width: 13px;
+  height: 13px;
+  color: #10B981;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.sp-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+@media (max-width: 540px) {
+  .sp-kpi-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sp-kpi-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.sp-kpi-val {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #F8FAFC;
+  display: block;
+}
+
+.subproject-detail-card.amber .sp-kpi-val {
+  color: #FBBF24;
+}
+
+.subproject-detail-card.emerald .sp-kpi-val {
+  color: #34D399;
+}
+
+.sp-kpi-lbl {
+  font-size: 0.7rem;
+  color: #94A3B8;
+  font-weight: 600;
+  display: block;
+  margin-top: 2px;
+}
+
+.sp-kpi-note {
+  font-size: 0.65rem;
+  color: #64748B;
+  display: block;
+  margin-top: 2px;
+}

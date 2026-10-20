@@ -446,14 +446,64 @@ const caseStudiesData = {
   },
 
   luclam: {
-    category: "Chuỗi Trà Thảo Mộc & Quà Tặng Cao Cấp",
+    category: "Chuỗi Trà Thảo Mộc & Quà Tặng Cao Cấp (2 Dự Án Trọng Điểm)",
     company: "Công Ty TNHH TM DV SX Lục Lam (Trà Thảo Mộc & Quà Tặng)",
     logoUrl: "portfolio_assets/images/logo_luclam.png",
     role: "Quản Lý Marketing",
     period: "04/2024 – 04/2025",
-    title: "Xây Dựng Thương Hiệu Từ Số 0 & Đạt Doanh Thu 40 Tỷ Đồng",
+    title: "Xây Dựng Thương Hiệu Từ Số 0 & Đạt Doanh Thu 40 Tỷ Đồng (2 Dự Án Trọng Điểm)",
     challenge: "Gia nhập ngành trà hoa thảo mộc và quà tặng cao cấp từ con số 0: chưa có thương hiệu, chưa có kênh bán hàng online và thiếu quy trình tiếp nhận đơn hàng.",
-    strategy: "Xây dựng trọn bộ nhận diện thương hiệu cao cấp, phát triển hệ thống 4 website kết nối phần mềm quản lý khách hàng, kết hợp quảng cáo mùa vụ với sự kiện trải nghiệm tại trung tâm thương mại Takashimaya.",
+    strategy: "Triển khai song song 2 dự án trọng điểm: Dự Án 1 (Chiến dịch Hộp Quà Tết B2B & Video BTS) kết hợp với Dự Án 2 (Dòng Trà Hoa Đà Lạt, hệ sinh thái 4 website vệ tinh kết nối CRM & sự kiện trải nghiệm Takashimaya).",
+    subProjects: [
+      {
+        id: "hop-qua-tet",
+        anchor: "hop-qua-tet",
+        num: "Dự Án 01",
+        badge: "Chiến Dịch Tết & Quà Tặng Doanh Nghiệp B2B",
+        badgeColor: "amber",
+        title: "Dự Án Hộp Quà Tết Lục Lam",
+        subtitle: "Bộ Sưu Tập Quà Tết Thủ Công Thượng Hạng & Thước Phim Hậu Trường Behind The Scenes (BTS)",
+        desc: "Thiết kế nhận diện bao bì thủ công cao cấp, sản xuất thước phim hậu trường đóng gói tỉ mỉ trên YouTube. 100% bộ sưu tập bán sạch trước Tết, thuyết phục hàng loạt hợp đồng quà tặng doanh nghiệp B2B lớn.",
+        videoId: "7kSgznq7ly8",
+        videoTitle: "Behind The Scenes (BTS) — Quy Trình Hoàn Thiện Hộp Quà Tết Lục Lam",
+        videoDesc: "Thước phim hậu trường ghi lại quá trình sản xuất, thiết kế bao bì và đóng gói thủ công tỉ mỉ bộ sưu tập Hộp Quà Tết Lục Lam cao cấp (Duy Hiền Agency thực hiện).",
+        scope: [
+          "Thiết kế toàn bộ quy chuẩn bao bì, hộp quà Tết thủ công ép kim sang trọng",
+          "Trực tiếp chỉ đạo sản xuất video Behind The Scenes (BTS) quy trình hoàn thiện hộp quà",
+          "Quảng cáo đa kênh Facebook & Google nhắm trúng đối tượng mua hàng doanh nghiệp (B2B)",
+          "Bán sạch 100% bộ sưu tập quà Tết trước hạn, mang lại doanh thu đột phá mùa vụ"
+        ],
+        kpis: [
+          { val: "100%", label: "Bộ Sưu Tập Bán Sạch", note: "Cháy hàng trước Tết" },
+          { val: "B2B Deals", label: "Hợp Đồng Doanh Nghiệp", note: "Hàng chục đơn hàng lớn" },
+          { val: "Video BTS", label: "Behind The Scenes", note: "Vũ khí chốt sale uy tín" }
+        ]
+      },
+      {
+        id: "tra-hoa-da-lat",
+        anchor: "tra-hoa-da-lat",
+        num: "Dự Án 02",
+        badge: "Chuỗi Trà Thảo Mộc Nông Sản Việt & Kênh Số",
+        badgeColor: "emerald",
+        title: "Dự Án Trà Hoa Đà Lạt Lục Lam",
+        subtitle: "Dòng Trà Hoa Thảo Mộc Thượng Hạng, Hệ Sinh Thái 4 Website & Trải Nghiệm Takashimaya",
+        desc: "Tuyển chọn hoa thảo mộc sạch Đà Lạt chế biến sâu, tự lập trình 4 website chuyên biệt kết nối CRM tự động và tổ chức sự kiện trải nghiệm thưởng trà tại TTTM Takashimaya đón 200+ khách VIP.",
+        videoId: "8WTAEo6BWiY",
+        videoTitle: "Dự Án Trà Hoa Lục Lam — Video Giới Thiệu Dòng Sản Phẩm Thượng Hạng",
+        videoDesc: "Thước phim giới thiệu nhận diện thương hiệu và các dòng sản phẩm trà hoa thảo mộc tự nhiên Đà Lạt chế biến sâu (Duy Hiền Agency thực hiện).",
+        scope: [
+          "Định vị thương hiệu nông sản sạch Đà Lạt chế biến sâu, chuẩn hóa bao bì từng dòng trà",
+          "Tự tay thiết kế & lập trình 4 website chuyên biệt (store, trahoa, gift, vietnamtravel)",
+          "Tích hợp hệ thống CRM tự động hóa thu thập dữ liệu & chăm sóc khách hàng",
+          "Tổ chức không gian trải nghiệm thưởng trà tại Takashimaya tiếp cận 200+ khách VIP"
+        ],
+        kpis: [
+          { val: "4 Website", label: "Hệ Sinh Thái Kênh Bán", note: "Tự lập trình & kết nối CRM" },
+          { val: "Takashimaya", label: "TTTM Hạng Sang", note: "200+ Khách VIP trải nghiệm" },
+          { val: "Đà Lạt", label: "Vùng Nguyên Liệu Chuẩn", note: "Hoa thảo mộc tự nhiên" }
+        ]
+      }
+    ],
     deliverables: [
       {
         pillar: "Strategy",
@@ -561,18 +611,18 @@ const caseStudiesData = {
       }
     ],
     results: [
-      "Đưa doanh thu từ con số 0 đạt mốc 40 tỷ đồng.",
-      "Sản xuất thành công 2 video chiến dịch (Trà hoa & BTS Hộp Quà Tết) lan tỏa mạnh mẽ hình ảnh thương hiệu.",
-      "Xây dựng và đào tạo đội ngũ tinh gọn 4–5 nhân sự Marketing vận hành tự chủ.",
-      "Hoàn thiện hệ sinh thái 4 website và hệ thống quản lý dữ liệu khách hàng."
+      "Đưa doanh thu từ con số 0 đạt mốc 40 tỷ đồng qua 2 dự án trọng điểm.",
+      "Dự án 1 (Hộp Quà Tết): Cháy 100% bộ sưu tập quà Tết trước hạn, video Behind The Scenes (BTS) đạt hiệu quả chốt deal B2B vượt trội.",
+      "Dự án 2 (Trà Hoa Đà Lạt): Nâng tầm nông sản chế biến sâu, tự lập trình 4 website và sự kiện Takashimaya tiếp cận 200+ khách VIP.",
+      "Xây dựng và đào tạo đội ngũ tinh gọn 4–5 nhân sự Marketing vận hành tự chủ."
     ],
     measurement: {
       before: "Thương hiệu trà thảo mộc mới thành lập từ số 0; chưa có kênh bán hàng trực tuyến; bao bì và nhận diện chưa đồng nhất; chưa có hệ thống CRM quản lý khách hàng; doanh thu khởi điểm 0 VNĐ.",
-      after: "Cán mốc 40 Tỷ VNĐ doanh thu lũy kế; hoàn thiện hệ sinh thái 4 website vệ tinh kết nối CRM; sự kiện trải nghiệm Takashimaya tiếp cận hơn 200 khách VIP & đối tác B2B; 2 video chiến dịch truyền thông lan tỏa mạnh mẽ.",
-      kpis: ["Doanh Thu 40 Tỷ Đồng Lũy Kế", "Hệ Sinh Thái 4 Website Bán Hàng & CRM", "Đội Ngũ Tinh Gọn 4–5 Nhân Sự", "Sự Kiện Trải Nghiệm Takashimaya 200+ Khách"]
+      after: "Cán mốc 40 Tỷ VNĐ doanh thu lũy kế; hoàn thiện hệ sinh thái 4 website vệ tinh kết nối CRM; 100% quà Tết bán sạch trước hạn; sự kiện trải nghiệm Takashimaya tiếp cận hơn 200 khách VIP & đối tác B2B; 2 video chiến dịch truyền thông lan tỏa mạnh mẽ.",
+      kpis: ["Doanh Thu 40 Tỷ Đồng Lũy Kế", "Dự Án 1: Hộp Quà Tết (Cháy Hàng)", "Dự Án 2: Trà Hoa Đà Lạt (4 Website)", "Đội Ngũ Tinh Gọn 4–5 Nhân Sự", "Sự Kiện Takashimaya 200+ Khách"]
     },
     learnings: "Với ngành trà thảo mộc & quà tặng cao cấp, niềm tin của khách hàng doanh nghiệp B2B không đến từ quảng cáo giảm giá sốc, mà đến từ trải nghiệm trực giác (offline sampling tại TTTM hạng sang như Takashimaya) kết hợp với nhận diện bao bì thủ công tinh xảo và câu chuyện thương hiệu trung thực được ghi lại qua video hậu trường (Behind The Scenes).",
-    tech: ["Doanh Thu 40 Tỷ", "2 Video Lục Lam", "Video BTS Quà Tết", "Ra Mắt Thương Hiệu", "Đội Ngũ 4–5 Người", "4 Website", "Quản Lý Khách Hàng", "Sự Kiện Takashimaya"]
+    tech: ["Dự Án 1: Hộp Quà Tết", "Dự Án 2: Trà Hoa Đà Lạt", "Doanh Thu 40 Tỷ", "2 Video TVC & BTS", "Hệ Sinh Thái 4 Website", "Đội Ngũ 4–5 Người", "CRM Quản Lý Khách Hàng", "Sự Kiện Takashimaya"]
   },
 
   bravigo: {

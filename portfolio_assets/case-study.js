@@ -396,8 +396,99 @@
       `;
     }
 
-    // === VIDEOS SHOWCASE (Lục Lam, LATH Group) ===
-    if (data.videos && data.videos.length > 0) {
+    // === SUB-PROJECTS SHOWCASE (Lục Lam: Dự án 1 - Hộp Quà Tết & Dự án 2 - Trà Hoa Đà Lạt) ===
+    if (data.subProjects && data.subProjects.length > 0) {
+      html += `
+        <section class="modal-subprojects-box" id="sub-projects" style="margin-bottom: 32px; position: relative;">
+          <span id="videos" style="position: absolute; top: -80px;"></span>
+          <span id="video-showcase" style="position: absolute; top: -80px;"></span>
+          <div class="modal-subprojects-header">
+            <div class="modal-subprojects-title-wrap">
+              <span class="modal-subprojects-badge">
+                <i data-lucide="layers"></i>
+                <span>Các Dự Án Trọng Điểm Của Doanh Nghiệp (${data.subProjects.length} Dự Án)</span>
+              </span>
+              <h2 class="modal-subprojects-heading">Danh Mục Dự Án Triển Khai Thực Chiến</h2>
+            </div>
+            <div class="subprojects-nav-pills">
+              ${data.subProjects
+                .map(
+                  (sp) => `
+                <a href="#${sp.anchor}" class="subproject-nav-pill ${sp.badgeColor || "amber"}">
+                  <i data-lucide="${sp.badgeColor === 'amber' ? 'gift' : 'flower-2'}" style="width: 13px; height: 13px;"></i>
+                  <span>${sp.num}: ${sp.title.split("(")[0].replace("Dự Án", "").trim()}</span>
+                  <i data-lucide="arrow-down" style="width: 12px; height: 12px;"></i>
+                </a>
+              `
+                )
+                .join("")}
+            </div>
+          </div>
+
+          <div class="subprojects-cards-list">
+            ${data.subProjects
+              .map(
+                (sp) => `
+              <div class="subproject-detail-card ${sp.badgeColor || "amber"}" id="${sp.anchor}">
+                <div class="sp-card-top">
+                  <span class="sp-num-badge ${sp.badgeColor || "amber"}">
+                    <i data-lucide="${sp.badgeColor === 'amber' ? 'gift' : 'flower-2'}"></i>
+                    <span>${sp.num} • ${sp.badge}</span>
+                  </span>
+                  <h3 class="sp-card-title">${sp.title}</h3>
+                  <p class="sp-card-subtitle">${sp.subtitle}</p>
+                </div>
+
+                <div class="sp-card-grid">
+                  <!-- Video Embed Column -->
+                  <div class="sp-video-col">
+                    <div class="sp-video-wrap">
+                      <iframe src="https://www.youtube.com/embed/${sp.videoId}" title="${sp.videoTitle}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="sp-video-meta">
+                      <span class="sp-video-title">${sp.videoTitle}</span>
+                      <span class="sp-video-desc">${sp.videoDesc}</span>
+                    </div>
+                  </div>
+
+                  <!-- Content & Scope Column -->
+                  <div class="sp-info-col">
+                    <div class="sp-desc-box">${sp.desc}</div>
+                    
+                    <div class="sp-scope-block">
+                      <div class="sp-scope-title">
+                        <i data-lucide="check-circle-2"></i>
+                        <span>Phạm Vi Trực Tiếp Triển Khai:</span>
+                      </div>
+                      <ul class="sp-scope-list">
+                        ${sp.scope.map((s) => `<li><i data-lucide="check"></i><span>${s}</span></li>`).join("")}
+                      </ul>
+                    </div>
+
+                    <!-- Mini KPI row -->
+                    <div class="sp-kpi-row">
+                      ${sp.kpis
+                        .map(
+                          (k) => `
+                        <div class="sp-kpi-item">
+                          <span class="sp-kpi-val">${k.val}</span>
+                          <span class="sp-kpi-lbl">${k.label}</span>
+                          ${k.note ? `<span class="sp-kpi-note">${k.note}</span>` : ""}
+                        </div>
+                      `
+                        )
+                        .join("")}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `
+              )
+              .join("")}
+          </div>
+        </section>
+      `;
+    } else if (data.videos && data.videos.length > 0) {
       html += `
         <section class="modal-video-box" id="video-showcase" style="margin-bottom: 32px;">
           <div class="modal-video-header">
