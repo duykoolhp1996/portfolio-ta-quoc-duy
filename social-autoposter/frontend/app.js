@@ -5,9 +5,12 @@
 const PLATFORM_SPECS = {
   facebook_profile: {
     id: "facebook_profile",
-    name: "FB Trang cá nhân (Tường nhà)",
+    name: "FB Trang cá nhân (Feed)",
+    emoji: "👤",
     icon: "user",
     color: "#063E9E",
+    desc: "📐 <b>Ảnh:</b> 1:1, 4:5 hoặc 16:9 • Reels dọc 9:16",
+    subdesc: "🛡️ Đăng trực tiếp nick Facebook cá nhân đã kết nối",
     aspectRatio: "Ảnh 1:1, 4:5 hoặc 16:9, Video Reels dọc 9:16",
     maxChars: 63206,
     recommendedChars: "Văn phong tự nhiên, chia sẻ góc nhìn cá nhân",
@@ -17,19 +20,67 @@ const PLATFORM_SPECS = {
   facebook_group: {
     id: "facebook_group",
     name: "Facebook Groups (Hội nhóm)",
+    emoji: "👥",
     icon: "users",
     color: "#063E9E",
+    desc: "📐 <b>Định dạng:</b> Đa ảnh, Album hoặc Video • Tối đa 63.000 ký tự",
+    subdesc: "🛡️ Giãn cách tự động 3–5 phút chống checkpoint",
     aspectRatio: "Ảnh 1:1, 16:9 hoặc Album dọc 4:5",
     maxChars: 63206,
     recommendedChars: "Dưới 1.000 từ để người đọc không bị ngợp",
     hashtagsTip: "3 - 5 hashtags chủ đề chính",
     rules: "Giãn cách tự động 3–5 phút chống checkpoint."
   },
+  facebook_page: {
+    id: "facebook_page",
+    name: "Facebook Fanpage",
+    emoji: "🚩",
+    icon: "flag",
+    color: "#1877F2",
+    desc: "📐 <b>Định dạng:</b> Bài viết Fanpage, Album ảnh & Video Reels",
+    subdesc: "🚀 Xuất bản chính thức qua Facebook Graph API",
+    aspectRatio: "Ảnh 1:1, 4:5 hoặc 16:9, Video Reels dọc 9:16",
+    maxChars: 63206,
+    recommendedChars: "Nội dung chuẩn thương hiệu, hình ảnh bắt mắt",
+    hashtagsTip: "3 - 5 hashtags thương hiệu",
+    rules: "Đăng qua Facebook Graph API chính thức."
+  },
+  zalo_oa: {
+    id: "zalo_oa",
+    name: "Zalo Official Account (OA)",
+    emoji: "💬",
+    icon: "message-circle",
+    color: "#0068FF",
+    desc: "📐 <b>Định dạng:</b> Tin tức, bài viết, broadcast gửi khách hàng",
+    subdesc: "⚡ Xuất bản chính thức qua Zalo OpenAPI v3",
+    aspectRatio: "Ảnh 16:9 (1024x533) hoặc 1:1",
+    maxChars: 2000,
+    recommendedChars: "Thông báo hoặc bài viết chia sẻ hữu ích",
+    hashtagsTip: "Không cần hashtag",
+    rules: "Gửi broadcast hoặc bài viết qua Zalo OpenAPI v3."
+  },
+  zalo_profile: {
+    id: "zalo_profile",
+    name: "Zalo Cá nhân (Nhật ký)",
+    emoji: "📱",
+    icon: "smartphone",
+    color: "#0068FF",
+    desc: "📐 <b>Định dạng:</b> Đăng bài kèm ảnh lên Nhật ký Zalo",
+    subdesc: "🛡️ Duy trì xuất bản qua phiên Zalo Web QR",
+    aspectRatio: "Ảnh 1:1, 4:5 hoặc 16:9",
+    maxChars: 2000,
+    recommendedChars: "Văn phong đời thường, gần gũi",
+    hashtagsTip: "1 - 2 hashtags",
+    rules: "Đăng lên Nhật ký Zalo thông qua phiên Web."
+  },
   threads: {
     id: "threads",
-    name: "Threads",
+    name: "Threads Official API",
+    emoji: "🧵",
     icon: "at-sign",
     color: "#000000",
+    desc: "📝 <b>Tối đa 500 ký tự</b> • 1 Topic Tag Meta",
+    subdesc: "📐 Ảnh vuông 1:1, ảnh ngang 16:9, Video dọc",
     aspectRatio: "Ảnh vuông 1:1, ảnh ngang 16:9 hoặc Video dọc 9:16",
     maxChars: 500,
     recommendedChars: "Khoảng 150 - 350 ký tự",
@@ -39,8 +90,11 @@ const PLATFORM_SPECS = {
   x_twitter: {
     id: "x_twitter",
     name: "X (Twitter)",
+    emoji: "𝕏",
     icon: "twitter",
     color: "#111827",
+    desc: "📝 <b>Tối đa 280 ký tự</b> • 2-3 Hashtag trending",
+    subdesc: "📐 Kích thước 16:9 (1200x675) hoặc 1:1",
     aspectRatio: "Ảnh 16:9 (1200x675) hoặc 1:1, tối đa 4 ảnh",
     maxChars: 280,
     recommendedChars: "Dưới 260 ký tự để chừa chỗ cho link & tag",
@@ -50,8 +104,11 @@ const PLATFORM_SPECS = {
   linkedin: {
     id: "linkedin",
     name: "LinkedIn",
+    emoji: "💼",
     icon: "briefcase",
     color: "#0077b5",
+    desc: "📝 Tối đa 3.000 ký tự • Phong cách B2B chuyên nghiệp",
+    subdesc: "📐 Ảnh 1.91:1 (1200x627) hoặc Slide PDF",
     aspectRatio: "Ảnh 1.91:1 (1200x627) hoặc 1:1, Slide PDF",
     maxChars: 3000,
     recommendedChars: "Khoảng 500 - 1.200 ký tự",
@@ -60,20 +117,40 @@ const PLATFORM_SPECS = {
   },
   instagram: {
     id: "instagram",
-    name: "Instagram",
+    name: "Instagram Feed & Reels",
+    emoji: "📸",
     icon: "camera",
     color: "#e1306c",
+    desc: "📐 <b>Dọc 4:5 (1080x1350)</b> hoặc Vuông 1:1",
+    subdesc: "🎨 Bắt buộc có hình ảnh hoặc video chất lượng cao",
     aspectRatio: "Ảnh dọc 4:5 (1080x1350) hoặc Vuông 1:1. Reels 9:16",
     maxChars: 2200,
     recommendedChars: "125 ký tự đầu tiên là quan trọng nhất",
     hashtagsTip: "15 - 25 hashtags",
     rules: "BẮT BUỘC phải có hình ảnh hoặc video chất lượng cao."
   },
+  youtube: {
+    id: "youtube",
+    name: "YouTube Shorts / Video",
+    emoji: "▶️",
+    icon: "youtube",
+    color: "#FF0000",
+    desc: "🎬 Video Shorts dọc 9:16 hoặc Video ngang 16:9",
+    subdesc: "🚀 Xuất bản trực tiếp lên kênh YouTube của bạn",
+    aspectRatio: "Video Shorts dọc 9:16 hoặc Video ngang 16:9",
+    maxChars: 5000,
+    recommendedChars: "Mô tả video đầy đủ từ khóa SEO",
+    hashtagsTip: "3 - 5 hashtags",
+    rules: "Bắt buộc tải lên file video hợp lệ."
+  },
   tiktok: {
     id: "tiktok",
-    name: "TikTok",
+    name: "TikTok Video",
+    emoji: "🎵",
     icon: "music",
-    color: "#00f2fe",
+    color: "#000000",
+    desc: "🎬 Video dọc 9:16 • Caption ngắn gọn & trending",
+    subdesc: "🚀 Xuất bản tự động lên kênh TikTok",
     aspectRatio: "Video dọc 9:16 (1080x1920)",
     maxChars: 2200,
     recommendedChars: "Caption ngắn gọn 100 - 300 ký tự",
@@ -165,6 +242,7 @@ function switchView(viewName) {
   // Load view-specific data
   if (viewName === "dashboard") loadDashboardStats();
   else if (viewName === "calendar") loadCalendarEvents();
+  else if (viewName === "composer") loadComposerChannels();
   else if (viewName === "queue") loadPosts();
   else if (viewName === "media") loadMediaAssets();
   else if (viewName === "accounts") loadAccounts();
@@ -597,12 +675,110 @@ function goToStep(step) {
   window.scrollTo({ top: 120, behavior: "smooth" });
 }
 
+let currentConfiguredChannels = {};
+
+async function loadComposerChannels() {
+  const container = document.getElementById("channel-picker-grid");
+  const countBadge = document.getElementById("composer-channel-count-badge");
+  if (!container) return;
+
+  try {
+    const res = await fetch("/api/status");
+    if (!res.ok) return;
+    const data = await res.json();
+    currentConfiguredChannels = data.channels_configured || {};
+    renderComposerChannelPicker(currentConfiguredChannels);
+  } catch (err) {
+    console.error("Lỗi nạp kênh kết nối:", err);
+  }
+}
+
+function renderComposerChannelPicker(configured) {
+  const container = document.getElementById("channel-picker-grid");
+  const countBadge = document.getElementById("composer-channel-count-badge");
+  if (!container) return;
+
+  const previousSelected = getSelectedChannels();
+  const connectedKeys = Object.keys(PLATFORM_SPECS).filter(k => Boolean(configured && configured[k]));
+
+  if (countBadge) {
+    countBadge.textContent = `${connectedKeys.length} nền tảng đã kết nối`;
+  }
+
+  if (connectedKeys.length === 0) {
+    container.innerHTML = `
+      <div class="col-span-full p-6 rounded-2xl bg-amber-50/80 border border-amber-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-start space-x-3.5">
+          <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-lg flex-shrink-0">⚠️</div>
+          <div>
+            <h4 class="text-xs font-bold text-slate-800">Chưa có mạng xã hội nào được kết nối</h4>
+            <p class="text-[11px] text-slate-600 mt-0.5">Hệ thống chỉ cho phép soạn bài khi bạn đã kết nối ít nhất 1 tài khoản (Facebook, Zalo, Threads...).</p>
+          </div>
+        </div>
+        <button type="button" onclick="switchView('accounts')" class="px-4 py-2 rounded-xl bg-[#063E9E] hover:bg-[#05317C] text-white text-xs font-bold transition shadow-sm flex items-center space-x-1.5 flex-shrink-0 cursor-pointer">
+          <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+          <span>Kết nối tài khoản ngay</span>
+        </button>
+      </div>
+    `;
+    handleChannelSelectionChange();
+    if (window.lucide) lucide.createIcons();
+    return;
+  }
+
+  const defaultSelected = previousSelected.filter(k => connectedKeys.includes(k));
+  if (defaultSelected.length === 0) {
+    if (connectedKeys.includes("facebook_profile")) {
+      defaultSelected.push("facebook_profile");
+    } else {
+      defaultSelected.push(connectedKeys[0]);
+    }
+  }
+
+  container.innerHTML = connectedKeys.map(key => {
+    const spec = PLATFORM_SPECS[key];
+    const isChecked = defaultSelected.includes(key);
+    return `
+      <label class="channel-card flex flex-col p-4 rounded-2xl border-2 ${isChecked ? 'border-[#063E9E] bg-white shadow-sm' : 'border-[#E7E1D4] bg-[#FCFAF7]'} hover:border-[#063E9E] cursor-pointer transition relative">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center space-x-2.5">
+            <span class="text-xl">${spec.emoji || '🌐'}</span>
+            <div>
+              <span class="text-xs font-bold text-slate-900">${spec.name}</span>
+              <span class="ml-1.5 px-1.5 py-0.5 text-[9px] font-bold rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200">Đã kết nối</span>
+            </div>
+          </div>
+          <input type="checkbox" name="channels" value="${key}" ${isChecked ? 'checked' : ''} onchange="handleChannelSelectionChange()" class="w-4 h-4 rounded text-[#063E9E] focus:ring-[#063E9E] border-[#DDD5C4]">
+        </div>
+        <div class="text-[11px] text-slate-600 space-y-1">
+          <div>${spec.desc || spec.aspectRatio}</div>
+          <div class="text-blue-700 font-medium">${spec.subdesc || spec.rules}</div>
+        </div>
+      </label>
+    `;
+  }).join("");
+
+  handleChannelSelectionChange();
+  if (window.lucide) lucide.createIcons();
+}
+
 function handleChannelSelectionChange() {
   const fbGroupCheck = document.querySelector('input[name="channels"][value="facebook_group"]');
   const groupSelectionBox = document.getElementById("group-selection-box");
   if (groupSelectionBox) {
     groupSelectionBox.style.display = (fbGroupCheck && fbGroupCheck.checked) ? "block" : "none";
   }
+
+  document.querySelectorAll('#channel-picker-grid label.channel-card').forEach(card => {
+    const cb = card.querySelector('input[type="checkbox"]');
+    if (cb && cb.checked) {
+      card.classList.add('border-[#063E9E]', 'bg-white', 'shadow-sm');
+      card.classList.remove('border-[#E7E1D4]', 'bg-[#FCFAF7]');
+    } else {
+      card.classList.remove('border-[#063E9E]', 'bg-white', 'shadow-sm');
+      card.classList.add('border-[#E7E1D4]', 'bg-[#FCFAF7]');
+    }
+  });
 }
 
 function getSelectedChannels() {
@@ -1529,7 +1705,34 @@ function filterAccountsTab(category) {
     activeBtn.className = "acc-tab-btn flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-[#063E9E] text-white shadow-sm transition";
   }
 
+  // Cập nhật nhãn nút kết nối ở header đồng bộ theo tab đã chọn
+  const headerBtnText = document.getElementById("header-connect-channel-btn-text");
+  if (headerBtnText) {
+    if (category === "facebook_page") headerBtnText.textContent = "+ Kết nối Facebook Page";
+    else if (category === "facebook_profile") headerBtnText.textContent = "+ Kết nối Facebook Cá nhân";
+    else if (category === "zalo_oa") headerBtnText.textContent = "+ Kết nối Zalo OA";
+    else if (category === "zalo_profile") headerBtnText.textContent = "+ Kết nối Zalo Cá nhân";
+    else if (category === "other") headerBtnText.textContent = "+ Cấu hình Threads / X / Khác";
+    else headerBtnText.textContent = "+ Kết nối kênh mới";
+  }
+
   renderAccountsGrid();
+}
+
+function connectChannelForActiveTab() {
+  if (currentAccountFilter === "facebook_page") {
+    openFbPageConnectModal();
+  } else if (currentAccountFilter === "facebook_profile") {
+    openFbConnectModal();
+  } else if (currentAccountFilter === "zalo_oa") {
+    openZaloConnectModal("oa");
+  } else if (currentAccountFilter === "zalo_profile") {
+    openZaloConnectModal("profile");
+  } else if (currentAccountFilter === "other") {
+    openOtherApisModal("threads");
+  } else {
+    openConnectChannelModal();
+  }
 }
 
 function renderAccountsGrid() {
@@ -1549,16 +1752,48 @@ function renderAccountsGrid() {
   }
 
   if (filtered.length === 0) {
+    let emptyTitle = "Chưa có kênh nào được cấu hình trong mục này";
+    let emptyDesc = "Hệ thống đang hiển thị dữ liệu thực tế từ cơ sở dữ liệu. Hãy bấm nút dưới đây để kết nối kênh thật của bạn.";
+    let btnText = "+ Kết nối kênh ngay";
+    let btnIcon = "plus";
+
+    if (currentAccountFilter === "facebook_page") {
+      emptyTitle = "Chưa có Facebook Fanpage nào được kết nối";
+      emptyDesc = "Kết nối Fanpage bằng Page Access Token để xuất bản bài viết, quản lý Reels và ảnh tự động.";
+      btnText = "+ Kết nối Facebook Page ngay";
+      btnIcon = "flag";
+    } else if (currentAccountFilter === "facebook_profile") {
+      emptyTitle = "Chưa có Facebook Cá nhân nào được kết nối";
+      emptyDesc = "Đăng nhập hoặc nhập Cookie Facebook để tự động đăng lên trang cá nhân (Feed) và các nhóm Facebook.";
+      btnText = "+ Kết nối Facebook Cá nhân ngay";
+      btnIcon = "user";
+    } else if (currentAccountFilter === "zalo_oa") {
+      emptyTitle = "Chưa có Zalo Official Account (OA) nào";
+      emptyDesc = "Cấu hình Zalo OpenAPI Access Token và OA ID để xuất bản tin tức và thông báo khách hàng.";
+      btnText = "+ Kết nối Zalo OA ngay";
+      btnIcon = "message-circle";
+    } else if (currentAccountFilter === "zalo_profile") {
+      emptyTitle = "Chưa có Zalo Cá nhân nào được kết nối";
+      emptyDesc = "Quét mã QR bằng ứng dụng Zalo trên điện thoại để liên kết phiên Web và đăng bài lên Nhật ký Zalo.";
+      btnText = "+ Quét mã QR Zalo Cá nhân ngay";
+      btnIcon = "qr-code";
+    } else if (currentAccountFilter === "other") {
+      emptyTitle = "Chưa cấu hình API cho Threads, X, LinkedIn hay TikTok";
+      emptyDesc = "Cấu hình API Key và Access Token cho các nền tảng mạng xã hội quốc tế để kích hoạt tính năng đăng bài.";
+      btnText = "+ Cấu hình API đa nền tảng ngay";
+      btnIcon = "key";
+    }
+
     grid.innerHTML = `
       <div class="col-span-1 md:col-span-2 py-14 px-6 text-center bg-[#FCFAF7] rounded-3xl border border-dashed border-[#DDD5C4] space-y-3">
         <div class="w-12 h-12 rounded-2xl bg-white border border-[#E7E1D4] text-[#063E9E] flex items-center justify-center mx-auto shadow-sm">
           <i data-lucide="plug-2" class="w-6 h-6"></i>
         </div>
-        <div class="text-sm font-bold text-slate-800">Chưa có kênh nào được cấu hình trong mục này</div>
-        <p class="text-xs text-slate-500 max-w-sm mx-auto">Hệ thống đang hiển thị dữ liệu thực tế từ cơ sở dữ liệu. Hãy bấm nút dưới đây để kết nối kênh thật của bạn.</p>
-        <button onclick="openConnectChannelModal()" class="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl bg-[#063E9E] text-white text-xs font-bold hover:bg-[#05317C] transition shadow-sm cursor-pointer">
-          <i data-lucide="plus" class="w-4 h-4"></i>
-          <span>+ Kết nối kênh ngay</span>
+        <div class="text-sm font-bold text-slate-800">${emptyTitle}</div>
+        <p class="text-xs text-slate-500 max-w-sm mx-auto">${emptyDesc}</p>
+        <button onclick="connectChannelForActiveTab()" class="inline-flex items-center space-x-1.5 px-4 py-2.5 rounded-xl bg-[#063E9E] text-white text-xs font-bold hover:bg-[#05317C] transition shadow-sm cursor-pointer">
+          <i data-lucide="${btnIcon}" class="w-4 h-4"></i>
+          <span>${btnText}</span>
         </button>
       </div>`;
     lucide.createIcons();
@@ -2553,6 +2788,11 @@ async function checkFacebookStatus() {
     const pill = document.getElementById("fb-status-pill");
     const label = document.getElementById("fb-status-label");
 
+    if (data.channels_configured) {
+      currentConfiguredChannels = data.channels_configured;
+      renderComposerChannelPicker(data.channels_configured);
+    }
+
     const isLoggedIn = data.facebook_connected || data.is_logged_in;
     if (isLoggedIn) {
       if (label) label.textContent = `Facebook: ${data.user_name || 'Đã kết nối'}`;
@@ -2656,6 +2896,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   lucide.createIcons();
   await loadBrandsAndCampaigns();
   checkFacebookStatus();
+  loadComposerChannels();
   loadDashboardStats();
   loadGroups();
   loadCategories();

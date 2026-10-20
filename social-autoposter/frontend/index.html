@@ -521,103 +521,17 @@
 
             <!-- Channels Selector Grid -->
             <div>
-              <span class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-3">Chọn các nền tảng mục tiêu:</span>
+              <div class="flex items-center justify-between mb-3">
+                <span class="block text-xs font-bold uppercase tracking-wider text-slate-700">Chọn các nền tảng mục tiêu:</span>
+                <span id="composer-channel-count-badge" class="text-[11px] font-semibold text-slate-500 bg-[#F4F1EA] px-2.5 py-0.5 rounded-full border border-[#E7E1D4]">Đang tải kênh...</span>
+              </div>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="channel-picker-grid">
-                
-                <!-- Facebook Profile -->
-                <label class="channel-card flex flex-col p-4 rounded-2xl border-2 border-[#E7E1D4] bg-[#FCFAF7] hover:border-[#063E9E] cursor-pointer transition relative">
-                  <div class="flex items-center justify-between mb-2">
-                    <div class="flex items-center space-x-2.5">
-                      <span class="text-xl">👤</span>
-                      <span class="text-xs font-bold text-[#063E9E]">FB Trang cá nhân (Feed)</span>
-                    </div>
-                    <input type="checkbox" name="channels" value="facebook_profile" checked class="w-4 h-4 rounded text-[#063E9E] focus:ring-[#063E9E] border-[#DDD5C4]">
-                  </div>
-                  <div class="text-[11px] text-slate-600 space-y-1">
-                    <div>📐 <span class="font-bold">Ảnh:</span> 1:1, 4:5 hoặc 16:9 • Reels dọc 9:16</div>
-                    <div class="text-blue-700 font-medium">🛡️ Đăng trực tiếp nick Facebook cá nhân đã kết nối</div>
-                  </div>
-                </label>
-
-                <!-- Facebook Groups -->
-                <label class="channel-card flex flex-col p-4 rounded-2xl border-2 border-[#E7E1D4] bg-[#FCFAF7] hover:border-[#063E9E] cursor-pointer transition relative">
-                  <div class="flex items-center justify-between mb-2">
-                    <div class="flex items-center space-x-2.5">
-                      <span class="text-xl">👥</span>
-                      <span class="text-xs font-bold text-[#063E9E]">Facebook Groups (Hội nhóm)</span>
-                    </div>
-                    <input type="checkbox" name="channels" value="facebook_group" checked onchange="handleChannelSelectionChange()" class="w-4 h-4 rounded text-[#063E9E] focus:ring-[#063E9E] border-[#DDD5C4]">
-                  </div>
-                  <div class="text-[11px] text-slate-600 space-y-1">
-                    <div>📐 <span class="font-bold">Định dạng:</span> Đa ảnh, Album hoặc Video</div>
-                    <div class="text-blue-700 font-medium">🛡️ Giãn cách tự động 3–5 phút chống checkpoint</div>
-                  </div>
-                </label>
-
-                <!-- Threads -->
-                <label class="channel-card flex flex-col p-4 rounded-2xl border-2 border-[#E7E1D4] bg-[#FCFAF7] hover:border-[#063E9E] cursor-pointer transition relative">
-                  <div class="flex items-center justify-between mb-2">
-                    <div class="flex items-center space-x-2.5">
-                      <span class="text-xl">🧵</span>
-                      <span class="text-xs font-bold text-slate-900">Threads Official API</span>
-                    </div>
-                    <input type="checkbox" name="channels" value="threads" checked onchange="handleChannelSelectionChange()" class="w-4 h-4 rounded text-[#063E9E] focus:ring-[#063E9E] border-[#DDD5C4]">
-                  </div>
-                  <div class="text-[11px] text-slate-600 space-y-1">
-                    <div>📝 <span class="font-bold text-rose-600">Tối đa 500 ký tự</span> • 1 Topic Tag Meta</div>
-                    <div>📐 Ảnh vuông 1:1, ảnh ngang 16:9, Video dọc</div>
-                  </div>
-                </label>
-
-                <!-- X / Twitter -->
-                <label class="channel-card flex flex-col p-4 rounded-2xl border-2 border-[#E7E1D4] bg-[#FCFAF7] hover:border-[#063E9E] cursor-pointer transition relative">
-                  <div class="flex items-center justify-between mb-2">
-                    <div class="flex items-center space-x-2.5">
-                      <span class="text-xl">𝕏</span>
-                      <span class="text-xs font-bold text-slate-900">X (Twitter)</span>
-                    </div>
-                    <input type="checkbox" name="channels" value="x_twitter" checked onchange="handleChannelSelectionChange()" class="w-4 h-4 rounded text-[#063E9E] focus:ring-[#063E9E] border-[#DDD5C4]">
-                  </div>
-                  <div class="text-[11px] text-slate-600 space-y-1">
-                    <div>📝 <span class="font-bold text-rose-600">Tối đa 280 ký tự</span> • 2-3 Hashtag trending</div>
-                    <div>📐 Kích thước 16:9 (1200x675) hoặc 1:1</div>
-                  </div>
-                </label>
-
-                <!-- LinkedIn -->
-                <label class="channel-card flex flex-col p-4 rounded-2xl border-2 border-[#E7E1D4] bg-[#FCFAF7] hover:border-[#063E9E] cursor-pointer transition relative">
-                  <div class="flex items-center justify-between mb-2">
-                    <div class="flex items-center space-x-2.5">
-                      <span class="text-xl">💼</span>
-                      <span class="text-xs font-bold text-[#0077b5]">LinkedIn</span>
-                    </div>
-                    <input type="checkbox" name="channels" value="linkedin" checked onchange="handleChannelSelectionChange()" class="w-4 h-4 rounded text-[#063E9E] focus:ring-[#063E9E] border-[#DDD5C4]">
-                  </div>
-                  <div class="text-[11px] text-slate-600 space-y-1">
-                    <div>📝 Tối đa 3.000 ký tự • Phong cách chuyên nghiệp</div>
-                    <div>📐 Ảnh 1.91:1 (1200x627) hoặc Slide PDF</div>
-                  </div>
-                </label>
-
-                <!-- Instagram -->
-                <label class="channel-card flex flex-col p-4 rounded-2xl border-2 border-[#E7E1D4] bg-[#FCFAF7] hover:border-[#063E9E] cursor-pointer transition relative">
-                  <div class="flex items-center justify-between mb-2">
-                    <div class="flex items-center space-x-2.5">
-                      <span class="text-xl">📸</span>
-                      <span class="text-xs font-bold text-[#e1306c]">Instagram Feed & Reels</span>
-                    </div>
-                    <input type="checkbox" name="channels" value="instagram" onchange="handleChannelSelectionChange()" class="w-4 h-4 rounded text-[#063E9E] focus:ring-[#063E9E] border-[#DDD5C4]">
-                  </div>
-                  <div class="text-[11px] text-slate-600 space-y-1">
-                    <div>📐 <span class="font-bold text-pink-700">Dọc 4:5 (1080x1350)</span> hoặc Vuông 1:1</div>
-                    <div>🎨 Bắt buộc có hình ảnh/video chất lượng cao</div>
-                  </div>
-                </label>
+                <!-- Dynamically populated via renderComposerChannelPicker() based strictly on connected accounts -->
               </div>
             </div>
 
             <!-- FB Group Selection Box (nếu FB Group được chọn) -->
-            <div id="group-selection-box" class="p-5 rounded-2xl bg-[#FCFAF7] border border-[#E7E1D4] space-y-3.5">
+            <div id="group-selection-box" style="display: none;" class="p-5 rounded-2xl bg-[#FCFAF7] border border-[#E7E1D4] space-y-3.5">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <span class="text-xs font-bold text-slate-800 tracking-wide uppercase">Chọn các Nhóm Facebook mục tiêu:</span>
                 <div class="flex items-center space-x-3 text-xs">
@@ -912,9 +826,9 @@
                 <i data-lucide="check-check" class="w-4 h-4 text-[#063E9E]"></i>
                 <span>Kiểm tra sức khỏe tất cả kênh</span>
               </button>
-              <button onclick="openConnectChannelModal()" class="flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-[#063E9E] hover:bg-[#05317C] text-white text-xs font-bold shadow-md shadow-[#063E9E]/20 transition cursor-pointer">
+              <button id="header-connect-channel-btn" onclick="connectChannelForActiveTab()" class="flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-[#063E9E] hover:bg-[#05317C] text-white text-xs font-bold shadow-md shadow-[#063E9E]/20 transition cursor-pointer">
                 <i data-lucide="plus-circle" class="w-4 h-4"></i>
-                <span>+ Kết nối kênh mới</span>
+                <span id="header-connect-channel-btn-text">+ Kết nối kênh mới</span>
               </button>
             </div>
           </div>
@@ -2167,6 +2081,6 @@ Nhập chủ đề và bấm một trong các nút tính năng bên trên để 
     </div>
   </div>
 
-  <script src="app.js?v=3.4"></script>
+  <script src="app.js?v=3.5"></script>
 </body>
 </html>
