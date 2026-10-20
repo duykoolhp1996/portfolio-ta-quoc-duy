@@ -117,6 +117,12 @@ const caseStudiesData = {
       location: "Bãi Dài, P. Uông Bí & Yên Tử, Tỉnh Quảng Ninh",
       theme: "“Gìn Giữ Hiếu Đạo — Kiến Tạo Vĩnh Hằng”",
       role: "Trưởng Phòng Marketing (Marketing Manager) — Trực tiếp lập Kế hoạch truyền thông tổng thể (IMC Plan), kịch bản sự kiện, kịch bản video teaser & bộ nhận diện POSM",
+      stats: {
+        scale: "32,54 Hecta",
+        investment: "450+ Tỷ VNĐ",
+        location: "Bãi Dài, P. Uông Bí & Yên Tử, Tỉnh Quảng Ninh",
+        timeline: "2026 — 2027"
+      },
       gallery: [
         {
           src: "portfolio_assets/images/sala_thienphuc_render.jpg",
@@ -459,12 +465,12 @@ const caseStudiesData = {
         items: [
           "Thiết lập bộ quy chuẩn nhận diện, màu sắc và phong cách thương hiệu cao cấp",
           "Thiết kế toàn bộ bao bì, menu và ấn phẩm truyền thông đồng bộ",
-          "Tuyển dụng, đào tạo và dẫn dắt đội ngũ 8 nhân sự marketing vận hành độc lập"
+          "Tuyển dụng, đào tạo và dẫn dắt đội ngũ tinh gọn 4–5 nhân sự marketing vận hành tự chủ"
         ],
         impact: {
           metrics: [
             { val: "40 Tỷ VNĐ", label: "Doanh Thu Đạt Mốc" },
-            { val: "8 Nhân Sự", label: "Đội Ngũ Vận Hành" },
+            { val: "4–5 Nhân Sự", label: "Đội Ngũ Vận Hành" },
             { val: "100%", label: "Nhận Diện Đồng Bộ" }
           ],
           summary: "Xây dựng thương hiệu từ số 0 cán mốc 40 tỷ đồng doanh thu lũy kế, xác lập chỗ đứng vững chắc trong phân khúc quà tặng doanh nghiệp B2B."
@@ -557,16 +563,16 @@ const caseStudiesData = {
     results: [
       "Đưa doanh thu từ con số 0 đạt mốc 40 tỷ đồng.",
       "Sản xuất thành công 2 video chiến dịch (Trà hoa & BTS Hộp Quà Tết) lan tỏa mạnh mẽ hình ảnh thương hiệu.",
-      "Xây dựng và đào tạo đội ngũ 8 nhân sự Marketing vận hành độc lập.",
+      "Xây dựng và đào tạo đội ngũ tinh gọn 4–5 nhân sự Marketing vận hành tự chủ.",
       "Hoàn thiện hệ sinh thái 4 website và hệ thống quản lý dữ liệu khách hàng."
     ],
     measurement: {
       before: "Thương hiệu trà thảo mộc mới thành lập từ số 0; chưa có kênh bán hàng trực tuyến; bao bì và nhận diện chưa đồng nhất; chưa có hệ thống CRM quản lý khách hàng; doanh thu khởi điểm 0 VNĐ.",
       after: "Cán mốc 40 Tỷ VNĐ doanh thu lũy kế; hoàn thiện hệ sinh thái 4 website vệ tinh kết nối CRM; sự kiện trải nghiệm Takashimaya tiếp cận hơn 200 khách VIP & đối tác B2B; 2 video chiến dịch truyền thông lan tỏa mạnh mẽ.",
-      kpis: ["Doanh Thu 40 Tỷ Đồng Lũy Kế", "Hệ Sinh Thái 4 Website Bán Hàng & CRM", "Đội Ngũ 8 Nhân Sự Vận Hành Độc Lập", "Sự Kiện Trải Nghiệm Takashimaya 200+ Khách"]
+      kpis: ["Doanh Thu 40 Tỷ Đồng Lũy Kế", "Hệ Sinh Thái 4 Website Bán Hàng & CRM", "Đội Ngũ Tinh Gọn 4–5 Nhân Sự", "Sự Kiện Trải Nghiệm Takashimaya 200+ Khách"]
     },
     learnings: "Với ngành trà thảo mộc & quà tặng cao cấp, niềm tin của khách hàng doanh nghiệp B2B không đến từ quảng cáo giảm giá sốc, mà đến từ trải nghiệm trực giác (offline sampling tại TTTM hạng sang như Takashimaya) kết hợp với nhận diện bao bì thủ công tinh xảo và câu chuyện thương hiệu trung thực được ghi lại qua video hậu trường (Behind The Scenes).",
-    tech: ["Doanh Thu 40 Tỷ", "2 Video Lục Lam", "Video BTS Quà Tết", "Ra Mắt Thương Hiệu", "Đội Ngũ 8 Người", "4 Website", "Quản Lý Khách Hàng", "Sự Kiện Takashimaya"]
+    tech: ["Doanh Thu 40 Tỷ", "2 Video Lục Lam", "Video BTS Quà Tết", "Ra Mắt Thương Hiệu", "Đội Ngũ 4–5 Người", "4 Website", "Quản Lý Khách Hàng", "Sự Kiện Takashimaya"]
   },
 
   bravigo: {
@@ -1120,10 +1126,19 @@ const companyChartData = {
 };
 
 window.filterCompanyBoard = function(companyKey, btn) {
-  // Update active pill button
   const pills = document.querySelectorAll(".company-pill");
-  pills.forEach(p => p.classList.remove("active"));
-  if (btn) btn.classList.add("active");
+  const isAlreadyActive = btn && btn.classList.contains("active") && companyKey !== "all";
+
+  if (isAlreadyActive) {
+    // Toggle off: quay về "all"
+    const allPill = document.querySelector(".company-pill[onclick*=\"'all'\"]") || pills[0];
+    pills.forEach(p => p.classList.remove("active"));
+    if (allPill) allPill.classList.add("active");
+    companyKey = "all";
+  } else {
+    pills.forEach(p => p.classList.remove("active"));
+    if (btn) btn.classList.add("active");
+  }
 
   const cards = document.querySelectorAll(".company-board-card");
 

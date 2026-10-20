@@ -140,20 +140,20 @@
           <!-- Highlight Stats Strip -->
           <div class="launch-stats-grid">
             <div class="launch-stat-item">
-              <span class="launch-stat-val">${lp.stats.scale}</span>
+              <span class="launch-stat-val">${(lp.stats && lp.stats.scale) || lp.scale || "32,54 Hecta"}</span>
               <span class="launch-stat-lbl">Quy Mô Diện Tích</span>
             </div>
             <div class="launch-stat-item">
-              <span class="launch-stat-val">${lp.stats.investment}</span>
+              <span class="launch-stat-val">${(lp.stats && lp.stats.investment) || lp.investment || "450+ Tỷ VNĐ"}</span>
               <span class="launch-stat-lbl">Tổng Vốn Đầu Tư</span>
             </div>
             <div class="launch-stat-item">
-              <span class="launch-stat-val">${lp.stats.location}</span>
+              <span class="launch-stat-val">${(lp.stats && lp.stats.location) || lp.location || "Bãi Dài, P. Uông Bí & Yên Tử, Tỉnh Quảng Ninh"}</span>
               <span class="launch-stat-lbl">Vị Trí Chiến Lược</span>
             </div>
             <div class="launch-stat-item">
-              <span class="launch-stat-val">${lp.stats.timeline}</span>
-              <span class="launch-stat-lbl">Thời Điểm Triển Khai</span>
+              <span class="launch-stat-val">${(lp.stats && lp.stats.timeline) || lp.timeline || lp.role || "Trưởng Phòng Marketing & Truyền Thông"}</span>
+              <span class="launch-stat-lbl">${(lp.stats && lp.stats.timeline) || lp.timeline ? "Thời Điểm Triển Khai" : "Vai Trò Đảm Nhận"}</span>
             </div>
           </div>
 
@@ -166,22 +166,28 @@
             <div class="launch-gallery-grid">
               ${lp.gallery
                 .map(
-                  (item) => `
-                <div class="launch-gallery-card" onclick="openLaunchLightbox('${item.src}', '${item.title.replace(/'/g, "\\'")}: ${item.caption.replace(/'/g, "\\'")}')">
+                  (item) => {
+                    const itemTitle = (item.name || item.title || "").replace(/'/g, "\\'");
+                    const itemCaption = (item.caption || item.desc || "").replace(/'/g, "\\'");
+                    const displayName = item.name || item.title || "Ấn phẩm";
+                    const displayDesc = item.caption || item.desc || "";
+                    return `
+                <div class="launch-gallery-card" onclick="openLaunchLightbox('${item.src}', '${itemTitle}: ${itemCaption}')">
                   <div class="launch-gallery-img-box">
-                    <img src="${item.src}" alt="${item.title}" loading="lazy">
-                    <span class="launch-gallery-tag">${item.tag}</span>
+                    <img src="${item.src}" alt="${displayName}" loading="lazy">
+                    <span class="launch-gallery-tag">${item.tag || "Ấn phẩm"}</span>
                     <div class="launch-gallery-zoom-hint">
                       <i data-lucide="maximize-2"></i>
                       <span>Phóng to</span>
                     </div>
                   </div>
                   <div class="launch-gallery-meta">
-                    <h4 class="launch-gallery-title">${item.title}</h4>
-                    <p class="launch-gallery-desc">${item.caption}</p>
+                    <h4 class="launch-gallery-title">${displayName}</h4>
+                    <p class="launch-gallery-desc">${displayDesc}</p>
                   </div>
                 </div>
-              `
+              `;
+                  }
                 )
                 .join("")}
             </div>
@@ -212,25 +218,35 @@
                 .map(
                   (t, i) => `
                 <div class="launch-tab-pane ${i === 0 ? "active" : ""}" data-tab-pane="${t.id}">
-                  <div class="launch-pane-lead">${t.lead}</div>
-                  <div class="launch-pane-cards">
-                    ${t.cards
-                      .map(
-                        (c) => `
-                      <div class="launch-pane-card">
-                        <div class="launch-card-head">
-                          <span class="launch-card-tag">${c.tag}</span>
-                          <span class="launch-card-time">${c.time}</span>
-                        </div>
-                        <h4 class="launch-card-title">${c.title}</h4>
-                        <ul class="launch-card-list">
-                          ${c.points.map((pt) => `<li><i data-lucide="check"></i><span>${pt}</span></li>`).join("")}
-                        </ul>
-                      </div>
-                    `
-                      )
-                      .join("")}
-                  </div>
+                  ${
+                    t.content
+                      ? t.content
+                      : `
+                    <div class="launch-pane-lead">${t.lead || ""}</div>
+                    <div class="launch-pane-cards">
+                      ${
+                        t.cards && t.cards.length
+                          ? t.cards
+                              .map(
+                                (c) => `
+                            <div class="launch-pane-card">
+                              <div class="launch-card-head">
+                                <span class="launch-card-tag">${c.tag || ""}</span>
+                                <span class="launch-card-time">${c.time || ""}</span>
+                              </div>
+                              <h4 class="launch-card-title">${c.title || ""}</h4>
+                              <ul class="launch-card-list">
+                                ${(c.points || c.items || []).map((pt) => `<li><i data-lucide="check"></i><span>${pt}</span></li>`).join("")}
+                              </ul>
+                            </div>
+                          `
+                              )
+                              .join("")
+                          : ""
+                      }
+                    </div>
+                  `
+                  }
                 </div>
               `
                 )
@@ -690,7 +706,11 @@
 
     // 7. Update URL search param
     if (shouldPushState) {
-      const newUrl = `${window.location.pathname}?case=${caseKey}${window.location.hash || ""}`;
+      let targetHash = window.location.hash || "";
+      if (targetHash === "#launch-project" && caseKey !== "sala") {
+        targetHash = "";
+      }
+      const newUrl = `${window.location.pathname}?case=${caseKey}${targetHash}`;
       window.history.pushState({ case: caseKey }, "", newUrl);
     }
 

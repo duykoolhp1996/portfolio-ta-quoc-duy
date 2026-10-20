@@ -44,7 +44,7 @@
 
 ### MARKETING MANAGER | Công Ty TNHH TM DV SX Lục Lam (Chuỗi Trà Thảo Mộc & Quà Tặng)
 *04/2024 – 04/2025*
-- **Tăng trưởng doanh thu 40 Tỷ từ số 0:** Dẫn dắt chiến lược marketing đưa thương hiệu trà hoa thảo mộc & quà tặng cao cấp đạt mốc **doanh thu 40 tỷ VNĐ** từ con số 0; trực tiếp tuyển dụng, đào tạo và quản lý **8 nhân sự Marketing**.
+- **Tăng trưởng doanh thu 40 Tỷ từ số 0:** Dẫn dắt chiến lược marketing đưa thương hiệu trà hoa thảo mộc & quà tặng cao cấp đạt mốc **doanh thu 40 tỷ VNĐ** từ con số 0; trực tiếp tuyển dụng, đào tạo và quản lý **4–5 nhân sự Marketing** tinh gọn.
 - **Kiến tạo thương hiệu & Hệ sinh thái 4 Websites:** Hoàn thiện trọn bộ Brand Guideline, moodboard định vị chuỗi; phát triển **4 website chuyên biệt** (*store.luclam.vn, trahoa.luclam.vn, gift.luclam.vn, vietnamtravel.com*) và hệ thống CRM quản trị khép kín từ data đến giao hàng.
 - **Ứng dụng AI Automation, CRM & 2 Video Chiến Dịch (Trà Hoa & BTS Hộp Quà Tết):** Tích hợp các luồng tự động hóa bằng AI vào quy trình chăm sóc khách hàng; điều hành chiến dịch đa kênh Google & Facebook Ads; chỉ đạo sản xuất video **Trà Hoa Lục Lam** và **Behind The Scenes (BTS) Hộp Quà Tết** thúc đẩy nhận diện và bùng nổ doanh số.
 - **Activation & Sự kiện quy mô lớn:** Tổ chức chuỗi Activation tại **TTTM Takashimaya**; triển khai ấn phẩm POSM Trade Marketing tại điểm bán; chủ trì sự kiện tri ân quy mô **200+ khách mời**; quản lý quan hệ KOLs/KOCs.
