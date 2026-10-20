@@ -740,9 +740,9 @@ a {
   z-index: 2;
 }
 
-/* Card 5: Far Right (Ellenor / Bravigo - Royal Cobalt Blue) */
+/* Card 5: Far Right (Bravigo - Crimson Red) */
 .fan-card-5 {
-  background: #2C54C6;
+  background: #BA1B2D;
   left: calc(50% + 192px);
   transform: rotate(14deg) translateY(42px);
   z-index: 1;

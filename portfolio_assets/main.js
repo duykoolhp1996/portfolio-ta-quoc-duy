@@ -628,6 +628,7 @@ const caseStudiesData = {
   bravigo: {
     category: "Ngành Xe Ô Tô & Phụ Kiện Thông Minh (B2B & B2C)",
     company: "Bravigo Việt Nam (Thiết Bị Công Nghệ Xe Ô Tô)",
+    logoUrl: "portfolio_assets/images/logo_bravigo.png",
     role: "Quản Lý Marketing",
     period: "03/2022 – 04/2024",
     title: "Phát Triển Thị Phần Qua Hàng Trăm Đại Lý & Chủ Trì Ra Mắt Flagship Ottocast P3",
