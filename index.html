@@ -91,7 +91,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Dark Studio Stylesheet -->
-  <link rel="stylesheet" href="portfolio_assets/style.css?v=2.8">
+  <link rel="stylesheet" href="portfolio_assets/style.css?v=2.9">
 
   <!-- Hotjar Tracking Code per Global Rule (hjid: 6791459, hjsv: 6) -->
   <script>
@@ -485,9 +485,13 @@
               <span class="pill-dot dot-pink"></span>
               <span>LATH Group</span>
             </button>
+            <button class="company-pill" onclick="filterCompanyBoard('phapviet', this)">
+              <span class="pill-dot" style="background: #38BDF8;"></span>
+              <span>Mắt Kính Pháp Việt</span>
+            </button>
           </div>
 
-          <!-- 6 Ô BẢNG ĐỘC LẬP CHO TỪNG CÔNG TY -->
+          <!-- 7 Ô BẢNG ĐỘC LẬP CHO TỪNG DOANH NGHIỆP & DỰ ÁN -->
           <div class="company-boards-grid" id="companyBoardsGrid">
             
             <!-- Ô 1: Sala Garden -->
@@ -767,6 +771,51 @@
                     <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
                   </a>
                 </div>
+              </div>
+            </div>
+
+            <!-- Ô 7: Mắt Kính Pháp Việt (Freelance) -->
+            <div class="company-board-card" data-company="phapviet" onclick="window.location.href='case-study.html?case=phapviet'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.location.href='case-study.html?case=phapviet';}">
+              <div class="board-card-header">
+                <div class="board-brand-info">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <h4 class="board-brand-name">Mắt Kính Pháp Việt</h4>
+                    <span class="badge badge-accent" style="font-size: 0.68rem; padding: 2px 7px;">Freelance</span>
+                  </div>
+                  <span class="board-brand-sub">Hạng mục: Bán Lẻ Mắt Kính &amp; Chuyên Khoa Khúc Xạ (O2O)</span>
+                </div>
+                <span class="board-period-badge">2024 – 2025</span>
+              </div>
+              
+              <div class="board-metrics-grid">
+                <div class="board-metric-box">
+                  <div class="box-metric-val cyan">+180%</div>
+                  <div class="box-metric-label">Tương Tác Social</div>
+                  <div class="box-metric-note">Xuất bản 25+ Video Reels/TikTok</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val emerald">+35%</div>
+                  <div class="box-metric-label">Khách Đến Cửa Hàng</div>
+                  <div class="box-metric-note">Chuyển đổi O2O đo mắt &amp; cắt kính</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val amber">-28%</div>
+                  <div class="box-metric-label">Chi Phí Tin Nhắn</div>
+                  <div class="box-metric-note">Meta Ads nhắm bán kính 3-5km</div>
+                </div>
+                <div class="board-metric-box">
+                  <div class="box-metric-val purple">30 Giây</div>
+                  <div class="box-metric-label">Phản Hồi Chatbot</div>
+                  <div class="box-metric-note">Tự động hóa tư vấn &amp; giữ chỗ 24/7</div>
+                </div>
+              </div>
+
+              <div class="board-card-footer">
+                <span class="board-role-tag">Quản Lý Social Media &amp; Build Marketing</span>
+                <a href="case-study.html?case=phapviet" class="board-cta-btn" onclick="event.stopPropagation();">
+                  <span>Xem Chi Tiết</span>
+                  <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
+                </a>
               </div>
             </div>
 
@@ -1880,6 +1929,137 @@
           </div>
         </article>
 
+        <!-- CASE STUDY 07: MẮT KÍNH PHÁP VIỆT (FREELANCE MARKETING) -->
+        <article class="case-study-item" data-tags="performance brand martech data strategy" onclick="if (!event.target.closest('a, button')) window.location.href='case-study.html?case=phapviet'" style="cursor: pointer;">
+          <div class="case-study-header">
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div class="case-company-logo-wrap" style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); padding: 6px;">
+                <img src="portfolio_assets/images/logo_phapviet.png" alt="Logo Mắt Kính Pháp Việt" class="case-company-logo" style="object-fit: contain;" />
+              </div>
+              <div>
+                <h3 class="case-project-title">
+                  <span>Dự Án Mắt Kính Pháp Việt</span>
+                  <span class="badge badge-accent" style="margin-left: 8px; font-size: 0.72rem; padding: 2px 8px; vertical-align: middle;">
+                    <i data-lucide="sparkles"></i> Freelance Marketing
+                  </span>
+                </h3>
+                <div class="case-company-name">Hạng mục: Bán Lẻ Mắt Kính &amp; Chuyên Khoa Khúc Xạ • Quản Lý Social Media &amp; Kéo Khách O2O</div>
+              </div>
+            </div>
+            <div class="case-meta-right">
+              <span class="case-role-badge">Tư Vấn &amp; Quản Lý Marketing Freelance</span>
+              <span class="case-period-text">2024 – 2025</span>
+            </div>
+          </div>
+
+          <div class="case-metrics-banner">
+            <div class="case-metric-block">
+              <div class="case-metric-number">+180%</div>
+              <div class="case-metric-desc">Tăng trưởng tương tác đa kênh Social Media Fanpage &amp; TikTok</div>
+            </div>
+            <div class="case-metric-block">
+              <div class="case-metric-number">+35%</div>
+              <div class="case-metric-desc">Lượng khách hàng đến đo mắt và cắt kính thực tế tại cửa hàng (O2O)</div>
+            </div>
+            <div class="case-metric-block">
+              <div class="case-metric-number">-28% Phí Inbox</div>
+              <div class="case-metric-desc">Tối ưu chiến dịch Meta Ads nhắm bán kính địa phương 3-5km</div>
+            </div>
+            <div class="case-metric-block">
+              <div class="case-metric-number">30 Giây</div>
+              <div class="case-metric-desc">Phản hồi Chatbot tự động 24/7 chốt hẹn đo mắt miễn phí</div>
+            </div>
+          </div>
+
+          <!-- Ma Trận Phân Môn: Công Việc Trực Tiếp Triển Khai ↔ Hiệu Quả Tương Ứng -->
+          <div class="case-workstream-matrix">
+            <!-- Row 1: Social Media & Content -->
+            <div class="cwm-row">
+              <div class="cwm-pillar">
+                <span class="cwm-tag content">
+                  <i data-lucide="message-square"></i>
+                  <span>Social &amp; Content</span>
+                </span>
+              </div>
+              <div class="cwm-scope">
+                <strong>Quản lý Fanpage &amp; sản xuất video ngắn Reels/TikTok:</strong> Định hướng 3 tuyến nội dung: Tư vấn sức khỏe mắt — Thời trang gọng kính theo khuôn mặt — Feedback trải nghiệm khách hàng; xuất bản 20+ bài viết và video ngắn mỗi tháng.
+              </div>
+              <div class="cwm-impact">
+                <span class="cwm-impact-metric">+180% Tương Tác • 25+ Video Ngắn</span>
+                <span class="cwm-impact-desc">Thu hút mạnh mẽ tệp bạn trẻ, phụ huynh học sinh và nhân viên văn phòng</span>
+              </div>
+            </div>
+
+            <!-- Row 2: Performance & Local Ads -->
+            <div class="cwm-row">
+              <div class="cwm-pillar">
+                <span class="cwm-tag performance">
+                  <i data-lucide="target"></i>
+                  <span>Local Meta Ads</span>
+                </span>
+              </div>
+              <div class="cwm-scope">
+                <strong>Triển khai quảng cáo Meta Ads nhắm bán kính địa phương 3-5km:</strong> Target chuẩn tệp học sinh/sinh viên cận thị, tệp nhân viên máy tính; A/B testing thông điệp tròng chống ánh sáng xanh và voucher đo mắt 0đ.
+              </div>
+              <div class="cwm-impact">
+                <span class="cwm-impact-metric">+35% Khách Đến Cửa Hàng • -28% Chi Phí</span>
+                <span class="cwm-impact-desc">Chuyển đổi trực tiếp người nhắn tin thành lượt khách đo mắt và cắt kính thực tế</span>
+              </div>
+            </div>
+
+            <!-- Row 3: Automation & Chatbot O2O -->
+            <div class="cwm-row">
+              <div class="cwm-pillar">
+                <span class="cwm-tag tech">
+                  <i data-lucide="bot"></i>
+                  <span>Chatbot &amp; CRM</span>
+                </span>
+              </div>
+              <div class="cwm-scope">
+                <strong>Thiết lập kịch bản Chatbot tự động 24/7 &amp; quy trình giữ chỗ O2O:</strong> Tự động phân loại nhu cầu đo kính/chọn gọng, phản hồi khách trong vòng 30 giây và gửi tin nhắn nhắc nhở bảo dưỡng kính sau khi mua.
+              </div>
+              <div class="cwm-impact">
+                <span class="cwm-impact-metric">Phản Hồi 30s • +45% Đặt Lịch Hẹn</span>
+                <span class="cwm-impact-desc">Không bỏ lỡ khách tiềm năng ban đêm, chuẩn hóa quy trình tư vấn nhân viên</span>
+              </div>
+            </div>
+
+            <!-- Row 4: Branding & POSM -->
+            <div class="cwm-row">
+              <div class="cwm-pillar">
+                <span class="cwm-tag brand">
+                  <i data-lucide="sparkles"></i>
+                  <span>POSM &amp; Combo</span>
+                </span>
+              </div>
+              <div class="cwm-scope">
+                <strong>Chuẩn hóa bộ nhận diện điểm bán (POSM) &amp; chiến lược combo sản phẩm:</strong> Thiết kế thẻ bảo hành, khăn lau kính, hộp đựng sang trọng; đóng gói các gói combo gọng + tròng tăng giá trị đơn hàng trung bình.
+              </div>
+              <div class="cwm-impact">
+                <span class="cwm-impact-metric">+25% Giá Trị Đơn (AOV) • Đánh Giá 5*</span>
+                <span class="cwm-impact-desc">Xác lập hình ảnh chuỗi mắt kính khúc xạ uy tín, nâng cao giá trị giỏ hàng</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-footer-actions">
+            <div class="case-tech-tags">
+              <span class="case-tag-item">Freelance Marketing</span>
+              <span class="case-tag-item">Quản Lý Social Media</span>
+              <span class="case-tag-item">Mô Hình O2O</span>
+              <span class="case-tag-item">Local Meta Ads 3-5km</span>
+              <span class="case-tag-item">Reels &amp; TikTok Video</span>
+              <span class="case-tag-item">Chatbot Tự Động 24/7</span>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+              <a href="case-study.html?case=phapviet" class="btn btn-outline btn-sm">
+                <span>Xem Chi Tiết Số Liệu &amp; Hồ Sơ Dự Án</span>
+                <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -2628,6 +2808,6 @@
   </div>
 
   <!-- Main JavaScript File -->
-  <script src="portfolio_assets/main.js?v=2.9"></script>
+  <script src="portfolio_assets/main.js?v=3.0"></script>
 </body>
 </html>

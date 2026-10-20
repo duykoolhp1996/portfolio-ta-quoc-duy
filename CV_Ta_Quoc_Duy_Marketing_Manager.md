@@ -61,6 +61,15 @@
 
 ---
 
+### MARKETING CONSULTANT (FREELANCE) | Hệ Thống Mắt Kính Pháp Việt (Chuỗi Bán Lẻ Mắt Kính & Chuyên Khoa Khúc Xạ)
+*2024 – 2025*
+- **Quản lý đa kênh Social Media & Sản xuất Video ngắn:** Định hướng 3 tuyến nội dung chuyên khoa mắt, dáng kính thời trang và feedback khách hàng; sản xuất loạt video ngắn Reels/TikTok giúp tăng trưởng **+180% tương tác** và thu hút tệp khách trẻ, nhân viên văn phòng.
+- **Tối ưu Local Meta Ads kéo khách Online-to-Offline (O2O):** Triển khai chiến dịch quảng cáo nhắm bán kính 3-5km quanh cửa hàng, hạ **-28% chi phí tin nhắn** và tăng **+35% lượng khách hàng** đến trực tiếp đo mắt và cắt kính tại cửa hàng.
+- **Tự động hóa Chatbot 24/7 & Chuẩn hóa POSM:** Thiết lập kịch bản tư vấn tự động phản hồi trong 30 giây, nâng tỷ lệ đặt lịch hẹn lên **45%**; chuẩn hóa bộ nhận diện điểm bán, thẻ bảo hành và combo gọng + tròng tăng **25% giá trị đơn hàng trung bình (AOV)**.
+- *Công nghệ & Kỹ năng:* Social Media Freelance, Mô Hình O2O, Local Meta Ads 3-5km, Video Reels & TikTok, Chatbot 24/7, POSM & Combo Retailing.
+
+---
+
 ### MARKETING MANAGER | Bravigo Việt Nam (Thiết bị công nghệ xe ô tô - B2B & B2C)
 *03/2022 – 04/2024*
 - **Chiến lược tiếp thị & Mở rộng thị phần:** Lập kế hoạch marketing ngắn và trung hạn cho hệ sinh thái công nghệ ô tô thông minh; thúc đẩy tăng trưởng nhận diện và chiếm lĩnh thị phần toàn quốc.

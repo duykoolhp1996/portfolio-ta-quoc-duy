@@ -992,6 +992,120 @@ const caseStudiesData = {
     },
     learnings: "Tại thị trường dịch vụ ẩm thực Bắc Mỹ, khách hàng văn phòng đặc biệt ưu tiên tốc độ và sự tiện lợi. Trải nghiệm số 1-chạm (One-tap ordering qua Toast Tab) kết hợp danh tiếng uy tín trên Google Maps Reviews là yếu tố sống còn để chuyển đổi khách vãng lai thành khách hàng thân thiết mỗi ngày.",
     tech: ["Website Song Ngữ", "Đặt Món Toast Tab", "Local SEO Milpitas", "F&B Quốc Tế", "Dịch Vụ Catering", "Google Reviews 5*"]
+  },
+
+  phapviet: {
+    category: "Bán Lẻ Mắt Kính & Chăm Sóc Thị Lực (Freelance / Tư Vấn Tiếp Thị)",
+    company: "Hệ Thống Mắt Kính Pháp Việt (Dự Án Freelance Marketing)",
+    logoUrl: "portfolio_assets/images/logo_phapviet.png",
+    role: "Quản Lý Social Media & Xây Dựng Hệ Thống Tiếp Thị (Freelance)",
+    period: "2024 – 2025",
+    title: "Quản Lý Social Media & Xây Dựng Hệ Thống Tiếp Thị Online-To-Offline (O2O)",
+    challenge: "Thị trường mắt kính và đo khám khúc xạ tại địa phương cạnh tranh gay gắt; các kênh mạng xã hội cũ ít tương tác và nội dung nghèo nàn; chưa có quy trình chạy quảng cáo theo bán kính cửa hàng; chưa có kịch bản chăm sóc khách hàng tự động để chuyển đổi người nhắn tin thành lượt khách ghé cửa hàng đo mắt thực tế.",
+    strategy: "Xây dựng lại toàn diện hệ thống tiếp thị số từ nền tảng: Quản lý đa kênh Social Media (Facebook, Reels, TikTok) với tuyến nội dung chuyên khoa mắt kết hợp gọng kính thời trang; triển khai chiến dịch Meta Ads định vị cục bộ (Geo-Targeting Ads 3-5km); thiết lập luồng Chatbot trả lời tự động 24/7 và kịch bản O2O chốt lịch đo mắt miễn phí tại cửa hàng.",
+    deliverables: [
+      {
+        pillar: "Social Media",
+        pillarTag: "Quản Lý & Phát Triển Kênh Social",
+        icon: "message-square",
+        title: "Quản Lý Đa Kênh Social Media & Sản Xuất Tuyến Nội Dung Video Ngắn",
+        tag: "Social Media Management",
+        desc: "Lên kế hoạch nội dung bài bản, định hướng 3 tuyến chủ đề cốt lõi: Kiến thức chăm sóc mắt — Xu hướng gọng kính thời trang — Feedback khách hàng thực tế.",
+        items: [
+          "Lên kế hoạch và xuất bản đều đặn 20+ bài viết chuyên môn và hình ảnh chất lượng cao mỗi tháng trên Fanpage",
+          "Sản xuất loạt video ngắn (Reels/TikTok) tư vấn chọn dáng gọng kính theo khuôn mặt và tròng chống ánh sáng xanh",
+          "Thiết kế toàn bộ hình ảnh visual, banner nhận diện và ấn phẩm khuyến mãi đồng bộ phong cách thương hiệu"
+        ],
+        impact: {
+          metrics: [
+            { val: "+180%", label: "Tăng Trưởng Tương Tác" },
+            { val: "25+ Video", label: "Reels & TikTok Xu Hướng" },
+            { val: "100%", label: "Nhận Diện Đồng Bộ" }
+          ],
+          summary: "Thổi luồng sinh khí mới cho các kênh mạng xã hội, thu hút lượng lớn khách hàng trẻ tuổi, giới văn phòng và phụ huynh có con cận thị học đường."
+        },
+        attachment: "Kế hoạch nội dung Social Media & Thư viện video ngắn"
+      },
+      {
+        pillar: "Performance Ads",
+        pillarTag: "Quảng Cáo Cục Bộ & Kéo Khách O2O",
+        icon: "target",
+        title: "Tối Ưu Meta Ads Nhắm Bán Kính Địa Phương (Local Geo-Targeting)",
+        tag: "Local Meta Ads & Lead Gen",
+        desc: "Thiết lập các chiến dịch quảng cáo nhắm mục tiêu chuẩn xác trong bán kính 3-5km quanh cửa hàng, tối ưu chi phí trên mỗi lượt nhắn tin đặt lịch.",
+        items: [
+          "Phân khúc đối tượng mục tiêu: Tệp học sinh/sinh viên cận thị, tệp nhân viên văn phòng làm việc máy tính nhiều, tệp trung niên",
+          "A/B Testing các mẫu thông điệp: Ưu đãi tròng chống mỏi mắt, combo gọng kính thời trang, voucher đo mắt chuyên sâu 0đ",
+          "Tối ưu hóa ngân sách thực chiến hàng ngày, hạ giá thành mỗi tin nhắn chất lượng xuống mức tối thiểu"
+        ],
+        impact: {
+          metrics: [
+            { val: "+35%", label: "Khách Đến Cửa Hàng (O2O)" },
+            { val: "-28%", label: "Chi Phí / Khách Tiềm Năng" },
+            { val: "3-5km", label: "Phủ Kín Bán Kính Cửa Hàng" }
+          ],
+          summary: "Mỗi chiến dịch quảng cáo đều trực tiếp kéo khách hàng bước chân vào cửa hàng đo mắt và cắt kính thực tế, xoay vòng dòng tiền nhanh chóng."
+        },
+        attachment: "Báo cáo hiệu quả quảng cáo Meta Ads & Phễu chuyển đổi O2O"
+      },
+      {
+        pillar: "Automation & CRM",
+        pillarTag: "Tự Động Hóa Tư Vấn & Đặt Lịch",
+        icon: "bot",
+        title: "Thiết Lập Kịch Bản Chatbot Tự Động 24/7 & Quy Trình Chăm Sóc O2O",
+        tag: "Chatbot & O2O SOP",
+        desc: "Xây dựng kịch bản phản hồi khách hàng trong vòng 30 giây và quy trình nhắc lịch tái khám thị lực định kỳ.",
+        items: [
+          "Cài đặt kịch bản Chatbot tự động phân loại nhu cầu: Đo mắt, cắt kính cận/loạn, chọn gọng thời trang hoặc thay tròng",
+          "Quy trình tự động thu thập số điện thoại và giữ chỗ lịch hẹn đo mắt miễn phí cùng chuyên viên khúc xạ",
+          "Hệ thống tin nhắn tự động nhắc nhở vệ sinh kính định kỳ và bảo dưỡng tròng sau khi mua"
+        ],
+        impact: {
+          metrics: [
+            { val: "30 Giây", label: "Tốc Độ Phản Hồi Inbox" },
+            { val: "+45%", label: "Tỷ Lệ Đặt Lịch Hẹn Thành Công" },
+            { val: "Chuẩn Hóa", label: "Quy Trình O2O Nhân Viên" }
+          ],
+          summary: "Không để rơi rụng bất kỳ khách hàng tiềm năng nào ngoài giờ làm việc, nâng cao tính chuyên nghiệp và sự hài lòng của khách hàng."
+        },
+        attachment: "Sơ đồ kịch bản Chatbot & Quy trình tư vấn chốt lịch"
+      },
+      {
+        pillar: "Branding & Retail",
+        pillarTag: "Nhận Diện Điểm Bán & Trade Marketing",
+        icon: "sparkles",
+        title: "Chuẩn Hóa Bộ Nhận Diện Điểm Bán (POSM) & Chiến Lược Combo Sản Phẩm",
+        tag: "Trade Marketing & Branding",
+        desc: "Tư vấn thiết kế bảng giá, thẻ bảo hành điện tử, bao bì hộp đựng kính và các gói combo tăng giá trị đơn hàng trung bình (AOV).",
+        items: [
+          "Thiết kế thẻ bảo hành, khăn lau kính, hộp đựng thương hiệu Mắt Kính Pháp Việt sang trọng",
+          "Đóng gói các gói combo sản phẩm: Gọng kính thời trang + Tròng chống lóa/UV420 công nghệ cao",
+          "Tổ chức chương trình ưu đãi mùa tựu trường và các dịp lễ hội tạo hiệu ứng truyền miệng tích cực"
+        ],
+        impact: {
+          metrics: [
+            { val: "+25%", label: "Giá Trị Đơn Trung Bình (AOV)" },
+            { val: "100%", label: "Chuẩn Hóa Nhận Diện POSM" },
+            { val: "5 Sao", label: "Đánh Giá Thực Tế Khách Hàng" }
+          ],
+          summary: "Định hình vị thế chuỗi cửa hàng mắt kính chuyên nghiệp, đáng tin cậy và có gu thẩm mỹ cao trong mắt cộng đồng người tiêu dùng địa phương."
+        },
+        attachment: "Bộ ấn phẩm nhận diện POSM & Combo sản phẩm tại cửa hàng"
+      }
+    ],
+    results: [
+      "Tái định vị và lột xác hình ảnh thương hiệu Mắt Kính Pháp Việt trên các nền tảng số (Facebook, TikTok, Instagram).",
+      "Gia tăng 35% lượng khách hàng đến đo mắt và cắt kính trực tiếp tại cửa hàng từ kênh Online (O2O).",
+      "Hạ 28% chi phí tin nhắn quảng cáo và nâng tỷ lệ chuyển đổi hẹn lịch đo mắt lên hơn 45%.",
+      "Xây dựng thành công hệ thống kịch bản tư vấn tự động và bàn giao quy trình tiếp thị tự chủ cho đội ngũ vận hành."
+    ],
+    measurement: {
+      before: "Kênh Social Media hoạt động thưa thớt, bài viết chủ yếu copy hình ảnh nhà sản xuất; chưa có chiến dịch quảng cáo định vị cục bộ (Local Ads); lượng khách vãng lai phụ thuộc hoàn toàn vào mặt tiền đường; chưa có kịch bản chăm sóc khách hàng tự động.",
+      after: "Kênh Social đạt hơn 180% mức tăng trưởng tương tác; xuất bản loạt video ngắn tư vấn thị lực hút khách; chiến dịch Meta Ads kéo lượng khách O2O đến cửa hàng tăng trưởng 35%; quy trình Chatbot tự động phản hồi 24/7 trong 30 giây.",
+      kpis: ["+35% Lượng Khách Đến Cửa Hàng (O2O)", "+180% Tăng Trưởng Tương Tác Social", "-28% Chi Phí Tin Nhắn Meta Ads", "Tự Động Hóa Kịch Bản Tư Vấn 24/7"]
+    },
+    learnings: "Với mô hình bán lẻ mắt kính và đo khúc xạ địa phương, khách hàng không mua kính online mà chỉ đưa ra quyết định khi trực tiếp đo khám thị lực và thử gọng kính lên mặt. Do đó, chiến lược tiếp thị thành công là tập trung 100% vào mô hình Online-to-Offline (O2O): dùng nội dung hữu ích trên Social để xây dựng niềm tin chuyên khoa, kết hợp Meta Ads theo bán kính 3-5km để kéo khách đến cửa hàng trải nghiệm thực tế.",
+    tech: ["Quản Lý Social Media", "Tư Vấn Marketing Freelance", "Mô Hình O2O (Online-To-Offline)", "Quảng Cáo Meta Ads", "Video Ngắn Reels & TikTok", "Chatbot Phản Hồi Tự Động", "Tối Ưu Điểm Bán POSM"]
   }
 };
 
@@ -1159,6 +1273,35 @@ const companyChartData = {
       {
         label: "Tăng Trưởng Đơn Online & Catering (%)",
         data: [10, 30, 55, 80],
+        type: "line",
+        borderColor: "#10B981",
+        backgroundColor: "#10B981",
+        borderWidth: 3,
+        tension: 0.35,
+        pointBackgroundColor: "#10B981",
+        pointBorderColor: "#FFFFFF",
+        pointBorderWidth: 2,
+        pointRadius: 6,
+        yAxisID: "y"
+      }
+    ],
+    yCallback: val => (val > 100 ? val + " Lượt" : val + "%")
+  },
+  phapviet: {
+    title: "Hiệu Quả Tăng Trưởng Lượng Khách O2O & Tương Tác Social (Mắt Kính Pháp Việt)",
+    badge: "Dự Án Freelance Marketing",
+    labels: ["Tháng 1 (Khởi Tạo)", "Tháng 2 (Tối Ưu Ads)", "Tháng 3 (Viral Reels)", "Tháng 4 (Bứt Phá O2O)"],
+    datasets: [
+      {
+        label: "Lượt Tương Tác Social Hàng Tuần (Lượt)",
+        data: [250, 780, 1500, 2300],
+        backgroundColor: "rgba(56, 189, 248, 0.8)",
+        borderRadius: 8,
+        yAxisID: "y"
+      },
+      {
+        label: "Tăng Trưởng Lượng Khách Đến Cửa Hàng (%)",
+        data: [0, 12, 24, 35],
         type: "line",
         borderColor: "#10B981",
         backgroundColor: "#10B981",
