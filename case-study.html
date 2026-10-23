@@ -3,6 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Instant Smart Redirect to Modern Stitch Porcelain Minimalist Case Studies -->
+  <script>
+    (function() {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var caseKey = (params.get('case') || '').toLowerCase();
+        var routeMap = {
+          'luclam': 'du-an/luclam.html',
+          'sala': 'du-an/sala-garden.html',
+          'salagarden': 'du-an/sala-garden.html',
+          'bravigo': 'du-an/bravigo.html',
+          'fclick': 'du-an/fclick.html',
+          'brewbanhmi': 'du-an/brewbanhmi.html',
+          'namtien': 'du-an/namtien.html',
+          'lath': 'du-an/namtien.html',
+          'phapviet': 'du-an/index.html'
+        };
+        var target = routeMap[caseKey] || 'du-an/index.html';
+        window.location.replace(target);
+      } catch (e) {
+        window.location.href = 'du-an/index.html';
+      }
+    })();
+  </script>
   <title>Chi Tiết Dự Án &amp; Hiệu Quả Tăng Trưởng — Tạ Quốc Duy | Marketing Manager</title>
   <meta name="description" content="Chi tiết chiến lược tiếp thị, quản trị đội ngũ, số liệu quảng cáo thực chiến và kết quả kinh doanh định lượng của Tạ Quốc Duy tại các doanh nghiệp.">
   <link rel="canonical" href="https://portfolio.duyhiendigi.com/case-study.html">
