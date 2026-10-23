@@ -140,30 +140,141 @@
 </head>
 <body class="bg-canvas text-accent-charcoal font-sans antialiased selection:bg-neutral-900 selection:text-white">
 <!-- BEGIN: Site Header -->
-<header class="fixed top-0 left-0 w-full z-50 py-4 px-6 md:px-12 pointer-events-none transition-all duration-300">
-<div class="max-w-7xl mx-auto flex items-center justify-between pointer-events-auto">
-<!-- Logo Mindly style -->
-<a class="group flex items-center gap-1.5 focus:outline-none" href="#">
-<span class="text-xl md:text-2xl font-bold tracking-tight text-neutral-950 font-sans">Quốc Duy</span>
-<span class="text-xs text-neutral-400 group-hover:rotate-45 transition-transform duration-300">✦</span>
-</a>
-<!-- Floating Center Pill Menu -->
-<nav class="hidden md:flex glass-pill shadow-sm rounded-full px-7 py-2.5 items-center space-x-7 text-xs lg:text-[13px] font-medium text-neutral-600">
-<a class="nav-link hover:text-black transition-colors" href="#about">Về Tôi</a>
-<a class="nav-link hover:text-black transition-colors" href="#metrics">Chỉ Số</a>
-<a class="nav-link hover:text-black transition-colors font-semibold text-neutral-900" href="du-an/index.html" title="Xem mô tả sản phẩm & chiến dịch theo 5 kỹ năng">Kỹ Năng &amp; Sản Phẩm ↗</a>
-<a class="nav-link hover:text-black transition-colors" href="#projects">Dự Án</a>
-<a class="nav-link hover:text-black transition-colors" href="#martech">MarTech &amp; AI</a>
-<a class="nav-link hover:text-black transition-colors" href="#career">Sự Nghiệp</a>
-</nav>
-<!-- Right Action CTA -->
-<div class="flex items-center gap-3">
-<a class="inline-flex items-center gap-2 bg-neutral-950 text-white hover:bg-neutral-800 text-xs md:text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-200 shadow-sm hover:shadow group" href="#contact">
-<span class="">Liên Hệ Tuyển Dụng</span>
-<span class="text-neutral-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200">↗</span>
-</a>
-</div>
-</div>
+<header class="fixed top-0 left-0 w-full z-50 py-3.5 px-4 sm:px-6 md:px-12 pointer-events-none transition-all duration-300">
+  <div class="max-w-7xl mx-auto flex items-center justify-between pointer-events-auto">
+    <!-- Brand Identity Logo -->
+    <a class="group flex flex-col focus:outline-none shrink-0" href="#about">
+      <div class="flex items-center gap-1.5">
+        <span class="text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-neutral-950 font-sans group-hover:text-neutral-700 transition-colors">Tạ Quốc Duy</span>
+        <span class="text-xs text-neutral-400 group-hover:rotate-45 transition-transform duration-300">✦</span>
+      </div>
+      <span class="text-[10px] uppercase tracking-wider text-neutral-400 font-medium hidden sm:inline-block">Growth &amp; MarTech Lead</span>
+    </a>
+
+    <!-- Floating Center Pill Menu (Desktop) -->
+    <nav class="hidden lg:flex glass-pill shadow-sm rounded-full px-6 py-2 items-center space-x-6 text-xs lg:text-[13px] font-medium text-neutral-600">
+      <a class="nav-link hover:text-black transition-colors" href="#about">Về Tôi</a>
+      <a class="nav-link hover:text-black transition-colors" href="#leadership">Năng Lực</a>
+      
+      <!-- Dropdown: Dự Án & Case Studies -->
+      <div class="relative group/dropdown py-1">
+        <a class="nav-link hover:text-black transition-colors flex items-center gap-1 cursor-pointer" href="#projects">
+          <span>Dự Án</span>
+          <svg class="w-3.5 h-3.5 text-neutral-400 group-hover/dropdown:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </a>
+        
+        <!-- Dropdown Box -->
+        <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2.5 opacity-0 translate-y-2 pointer-events-none group-hover/dropdown:opacity-100 group-hover/dropdown:translate-y-0 group-hover/dropdown:pointer-events-auto transition-all duration-200 z-50">
+          <div class="w-80 bg-white/95 backdrop-blur-2xl rounded-2xl shadow-[0_20px_50px_-10px_rgba(15,23,42,0.12)] border border-neutral-100 p-2.5 flex flex-col gap-1 text-xs">
+            <div class="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-neutral-400">6 Case Studies Tiêu Biểu</div>
+            <a href="du-an/sala-garden.html" class="flex items-center gap-3 p-2 rounded-xl hover:bg-neutral-50 transition-colors group/item">
+              <span class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-[11px] shrink-0">450T</span>
+              <div class="flex flex-col">
+                <span class="font-semibold text-neutral-900 group-hover/item:text-black">Sala Garden &amp; Thiên Phúc</span>
+                <span class="text-[11px] text-neutral-400">BĐS Sinh Thái • 130+ Video In-house</span>
+              </div>
+            </a>
+            <a href="du-an/luclam.html" class="flex items-center gap-3 p-2 rounded-xl hover:bg-neutral-50 transition-colors group/item">
+              <span class="w-8 h-8 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center font-bold text-[11px] shrink-0">40T</span>
+              <div class="flex flex-col">
+                <span class="font-semibold text-neutral-900 group-hover/item:text-black">Lục Lam Group (Quà Tết 40 Tỷ)</span>
+                <span class="text-[11px] text-neutral-400">Trà Thảo Mộc • 4 Web • CRM Tự Động</span>
+              </div>
+            </a>
+            <a href="du-an/bravigo.html" class="flex items-center gap-3 p-2 rounded-xl hover:bg-neutral-50 transition-colors group/item">
+              <span class="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center font-bold text-[11px] shrink-0">300+</span>
+              <div class="flex flex-col">
+                <span class="font-semibold text-neutral-900 group-hover/item:text-black">Ottocast P3 Bravigo</span>
+                <span class="text-[11px] text-neutral-400">300+ Gara • Slide Keynote 45 trang</span>
+              </div>
+            </a>
+            <a href="du-an/fclick.html" class="flex items-center gap-3 p-2 rounded-xl hover:bg-neutral-50 transition-colors group/item">
+              <span class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center font-bold text-[11px] shrink-0">-25%</span>
+              <div class="flex flex-col">
+                <span class="font-semibold text-neutral-900 group-hover/item:text-black">Mobile App Fclick</span>
+                <span class="text-[11px] text-neutral-400">-25% CPI • AI Automation Tiết Kiệm 30%</span>
+              </div>
+            </a>
+            <a href="du-an/brewbanhmi.html" class="flex items-center gap-3 p-2 rounded-xl hover:bg-neutral-50 transition-colors group/item">
+              <span class="w-8 h-8 rounded-lg bg-amber-50 text-amber-800 flex items-center justify-center font-bold text-[11px] shrink-0">USA</span>
+              <div class="flex flex-col">
+                <span class="font-semibold text-neutral-900 group-hover/item:text-black">Brew &amp; Bánh Mì Cafe (Mỹ)</span>
+                <span class="text-[11px] text-neutral-400">Milpitas California • Toast Tab POS</span>
+              </div>
+            </a>
+            <a href="du-an/namtien.html" class="flex items-center gap-3 p-2 rounded-xl hover:bg-neutral-50 transition-colors group/item">
+              <span class="w-8 h-8 rounded-lg bg-rose-50 text-rose-700 flex items-center justify-center font-bold text-[11px] shrink-0">1.5K</span>
+              <div class="flex flex-col">
+                <span class="font-semibold text-neutral-900 group-hover/item:text-black">Xe Máy Nam Tiến &amp; LATH</span>
+                <span class="text-[11px] text-neutral-400">Phễu O2O • 1.500+ Leads/tháng</span>
+              </div>
+            </a>
+            <div class="h-px bg-neutral-100 my-1"></div>
+            <a href="du-an/index.html" class="flex items-center justify-between p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 text-neutral-950 font-semibold transition-colors">
+              <span class="flex items-center gap-1.5">
+                <span>Ma Trận 5 Nhóm Kỹ Năng &amp; Bàn Giao</span>
+              </span>
+              <span class="text-xs">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a class="nav-link hover:text-black transition-colors" href="#martech">MarTech &amp; AI</a>
+      <a class="nav-link hover:text-black transition-colors" href="#career">Sự Nghiệp</a>
+      <a class="nav-link hover:text-black transition-colors font-semibold text-neutral-900 inline-flex items-center gap-1" href="du-an/index.html" title="Kho sản phẩm & chiến dịch bàn giao">
+        <span>Sản Phẩm</span>
+        <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-neutral-100 text-neutral-700 font-bold">Hub</span>
+      </a>
+    </nav>
+
+    <!-- Right Action CTAs & Mobile Toggle -->
+    <div class="flex items-center gap-2 sm:gap-3">
+      <!-- Download CV PDF button -->
+      <a class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-semibold text-neutral-700 bg-white/80 hover:bg-white hover:text-black transition-all border border-neutral-200/80 shadow-sm" href="assets/docs/CV_Ta_Quoc_Duy_Marketing_Manager.pdf" target="_blank">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+        <span>Tải CV</span>
+      </a>
+
+      <!-- Primary Hiring Contact Button -->
+      <a class="inline-flex items-center gap-1.5 bg-neutral-950 text-white hover:bg-neutral-800 text-xs sm:text-sm font-medium px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all shadow-sm group" href="#contact">
+        <span>Liên Hệ</span>
+        <span class="text-neutral-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileMenuBtn" aria-label="Mở Menu Di Động" class="lg:hidden w-9 h-9 rounded-full bg-white/90 border border-neutral-200/80 shadow-sm flex items-center justify-center text-neutral-800 hover:text-black hover:bg-white transition-all focus:outline-none">
+        <svg id="hamburgerIcon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <svg id="closeIcon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div id="mobileMenu" class="lg:hidden fixed inset-x-4 top-20 bg-white/95 backdrop-blur-2xl rounded-3xl shadow-2xl border border-neutral-200/80 p-5 flex flex-col gap-3 transition-all duration-300 transform -translate-y-4 opacity-0 pointer-events-none z-50">
+    <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
+      <span class="text-xs font-bold uppercase tracking-wider text-neutral-400">Danh Mục Điều Hướng</span>
+      <span class="text-[11px] font-mono text-neutral-500">Quốc Duy Portfolio</span>
+    </div>
+    <div class="grid grid-cols-2 gap-2 text-sm font-medium text-neutral-800">
+      <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100" href="#about">✦ Về Tôi</a>
+      <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100" href="#leadership">✦ Năng Lực</a>
+      <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100" href="#projects">✦ Dự Án</a>
+      <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100" href="#martech">✦ MarTech &amp; AI</a>
+      <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100" href="#career">✦ Sự Nghiệp</a>
+      <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-900 text-white" href="du-an/index.html">✦ Kho Sản Phẩm ↗</a>
+    </div>
+
+    <div class="pt-2 border-t border-neutral-100 flex flex-col gap-2">
+      <a class="w-full flex items-center justify-center gap-2 p-2.5 rounded-xl bg-neutral-100 hover:bg-neutral-200 text-neutral-900 font-semibold text-xs" href="assets/docs/CV_Ta_Quoc_Duy_Marketing_Manager.pdf" target="_blank">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+        <span>Tải CV Đầy Đủ (Bản PDF)</span>
+      </a>
+      <a class="w-full flex items-center justify-center gap-2 p-2.5 rounded-xl bg-neutral-950 text-white font-semibold text-xs shadow-md" href="tel:0392225986">
+        <span>Hotline / Zalo: 039 222 5986</span>
+      </a>
+    </div>
+  </div>
 </header>
 <!-- END: Site Header -->
 
@@ -930,6 +1041,44 @@
       updateActiveState(currentHash);
     } else if (sections.length > 0) {
       updateActiveState(sections[0].id);
+    }
+    // Mobile menu toggle logic
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    if (mobileMenuBtn && mobileMenu) {
+      const openMobileMenu = () => {
+        mobileMenu.classList.remove('pointer-events-none', 'opacity-0', '-translate-y-4');
+        mobileMenu.classList.add('pointer-events-auto', 'opacity-100', 'translate-y-0');
+        hamburgerIcon?.classList.add('hidden');
+        closeIcon?.classList.remove('hidden');
+      };
+
+      const closeMobileMenu = () => {
+        mobileMenu.classList.remove('pointer-events-auto', 'opacity-100', 'translate-y-0');
+        mobileMenu.classList.add('pointer-events-none', 'opacity-0', '-translate-y-4');
+        hamburgerIcon?.classList.remove('hidden');
+        closeIcon?.classList.add('hidden');
+      };
+
+      mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = !mobileMenu.classList.contains('pointer-events-none');
+        if (isOpen) closeMobileMenu();
+        else openMobileMenu();
+      });
+
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => closeMobileMenu());
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          closeMobileMenu();
+        }
+      });
     }
   });
 </script>
