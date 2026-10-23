@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Tạ Quốc Duy — Growth &amp; MarTech Lead</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary-container": "#131b2e",
+          "tertiary-fixed-dim": "#4edea3",
+          "secondary-fixed": "#acedff",
+          "error": "#ba1a1a",
+          "error-container": "#ffdad6",
+          "on-error-container": "#93000a",
+          "on-error": "#ffffff",
+          "tertiary-container": "#002113",
+          "outline-variant": "#c6c6cd",
+          "on-secondary-fixed": "#001f26",
+          "on-tertiary": "#ffffff",
+          "secondary-container": "#57dffe",
+          "on-primary-container": "#7c839b",
+          "on-surface-variant": "#45464d",
+          "primary": "#000000",
+          "outline": "#76777d",
+          "on-surface": "#191c1e",
+          "on-tertiary-fixed": "#002113",
+          "surface-dim": "#d8dadc",
+          "on-tertiary-fixed-variant": "#005236",
+          "on-secondary-container": "#006172",
+          "on-secondary": "#ffffff",
+          "surface-variant": "#e0e3e5",
+          "secondary": "#00687a",
+          "surface-tint": "#565e74",
+          "on-secondary-fixed-variant": "#004e5c",
+          "on-background": "#191c1e",
+          "secondary-fixed-dim": "#4cd7f6",
+          "on-primary-fixed-variant": "#3f465c",
+          "surface-container-highest": "#e0e3e5",
+          "on-primary": "#ffffff",
+          "surface-container-high": "#e6e8ea",
+          "tertiary": "#000000",
+          "primary-fixed-dim": "#bec6e0",
+          "surface": "#f7f9fb",
+          "surface-bright": "#f7f9fb",
+          "on-primary-fixed": "#131b2e",
+          "surface-container-lowest": "#ffffff",
+          "background": "#f7f9fb",
+          "on-tertiary-container": "#009668",
+          "surface-container": "#eceef0",
+          "inverse-on-surface": "#eff1f3",
+          "tertiary-fixed": "#6ffbbe",
+          "inverse-surface": "#2d3133",
+          "inverse-primary": "#bec6e0",
+          "surface-container-low": "#f2f4f6",
+          "primary-fixed": "#dae2fd"
+        },
+        "borderRadius": {
+          "DEFAULT": "1rem",
+          "lg": "2rem",
+          "xl": "3rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xs": "0.375rem",
+          "space-sm": "0.75rem",
+          "space-lg": "2rem",
+          "margin": "3rem",
+          "gutter-sm": "1rem",
+          "gutter": "1.5rem",
+          "space-md": "1.25rem",
+          "space-xl": "3.5rem",
+          "margin-sm": "1.25rem"
+        },
+        "fontFamily": {
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Playfair Display"],
+          "display": ["Playfair Display"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "headline-lg": ["Playfair Display"],
+          "headline-md": ["Playfair Display"],
+          "label-md": ["Plus Jakarta Sans"],
+          "display-mobile": ["Playfair Display"],
+          "label-sm": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "body-lg": ["1.125rem", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+          "headline-lg-mobile": ["2rem", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+          "display": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "400"}],
+          "body-sm": ["0.875rem", {"lineHeight": "1.5", "letterSpacing": "0.005em", "fontWeight": "400"}],
+          "body-md": ["1rem", {"lineHeight": "1.55", "letterSpacing": "0em", "fontWeight": "400"}],
+          "label-lg": ["0.875rem", {"lineHeight": "1.25", "letterSpacing": "0.01em", "fontWeight": "600"}],
+          "headline-sm": ["1.25rem", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "headline-lg": ["3rem", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+          "headline-md": ["2rem", {"lineHeight": "1.3", "letterSpacing": "-0.015em", "fontWeight": "500"}],
+          "label-md": ["0.75rem", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+          "display-mobile": ["2.75rem", {"lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+          "label-sm": ["0.6875rem", {"lineHeight": "1.15", "letterSpacing": "0.05em", "fontWeight": "700"}]
+        }
+      }
+    }
+  };</script>
+  <!-- Hotjar Tracking Code -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:6791459,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KQYN3R3X2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9KQYN3R3X2');
+  </script>
+</head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 left-0 w-full z-50 bg-surface/85 backdrop-blur-2xl shadow-[0_1px_12px_rgba(15,23,42,0.04)]"><div class="h-20 max-w-[1360px] mx-auto px-gutter-sm lg:px-margin flex items-center justify-between gap-space-md"><a class="flex flex-col group shrink-0" data-path="trang-chu" href="../index.html"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-secondary transition-colors">Tạ Quốc Duy</span><span class="text-secondary text-[10px] transform group-hover:rotate-45 transition-transform duration-300">✦</span></div><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Growth &amp; MarTech Lead</span></a><nav class="hidden xl:flex items-center gap-1 bg-surface-container-low/70 p-1.5 rounded-full backdrop-blur-md" data-active-classes="bg-surface-container-high text-on-surface font-semibold shadow-[0_2px_8px_rgba(15,23,42,0.06)]"><a class="px-3.5 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="trang-chu" href="../index.html">Trang Chủ</a><a class="px-3.5 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="ve-toi" href="../index.html#about">Về Tôi</a><a class="px-3.5 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="chi-so" href="../index.html#metrics">Chỉ Số</a><a class="px-3.5 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="nang-luc-tru-cot" href="../index.html#leadership">Năng Lực &amp; Trụ Cột</a><a class="px-3.5 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="chien-dich-san-pham" href="./chien_dich_san_pham_theo_ky_nang.html">Chiến Dịch &amp; Sản Phẩm</a><a class="relative px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface font-semibold shadow-[0_2px_8px_rgba(15,23,42,0.06)] flex items-center gap-1.5" data-path="du-an" href="../index.html#projects"><span>Dự Án</span><span class="inline-flex items-center px-1.5 py-0.5 rounded-full font-label-sm text-[10px] bg-secondary-container/40 text-on-secondary-container">Case Study</span></a><a class="px-3.5 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="he-thong-martech" href="../index.html#martech">Hệ Thống MarTech</a><a class="px-3.5 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="su-nghiep" href="../index.html#career">Sự Nghiệp</a></nav><div class="flex items-center gap-space-sm shrink-0"><a class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full font-label-md text-label-md text-on-surface bg-surface-container-lowest shadow-[0_2px_8px_rgba(15,23,42,0.05)] hover:bg-surface-container-high hover:text-on-surface transition-all" href="../CV_Ta_Quoc_Duy_Marketing_Manager.pdf" target="_blank"><span class="material-symbols-outlined text-[16px]">download</span><span>Tải CV (Bản PDF)</span></a><a class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full font-label-md text-label-md text-on-primary bg-primary hover:bg-primary-container hover:text-on-primary transition-all shadow-[0_4px_16px_rgba(0,0,0,0.12)]" data-path="lien-he" href="../index.html#contact"><span class="material-symbols-outlined text-[16px]">send</span><span>Liên Hệ Tuyển Dụng</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-[0_2px_6px_rgba(0,0,0,0.1)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Project Navigator Switcher -->
+<section class="w-full max-w-[1360px] mx-auto px-gutter-sm lg:px-margin pt-space-md pb-space-xs">
+<div class="flex flex-col gap-space-sm">
+<!-- Breadcrumb Navigation -->
+<nav class="flex items-center flex-wrap gap-2 text-on-surface-variant font-label-md text-label-md">
+<a class="hover:text-on-surface transition-colors" data-path="trang-chu" href="../index.html">Trang Chủ</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-on-surface transition-colors" data-path="du-an" href="./chien_dich_san_pham_theo_ky_nang.html">Chiến Dịch &amp; Case Studies</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-semibold truncate max-w-xs sm:max-w-none">Chi Tiết: Sala Garden &amp; Thiên Phúc Vĩnh Hằng Viên</span>
+</nav>
+<!-- Case Studies Carousel / Quick Switcher -->
+<div class="p-1.5 rounded-full bg-surface-container-low shadow-[0_2px_12px_rgba(15,23,42,0.03)] flex items-center gap-1.5 overflow-x-auto no-scrollbar scroll-smooth">
+<a class="shrink-0 px-4 py-2 rounded-full font-label-md text-label-md bg-primary text-on-primary shadow-sm flex items-center gap-1.5 transition-all" href="#case-sala">
+<span class="text-secondary-fixed text-xs">✦</span>
+<span>Sala Garden &amp; Thiên Phúc (450 Tỷ)</span>
+</a>
+<a class="shrink-0 px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-1.5" href="./chien_dich_san_pham_theo_ky_nang.html#case-study-container">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span>Ottocast P3 Bravigo (Keynote Launch)</span>
+</a>
+<a class="shrink-0 px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-1.5" href="./chien_dich_san_pham_theo_ky_nang.html#case-study-container">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span>Lục Lam Group (Trà Hoa 40 Tỷ)</span>
+</a>
+<a class="shrink-0 px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-1.5" href="./chien_dich_san_pham_theo_ky_nang.html#case-study-container">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span>Fclick Mobile App (-25% CPI)</span>
+</a>
+<a class="shrink-0 px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-1.5" href="./chien_dich_san_pham_theo_ky_nang.html#case-study-container">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span>Brew &amp; Bánh Mì (USA POS)</span>
+</a>
+<a class="shrink-0 px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-1.5" href="./chien_dich_san_pham_theo_ky_nang.html#case-study-container">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span>Xe Máy Nam Tiến (1.500+ Leads)</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Hero Section: Project Identity & Key Metrics -->
+<section class="w-full max-w-[1360px] mx-auto px-gutter-sm lg:px-margin pt-space-lg pb-space-xl" id="case-sala">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-gutter lg:p-space-xl shadow-[0_20px_45px_-15px_rgba(15,23,42,0.06)]">
+<!-- Ambient Atmospheric Light -->
+<div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-secondary-fixed/25 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-lg">
+<!-- Metadata Header & Badges -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-label-sm text-label-sm uppercase tracking-wider bg-secondary-container/30 text-on-secondary-container font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Bất Động Sản Sinh Thái 5 Sao
+            </span>
+<span class="px-3 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface font-semibold">
+              Vốn Đầu Tư 450+ Tỷ VNĐ
+            </span>
+<span class="px-3 py-1 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant">
+              IMC Launch Campaign
+            </span>
+<span class="px-3 py-1 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+              03/2026 - Hiện tại
+            </span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-ping"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">Dự Án Đang Vận Hành Thực Tế</span>
+</div>
+</div>
+<!-- Main Title & Core Ownership Statement -->
+<div class="flex flex-col gap-space-xs max-w-4xl">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Chiến Lược Ra Mắt <span class="italic font-normal font-display">Thiên Phúc Vĩnh Hằng Viên</span> &amp; Cỗ Máy Nội Dung <span class="italic font-normal font-display text-secondary">130+ Video</span> Mỗi Tháng
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant pt-space-xs">
+            Đảm nhiệm vai trò <strong class="text-on-surface font-semibold">Trưởng Phòng Marketing (Marketing Manager)</strong> — Trực tiếp dẫn dắt 2 bộ phận chuyên trách (10 nhân sự Digital &amp; Branding), quản trị tập trung ngân sách Paid Ads 300 triệu/tháng và thiết lập toàn bộ quy trình tiếp cận tệp gia chủ tinh hoa 55+ tuổi.
+          </p>
+</div>
+<!-- Visual Hero Media & Atmospheric Vignette -->
+<div class="relative w-full h-80 sm:h-96 lg:h-[420px] rounded-lg overflow-hidden shadow-sm group">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="High-end eco park memorial landscape featuring serene zen gardens, gentle water ponds, modern stone pavilions, lush green hills under a calm morning sunrise with soft atmospheric mist and clean architectural lines." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2ToFDiyEWKE_oYLO8eprAZwyqK1YSpwATOUIxbIt7Mt0rHgQjmXBysPJM6NdEGo8liYHRKoOVCtcUduU1ADxBGkDc6yMyOpqIvSR_PJTh9VtvAWu3nE5V5E4dASgWQAogXsvl-XwG6p5iwCotMwTMRRoHv4sIpy0pRKY2dAGEg6XC-7UTXStt5rHk8tmTT-ftUnB0r6QOVY5QmipXZJLzcuBqeVgoAr1AvVovINWCA43uMmKXJSPy2Q')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<!-- Bottom Floating Badge within Image -->
+<div class="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-xs text-on-primary">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary-fixed tracking-widest uppercase">Khuôn Viên Nghỉ Dưỡng Vĩnh Hằng</span>
+<span class="font-headline-sm text-headline-sm text-on-primary font-medium">Thiên Phúc Vĩnh Hằng Viên (32.54 ha — Yên Tử)</span>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-on-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">verified</span>
+<span>Chuẩn Mực Sinh Thái 5 Sao</span>
+</div>
+</div>
+</div>
+<!-- 4 High-Impact Stat Bento Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm pt-space-xs">
+<!-- Stat 1 -->
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Quy Mô Đầu Tư</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">450 Tỷ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dự án Yên Tử diện tích 32.54 ha</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Nội Dung In-House</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">movie</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">130+ Video</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Phủ TikTok, Reels, Shorts / tháng</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Chi Phí Cực Tối Ưu</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">trending_down</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">1.205đ <span class="text-sm font-normal text-on-surface-variant">/ Click</span></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">CTR 6.14% • Thấp hơn 65% thị trường</span>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tệp Khách Gia Chủ VIP</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">stars</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">50+ Leads</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">80.5% tập trung nhóm 55+ tuổi</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Project Context & Strategic Pivot -->
+<section class="w-full max-w-[1360px] mx-auto px-gutter-sm lg:px-margin py-space-lg">
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Tầm Nhìn &amp; Thách Thức</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+          Bối Cảnh Thị Trường &amp; <span class="italic font-normal">Định Hướng Chiến Lược Cốt Lõi</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Bất động sản công viên tưởng niệm là ngành hàng đặc thù: rào cản tâm lý cao, chu kỳ quyết định kéo dài và tệp khách hàng mua sẵn chuẩn bị cho tương lai (chuẩn bị trước) đòi hỏi sự tôn nghiêm và tinh tế tuyệt đối.
+        </p>
+</div>
+<!-- Two-Column Editorial Card Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Left: Bottlenecks & Legacy Pain Points -->
+<div class="p-gutter rounded-xl bg-surface-container-high/60 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">error_outline</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+              Điểm Nghẽn &amp; Thách Thức Ban Đầu
+            </h3>
+<ul class="flex flex-col gap-3 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2.5">
+<span class="text-error font-bold mt-0.5">•</span>
+<span><strong>Chi phí quảng cáo BĐS truyền thống leo thang:</strong> Giá thầu CPC BĐS thường dao động từ 8.000đ - 15.000đ, tỷ lệ tiếp cận ảo cao và không chạm đúng người ra quyết định trong gia đình.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="text-error font-bold mt-0.5">•</span>
+<span><strong>Phụ thuộc agency sản xuất đắt đỏ:</strong> Chi phí sản xuất video thuê ngoài cao (15 - 20 triệu/video) nhưng sản lượng chỉ 15-20 video/tháng, thông điệp cứng nhắc thiếu tính nhân văn.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="text-error font-bold mt-0.5">•</span>
+<span><strong>Độ trễ thông tin giữa Marketing và Sales:</strong> Leads rải rác qua inbox, thiếu kịch bản nuôi dưỡng (nurturing) dẫn đến tỷ lệ tham quan thực địa chỉ đạt xấp xỉ 18%.</span>
+</li>
+</ul>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">
+            Rào cản: Văn hóa kiêng kỵ trao đổi về hậu sự đòi hỏi giải pháp truyền thông văn minh, ấm áp và đề cao chữ Hiếu.
+          </div>
+</div>
+<!-- Right: The Leader's Strategic Approach -->
+<div class="p-gutter rounded-xl bg-primary-container text-on-primary flex flex-col justify-between gap-space-md shadow-[0_15px_35px_-10px_rgba(19,27,46,0.2)]">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed/20 flex items-center justify-center text-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-primary">
+              Giải Pháp Thực Thi Của Tôi
+            </h3>
+<ul class="flex flex-col gap-3 font-body-sm text-body-sm text-on-primary-container">
+<li class="flex items-start gap-2.5">
+<span class="text-secondary-fixed font-bold mt-0.5">✓</span>
+<span><strong class="text-on-primary">Xây dựng cỗ máy Content In-House:</strong> Chuẩn hóa SOP sản xuất 130+ video ngắn mỗi tháng bằng thiết bị cơ động và AI hỗ trợ viết kịch bản, giảm 70% ngân sách sản xuất.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="text-secondary-fixed font-bold mt-0.5">✓</span>
+<span><strong class="text-on-primary">Chiến lược phễu ngân sách 300Tr:</strong> Dành 80.5% ngân sách tập trung vào nhóm gia chủ 55+ tuổi tại Hà Nội, Quảng Ninh, Hải Phòng và cộng đồng kiều bào kiệt xuất.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="text-secondary-fixed font-bold mt-0.5">✓</span>
+<span><strong class="text-on-primary">Quy trình Lead-to-Order tức thì:</strong> Kết nối dữ liệu tự động giữa Ads Manager và CRM Telesales trong 5 phút, đẩy tỷ lệ chuyển đổi hẹn tham quan thực địa tăng 45%.</span>
+</li>
+</ul>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-highest/10 text-secondary-fixed font-label-sm text-label-sm">
+            Kết quả: Hạ mức CPC xuống 1.205đ (thấp hơn 65% thị trường) và duy trì 50+ khách VIP tiềm năng đều đặn mỗi tháng.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: 4 Detailed Key Workstreams -->
+<section class="w-full max-w-[1360px] mx-auto px-gutter-sm lg:px-margin py-space-lg">
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs max-w-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Trọng Tâm Hành Động</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+            4 Trụ Cột Triển Khai <span class="italic font-normal">Chi Tiết</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Phương pháp quản trị đồng bộ từ xây dựng bộ máy sáng tạo nội dung đến kỹ thuật tối ưu hóa quảng cáo đa kênh.
+          </p>
+</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3.5 py-1.5 rounded-full shrink-0">
+          Marketing Operations Framework
+        </div>
+</div>
+<!-- 4 Pillars Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Workstream 1 -->
+<div class="p-gutter rounded-xl bg-surface-container-lowest shadow-[0_4px_20px_rgba(15,23,42,0.03)] flex flex-col gap-space-md group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Trụ Cột 01</span>
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">paid</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors">
+              Quản Trị Ngân Sách Ads 300Tr &amp; Tối Ưu Chi Phí
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Điều phối ngân sách quảng cáo kỹ thuật số Meta Ads &amp; Google Video Ads linh hoạt theo chu kỳ tâm lý khách hàng (các dịp Thanh Minh, Vu Lan, Lễ Tết). 
+            </p>
+</div>
+<!-- Inline Mini Data Viz: CTR & Reach -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex justify-between items-center text-on-surface font-label-md text-label-md">
+<span>Hiệu quả chi phí (CPC)</span>
+<span class="font-semibold text-secondary">1.205đ <span class="text-xs text-on-surface-variant font-normal">/ click</span></span>
+</div>
+<!-- Progress bar -->
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 88%"></div>
+</div>
+<div class="flex justify-between items-center font-label-sm text-label-sm text-on-surface-variant pt-1">
+<span>24.900+ Lượt truy cập chất lượng</span>
+<span>CTR trung bình 6.14%</span>
+</div>
+</div>
+<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Setup tracking chuyển đổi đa tầng trên Landing Page &amp; Form Lead.</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>80.5% phân bổ ngân sách nhắm thẳng đối tượng 55+ tại khu vực trọng điểm.</span>
+</li>
+</ul>
+</div>
+<!-- Workstream 2 -->
+<div class="p-gutter rounded-xl bg-surface-container-lowest shadow-[0_4px_20px_rgba(15,23,42,0.03)] flex flex-col gap-space-md group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Trụ Cột 02</span>
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">video_library</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors">
+              Cỗ Máy Sản Xuất 130+ Video Ngắn In-House
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Thay thế hoàn toàn đơn vị sản xuất ngoài bằng đội ngũ nội bộ tinh gọn. Chuẩn hóa quy trình từ kịch bản, ghi hình thực địa flycam đến hậu kỳ âm thanh thiền định.
+            </p>
+</div>
+<!-- Content Distribution Snapshot -->
+<div class="grid grid-cols-3 gap-2 p-space-sm rounded-lg bg-surface-container-low text-center">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">60+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">TikTok Shorts</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">45+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Meta Reels</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">25+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">YouTube Shorts</span>
+</div>
+</div>
+<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Ứng dụng AI hỗ trợ xây dựng 30 kịch bản tri ân &amp; phong thủy mỗi tuần.</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Tăng 300% tương tác tự nhiên hữu cơ (organic engagement) không tốn phí.</span>
+</li>
+</ul>
+</div>
+<!-- Workstream 3 -->
+<div class="p-gutter rounded-xl bg-surface-container-lowest shadow-[0_4px_20px_rgba(15,23,42,0.03)] flex flex-col gap-space-md group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Trụ Cột 03</span>
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors">
+              Lãnh Đạo 2 Teams &amp; Chuẩn Hóa Lead-to-Order
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Trực tiếp quản lý 10 nhân sự chia làm 2 bộ phận: Team Digital Performance và Team Creative Branding. Xây dựng khung OKRs tuần và chỉ số đo lường hiệu suất cá nhân rõ ràng.
+            </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface font-label-md text-label-md">
+<span>Tỷ lệ hẹn tham quan thực địa</span>
+<span class="font-semibold text-tertiary-container text-on-tertiary-container">+45% Tăng trưởng</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Tự động hóa luồng thông tin: Khách đăng ký -&gt; Kiểm duyệt dữ liệu -&gt; Phân bổ Sales tư vấn trực tiếp trong vòng 5 phút.
+            </p>
+</div>
+<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Họp giao ban Sales &amp; Marketing hàng tuần rà soát chất lượng từng Lead.</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Đào tạo kỹ năng tư vấn chuyên sâu về tâm lý gia chủ cho đội ngũ trực kênh.</span>
+</li>
+</ul>
+</div>
+<!-- Workstream 4 -->
+<div class="p-gutter rounded-xl bg-surface-container-lowest shadow-[0_4px_20px_rgba(15,23,42,0.03)] flex flex-col gap-space-md group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Trụ Cột 04</span>
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors">
+              Kế Hoạch IMC Launch Thiên Phúc Vĩnh Hằng Viên (450 Tỷ)
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Chủ trì thiết kế toàn diện Kế hoạch Truyền thông Tích hợp (IMC) cho giai đoạn mở bán dự án sinh thái quy mô 32.54 ha tại vùng đất di sản Yên Tử.
+            </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface font-label-md text-label-md">
+<span>Sự kiện Kick-Off &amp; Ra mắt</span>
+<span class="font-semibold text-secondary">200+ Nhà Đầu Tư VIP</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Đồng bộ bộ tài liệu bán hàng POSM cao cấp, Brochure sa bàn thực tế ảo 3D và video trải nghiệm không gian thiền định.
+            </p>
+</div>
+<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Định vị thương hiệu "Vĩnh Hằng Viên Sinh Thái Đẳng Cấp Thượng Lưu".</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Kịch bản tiếp cận báo chí tài chính &amp; bất động sản uy tín.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Real-World Management Deliverables & Artifacts -->
+<section class="w-full max-w-[1360px] mx-auto px-gutter-sm lg:px-margin py-space-lg">
+<div class="relative p-gutter lg:p-space-xl rounded-xl bg-surface-container-high/40 overflow-hidden">
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Tài Sản &amp; Sản Phẩm Quản Trị</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+              Sản Phẩm Thực Tế <span class="italic font-normal">Đã Bàn Giao &amp; Vận Hành</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Các tài liệu chiến lược, bảng tính điều hành và quy trình chuẩn (SOP) được chính Tạ Quốc Duy trực tiếp biên soạn và chuyển giao cho doanh nghiệp.
+            </p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="inline-flex items-center px-3 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim mr-1.5">lock_open</span>
+              Bản Xem Trước Quản Trị
+            </span>
+</div>
+</div>
+<!-- Deliverables 4-Column Mosaic -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<!-- Artifact 1 -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex flex-col justify-between gap-space-md shadow-sm hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-secondary-container/30 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Chiến Lược IMC</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Kế Hoạch Ra Mắt (450 Tỷ)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Bản kế hoạch 48 trang phân bổ ngân sách kênh, timeline 6 tháng và kịch bản truyền thông sự kiện mở bán.
+              </p>
+</div>
+<div class="pt-space-xs">
+<button class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full font-label-md text-label-md bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface transition-all" onclick="alert('Đang tải bản trích lược Kế hoạch IMC... Vui lòng liên hệ trực tiếp Duy để nhận đầy đủ bản bảo mật.')">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Xem Mẫu Kế Hoạch</span>
+</button>
+</div>
+</div>
+<!-- Artifact 2 -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex flex-col justify-between gap-space-md shadow-sm hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-secondary-container/30 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">table_chart</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Quản Trị Đội Ngũ</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Bộ Khung OKR 10 Nhân Sự</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Bảng tính phân rã mục tiêu cấp phòng ban xuống chỉ số định lượng hàng tuần cho Content, Ads, Media &amp; Design.
+              </p>
+</div>
+<div class="pt-space-xs">
+<button class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full font-label-md text-label-md bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface transition-all" onclick="alert('Bảng phân bổ OKR đang được lưu trữ an toàn. Nhấn Liên hệ Tuyển dụng để trao đổi trực tiếp.')">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Tải Mẫu Khung KPI</span>
+</button>
+</div>
+</div>
+<!-- Artifact 3 -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex flex-col justify-between gap-space-md shadow-sm hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-secondary-container/30 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Quy Trình Chuẩn SOP</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">SOP 130+ Video / Tháng</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Flowchart 7 bước chuẩn hóa: Brief -&gt; AI Scripting -&gt; Phê duyệt -&gt; Sản xuất thực địa -&gt; Hậu kỳ -&gt; Đăng tải đa nền tảng.
+              </p>
+</div>
+<div class="pt-space-xs">
+<button class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full font-label-md text-label-md bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface transition-all" onclick="alert('Quy trình SOP sản xuất in-house nội dung số đã sẵn sàng chia sẻ trong buổi phỏng vấn chuyên sâu.')">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Xem Sơ Đồ Quy Trình</span>
+</button>
+</div>
+</div>
+<!-- Artifact 4 -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex flex-col justify-between gap-space-md shadow-sm hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-secondary-container/30 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">insights</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Hạ Tầng Dữ Liệu</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Looker Studio Dashboard</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Hệ thống báo cáo số liệu Ads thời gian thực (CPL, CPC, ROAS, Tốc độ phản hồi lead của Sales) kết nối API trực tiếp.
+              </p>
+</div>
+<div class="pt-space-xs">
+<button class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full font-label-md text-label-md bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface transition-all" onclick="alert('Dashboard Looker Studio hiển thị trực tiếp dữ liệu chiến dịch tổng thể.')">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+<span>Khám Phá Dashboard</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Before vs After Transformation Table -->
+<section class="w-full max-w-[1360px] mx-auto px-gutter-sm lg:px-margin py-space-lg">
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Bằng Chứng Định Lượng</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+          Hiệu Quả Chuyển Đổi: <span class="italic font-normal">Trước &amp; Sau Khi Tiếp Nhận Dự Án</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Số liệu chứng minh tác động thực tế của tư duy tối ưu hóa hiệu suất và cải tiến quy trình vận hành.
+        </p>
+</div>
+<!-- Comparison Card Container -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md lg:p-gutter shadow-[0_4px_25px_rgba(15,23,42,0.04)] overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[640px]">
+<thead>
+<tr class="border-b-0 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4 font-semibold">Chỉ Số Đánh Giá (Metrics)</th>
+<th class="py-3 px-4 font-semibold bg-surface-container-high/40 rounded-tl-lg rounded-bl-lg">Trước Khi Tiếp Quản</th>
+<th class="py-3 px-4 font-semibold bg-secondary-container/20 text-on-secondary-container rounded-tr-lg rounded-br-lg">Sau Khi Tối Ưu (Hiện Tại)</th>
+<th class="py-3 px-4 font-semibold">Mức Độ Cải Thiện</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-4 font-semibold text-on-surface">
+                Sản lượng Video ngắn đa kênh
+                <span class="block font-normal text-xs text-on-surface-variant">TikTok, Facebook Reels, Shorts</span>
+</td>
+<td class="py-4 px-4 text-on-surface-variant bg-surface-container-high/20">
+                15 - 20 video / tháng (Thuê agency ngoài)
+              </td>
+<td class="py-4 px-4 font-semibold text-on-surface bg-secondary-container/10">
+                130+ video / tháng (Đội ngũ in-house)
+              </td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">north</span>
+                  +650% Sản Lượng
+                </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-4 font-semibold text-on-surface">
+                Chi phí mỗi lượt Click (CPC)
+                <span class="block font-normal text-xs text-on-surface-variant">Trung bình Meta Ads toàn ngành</span>
+</td>
+<td class="py-4 px-4 text-on-surface-variant bg-surface-container-high/20">
+                5.500đ — 8.000đ / click
+              </td>
+<td class="py-4 px-4 font-semibold text-on-surface bg-secondary-container/10">
+                1.205đ / click (CTR đạt 6.14%)
+              </td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">south</span>
+                  Giảm 65% Chi Phí
+                </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-4 font-semibold text-on-surface">
+                Khách hàng VIP tiềm năng
+                <span class="block font-normal text-xs text-on-surface-variant">Gia chủ 55+ chuẩn bị trước</span>
+</td>
+<td class="py-4 px-4 text-on-surface-variant bg-surface-container-high/20">
+                15 - 20 leads rải rác / tháng
+              </td>
+<td class="py-4 px-4 font-semibold text-on-surface bg-secondary-container/10">
+                50+ khách VIP chất lượng / tháng
+              </td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">north</span>
+                  +250% Tăng Trưởng
+                </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-4 font-semibold text-on-surface">
+                Tỷ lệ đặt lịch tham quan thực tế
+                <span class="block font-normal text-xs text-on-surface-variant">Chuyển đổi phễu Lead-to-Site Visit</span>
+</td>
+<td class="py-4 px-4 text-on-surface-variant bg-surface-container-high/20">
+                Xấp xỉ 18% tổng lượng lead
+              </td>
+<td class="py-4 px-4 font-semibold text-on-surface bg-secondary-container/10">
+                Đạt 26.1% (Tăng thêm 45% tuyệt đối)
+              </td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                  +45% Tỷ Lệ Chốt Hẹn
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Section 7: Next Case Studies Preview & Direct Recruiter CTA -->
+<section class="w-full max-w-[1360px] mx-auto px-gutter-sm lg:px-margin pt-space-lg pb-space-xl">
+<div class="flex flex-col gap-space-xl">
+<!-- Cross Navigation to other Projects -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Khám Phá Các Case Study Khác</span>
+<a class="font-label-md text-label-md text-secondary hover:underline flex items-center gap-1" data-path="du-an" href="./chien_dich_san_pham_theo_ky_nang.html">
+<span>Xem Toàn Bộ 6 Dự Án</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- Next Card 1 -->
+<a class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all group flex flex-col justify-between shadow-sm" data-path="du-an" href="./chien_dich_san_pham_theo_ky_nang.html#case-study-container">
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Keynote &amp; Tech Launch</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors">Ottocast P3 Bravigo</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ra mắt công nghệ Car-Tech đỉnh cao, thiết kế Keynote trình diễn độc quyền và phủ sóng truyền thông báo chí ô tô.</p>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-md text-label-md pt-space-sm group-hover:translate-x-1 transition-transform">
+<span>Xem chi tiết</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</a>
+<!-- Next Card 2 -->
+<a class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all group flex flex-col justify-between shadow-sm" data-path="du-an" href="./chien_dich_san_pham_theo_ky_nang.html#case-study-container">
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">FMCG &amp; Quà Tặng Doanh Nghiệp</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors">Lục Lam Group (40 Tỷ)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Chiến dịch Hộp quà Tết &amp; Trà hoa thảo mộc cao cấp, tối ưu luồng B2B Corporate Gifts và chiến dịch số mùa vụ.</p>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-md text-label-md pt-space-sm group-hover:translate-x-1 transition-transform">
+<span>Xem chi tiết</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</a>
+<!-- Next Card 3 -->
+<a class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all group flex flex-col justify-between shadow-sm" data-path="du-an" href="./chien_dich_san_pham_theo_ky_nang.html#case-study-container">
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Mobile Growth &amp; Automation</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors">Fclick App (-25% CPI)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tăng trưởng người dùng ứng dụng di động, kết hợp tự động hóa kịch bản quảng cáo AI và hạ chỉ số chi phí cài đặt.</p>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-md text-label-md pt-space-sm group-hover:translate-x-1 transition-transform">
+<span>Xem chi tiết</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</a>
+</div>
+</div>
+<!-- Recruiter Call to Action Box (Editorial Glass Aesthetic) -->
+<div class="relative overflow-hidden rounded-xl bg-primary text-on-primary p-gutter lg:p-space-xl shadow-xl">
+<div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs text-center lg:text-left max-w-2xl">
+<div class="inline-flex items-center justify-center lg:justify-start gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">Sẵn Sàng Tiếp Nhận Thử Thách Mới</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg font-normal tracking-tight">
+              Bạn Cần Một Leader <span class="italic font-display text-secondary-fixed">Thực Chiến</span> Để Tăng Trưởng Dự Án?
+            </h3>
+<p class="font-body-md text-body-md text-on-primary-container">
+              Kinh nghiệm trực tiếp dẫn dắt đội ngũ 10+ nhân sự, quản trị ngân sách hàng trăm triệu mỗi tháng và khả năng kết hợp sâu giữa Sáng tạo thương hiệu &amp; Hạ tầng Dữ liệu MarTech.
+            </p>
+<div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2 text-on-primary font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">phone_in_talk</span>
+<span>Hotline/Zalo: <strong>039 222 5986</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">location_on</span>
+<span>TP. Hồ Chí Minh &amp; Hybrid Toàn Quốc</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0 w-full sm:w-auto">
+<a class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-label-md text-label-md text-on-secondary-fixed bg-secondary-fixed hover:bg-secondary-fixed-dim transition-all shadow-[0_4px_20px_rgba(172,237,255,0.25)]" data-path="lien-he" href="../index.html#contact">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+<span>Trao Đổi Cơ Hội Tuyển Dụng</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-label-md text-label-md text-on-primary bg-surface-container-highest/20 hover:bg-surface-container-highest/30 transition-all backdrop-blur-md" href="../CV_Ta_Quoc_Duy_Marketing_Manager.pdf" target="_blank">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Tải Bản CV Đầy Đủ (PDF)</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low mt-space-xl shadow-[0_-1px_12px_rgba(15,23,42,0.02)]"><div class="max-w-[1360px] mx-auto px-gutter-sm lg:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start pb-space-lg"><div class="md:col-span-5 flex flex-col gap-space-xs"><div class="flex items-center gap-2"><span class="font-headline-md text-headline-md text-on-surface tracking-tight">Tạ Quốc Duy</span><span class="text-secondary text-sm">✦</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-md">Chiến lược tăng trưởng lấy dữ liệu làm trung tâm, tích hợp hạ tầng MarTech hiện đại kết hợp tư duy thương hiệu chiều sâu.</p><div class="inline-flex items-center gap-2 pt-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span><span class="font-label-md text-label-md text-on-surface-variant">Sẵn sàng cho vai trò Growth &amp; MarTech Lead</span></div></div><div class="md:col-span-4 flex flex-col gap-space-xs"><h4 class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Thông Tin Kết Nối</h4><div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[18px]">call</span><span>Hotline / Zalo: <strong class="font-semibold text-on-surface">039 222 5986</strong></span></div><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[18px]">location_on</span><span>Địa điểm: <span class="text-on-surface">TP. Hồ Chí Minh, Việt Nam</span></span></div><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[18px]">mail</span><span>Email: <span class="text-on-surface">duy.growthmartech@portfolio.vn</span></span></div></div></div><div class="md:col-span-3 flex flex-col gap-space-xs"><h4 class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Chuyên Môn Cốt Lõi</h4><div class="flex flex-wrap gap-1.5"><span class="px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-highest text-on-surface">CDP &amp; Automation</span><span class="px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-highest text-on-surface">Performance Scale</span><span class="px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-highest text-on-surface">Product-Led Growth</span><span class="px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-highest text-on-surface">Data Attribution</span></div></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left"><p class="font-label-md text-label-md text-on-surface-variant">© 2026 Tạ Quốc Duy. All rights reserved. Crafted with Mindly Editorial Precision.</p><div class="flex items-center gap-space-md font-label-md text-label-md text-on-surface-variant"><a class="hover:text-on-surface transition-colors" data-path="trang-chu" href="../index.html">Trang Chủ</a><a class="hover:text-on-surface transition-colors" data-path="du-an" href="./chien_dich_san_pham_theo_ky_nang.html">Case Studies</a><a class="hover:text-on-surface transition-colors" data-path="lien-he" href="../index.html#contact">Tuyển Dụng</a></div></div></div></footer></body></html>

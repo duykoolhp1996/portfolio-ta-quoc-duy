@@ -1,0 +1,801 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="vi"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tạ Quốc Duy ✦ Growth &amp; MarTech Lead | Marketing Manager</title>
+<!-- Tailwind CSS CDN with forms and container queries plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans for authentic Mindly luxury editorial aesthetic -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Custom Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          colors: {
+            canvas: '#FAFAFA',
+            porcelain: '#F5F6F8',
+            accent: {
+              charcoal: '#0F1012',
+              subtle: '#626671',
+              border: '#EAECEF',
+            }
+          },
+          animation: {
+            'spin-slow': 'spin 22s linear infinite',
+            'float-slow': 'float 6s ease-in-out infinite',
+            'float-delayed': 'float 7s ease-in-out 2s infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Mindly-style subtle radial ambient illumination */
+    .hero-atmosphere {
+      background: radial-gradient(circle at 50% 25%, rgba(228, 235, 248, 0.6) 0%, rgba(250, 250, 250, 0.95) 75%);
+    }
+
+    .glass-pill {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .glass-card-mindly {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 20px 45px -12px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.95);
+    }
+
+    /* Subtle bottom mask to blend portrait smoothly into the base */
+    .portrait-fade {
+      mask-image: linear-gradient(to bottom, black 78%, transparent 99%);
+      -webkit-mask-image: linear-gradient(to bottom, black 78%, transparent 99%);
+    }
+
+    .curved-line {
+      pointer-events: none;
+    }
+  </style>
+  <!-- Hotjar Tracking Code per Rule 6 -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:6791459,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- Google tag (gtag.js) per Rule 6 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KQYN3R3X2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9KQYN3R3X2');
+  </script>
+</head>
+<body class="bg-canvas text-accent-charcoal font-sans antialiased selection:bg-neutral-900 selection:text-white">
+<!-- BEGIN: Site Header -->
+<header class="fixed top-0 left-0 w-full z-50 py-4 px-6 md:px-12 pointer-events-none transition-all duration-300">
+<div class="max-w-7xl mx-auto flex items-center justify-between pointer-events-auto">
+<!-- Logo Mindly style -->
+<a class="group flex items-center gap-1.5 focus:outline-none" href="#">
+<span class="text-xl md:text-2xl font-bold tracking-tight text-neutral-950 font-sans">Quốc Duy</span>
+<span class="text-xs text-neutral-400 group-hover:rotate-45 transition-transform duration-300">✦</span>
+</a>
+<!-- Floating Center Pill Menu -->
+<nav class="hidden md:flex glass-pill shadow-sm rounded-full px-7 py-2.5 items-center space-x-7 text-xs lg:text-[13px] font-medium text-neutral-600">
+<a class="hover:text-black transition-colors" href="#about">Về Tôi</a>
+<a class="hover:text-black transition-colors" href="#metrics">Chỉ Số</a>
+<a class="hover:text-black transition-colors" href="#leadership">Năng Lực</a>
+<a class="hover:text-black transition-colors" href="#projects">Dự Án</a>
+<a class="hover:text-black transition-colors" href="#martech">MarTech &amp; AI</a>
+<a class="hover:text-black transition-colors" href="#career">Sự Nghiệp</a>
+</nav>
+<!-- Right Action CTA -->
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center gap-2 bg-neutral-950 text-white hover:bg-neutral-800 text-xs md:text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-200 shadow-sm hover:shadow group" href="#contact">
+<span class="">Liên Hệ Tuyển Dụng</span>
+<span class="text-neutral-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200">↗</span>
+</a>
+</div>
+</div>
+</header>
+<!-- END: Site Header -->
+<!-- BEGIN: Hero Section (Strictly inspired by Mindly reference) -->
+<section class="relative min-h-[96vh] md:h-screen max-h-[1050px] pt-24 pb-0 overflow-hidden hero-atmosphere flex flex-col justify-between border-b border-neutral-100" id="about">
+<!-- Top Floating Mindly Rotating Stamp Badge -->
+<div class="absolute right-8 md:right-20 top-20 hidden lg:block select-none pointer-events-none z-20">
+<div class="relative w-28 h-28 flex items-center justify-center animate-spin-slow opacity-85">
+<svg class="w-full h-full text-neutral-400 fill-current" viewBox="0 0 100 100">
+<defs>
+<path d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" id="circleStampPath"></path>
+</defs>
+<text font-family="'Plus Jakarta Sans', sans-serif" font-size="8.2" font-weight="600" letter-spacing="3.2px">
+<textPath xlink:href="#circleStampPath">
+              ✦ GROWTH &amp; MARTECH LEAD ✦ TP. HỒ CHÍ MINH
+            </textPath>
+</text>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center text-neutral-800 text-xs font-bold">
+          ✦
+        </div>
+</div>
+</div>
+<!-- Hero Content Container -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-20 text-center pt-2 md:pt-4">
+<!-- Editorial Title -->
+<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-serif font-normal tracking-tight text-neutral-950 leading-[1.08] mb-3 max-w-4xl mx-auto">
+        Chiến Lược Marketing.<br>
+<span class="italic font-normal text-neutral-900">Tăng Trưởng Dựa Trên Dữ Liệu &amp; AI.</span>
+</h1>
+<!-- Subtitle -->
+<p class="text-xs sm:text-sm md:text-[15px] text-neutral-600 max-w-2xl mx-auto font-normal leading-relaxed mb-6">
+        Kết hợp tư duy chiến lược, tăng trưởng từ dữ liệu và công nghệ AI Automation — Tối ưu chi phí &amp; tạo doanh thu thực tế.
+      </p>
+<!-- Action Button Group -->
+<div class="flex flex-wrap items-center justify-center gap-3 text-xs md:text-sm font-medium">
+<a class="inline-flex items-center gap-2 bg-neutral-950 text-white px-6 py-3 rounded-full hover:bg-neutral-800 transition-all duration-200 shadow-sm hover:shadow group" href="#projects">
+<span class="">Xem Dự Án Tiêu Biểu</span>
+<span class="group-hover:translate-x-1 transition-transform duration-200">→</span>
+</a>
+<a class="inline-flex items-center gap-2.5 glass-pill px-6 py-3 rounded-full hover:bg-white text-neutral-800 transition-all duration-200 shadow-sm border border-neutral-200/80" href="#contact">
+<svg class="w-4 h-4 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="">Tải CV (Bản PDF)</span>
+</a>
+</div>
+</div>
+<!-- Center Interactive Visual Staging with Portrait & Mindly Connectors -->
+<div class="relative w-full max-w-7xl mx-auto flex-1 flex justify-center items-end min-h-[460px] sm:min-h-[540px] md:min-h-[600px] lg:min-h-[660px]">
+<!-- SVG Curved Lines (Faithful to Mindly layout, adjusted for enlarged portrait) -->
+<svg class="absolute inset-0 w-full h-full curved-line hidden md:block z-10" fill="none" viewBox="0 0 1200 620"><!-- Curve Left: Card to Portrait (pulled inward) -->
+<path d="M 310 190 C 400 190, 450 280, 490 320" stroke="#CBD5E1" stroke-dasharray="3 3" stroke-linecap="round" stroke-width="1.2"></path>
+<circle cx="310" cy="190" fill="#94A3B8" r="3"></circle>
+<!-- Curve Right: Card to Portrait (pulled inward) -->
+<path d="M 890 200 C 800 200, 750 280, 710 320" stroke="#CBD5E1" stroke-dasharray="3 3" stroke-linecap="round" stroke-width="1.2"></path>
+<circle cx="890" cy="200" fill="#94A3B8" r="3"></circle>
+<!-- Ground indicator arcs -->
+<path d="M 220 570 C 330 570, 400 560, 480 580" stroke="#E2E8F0" stroke-width="1"></path>
+<path d="M 980 570 C 870 570, 800 560, 720 580" stroke="#E2E8F0" stroke-width="1"></path></svg>
+<!-- Center Hero Studio Portrait - Significantly enlarged -->
+<div class="relative z-20 flex justify-center items-end h-full select-none">
+<img alt="Tạ Quốc Duy - Growth &amp; MarTech Lead" class="h-[440px] sm:h-[530px] md:h-[600px] lg:h-[680px] w-auto max-w-none object-contain object-bottom portrait-fade pointer-events-none drop-shadow-md scale-105 transform origin-bottom transition-transform duration-300" src="hero_portrait.jpg">
+</div>
+<!-- Floating Card Left: AI & Tự Động Hóa -->
+<div class="absolute left-4 sm:left-10 md:left-16 lg:left-24 top-8 sm:top-12 z-30 animate-float-slow hidden sm:block max-w-[220px] md:max-w-[250px]">
+<div class="glass-card-mindly rounded-2xl p-4 md:p-5 text-left shadow-lg">
+<div class="flex items-center gap-2 mb-2.5">
+<div class="w-8 h-8 rounded-xl bg-neutral-950 text-white flex items-center justify-center text-sm shadow-sm">
+              ✦
+            </div>
+<span class="text-[11px] font-semibold tracking-wide text-neutral-400 uppercase">Automation</span>
+</div>
+<h4 class="text-xs md:text-sm font-semibold text-neutral-950 leading-snug mb-1">
+            ✦ AI &amp; Tự Động Hóa
+          </h4>
+<p class="text-[11px] md:text-xs text-neutral-500 leading-relaxed">
+            Tiết kiệm 30% thời gian vận hành &amp; tự xây dựng AI Agents nội bộ.
+          </p>
+</div>
+</div>
+<!-- Floating Card Right: 40 Tỷ Doanh Thu -->
+<div class="absolute right-4 sm:right-10 md:right-16 lg:right-24 top-8 sm:top-12 z-30 animate-float-delayed hidden sm:block max-w-[220px] md:max-w-[250px]">
+<div class="glass-card-mindly rounded-2xl p-4 md:p-5 text-left shadow-lg">
+<div class="flex items-center justify-between mb-2.5">
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-bold border border-emerald-200/50">
+              KẾT QUẢ ĐỈNH
+            </span>
+<span class="text-[10px] font-mono text-neutral-400">P&amp;L Scale</span>
+</div>
+<h4 class="text-xs md:text-sm font-semibold text-neutral-950 leading-snug mb-1">
+            ✦ 40 Tỷ Doanh Thu
+          </h4>
+<p class="text-[11px] md:text-xs text-neutral-500 leading-relaxed">
+            Tăng trưởng từ số 0 &amp; chuỗi hệ thống Takashimaya, Lotte Mart.
+          </p>
+</div>
+</div>
+<!-- Micro Floating Pill Left (50+ Khách VIP / Tháng) -->
+<div class="absolute left-10 md:left-28 lg:left-36 bottom-24 md:bottom-28 z-30 hidden md:flex items-center gap-2.5 glass-pill px-3.5 py-2 rounded-xl shadow-md">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+</span>
+<div class="text-left">
+<p class="text-xs font-semibold text-neutral-900 leading-none">50+ Khách VIP / Tháng</p>
+<p class="text-[10px] text-neutral-400 leading-none mt-1">CPC 1.205đ · Sala Garden</p>
+</div>
+</div>
+<!-- Micro Floating Pill Right (130+ Video / Tháng) -->
+<div class="absolute right-10 md:right-28 lg:right-36 bottom-28 md:bottom-32 z-30 hidden md:flex items-center gap-2.5 glass-pill px-3.5 py-2 rounded-xl shadow-md">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+<div class="text-left">
+<p class="text-xs font-semibold text-neutral-900 leading-none">130+ Video / Tháng</p>
+<p class="text-[10px] text-neutral-400 leading-none mt-1">TikTok &amp; Reels Viral Machine</p>
+</div>
+</div>
+<!-- Bottom Profile Social Proof (Bách Khoa TP.HCM) -->
+<div class="absolute left-8 md:left-24 lg:left-32 bottom-4 z-30 glass-pill px-3.5 py-2 rounded-xl border border-white/90 shadow-sm flex items-center gap-2.5 bg-white/85">
+<div class="w-6 h-6 rounded-full bg-neutral-950 text-white flex items-center justify-center text-[10px] font-serif font-bold">
+          BK
+        </div>
+<div class="text-left">
+<p class="text-[11px] font-semibold text-neutral-950 leading-none">ĐH Bách Khoa TP.HCM</p>
+<p class="text-[10px] text-neutral-500 leading-none mt-0.5">Cử nhân CNTT · 8+ năm Quản lý</p>
+</div>
+</div>
+<!-- Bottom Right Mindly Quote Accent -->
+<div class="absolute right-8 md:right-24 lg:right-32 bottom-4 z-30 hidden sm:flex items-center gap-2 text-right">
+<div class="text-right">
+<span class="text-[10px] font-medium text-neutral-400 block tracking-widest uppercase">Less chaos. More clarity.</span>
+<span class="text-xs font-medium text-neutral-700">Tư duy hệ thống · Thực thi sắc bén</span>
+</div>
+<div class="text-sm text-neutral-400">✦</div>
+</div>
+</div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: Impact Metrics Section -->
+<section class="py-20 bg-white border-b border-neutral-100" id="metrics">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<span class="text-xs font-semibold text-neutral-400 uppercase tracking-widest block mb-1.5">Hiệu Suất Thực Chiến</span>
+<h2 class="text-3xl md:text-4xl font-serif text-neutral-950 font-normal">Kết Quả Đo Lường Được</h2>
+</div>
+<p class="text-xs md:text-sm text-neutral-500 max-w-md mt-3 md:mt-0 leading-relaxed">
+          Các con số thực tế được ghi nhận qua quá trình trực tiếp quản trị tiếp thị, điều hành đội ngũ và tối ưu tăng trưởng.
+        </p>
+</div>
+<!-- 6 Key Metrics Cards -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<div class="p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 transition-colors">
+<p class="text-xs font-medium text-neutral-400 mb-2">Kinh Nghiệm</p>
+<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1">8+ Năm</p>
+<p class="text-[11px] text-neutral-500 leading-snug">Hoạch định &amp; quản trị tiếp thị BĐS, F&amp;B, Tech, Bán lẻ</p>
+</div>
+<div class="p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 transition-colors">
+<p class="text-xs font-medium text-neutral-400 mb-2">Ngân Sách Ads</p>
+<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1">700M</p>
+<p class="text-[11px] text-neutral-500 leading-snug">VNĐ/tháng lớn nhất từng quản lý &amp; tối ưu ROI</p>
+</div>
+<div class="p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 transition-colors">
+<p class="text-xs font-medium text-neutral-400 mb-2">Sản Xuất Video</p>
+<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1">130+</p>
+<p class="text-[11px] text-neutral-500 leading-snug">Video ngắn / tháng phủ sóng TikTok, Reels, Shorts</p>
+</div>
+<div class="p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 transition-colors">
+<p class="text-xs font-medium text-neutral-400 mb-2">Quy Mô Team</p>
+<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1">10</p>
+<p class="text-[11px] text-neutral-500 leading-snug">Nhân sự: Điều hành Digital Ads &amp; Brand Creative</p>
+</div>
+<div class="p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 transition-colors">
+<p class="text-xs font-medium text-neutral-400 mb-2">Doanh Thu Chuỗi</p>
+<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1">40 Tỷ</p>
+<p class="text-[11px] text-neutral-500 leading-snug">VNĐ xây dựng từ số 0 cho Lục Lam Group</p>
+</div>
+<div class="p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 transition-colors">
+<p class="text-xs font-medium text-neutral-400 mb-2">AI Automation</p>
+<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1">30%</p>
+<p class="text-[11px] text-neutral-500 leading-snug">Thời gian vận hành tiết kiệm nhờ AI Agents &amp; Vibe Coding</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Impact Metrics Section -->
+<!-- BEGIN: Strategic Pillars -->
+<section class="py-20 bg-canvas" id="leadership">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-xs font-semibold text-neutral-400 uppercase tracking-widest block mb-2">Nền Tảng &amp; Phương Pháp</span>
+<h2 class="text-3xl md:text-4xl font-serif text-neutral-950 font-normal">3 Trụ Cột Năng Lực Cốt Lõi</h2>
+<p class="text-sm text-neutral-500 mt-3 leading-relaxed">
+          Tốt nghiệp Cử nhân Công nghệ Thông tin tại ĐH Bách Khoa TP.HCM kết hợp hơn 8 năm dẫn dắt tiếp thị đa ngành.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Pillar 1 -->
+<div class="bg-white rounded-3xl p-8 border border-neutral-200/80 shadow-sm hover:shadow-md transition-shadow">
+<div class="text-xs font-mono text-neutral-400 mb-6">01 // TRỤ CỘT</div>
+<h3 class="text-xl font-semibold text-neutral-950 mb-3">Marketing Strategy &amp; Leadership</h3>
+<p class="text-sm text-neutral-600 leading-relaxed mb-6">
+            Hoạch định chiến lược tiếp thị tổng thể, quản trị ngân sách P&amp;L (tới 700 triệu/tháng), dẫn dắt 2 teams (10 nhân sự), xây dựng chỉ tiêu KPI/OKR định lượng từng vị trí và chuẩn hóa quy trình SOP.
+          </p>
+<ul class="text-xs text-neutral-600 space-y-2.5">
+<li class="flex items-center gap-2"><span class="text-neutral-900 font-bold">✓</span> Quản trị P&amp;L &amp; tối ưu ngân sách lớn</li>
+<li class="flex items-center gap-2"><span class="text-neutral-900 font-bold">✓</span> Dẫn dắt 10 nhân sự Digital &amp; Branding</li>
+<li class="flex items-center gap-2"><span class="text-neutral-900 font-bold">✓</span> Gắn kết luồng Lead-to-Order với Sales</li>
+</ul>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-white rounded-3xl p-8 border border-neutral-200/80 shadow-sm hover:shadow-md transition-shadow">
+<div class="text-xs font-mono text-neutral-400 mb-6">02 // TRỤ CỘT</div>
+<h3 class="text-xl font-semibold text-neutral-950 mb-3">Performance &amp; Brand Growth</h3>
+<p class="text-sm text-neutral-600 leading-relaxed mb-6">
+            Trực tiếp tối ưu quảng cáo đa kênh (Meta, Google, TikTok, Zalo OA), cắt giảm 25% CPI tải app, tăng trưởng doanh thu ads +40%, SEO tự nhiên 5.000+ traffic/tháng và sản xuất 130+ video/tháng.
+          </p>
+<ul class="text-xs text-neutral-600 space-y-2.5">
+<li class="flex items-center gap-2"><span class="text-neutral-900 font-bold">✓</span> CPC 1.205đ (CTR 6.14%) tại BĐS Sala Garden</li>
+<li class="flex items-center gap-2"><span class="text-neutral-900 font-bold">✓</span> Cỗ máy in-house 130+ video ngắn/tháng</li>
+<li class="flex items-center gap-2"><span class="text-neutral-900 font-bold">✓</span> Đưa sản phẩm vào chuỗi Lotte Mart &amp; Takashimaya</li>
+</ul>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-white rounded-3xl p-8 border border-neutral-200/80 shadow-sm hover:shadow-md transition-shadow">
+<div class="text-xs font-mono text-neutral-400 mb-6">03 // TRỤ CỘT</div>
+<h3 class="text-xl font-semibold text-neutral-950 mb-3">MarTech, Data &amp; AI Automation</h3>
+<p class="text-sm text-neutral-600 leading-relaxed mb-6">
+            Nền tảng CNTT ĐH Bách Khoa TP.HCM: Tự tay xây dựng Dashboard báo cáo thời gian thực, tích hợp CRM đa kênh, phát triển AI Agents tự hành và giải pháp Vibe Coding tiết kiệm 30% thời gian.
+          </p>
+<ul class="text-xs text-neutral-600 space-y-2.5">
+<li class="flex items-center gap-2"><span class="text-neutral-900 font-bold">✓</span> Tự động hóa CRM, Looker Studio, GA4</li>
+<li class="flex items-center gap-2"><span class="text-neutral-900 font-bold">✓</span> Triển khai AI Agents sản xuất content &amp; prompts</li>
+<li class="flex items-center gap-2"><span class="text-neutral-900 font-bold">✓</span> Tự thiết kế &amp; lập trình trọn gói hệ thống website</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Strategic Pillars -->
+<!-- BEGIN: Case Studies Section -->
+<section class="py-20 bg-white border-t border-neutral-100" id="projects">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<span class="text-xs font-semibold text-neutral-400 uppercase tracking-widest block mb-2">Dự Án Tiêu Biểu</span>
+<h2 class="text-3xl md:text-4xl font-serif text-neutral-950 font-normal">Hồ Sơ Năng Lực &amp; 6 Dự Án Thực Chiến</h2>
+</div>
+<p class="text-xs md:text-sm text-neutral-500 max-w-sm mt-3 md:mt-0 leading-relaxed">
+          Bối cảnh, giải pháp công nghệ và kết quả kinh doanh đo lường minh bạch từ 6 doanh nghiệp tiêu biểu.
+        </p>
+</div>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Case 1: Sala Garden -->
+<a href="chi_tiet_du_an_sala_garden.html" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-xl hover:-translate-y-1 transition-all bg-canvas flex flex-col justify-between block cursor-pointer text-inherit no-underline">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">BĐS Hoa Viên Sinh Thái</span>
+<span class="text-[11px] text-neutral-400 font-mono">03/2026 – Hiện tại</span>
+</div>
+<h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
+  <span>Sala Garden</span>
+  <span class="text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-neutral-400">↗</span>
+</h3>
+<p class="text-xs font-medium text-neutral-500 mb-4">Marketing Manager • Điều hành 10 nhân sự</p>
+<div class="grid grid-cols-2 gap-2.5 mb-5 p-3.5 bg-white rounded-xl border border-neutral-100">
+<div>
+<p class="text-xs text-neutral-400">Ngân sách Ads</p>
+<p class="text-base font-bold text-neutral-900">300 Tr/tháng</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">Chi phí / Click</p>
+<p class="text-base font-bold text-neutral-900">CPC 1.205đ</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">Khách VIP</p>
+<p class="text-base font-bold text-neutral-900">50+ / tháng</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">Sản xuất Video</p>
+<p class="text-base font-bold text-neutral-900">130+ Video/tháng</p>
+</div>
+</div>
+<p class="text-xs text-neutral-600 leading-relaxed mb-4">
+              Vận hành cỗ máy video ngắn phủ TikTok/Reels/Shorts, lập kế hoạch IMC ra mắt Thiên Phúc Vĩnh Hằng Viên (32.54 ha - vốn 450 tỷ).
+            </p>
+</div>
+<div class="pt-4 border-t border-neutral-200/60 flex items-center justify-between text-xs font-medium">
+<span class="text-neutral-500">Tệp mục tiêu 55+ tuổi</span>
+<span class="text-neutral-950 font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Xem Chi Tiết →</span>
+</div>
+</a>
+<!-- Case 2: Fclick Mobile App -->
+<a href="../case-study.html?case=fclick" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-xl hover:-translate-y-1 transition-all bg-canvas flex flex-col justify-between block cursor-pointer text-inherit no-underline">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">Mobile App &amp; SaaS</span>
+<span class="text-[11px] text-neutral-400 font-mono">06/2025 – 02/2026</span>
+</div>
+<h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
+  <span>Fclick Mobile App</span>
+  <span class="text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-neutral-400">↗</span>
+</h3>
+<p class="text-xs font-medium text-neutral-500 mb-4">Marketing Manager &amp; MarTech Lead</p>
+<div class="grid grid-cols-2 gap-2.5 mb-5 p-3.5 bg-white rounded-xl border border-neutral-100">
+<div>
+<p class="text-xs text-neutral-400">Chi phí tải App</p>
+<p class="text-base font-bold text-emerald-600">-25% CPI</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">Tối ưu thời gian</p>
+<p class="text-base font-bold text-neutral-900">Tiết kiệm 30%</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">Tỷ lệ giữ chân</p>
+<p class="text-base font-bold text-neutral-900">+20% Retention</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">Báo cáo đa kênh</p>
+<p class="text-base font-bold text-neutral-900">Auto Dashboard</p>
+</div>
+</div>
+<p class="text-xs text-neutral-600 leading-relaxed mb-4">
+              Ứng dụng AI xây dựng quy trình kịch bản và sáng tạo hình ảnh quảng cáo đa biến thể; triển khai 4 website vệ tinh thu hút tệp cài đặt chất lượng.
+            </p>
+</div>
+<div class="pt-4 border-t border-neutral-200/60 flex items-center justify-between text-xs font-medium">
+<span class="text-neutral-500">In-app Events &amp; AI Prompting</span>
+<span class="text-neutral-950 font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Xem Chi Tiết →</span>
+</div>
+</a>
+<!-- Case 3: Lục Lam Group -->
+<a href="../case-study.html?case=luclam" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-xl hover:-translate-y-1 transition-all bg-canvas flex flex-col justify-between block cursor-pointer text-inherit no-underline">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">Trà Thảo Mộc &amp; Quà B2B</span>
+<span class="text-[11px] text-neutral-400 font-mono">09/2023 – 05/2025</span>
+</div>
+<h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
+  <span>Lục Lam Group</span>
+  <span class="text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-neutral-400">↗</span>
+</h3>
+<p class="text-xs font-medium text-neutral-500 mb-4">Marketing Manager • Đội ngũ 4-5 người</p>
+<div class="grid grid-cols-2 gap-2.5 mb-5 p-3.5 bg-white rounded-xl border border-neutral-100">
+<div>
+<p class="text-xs text-neutral-400">Doanh thu đạt mốc</p>
+<p class="text-base font-bold text-neutral-900">40 Tỷ VNĐ</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">Hệ thống Website</p>
+<p class="text-base font-bold text-neutral-900">4 Website</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">TTTM Cao cấp</p>
+<p class="text-base font-bold text-neutral-900">Takashimaya</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">Bộ quà Tết B2B</p>
+<p class="text-base font-bold text-emerald-600">100% Cháy hàng</p>
+</div>
+</div>
+<p class="text-xs text-neutral-600 leading-relaxed mb-4">
+              Dẫn dắt thương hiệu từ số 0, tự lập trình 4 website kết nối CRM và tổ chức thành công chuỗi trải nghiệm thưởng trà tại Takashimaya Q.1.
+            </p>
+</div>
+<div class="pt-4 border-t border-neutral-200/60 flex items-center justify-between text-xs font-medium">
+<span class="text-neutral-500">TVC &amp; Behind The Scenes</span>
+<span class="text-neutral-950 font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Xem Chi Tiết →</span>
+</div>
+</a>
+<!-- Case 4: Bravigo -->
+<a href="../case-study.html?case=bravigo" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-xl hover:-translate-y-1 transition-all bg-canvas flex flex-col justify-between block cursor-pointer text-inherit no-underline">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">Phụ Kiện Ô Tô Thông Minh</span>
+<span class="text-[11px] text-neutral-400 font-mono">11/2022 – 08/2023</span>
+</div>
+<h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
+  <span>Bravigo &amp; Ottocast P3</span>
+  <span class="text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-neutral-400">↗</span>
+</h3>
+<p class="text-xs font-medium text-neutral-500 mb-4">Trưởng Nhóm Marketing Số (8 chuyên viên)</p>
+<div class="grid grid-cols-2 gap-2.5 mb-5 p-3.5 bg-white rounded-xl border border-neutral-100">
+<div>
+<p class="text-xs text-neutral-400">Kênh B2B Gara</p>
+<p class="text-base font-bold text-neutral-900">Hàng trăm ĐL</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">Sự kiện Flagship</p>
+<p class="text-base font-bold text-neutral-900">Ottocast P3</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">Slide Keynote</p>
+<p class="text-base font-bold text-neutral-900">100% Canva</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">Reviewer Xe</p>
+<p class="text-base font-bold text-neutral-900">KOLs Kéo Đơn</p>
+</div>
+</div>
+<p class="text-xs text-neutral-600 leading-relaxed mb-4">
+              Trưởng ban tổ chức ra mắt Ottocast P3, trực tiếp thiết kế toàn bộ bài thuyết trình keynote công nghệ, xác lập kỷ lục đơn cọc trong đêm ra mắt.
+            </p>
+</div>
+<div class="pt-4 border-t border-neutral-200/60 flex items-center justify-between text-xs font-medium">
+<span class="text-neutral-500">Mạng lưới phân phối đại lý</span>
+<span class="text-neutral-950 font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Xem Chi Tiết →</span>
+</div>
+</a>
+<!-- Case 5: Brew & Bánh Mì (USA) -->
+<a href="../case-study.html?case=brewbanhmi" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-xl hover:-translate-y-1 transition-all bg-canvas flex flex-col justify-between block cursor-pointer text-inherit no-underline">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">F&amp;B Quốc Tế (California, USA)</span>
+<span class="text-[11px] text-neutral-400 font-mono">2024 – 2025</span>
+</div>
+<h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
+  <span>Brew &amp; Bánh Mì Cafe</span>
+  <span class="text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-neutral-400">↗</span>
+</h3>
+<p class="text-xs font-medium text-neutral-500 mb-4">Quản Lý Marketing &amp; Kênh Số</p>
+<div class="grid grid-cols-2 gap-2.5 mb-5 p-3.5 bg-white rounded-xl border border-neutral-100">
+<div>
+<p class="text-xs text-neutral-400">Website chuẩn Mỹ</p>
+<p class="text-base font-bold text-neutral-900">Song Ngữ</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">Hệ POS Trực tuyến</p>
+<p class="text-base font-bold text-neutral-900">Toast Tab</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">Local SEO Maps</p>
+<p class="text-base font-bold text-neutral-900">Top 5 Sao</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">Traffic / tháng</p>
+<p class="text-base font-bold text-neutral-900">5.000+ Lượt</p>
+</div>
+</div>
+<p class="text-xs text-neutral-600 leading-relaxed mb-4">
+              Lập trình website brewbanhmicafe.com chuẩn di động, tích hợp hoàn chỉnh hệ thống POS Toast Tab tự động hóa đơn đặt Pick-up và Catering.
+            </p>
+</div>
+<div class="pt-4 border-t border-neutral-200/60 flex items-center justify-between text-xs font-medium">
+<span class="text-neutral-500">Milpitas, California, USA</span>
+<span class="text-neutral-950 font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Xem Chi Tiết →</span>
+</div>
+</a>
+<!-- Case 6: LATH Group & Chuỗi Xe Máy Nam Tiến -->
+<a href="../case-study.html?case=namtien" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-xl hover:-translate-y-1 transition-all bg-canvas flex flex-col justify-between block cursor-pointer text-inherit no-underline">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">Bán Lẻ O2O &amp; Mỹ Phẩm</span>
+<span class="text-[11px] text-neutral-400 font-mono">Đa Ngành</span>
+</div>
+<h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
+  <span>LATH &amp; Nam Tiến Showroom</span>
+  <span class="text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-neutral-400">↗</span>
+</h3>
+<p class="text-xs font-medium text-neutral-500 mb-4">Marketing Lead / Manager</p>
+<div class="grid grid-cols-2 gap-2.5 mb-5 p-3.5 bg-white rounded-xl border border-neutral-100">
+<div>
+<p class="text-xs text-neutral-400">Tăng Ads LATH</p>
+<p class="text-base font-bold text-emerald-600">+40% D.Thu</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">SEO Tự Nhiên</p>
+<p class="text-base font-bold text-neutral-900">5.000/tháng</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">Nam Tiến Leads</p>
+<p class="text-base font-bold text-neutral-900">1.500+/tháng</p>
+</div>
+<div>
+<p class="text-xs text-neutral-400">Views Video Xe</p>
+<p class="text-base font-bold text-neutral-900">5M+ Lượt</p>
+</div>
+</div>
+<p class="text-xs text-neutral-600 leading-relaxed mb-4">
+              Đưa mỹ phẩm vào Lotte Mart và thiết lập phễu O2O cho chuỗi showroom xe máy Nam Tiến, mang về 1.500+ leads chất lượng mỗi tháng.
+            </p>
+</div>
+<div class="pt-4 border-t border-neutral-200/60 flex items-center justify-between text-xs font-medium">
+<span class="text-neutral-500">Mô hình Online-to-Offline (O2O)</span>
+<span class="text-neutral-950 font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Xem Chi Tiết →</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- END: Case Studies Section -->
+<!-- BEGIN: MarTech Architecture Section -->
+<section class="py-20 bg-neutral-950 text-white" id="martech">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-2xl mb-14">
+<span class="text-xs font-semibold text-neutral-400 uppercase tracking-widest block mb-2 font-mono">Hệ Thống Công Nghệ &amp; Tự Động Hóa AI</span>
+<h2 class="text-3xl md:text-4xl font-serif font-normal text-white">Mô Hình Công Nghệ Tiếp Thị Đa Tầng</h2>
+<p class="text-sm text-neutral-400 mt-3 leading-relaxed">
+          Tự tay thiết lập luồng dữ liệu tự động, loại bỏ 100% cảm tính và xây dựng công cụ số hỗ trợ đội ngũ tăng tốc.
+        </p>
+</div>
+<!-- 4 Stack Blocks -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-700 transition-colors">
+<div class="w-8 h-8 rounded-lg bg-neutral-800 text-neutral-200 flex items-center justify-center text-xs font-mono mb-4">
+            01
+          </div>
+<h4 class="text-base font-semibold text-white mb-2">CRM &amp; Khách Hàng</h4>
+<p class="text-xs text-neutral-400 mb-4 leading-relaxed">
+            Phân loại khách hàng tiềm năng, kết nối dữ liệu giữa Marketing và Sales.
+          </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">HubSpot</span>
+<span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">Zoho CRM</span>
+<span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">Lark Suite</span>
+<span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">Zalo OA/ZNS</span>
+</div>
+</div>
+<div class="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-700 transition-colors">
+<div class="w-8 h-8 rounded-lg bg-neutral-800 text-neutral-200 flex items-center justify-center text-xs font-mono mb-4">
+            02
+          </div>
+<h4 class="text-base font-semibold text-white mb-2">Ads &amp; Đo Lường</h4>
+<p class="text-xs text-neutral-400 mb-4 leading-relaxed">
+            Tối ưu giá thầu thông minh đa kênh và theo dõi chỉ số ROI theo thời gian thực.
+          </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">Meta Ads</span>
+<span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">Google Ads</span>
+<span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">TikTok Ads</span>
+<span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">Looker Studio</span>
+</div>
+</div>
+<div class="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-700 transition-colors">
+<div class="w-8 h-8 rounded-lg bg-neutral-800 text-neutral-200 flex items-center justify-center text-xs font-mono mb-4">
+            03
+          </div>
+<h4 class="text-base font-semibold text-white mb-2">Web &amp; Analytics</h4>
+<p class="text-xs text-neutral-400 mb-4 leading-relaxed">
+            Tự thiết kế &amp; code website chuyển đổi cao, gắn tracking hành vi chuyên sâu.
+          </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">HTML/Tailwind</span>
+<span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">WordPress</span>
+<span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">GA4 / GTM</span>
+<span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">Hotjar</span>
+</div>
+</div>
+<div class="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-700 transition-colors">
+<div class="w-8 h-8 rounded-lg bg-neutral-800 text-neutral-200 flex items-center justify-center text-xs font-mono mb-4">
+            04
+          </div>
+<h4 class="text-base font-semibold text-white mb-2">AI Agents &amp; Vibe Coding</h4>
+<p class="text-xs text-neutral-400 mb-4 leading-relaxed">
+            Tự tạo AI Agent tạo kịch bản, làm ảnh A/B testing và viết app tự động hóa.
+          </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">Claude / GPT-4</span>
+<span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">Midjourney</span>
+<span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">Make / n8n</span>
+<span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">Python Scripts</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: MarTech Architecture Section -->
+<!-- BEGIN: Career Milestones Section -->
+<section class="py-20 bg-canvas" id="career">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-14">
+<span class="text-xs font-semibold text-neutral-400 uppercase tracking-widest block mb-2">Hành Trình Sự Nghiệp</span>
+<h2 class="text-3xl md:text-4xl font-serif text-neutral-950 font-normal">8+ Năm Thực Chiến &amp; Dẫn Dắt</h2>
+</div>
+<div class="relative border-l border-neutral-200 ml-4 md:ml-32 space-y-10">
+<!-- Role 1 -->
+<div class="relative pl-8 group">
+<div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-neutral-950 border-2 border-white ring-4 ring-neutral-100"></div>
+<span class="text-xs font-mono text-neutral-400 block mb-1">03/2026 – Hiện Tại</span>
+<h3 class="text-base font-bold text-neutral-950">Trưởng Phòng Marketing (Marketing Manager)</h3>
+<p class="text-xs font-medium text-neutral-600 mb-2">Công Ty Cổ Phần TM &amp; DV Sala Garden • Bất Động Sản Sinh Thái</p>
+<p class="text-xs text-neutral-500 leading-relaxed">
+            Dẫn dắt 2 nhóm (10 nhân sự), quản lý ngân sách quảng cáo 300 triệu/tháng, duy trì đều đặn 50+ khách VIP/tháng và sản xuất hơn 130 video ngắn/tháng.
+          </p>
+</div>
+<!-- Role 2 -->
+<div class="relative pl-8 group">
+<div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-neutral-300 border-2 border-white"></div>
+<span class="text-xs font-mono text-neutral-400 block mb-1">06/2025 – 02/2026</span>
+<h3 class="text-base font-bold text-neutral-950">Trưởng Phòng Marketing &amp; MarTech Lead</h3>
+<p class="text-xs font-medium text-neutral-600 mb-2">Công Ty Fclick • Ứng Dụng Di Động &amp; SaaS</p>
+<p class="text-xs text-neutral-500 leading-relaxed">
+            Cắt giảm 25% CPI tải ứng dụng, tự động hóa 30% thời gian làm kịch bản nhờ AI và xây dựng hệ sinh thái 4 website vệ tinh.
+          </p>
+</div>
+<!-- Role 3 -->
+<div class="relative pl-8 group">
+<div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-neutral-300 border-2 border-white"></div>
+<span class="text-xs font-mono text-neutral-400 block mb-1">09/2023 – 05/2025</span>
+<h3 class="text-base font-bold text-neutral-950">Trưởng Phòng Marketing</h3>
+<p class="text-xs font-medium text-neutral-600 mb-2">Công Ty Cổ Phần Lục Lam • Chuỗi Trà Thảo Mộc &amp; Hộp Quà Tết B2B</p>
+<p class="text-xs text-neutral-500 leading-relaxed">
+            Dẫn dắt chiến lược đưa chuỗi đạt mốc 40 tỷ VNĐ từ số 0, trực tiếp lập trình 4 website thương hiệu và tổ chức thành công sự kiện ra mắt tại TTTM Takashimaya.
+          </p>
+</div>
+<!-- Role 4 -->
+<div class="relative pl-8 group">
+<div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-neutral-300 border-2 border-white"></div>
+<span class="text-xs font-mono text-neutral-400 block mb-1">11/2022 – 08/2023</span>
+<h3 class="text-base font-bold text-neutral-950">Trưởng Nhóm Marketing Số (Marketing Leader)</h3>
+<p class="text-xs font-medium text-neutral-600 mb-2">Công Ty Bravigo • Phụ Kiện &amp; Thiết Bị Ô Tô Thông Minh</p>
+<p class="text-xs text-neutral-500 leading-relaxed">
+            Phát triển mạng lưới hàng trăm đại lý toàn quốc, chủ trì sự kiện Flagship Ottocast P3 và quản lý đội ngũ 8 chuyên viên tiếp thị chuyên ngành xe.
+          </p>
+</div>
+<!-- Role 5 -->
+<div class="relative pl-8 group">
+<div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-neutral-300 border-2 border-white"></div>
+<span class="text-xs font-mono text-neutral-400 block mb-1">04/2018 – 10/2022</span>
+<h3 class="text-base font-bold text-neutral-950">Trưởng Nhóm Marketing</h3>
+<p class="text-xs font-medium text-neutral-600 mb-2">Tập Đoàn LATH • Thương Hiệu Mỹ Phẩm &amp; Bán Lẻ</p>
+<p class="text-xs text-neutral-500 leading-relaxed">
+            Thúc đẩy tăng trưởng doanh thu quảng cáo +40%, phát triển kênh SEO tự nhiên 5.000 lượt/tháng và đưa mỹ phẩm vào chuỗi siêu thị Lotte Mart.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Career Milestones Section -->
+<!-- BEGIN: Contact Section -->
+<section class="py-24 bg-white border-t border-neutral-200" id="contact">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="rounded-3xl bg-canvas border border-neutral-200/80 p-8 sm:p-12 shadow-sm text-center">
+<span class="text-xs font-semibold text-neutral-400 uppercase tracking-widest block mb-2">Kết Nối Tuyển Dụng</span>
+<h2 class="text-3xl md:text-5xl font-serif text-neutral-950 font-normal mb-4">
+          Sẵn Sàng Trao Đổi Cơ Hội Hợp Tác
+        </h2>
+<p class="text-sm md:text-base text-neutral-600 max-w-xl mx-auto mb-8 leading-relaxed">
+          Sẵn sàng đảm nhiệm vị trí <strong class="text-neutral-950 font-semibold">Marketing Manager</strong> / <strong class="text-neutral-950 font-semibold">Trưởng Phòng Marketing</strong> hoặc tư vấn chiến lược tăng trưởng doanh số, chuẩn hóa dữ liệu và AI Automation tại TP. Hồ Chí Minh.
+        </p>
+<!-- Quick Contacts -->
+<div class="flex flex-wrap items-center justify-center gap-3.5 mb-10 text-xs md:text-sm">
+<a class="inline-flex items-center gap-2 bg-neutral-950 text-white px-5 py-3 rounded-full hover:bg-neutral-800 transition shadow-sm" href="tel:0392225986">
+<span class="">📞 039 222 5986 (Zalo 24/7)</span>
+</a>
+<a class="inline-flex items-center gap-2 glass-pill px-5 py-3 rounded-full text-neutral-800 hover:bg-white border border-neutral-200 transition shadow-sm" href="mailto:admin@duyhiendigi.com">
+<span class="">✉️ Trao Đổi Qua Email</span>
+</a>
+<a class="inline-flex items-center gap-2 glass-pill px-5 py-3 rounded-full text-neutral-800 hover:bg-white border border-neutral-200 transition shadow-sm" href="CV_Ta_Quoc_Duy_Marketing_Manager.pdf" target="_blank">
+<span class="">📄 Tải CV Bản PDF ↗</span>
+</a>
+</div>
+<div class="pt-6 border-t border-neutral-200/70 text-xs text-neutral-400 flex flex-col sm:flex-row items-center justify-between gap-3">
+<span class="">📍 Địa bàn: TP. Hồ Chí Minh (Toàn thời gian Onsite / Hybrid)</span>
+<span class="">Học vấn: Cử nhân CNTT - ĐH Bách Khoa TP.HCM</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Contact Section -->
+<!-- BEGIN: Site Footer -->
+<footer class="py-8 bg-white border-t border-neutral-100 text-center">
+<div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
+<div class="flex items-center gap-2">
+<span class="font-bold text-neutral-900">Tạ Quốc Duy ✦</span>
+<span class="">Marketing Leadership &amp; AI Automation</span>
+</div>
+<div class="">
+        © 2026 Tạ Quốc Duy. Portfolio inspired by Mindly minimalist aesthetic.
+      </div>
+</div>
+</footer>
+<!-- END: Site Footer -->
+
+
+</body></html>
