@@ -3,8 +3,10 @@
 
 User-agent: *
 Allow: /
-Allow: /portfolio_assets/
-Allow: /CV_Ta_Quoc_Duy_Marketing_Manager.pdf
+Allow: /du-an/
+Allow: /assets/
+Disallow: /tools/
 
 # Sitemaps
 Sitemap: https://portfolio.duyhiendigi.com/sitemap.xml
+

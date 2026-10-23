@@ -4,11 +4,36 @@
 <title>Tạ Quốc Duy ✦ Growth &amp; MarTech Lead | Marketing Manager</title>
 <!-- Compiled Minified Tailwind CSS (Instant Loading, Zero CDN Delay) -->
 <link rel="stylesheet" href="tailwind.min.css">
+<link rel="stylesheet" href="assets/css/design-system.css">
 <!-- Google Fonts: Playfair Display (Full Vietnamese Diacritics Support) & Plus Jakarta Sans -->
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+    /* One Page Scroll & Section Snap */
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+      scroll-padding-top: 0px;
+      overflow-y: scroll;
+    }
+
+    section[id] {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      position: relative;
+    }
+
+    @media (min-width: 1024px) {
+      section[id] {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+    }
+
     /* Mindly-style subtle radial ambient illumination */
     .hero-atmosphere {
       background: radial-gradient(circle at 50% 25%, rgba(228, 235, 248, 0.6) 0%, rgba(250, 250, 250, 0.95) 75%);
@@ -37,6 +62,69 @@
 
     .curved-line {
       pointer-events: none;
+    }
+
+    /* Side Dot Navigation styling (One Page Scroll) */
+    .snap-nav-pill {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 12px 36px -4px rgba(0, 0, 0, 0.08);
+    }
+    .snap-dot {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .snap-dot.active {
+      height: 22px;
+      width: 7px;
+      border-radius: 9999px;
+      background-color: #09090b;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    }
+    .snap-dot:not(.active) {
+      height: 7px;
+      width: 7px;
+      border-radius: 9999px;
+      background-color: #cbd5e1;
+    }
+    .snap-dot-wrap:hover .snap-dot:not(.active) {
+      background-color: #64748b;
+      transform: scale(1.3);
+    }
+
+    /* Dark theme adaptation for side dots when on dark sections */
+    .side-nav-dark-theme.snap-nav-pill {
+      background: rgba(24, 24, 27, 0.88);
+      border-color: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 12px 36px -4px rgba(0, 0, 0, 0.4);
+    }
+    .side-nav-dark-theme .snap-dot.active {
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    }
+    .side-nav-dark-theme .snap-dot:not(.active) {
+      background-color: #52525b;
+    }
+    .side-nav-dark-theme .snap-dot-wrap:hover .snap-dot:not(.active) {
+      background-color: #d4d4d8;
+    }
+
+    /* Active link in top nav */
+    .nav-link.active-nav {
+      color: #09090b !important;
+      font-weight: 700;
+      position: relative;
+    }
+    .nav-link.active-nav::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 15%;
+      width: 70%;
+      height: 2px;
+      border-radius: 2px;
+      background-color: #09090b;
     }
   </style>
   <!-- Hotjar Tracking Code per Rule 6 -->
@@ -71,12 +159,12 @@
 </a>
 <!-- Floating Center Pill Menu -->
 <nav class="hidden md:flex glass-pill shadow-sm rounded-full px-7 py-2.5 items-center space-x-7 text-xs lg:text-[13px] font-medium text-neutral-600">
-<a class="hover:text-black transition-colors" href="#about">Về Tôi</a>
-<a class="hover:text-black transition-colors" href="#metrics">Chỉ Số</a>
-<a class="hover:text-black transition-colors" href="#leadership">Năng Lực</a>
-<a class="hover:text-black transition-colors" href="#projects">Dự Án</a>
-<a class="hover:text-black transition-colors" href="#martech">MarTech &amp; AI</a>
-<a class="hover:text-black transition-colors" href="#career">Sự Nghiệp</a>
+<a class="nav-link hover:text-black transition-colors" href="#about">Về Tôi</a>
+<a class="nav-link hover:text-black transition-colors" href="#metrics">Chỉ Số</a>
+<a class="nav-link hover:text-black transition-colors font-semibold text-neutral-900" href="du-an/index.html" title="Xem mô tả sản phẩm & chiến dịch theo 5 kỹ năng">Kỹ Năng &amp; Sản Phẩm ↗</a>
+<a class="nav-link hover:text-black transition-colors" href="#projects">Dự Án</a>
+<a class="nav-link hover:text-black transition-colors" href="#martech">MarTech &amp; AI</a>
+<a class="nav-link hover:text-black transition-colors" href="#career">Sự Nghiệp</a>
 </nav>
 <!-- Right Action CTA -->
 <div class="flex items-center gap-3">
@@ -88,6 +176,39 @@
 </div>
 </header>
 <!-- END: Site Header -->
+
+<!-- BEGIN: Side Dot Navigation (One Page Scroll Indicators) -->
+<nav id="sideNav" aria-label="One page section navigation" class="fixed right-5 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col items-center gap-2.5 snap-nav-pill py-3.5 px-2 rounded-full transition-all duration-300">
+  <a href="#about" class="snap-dot-wrap group relative flex items-center justify-center p-1" data-section="about" aria-label="Về Tôi">
+    <span class="snap-dot block"></span>
+    <span class="pointer-events-none absolute right-full mr-3.5 px-2.5 py-1 rounded-md text-[11px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 bg-neutral-900 text-white shadow-md -translate-x-1 group-hover:translate-x-0">Về Tôi</span>
+  </a>
+  <a href="#metrics" class="snap-dot-wrap group relative flex items-center justify-center p-1" data-section="metrics" aria-label="Chỉ Số">
+    <span class="snap-dot block"></span>
+    <span class="pointer-events-none absolute right-full mr-3.5 px-2.5 py-1 rounded-md text-[11px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 bg-neutral-900 text-white shadow-md -translate-x-1 group-hover:translate-x-0">Chỉ Số Vận Hành</span>
+  </a>
+  <a href="#leadership" class="snap-dot-wrap group relative flex items-center justify-center p-1" data-section="leadership" aria-label="Năng Lực">
+    <span class="snap-dot block"></span>
+    <span class="pointer-events-none absolute right-full mr-3.5 px-2.5 py-1 rounded-md text-[11px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 bg-neutral-900 text-white shadow-md -translate-x-1 group-hover:translate-x-0">Năng Lực Quản Trị</span>
+  </a>
+  <a href="#projects" class="snap-dot-wrap group relative flex items-center justify-center p-1" data-section="projects" aria-label="Dự Án">
+    <span class="snap-dot block"></span>
+    <span class="pointer-events-none absolute right-full mr-3.5 px-2.5 py-1 rounded-md text-[11px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 bg-neutral-900 text-white shadow-md -translate-x-1 group-hover:translate-x-0">Dự Án &amp; Case Study</span>
+  </a>
+  <a href="#martech" class="snap-dot-wrap group relative flex items-center justify-center p-1" data-section="martech" aria-label="MarTech & AI">
+    <span class="snap-dot block"></span>
+    <span class="pointer-events-none absolute right-full mr-3.5 px-2.5 py-1 rounded-md text-[11px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 bg-neutral-900 text-white shadow-md -translate-x-1 group-hover:translate-x-0">MarTech &amp; AI Stack</span>
+  </a>
+  <a href="#career" class="snap-dot-wrap group relative flex items-center justify-center p-1" data-section="career" aria-label="Sự Nghiệp">
+    <span class="snap-dot block"></span>
+    <span class="pointer-events-none absolute right-full mr-3.5 px-2.5 py-1 rounded-md text-[11px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 bg-neutral-900 text-white shadow-md -translate-x-1 group-hover:translate-x-0">Hành Trình Sự Nghiệp</span>
+  </a>
+  <a href="#contact" class="snap-dot-wrap group relative flex items-center justify-center p-1" data-section="contact" aria-label="Liên Hệ">
+    <span class="snap-dot block"></span>
+    <span class="pointer-events-none absolute right-full mr-3.5 px-2.5 py-1 rounded-md text-[11px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 bg-neutral-900 text-white shadow-md -translate-x-1 group-hover:translate-x-0">Liên Hệ Tuyển Dụng</span>
+  </a>
+</nav>
+<!-- END: Side Dot Navigation -->
 <!-- BEGIN: Hero Section (Strictly inspired by Mindly reference) -->
 <section class="relative min-h-[85vh] pt-24 pb-8 overflow-x-clip hero-atmosphere flex flex-col justify-between border-b border-neutral-100" id="about">
 <!-- Top Floating Mindly Rotating Stamp Badge -->
@@ -337,20 +458,25 @@
 <span class="text-xs font-semibold text-neutral-400 uppercase tracking-widest block mb-2">Dự Án Tiêu Biểu</span>
 <h2 class="text-3xl md:text-4xl font-serif text-neutral-950 font-normal">Hồ Sơ Năng Lực &amp; 6 Dự Án Thực Chiến</h2>
 </div>
-<p class="text-xs md:text-sm text-neutral-500 max-w-sm mt-3 md:mt-0 leading-relaxed">
-          Bối cảnh, giải pháp công nghệ và kết quả kinh doanh đo lường minh bạch từ 6 doanh nghiệp tiêu biểu.
-        </p>
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 mt-3 md:mt-0">
+<a href="stitch_design/chien_dich_san_pham_theo_ky_nang.html" target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-neutral-300 hover:border-neutral-900 bg-white text-xs font-semibold text-neutral-800 hover:text-black shadow-sm transition-all">
+  <span>Xem Ma Trận Sản Phẩm Theo Kỹ Năng</span> ↗
+</a>
+</div>
 </div>
 <!-- Projects Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 <!-- Case 1: Sala Garden -->
-<div class="rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-400 transition-all bg-canvas flex flex-col justify-between">
+<a href="du-an/sala-garden.html" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg transition-all bg-canvas flex flex-col justify-between block cursor-pointer">
 <div>
 <div class="flex items-center justify-between mb-4">
 <span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">BĐS Hoa Viên Sinh Thái</span>
 <span class="text-[11px] text-neutral-400 font-mono">03/2026 – Hiện tại</span>
 </div>
-<h3 class="text-xl font-bold text-neutral-900 mb-1">Sala Garden</h3>
+<h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
+  <span>Sala Garden</span>
+  <span class="text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-neutral-400">↗</span>
+</h3>
 <p class="text-xs font-medium text-neutral-500 mb-4">Marketing Manager • Điều hành 10 nhân sự</p>
 <div class="grid grid-cols-2 gap-2.5 mb-5 p-3.5 bg-white rounded-xl border border-neutral-100">
 <div>
@@ -376,17 +502,20 @@
 </div>
 <div class="pt-4 border-t border-neutral-200/60 flex items-center justify-between text-xs font-medium">
 <span class="text-neutral-500">Tệp mục tiêu 55+ tuổi</span>
-<span class="text-neutral-950">Xem Chi Tiết →</span>
+<span class="text-neutral-950 font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Mở Trang Dự Án ↗</span>
 </div>
-</div>
+</a>
 <!-- Case 2: Fclick Mobile App -->
-<div class="rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-400 transition-all bg-canvas flex flex-col justify-between">
+<a href="case-study.html?case=fclick" target="_blank" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg transition-all bg-canvas flex flex-col justify-between block cursor-pointer">
 <div>
 <div class="flex items-center justify-between mb-4">
 <span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">Mobile App &amp; SaaS</span>
 <span class="text-[11px] text-neutral-400 font-mono">06/2025 – 02/2026</span>
 </div>
-<h3 class="text-xl font-bold text-neutral-900 mb-1">Fclick Mobile App</h3>
+<h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
+  <span>Fclick Mobile App</span>
+  <span class="text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-neutral-400">↗</span>
+</h3>
 <p class="text-xs font-medium text-neutral-500 mb-4">Marketing Manager &amp; MarTech Lead</p>
 <div class="grid grid-cols-2 gap-2.5 mb-5 p-3.5 bg-white rounded-xl border border-neutral-100">
 <div>
@@ -412,17 +541,20 @@
 </div>
 <div class="pt-4 border-t border-neutral-200/60 flex items-center justify-between text-xs font-medium">
 <span class="text-neutral-500">In-app Events &amp; AI Prompting</span>
-<span class="text-neutral-950">Xem Chi Tiết →</span>
+<span class="text-neutral-950 font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Mở Trang Dự Án ↗</span>
 </div>
-</div>
+</a>
 <!-- Case 3: Lục Lam Group -->
-<div class="rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-400 transition-all bg-canvas flex flex-col justify-between">
+<a href="case-study.html?case=luclam" target="_blank" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg transition-all bg-canvas flex flex-col justify-between block cursor-pointer">
 <div>
 <div class="flex items-center justify-between mb-4">
 <span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">Trà Thảo Mộc &amp; Quà B2B</span>
 <span class="text-[11px] text-neutral-400 font-mono">09/2023 – 05/2025</span>
 </div>
-<h3 class="text-xl font-bold text-neutral-900 mb-1">Lục Lam Group</h3>
+<h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
+  <span>Lục Lam Group</span>
+  <span class="text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-neutral-400">↗</span>
+</h3>
 <p class="text-xs font-medium text-neutral-500 mb-4">Marketing Manager • Đội ngũ 4-5 người</p>
 <div class="grid grid-cols-2 gap-2.5 mb-5 p-3.5 bg-white rounded-xl border border-neutral-100">
 <div>
@@ -448,17 +580,20 @@
 </div>
 <div class="pt-4 border-t border-neutral-200/60 flex items-center justify-between text-xs font-medium">
 <span class="text-neutral-500">TVC &amp; Behind The Scenes</span>
-<span class="text-neutral-950">Xem Chi Tiết →</span>
+<span class="text-neutral-950 font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Mở Trang Dự Án ↗</span>
 </div>
-</div>
+</a>
 <!-- Case 4: Bravigo -->
-<div class="rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-400 transition-all bg-canvas flex flex-col justify-between">
+<a href="case-study.html?case=bravigo" target="_blank" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg transition-all bg-canvas flex flex-col justify-between block cursor-pointer">
 <div>
 <div class="flex items-center justify-between mb-4">
 <span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">Phụ Kiện Ô Tô Thông Minh</span>
 <span class="text-[11px] text-neutral-400 font-mono">11/2022 – 08/2023</span>
 </div>
-<h3 class="text-xl font-bold text-neutral-900 mb-1">Bravigo &amp; Ottocast P3</h3>
+<h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
+  <span>Bravigo &amp; Ottocast P3</span>
+  <span class="text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-neutral-400">↗</span>
+</h3>
 <p class="text-xs font-medium text-neutral-500 mb-4">Trưởng Nhóm Marketing Số (8 chuyên viên)</p>
 <div class="grid grid-cols-2 gap-2.5 mb-5 p-3.5 bg-white rounded-xl border border-neutral-100">
 <div>
@@ -484,17 +619,20 @@
 </div>
 <div class="pt-4 border-t border-neutral-200/60 flex items-center justify-between text-xs font-medium">
 <span class="text-neutral-500">Mạng lưới phân phối đại lý</span>
-<span class="text-neutral-950">Xem Chi Tiết →</span>
+<span class="text-neutral-950 font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Mở Trang Dự Án ↗</span>
 </div>
-</div>
+</a>
 <!-- Case 5: Brew & Bánh Mì (USA) -->
-<div class="rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-400 transition-all bg-canvas flex flex-col justify-between">
+<a href="case-study.html?case=brewbanhmi" target="_blank" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg transition-all bg-canvas flex flex-col justify-between block cursor-pointer">
 <div>
 <div class="flex items-center justify-between mb-4">
 <span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">F&amp;B Quốc Tế (California, USA)</span>
 <span class="text-[11px] text-neutral-400 font-mono">2024 – 2025</span>
 </div>
-<h3 class="text-xl font-bold text-neutral-900 mb-1">Brew &amp; Bánh Mì Cafe</h3>
+<h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
+  <span>Brew &amp; Bánh Mì Cafe</span>
+  <span class="text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-neutral-400">↗</span>
+</h3>
 <p class="text-xs font-medium text-neutral-500 mb-4">Quản Lý Marketing &amp; Kênh Số</p>
 <div class="grid grid-cols-2 gap-2.5 mb-5 p-3.5 bg-white rounded-xl border border-neutral-100">
 <div>
@@ -520,17 +658,20 @@
 </div>
 <div class="pt-4 border-t border-neutral-200/60 flex items-center justify-between text-xs font-medium">
 <span class="text-neutral-500">Milpitas, California, USA</span>
-<span class="text-neutral-950">Xem Chi Tiết →</span>
+<span class="text-neutral-950 font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Mở Trang Dự Án ↗</span>
 </div>
-</div>
+</a>
 <!-- Case 6: LATH Group & Chuỗi Xe Máy Nam Tiến -->
-<div class="rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-400 transition-all bg-canvas flex flex-col justify-between">
+<a href="case-study.html?case=namtien" target="_blank" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg transition-all bg-canvas flex flex-col justify-between block cursor-pointer">
 <div>
 <div class="flex items-center justify-between mb-4">
 <span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">Bán Lẻ O2O &amp; Mỹ Phẩm</span>
 <span class="text-[11px] text-neutral-400 font-mono">Đa Ngành</span>
 </div>
-<h3 class="text-xl font-bold text-neutral-900 mb-1">LATH &amp; Nam Tiến Showroom</h3>
+<h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
+  <span>LATH &amp; Nam Tiến Showroom</span>
+  <span class="text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-neutral-400">↗</span>
+</h3>
 <p class="text-xs font-medium text-neutral-500 mb-4">Marketing Lead / Manager</p>
 <div class="grid grid-cols-2 gap-2.5 mb-5 p-3.5 bg-white rounded-xl border border-neutral-100">
 <div>
@@ -556,8 +697,26 @@
 </div>
 <div class="pt-4 border-t border-neutral-200/60 flex items-center justify-between text-xs font-medium">
 <span class="text-neutral-500">Mô hình Online-to-Offline (O2O)</span>
-<span class="text-neutral-950">Xem Chi Tiết →</span>
+<span class="text-neutral-950 font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">Mở Trang Dự Án ↗</span>
 </div>
+</a>
+</div>
+<!-- CTA Bridge to Deliverables Hub -->
+<div class="mt-12 p-6 md:p-8 rounded-3xl bg-neutral-100/90 border border-neutral-200/80 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+  <div class="flex flex-col text-center md:text-left">
+    <div class="inline-flex items-center justify-center md:justify-start gap-2 mb-1">
+      <span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span>
+      <span class="text-xs uppercase font-bold tracking-wider text-secondary">Ma Trận Năng Lực &amp; Sản Phẩm Chuyển Giao</span>
+    </div>
+    <h4 class="text-lg md:text-xl font-bold text-neutral-900">Khám Phá Toàn Diện 6 Chiến Dịch Theo 5 Nhóm Kỹ Năng</h4>
+    <p class="text-xs md:text-sm text-neutral-600 mt-1 max-w-2xl leading-relaxed">
+      Xem chi tiết sản phẩm đóng gói (Keynote P3, SOP 130+ video/tháng, P&amp;L 700M, Looker Studio) và lọc case studies theo kỹ năng chuyên môn.
+    </p>
+  </div>
+  <a href="du-an/index.html" class="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-neutral-950 text-white font-medium text-xs md:text-sm hover:bg-neutral-800 transition-all shadow-md group">
+    <span>Xem Trung Tâm Dự Án &amp; Kỹ Năng</span>
+    <span class="group-hover:translate-x-1 transition-transform">→</span>
+  </a>
 </div>
 </div>
 </div>
@@ -746,5 +905,191 @@
 </footer>
 <!-- END: Site Footer -->
 
+<!-- BEGIN: One Page Scroll & Section Sync Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    const sideNav = document.getElementById('sideNav');
+    const sideDotWraps = document.querySelectorAll('.snap-dot-wrap');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sectionIds = sections.map(sec => sec.id);
+
+    let isScrolling = false;
+    let scrollCoolDownTimer = null;
+
+    function getActiveIndex() {
+      const scrollPos = window.scrollY + window.innerHeight * 0.35;
+      let idx = sections.findIndex(s => s.offsetTop <= scrollPos && (s.offsetTop + s.offsetHeight) > scrollPos);
+      if (idx === -1) {
+        if (window.scrollY < sections[0].offsetTop) return 0;
+        return sections.length - 1;
+      }
+      return idx;
+    }
+
+    function scrollToSectionIndex(index) {
+      if (index < 0 || index >= sections.length) return;
+      isScrolling = true;
+      const target = sections[index];
+      target.scrollIntoView({ behavior: 'smooth' });
+      updateActiveState(target.id);
+
+      clearTimeout(scrollCoolDownTimer);
+      scrollCoolDownTimer = setTimeout(() => {
+        isScrolling = false;
+      }, 750);
+    }
+
+    function updateActiveState(activeId) {
+      if (!activeId) return;
+
+      // 1. Update side dot indicators
+      sideDotWraps.forEach(wrap => {
+        const dot = wrap.querySelector('.snap-dot');
+        const isCurrent = wrap.getAttribute('data-section') === activeId;
+        if (dot) {
+          dot.classList.toggle('active', isCurrent);
+        }
+      });
+
+      // 2. Update top navigation menu links
+      navLinks.forEach(link => {
+        const targetId = link.getAttribute('href')?.replace('#', '');
+        link.classList.toggle('active-nav', targetId === activeId);
+      });
+
+      // 3. Adapt side navigation theme when viewing dark sections (e.g. #martech)
+      if (sideNav) {
+        if (activeId === 'martech') {
+          sideNav.classList.add('side-nav-dark-theme');
+        } else {
+          sideNav.classList.remove('side-nav-dark-theme');
+        }
+      }
+    }
+
+    // IntersectionObserver for tracking active section
+    const observer = new IntersectionObserver((entries) => {
+      const visibleEntries = entries.filter(e => e.isIntersecting);
+      if (visibleEntries.length > 0) {
+        visibleEntries.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        updateActiveState(visibleEntries[0].target.id);
+      }
+    }, {
+      root: null,
+      rootMargin: '-15% 0px -35% 0px',
+      threshold: [0.1, 0.3, 0.6]
+    });
+
+    sections.forEach(sec => observer.observe(sec));
+
+    // Handle initial state on load
+    const currentHash = window.location.hash.replace('#', '');
+    if (currentHash && sectionIds.includes(currentHash)) {
+      updateActiveState(currentHash);
+    } else if (sections.length > 0) {
+      updateActiveState(sections[0].id);
+    }
+
+    // 1. MOUSE WHEEL / TRACKPAD ONE PAGE SCROLL INTERCEPTION
+    window.addEventListener('wheel', (e) => {
+      // Don't intercept if user is typing or inside a specific scrollable modal
+      if (e.target.closest('input, textarea, select')) return;
+
+      const currentIdx = getActiveIndex();
+      const currentSection = sections[currentIdx];
+
+      // If the section is taller than screen and user is scrolling within it, allow inner scroll
+      const isOversized = currentSection.offsetHeight > window.innerHeight + 60;
+      if (isOversized) {
+        const sectionTop = currentSection.offsetTop;
+        const sectionBottom = sectionTop + currentSection.offsetHeight;
+        const scrollBottom = window.scrollY + window.innerHeight;
+
+        if (e.deltaY > 0 && scrollBottom < sectionBottom - 20) {
+          // Still scrolling down inside this section
+          return;
+        }
+        if (e.deltaY < 0 && window.scrollY > sectionTop + 20) {
+          // Still scrolling up inside this section
+          return;
+        }
+      }
+
+      // Minimum delta to avoid accidental micro-movements
+      if (Math.abs(e.deltaY) < 18) return;
+
+      if (isScrolling) {
+        e.preventDefault();
+        return;
+      }
+
+      if (e.deltaY > 0) {
+        // Scroll to next section
+        if (currentIdx < sections.length - 1) {
+          e.preventDefault();
+          scrollToSectionIndex(currentIdx + 1);
+        }
+      } else {
+        // Scroll to previous section
+        if (currentIdx > 0) {
+          e.preventDefault();
+          scrollToSectionIndex(currentIdx - 1);
+        }
+      }
+    }, { passive: false });
+
+    // 2. MOBILE TOUCH SWIPE SUPPORT
+    let touchStartY = 0;
+    window.addEventListener('touchstart', (e) => {
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    window.addEventListener('touchend', (e) => {
+      const touchEndY = e.changedTouches[0].clientY;
+      const diffY = touchStartY - touchEndY;
+      if (Math.abs(diffY) > 50 && !isScrolling) {
+        const currentIdx = getActiveIndex();
+        if (diffY > 0 && currentIdx < sections.length - 1) {
+          scrollToSectionIndex(currentIdx + 1);
+        } else if (diffY < 0 && currentIdx > 0) {
+          scrollToSectionIndex(currentIdx - 1);
+        }
+      }
+    }, { passive: true });
+
+    // 3. KEYBOARD ARROW KEYS (Up/Down) & PageUp/PageDown
+    window.addEventListener('keydown', (e) => {
+      if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+
+      const currentIdx = getActiveIndex();
+
+      if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+        if (currentIdx < sections.length - 1) {
+          e.preventDefault();
+          scrollToSectionIndex(currentIdx + 1);
+        }
+      } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+        if (currentIdx > 0) {
+          e.preventDefault();
+          scrollToSectionIndex(currentIdx - 1);
+        }
+      }
+    });
+
+    // 4. Dot click smooth transition
+    sideDotWraps.forEach(wrap => {
+      wrap.addEventListener('click', (e) => {
+        const targetId = wrap.getAttribute('data-section');
+        const targetIdx = sections.findIndex(s => s.id === targetId);
+        if (targetIdx !== -1) {
+          e.preventDefault();
+          scrollToSectionIndex(targetIdx);
+        }
+      });
+    });
+  });
+</script>
+<!-- END: One Page Scroll & Section Sync Script -->
 
 </body></html>

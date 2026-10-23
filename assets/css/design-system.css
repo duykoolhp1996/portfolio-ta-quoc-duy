@@ -1,0 +1,117 @@
+/**
+ * TẠ QUỐC DUY PORTFOLIO — CORE DESIGN SYSTEM TOKENS (V3.0)
+ * Mindly Editorial Porcelain & Cyber-Slate Luxury
+ */
+
+:root {
+  /* Surface & Background */
+  --bg-primary: #f7f9fb;
+  --bg-surface: #ffffff;
+  --bg-surface-dim: #eceef0;
+  --bg-surface-high: #e6e8ea;
+  --bg-surface-highest: #e0e3e5;
+  --bg-dark: #0a0d12;
+  --bg-dark-card: #111827;
+
+  /* Typography Colors */
+  --text-primary: #191c1e;
+  --text-muted: #45464d;
+  --text-subtle: #76777d;
+  --text-on-dark: #f8fafc;
+  --text-on-dark-muted: #94a3b8;
+
+  /* Accents & Brand Jewels */
+  --brand-primary: #000000;
+  --brand-secondary: #00687a;
+  --brand-secondary-hover: #004e5c;
+  --brand-accent-cyan: #acedff;
+  --brand-accent-glow: #57dffe;
+  --brand-accent-mint: #4edea3;
+
+  /* Borders & Glassmorphism */
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-glass: rgba(255, 255, 255, 0.4);
+  --border-dark: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.78);
+  --glass-bg-dark: rgba(17, 24, 39, 0.85);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 16px -2px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 12px 32px -4px rgba(15, 23, 42, 0.08);
+  --shadow-glow: 0 0 32px -8px rgba(87, 223, 254, 0.35);
+
+  /* Typography Stack */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Base Resets & Typography */
+html {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+}
+
+.glass-panel-dark {
+  background: var(--glass-bg-dark);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-dark);
+}
+
+/* Ambient Radial Illumination */
+.ambient-glow {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 9999px;
+  filter: blur(64px);
+  z-index: 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 9999px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
