@@ -2,14 +2,43 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Tạ Quốc Duy ✦ Growth &amp; MarTech Lead | Marketing Manager</title>
-<!-- Compiled Minified Tailwind CSS (Instant Loading, Zero CDN Delay) -->
+<!-- Compiled Minified Tailwind CSS + Tailwind CDN -->
 <link rel="stylesheet" href="tailwind.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="assets/css/design-system.css">
 <!-- Google Fonts: Playfair Display (Full Vietnamese Diacritics Support) & Plus Jakarta Sans -->
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+    /* Absolute Solid Background for Mobile Menu - Prevents any text bleed-through */
+    #mobileMenuBackdrop {
+      background-color: rgba(15, 23, 42, 0.45) !important;
+      backdrop-filter: blur(6px) !important;
+      -webkit-backdrop-filter: blur(6px) !important;
+      z-index: 9998 !important;
+    }
+    #mobileMenu {
+      background-color: #ffffff !important;
+      opacity: 1 !important;
+      border: 1px solid rgba(0, 0, 0, 0.12) !important;
+      box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.35), 0 0 0 1px rgba(0,0,0,0.06) !important;
+      z-index: 9999 !important;
+      max-height: calc(100vh - 5rem) !important;
+      overflow-y: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+    }
+    #mobileMenu.pointer-events-none {
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transform: translateY(-12px) !important;
+    }
+    #mobileMenu.pointer-events-auto {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      transform: translateY(0) !important;
+    }
+
     /* Natural Smooth Scrolling without Snapping */
     html {
       scroll-behavior: smooth;
@@ -250,28 +279,29 @@
     </div>
   </div>
 
-  <!-- Mobile Drawer Menu Overlay -->
-  <div id="mobileMenuBackdrop" class="lg:hidden fixed inset-0 bg-neutral-900/30 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-  <div id="mobileMenu" class="lg:hidden fixed inset-x-3 sm:inset-x-4 top-16 sm:top-20 bg-white/98 backdrop-blur-2xl rounded-2xl sm:rounded-3xl shadow-2xl border border-neutral-200/90 p-4 sm:p-5 flex flex-col gap-3 transition-all duration-300 transform -translate-y-4 opacity-0 pointer-events-none z-50 max-h-[calc(100vh-4.75rem)] overflow-y-auto overscroll-contain">
-    <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
-      <span class="text-xs font-bold uppercase tracking-wider text-neutral-400">Danh Mục Điều Hướng</span>
-      <span class="text-[11px] font-mono text-neutral-500">Quốc Duy Portfolio</span>
+  <!-- Mobile Drawer Menu Overlay with Guaranteed Solid Contrast -->
+  <div id="mobileMenuBackdrop" class="lg:hidden fixed inset-0 bg-neutral-900/40 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="mobileMenu" class="lg:hidden fixed inset-x-3 sm:inset-x-4 top-16 sm:top-20 bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-neutral-200 p-4 sm:p-5 flex flex-col gap-3 transition-all duration-300 transform -translate-y-4 opacity-0 pointer-events-none z-50 max-h-[calc(100vh-4.75rem)] overflow-y-auto overscroll-contain" style="background-color: #ffffff !important; box-shadow: 0 25px 60px -15px rgba(0,0,0,0.3) !important;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid #f3f4f6;">
+      <span style="font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #9ca3af;">Danh Mục Điều Hướng</span>
+      <span style="font-size: 0.6875rem; font-family: monospace; color: #6b7280;">Tạ Quốc Duy</span>
     </div>
-    <div class="grid grid-cols-2 gap-2 text-sm font-medium text-neutral-800">
-      <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100" href="#about">✦ Về Tôi</a>
-      <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100" href="#leadership">✦ Năng Lực</a>
-      <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100" href="#projects">✦ Dự Án</a>
-      <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100" href="#martech">✦ MarTech &amp; AI</a>
-      <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100" href="#career">✦ Sự Nghiệp</a>
-      <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-900 text-white" href="du-an/index.html">✦ Kho Sản Phẩm ↗</a>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; font-size: 0.875rem; font-weight: 500;">
+      <a class="mobile-nav-link" style="display: flex; align-items: center; gap: 0.375rem; padding: 0.625rem; border-radius: 0.75rem; background-color: #f9fafb; color: #1f2937; text-decoration: none;" href="#about"><span>✦</span><span>Về Tôi</span></a>
+      <a class="mobile-nav-link" style="display: flex; align-items: center; gap: 0.375rem; padding: 0.625rem; border-radius: 0.75rem; background-color: #f9fafb; color: #1f2937; text-decoration: none;" href="#leadership"><span>✦</span><span>Năng Lực</span></a>
+      <a class="mobile-nav-link" style="display: flex; align-items: center; gap: 0.375rem; padding: 0.625rem; border-radius: 0.75rem; background-color: #f9fafb; color: #1f2937; text-decoration: none;" href="#projects"><span>✦</span><span>Dự Án</span></a>
+      <a class="mobile-nav-link" style="display: flex; align-items: center; gap: 0.375rem; padding: 0.625rem; border-radius: 0.75rem; background-color: #f9fafb; color: #1f2937; text-decoration: none;" href="#martech"><span>✦</span><span>MarTech &amp; AI</span></a>
+      <a class="mobile-nav-link" style="display: flex; align-items: center; gap: 0.375rem; padding: 0.625rem; border-radius: 0.75rem; background-color: #f9fafb; color: #1f2937; text-decoration: none;" href="#career"><span>✦</span><span>Sự Nghiệp</span></a>
+      <a class="mobile-nav-link" style="display: flex; align-items: center; justify-content: space-between; padding: 0.625rem; border-radius: 0.75rem; background-color: #0f1012 !important; color: #ffffff !important; text-decoration: none; font-weight: 600;" href="du-an/index.html"><span>✦ Kho Dự Án</span><span>↗</span></a>
     </div>
 
-    <div class="pt-2 border-t border-neutral-100 flex flex-col gap-2">
-      <a class="w-full flex items-center justify-center gap-2 p-2.5 rounded-xl bg-neutral-100 hover:bg-neutral-200 text-neutral-900 font-semibold text-xs" href="assets/docs/CV_Ta_Quoc_Duy_Marketing_Manager.pdf" target="_blank">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+    <div style="display: flex; flex-direction: column; gap: 0.5rem; padding-top: 0.5rem; border-top: 1px solid #f3f4f6;">
+      <a style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; padding: 0.625rem; border-radius: 0.75rem; background-color: #f3f4f6; color: #111827; font-weight: 600; font-size: 0.75rem; text-decoration: none; min-height: 42px;" href="assets/docs/CV_Ta_Quoc_Duy_Marketing_Manager.pdf" target="_blank">
+        <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
         <span>Tải CV Đầy Đủ (Bản PDF)</span>
       </a>
-      <a class="w-full flex items-center justify-center gap-2 p-2.5 rounded-xl bg-neutral-950 text-white font-semibold text-xs shadow-md" href="tel:0392225986">
+      <a style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; padding: 0.625rem; border-radius: 0.75rem; background-color: #0f1012 !important; color: #ffffff !important; font-weight: 600; font-size: 0.75rem; text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,0.15); min-height: 42px;" href="tel:0392225986">
+        <span style="width: 0.5rem; height: 0.5rem; border-radius: 9999px; background-color: #34d399;"></span>
         <span>Hotline / Zalo: 039 222 5986</span>
       </a>
     </div>
