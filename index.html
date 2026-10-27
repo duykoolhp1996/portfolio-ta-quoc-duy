@@ -2,6 +2,32 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Tạ Quốc Duy ✦ Growth &amp; MarTech Lead | Marketing Manager</title>
+<meta name="description" content="Portfolio Tạ Quốc Duy — Growth & MarTech Lead với 8+ năm quản trị marketing: ngân sách ads 700 triệu/tháng, doanh thu 40 tỷ từ số 0, AI Automation tiết kiệm 30% vận hành. TP. Hồ Chí Minh.">
+<meta name="theme-color" content="#0a0d12">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<!-- Open Graph / Social Cards -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://portfolio.duyhiendigi.com/">
+<meta property="og:title" content="Tạ Quốc Duy ✦ Growth &amp; MarTech Lead | Marketing Manager">
+<meta property="og:description" content="8+ năm quản trị marketing · Ads 700 triệu/tháng · Doanh thu 40 tỷ từ số 0 · AI Automation & MarTech.">
+<meta property="og:image" content="https://portfolio.duyhiendigi.com/hero_portrait.png">
+<meta property="og:locale" content="vi_VN">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Structured Data: Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Tạ Quốc Duy",
+  "jobTitle": "Marketing Manager — Growth & MarTech Lead",
+  "url": "https://portfolio.duyhiendigi.com/",
+  "email": "mailto:admin@duyhiendigi.com",
+  "telephone": "+84392225986",
+  "address": { "@type": "PostalAddress", "addressLocality": "TP. Hồ Chí Minh", "addressCountry": "VN" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Đại học Bách Khoa TP.HCM" },
+  "knowsAbout": ["Marketing Strategy", "P&L Management", "Performance Marketing", "MarTech", "AI Automation", "CRM", "Growth"]
+}
+</script>
 <!-- Compiled Minified Tailwind CSS + Tailwind CDN -->
 <link rel="stylesheet" href="tailwind.min.css">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -145,6 +171,188 @@
       border-radius: 2px;
       background-color: #09090b;
     }
+
+    /* ===== Scroll Reveal System ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-left { transform: translateX(-30px); }
+    .reveal-right { transform: translateX(30px); }
+    .reveal-left.is-visible, .reveal-right.is-visible { transform: translateX(0); }
+    /* Stagger delays */
+    .reveal[data-delay="1"] { transition-delay: 0.08s; }
+    .reveal[data-delay="2"] { transition-delay: 0.16s; }
+    .reveal[data-delay="3"] { transition-delay: 0.24s; }
+    .reveal[data-delay="4"] { transition-delay: 0.32s; }
+    .reveal[data-delay="5"] { transition-delay: 0.40s; }
+    .reveal[data-delay="6"] { transition-delay: 0.48s; }
+
+    /* ===== Hero ambient glow orbs ===== */
+    .glow-orb {
+      position: absolute;
+      border-radius: 9999px;
+      filter: blur(72px);
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.55;
+    }
+    .glow-orb-mint { background: radial-gradient(circle, rgba(78, 222, 163, 0.34) 0%, transparent 68%); animation: orbFloat 11s ease-in-out infinite; }
+    .glow-orb-cyan { background: radial-gradient(circle, rgba(87, 223, 254, 0.30) 0%, transparent 68%); animation: orbFloat 13s ease-in-out infinite reverse; }
+    @keyframes orbFloat {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-24px, 22px) scale(1.08); }
+    }
+
+    /* Subtle dotted texture for hero base */
+    .hero-dots {
+      background-image: radial-gradient(rgba(15, 23, 42, 0.055) 1px, transparent 1px);
+      background-size: 26px 26px;
+      mask-image: radial-gradient(ellipse 75% 65% at 50% 40%, black 35%, transparent 78%);
+      -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 40%, black 35%, transparent 78%);
+    }
+
+    /* ===== Trusted-by Marquee ===== */
+    .marquee-mask {
+      mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 46s linear infinite;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    @keyframes marqueeScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ===== Case Card Image Header ===== */
+    .case-media {
+      position: relative;
+      height: 13.5rem;
+      overflow: hidden;
+      border-radius: 1rem;
+      background: #f4f4f5;
+      margin-bottom: 1.25rem;
+    }
+    .case-media img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+    }
+    .case-card:hover .case-media img { transform: scale(1.06); }
+    .case-media::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(9, 9, 11, 0.42) 0%, rgba(9, 9, 11, 0.05) 45%, transparent 70%);
+      transition: opacity 0.5s ease;
+    }
+    .case-card:hover .case-media::after { opacity: 0.75; }
+    /* Chip neo góc dưới-trái để phần trên ảnh luôn thoáng khi cards xếp 2 cột */
+    .case-media .case-chip {
+      position: absolute;
+      bottom: 0.7rem; left: 0.75rem;
+      z-index: 2;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .case-media .case-open {
+      position: absolute;
+      right: 0.75rem; top: 0.7rem;
+      z-index: 2;
+      opacity: 0;
+      transform: translateY(-6px);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .case-card:hover .case-open { opacity: 1; transform: translateY(0); }
+
+    /* Case card lift */
+    .case-card { transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease, border-color 0.3s ease; }
+    .case-card:hover { transform: translateY(-5px); }
+
+    /* ===== MarTech glow cards ===== */
+    .stack-card { transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.5s ease; }
+    .stack-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(87, 223, 254, 0.35) !important;
+      box-shadow: 0 18px 44px -18px rgba(87, 223, 254, 0.22);
+    }
+
+    /* ===== Career timeline hover ===== */
+    .timeline-item .timeline-dot { transition: all 0.35s ease; }
+    .timeline-item:hover .timeline-dot { transform: scale(1.35); box-shadow: 0 0 0 5px rgba(9, 9, 11, 0.07); }
+    .timeline-item h3 { transition: color 0.25s ease; }
+
+    /* Counter number rendering */
+    .counter-num { font-variant-numeric: tabular-nums; }
+
+    /* Availability pill */
+    .status-dot { position: relative; display: inline-flex; width: 0.5rem; height: 0.5rem; }
+    .status-dot::before {
+      content: '';
+      position: absolute; inset: 0;
+      border-radius: 9999px;
+      background: #10b981;
+    }
+    .status-dot::after {
+      content: '';
+      position: absolute; inset: 0;
+      border-radius: 9999px;
+      background: #10b981;
+      animation: statusPing 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+    @keyframes statusPing {
+      0% { transform: scale(1); opacity: 0.7; }
+      75%, 100% { transform: scale(2.6); opacity: 0; }
+    }
+
+    /* Anchor offset for fixed header */
+    section[id] { scroll-margin-top: 88px; }
+
+    /* ===== GSAP enhancement layer ===== */
+    /* Reading progress bar */
+    #scrollProgress {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 2px;
+      transform: scaleX(0);
+      transform-origin: left center;
+      background: linear-gradient(90deg, #57dffe 0%, #4edea3 100%);
+      z-index: 60;
+      pointer-events: none;
+    }
+    /* Header solid backdrop once scrolled (keeps brand readable over dark sections) */
+    #siteHeader.is-scrolled {
+      background-color: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 10px 30px -24px rgba(15, 23, 42, 0.5);
+    }
+    /* GSAP owns these transforms/frames — pause CSS transitions only while a tween runs */
+    html.gsap-ready { scroll-behavior: auto !important; }
+    html.gsap-ready .fx-busy,
+    html.gsap-ready .fx-busy * { transition: none !important; }
+    html.gsap-ready #heroPortrait { transition: none !important; }
+    html.gsap-ready .glow-orb { animation: none !important; }
+    /* Release the compositor hint once an element has finished revealing */
+    html.gsap-ready .reveal.is-visible { will-change: auto; }
+
+    /* ===== Reduced motion ===== */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .reveal-left, .reveal-right { opacity: 1 !important; transform: none !important; transition: none !important; }
+      .marquee-track { animation: none !important; }
+      .glow-orb, .status-dot::after { animation: none !important; }
+      .case-media img, .case-card, .stack-card { transition: none !important; }
+      html { scroll-behavior: auto; }
+      #scrollProgress { display: none; }
+    }
   </style>
   <!-- Hotjar Tracking Code per Rule 6 -->
   <script>
@@ -168,8 +376,9 @@
   </script>
 </head>
 <body class="bg-canvas text-accent-charcoal font-sans antialiased selection:bg-neutral-900 selection:text-white">
+<div id="scrollProgress" aria-hidden="true"></div>
 <!-- BEGIN: Site Header -->
-<header class="fixed top-0 left-0 w-full z-50 py-3.5 px-4 sm:px-6 md:px-12 pointer-events-none transition-all duration-300">
+<header id="siteHeader" class="fixed top-0 left-0 w-full z-50 py-3.5 px-4 sm:px-6 md:px-12 pointer-events-none transition-all duration-300">
   <div class="max-w-7xl mx-auto flex items-center justify-between pointer-events-auto">
     <!-- Brand Identity Logo -->
     <a class="group flex flex-col focus:outline-none shrink-0" href="#about">
@@ -183,11 +392,12 @@
     <!-- Floating Center Pill Menu (Desktop) -->
     <nav class="hidden lg:flex glass-pill shadow-sm rounded-full px-6 py-2 items-center space-x-6 text-xs lg:text-[13px] font-medium text-neutral-600">
       <a class="nav-link hover:text-black transition-colors" href="#about">Về Tôi</a>
+      <a class="nav-link hover:text-black transition-colors" href="dich-vu/">Dịch Vụ</a>
       <a class="nav-link hover:text-black transition-colors" href="#leadership">Năng Lực</a>
       
       <!-- Dropdown: Dự Án & Case Studies -->
       <div class="relative group/dropdown py-1">
-        <a class="nav-link hover:text-black transition-colors flex items-center gap-1 cursor-pointer" href="#projects">
+        <a class="nav-link hover:text-black transition-colors flex items-center gap-1 cursor-pointer" href="du-an/" data-nav-section="projects" title="Toàn bộ 6 dự án & case studies">
           <span>Dự Án</span>
           <svg class="w-3.5 h-3.5 text-neutral-400 group-hover/dropdown:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </a>
@@ -195,7 +405,10 @@
         <!-- Dropdown Box -->
         <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2.5 opacity-0 translate-y-2 pointer-events-none group-hover/dropdown:opacity-100 group-hover/dropdown:translate-y-0 group-hover/dropdown:pointer-events-auto transition-all duration-200 z-50">
           <div class="w-80 bg-white/95 backdrop-blur-2xl rounded-2xl shadow-[0_20px_50px_-10px_rgba(15,23,42,0.12)] border border-neutral-100 p-2.5 flex flex-col gap-1 text-xs">
-            <div class="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-neutral-400">6 Case Studies Tiêu Biểu</div>
+            <div class="flex items-center justify-between gap-2 px-2.5 py-1.5 mb-0.5 rounded-lg text-[10px] font-bold uppercase tracking-wider text-neutral-400">
+              <span>6 Case Studies Tiêu Biểu</span>
+              <span class="text-neutral-400 normal-case tracking-normal font-semibold">Bấm “Dự Án” để xem tất cả ↗</span>
+            </div>
             <a href="du-an/sala-garden" class="flex items-center gap-3 p-2 rounded-xl hover:bg-neutral-50 transition-colors group/item">
               <span class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-[11px] shrink-0">450T</span>
               <div class="flex flex-col">
@@ -239,9 +452,9 @@
               </div>
             </a>
             <div class="h-px bg-neutral-100 my-1"></div>
-            <a href="du-an/" class="flex items-center justify-between p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 text-neutral-950 font-semibold transition-colors">
+            <a href="du-an/#ban-giao" class="flex items-center justify-between p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 text-neutral-950 font-semibold transition-colors">
               <span class="flex items-center gap-1.5">
-                <span>Ma Trận 5 Nhóm Kỹ Năng &amp; Bàn Giao</span>
+                <span>5 Tài Liệu &amp; Bàn Giao Sẵn Sàng</span>
               </span>
               <span class="text-xs">↗</span>
             </a>
@@ -251,10 +464,6 @@
 
       <a class="nav-link hover:text-black transition-colors" href="#martech">MarTech &amp; AI</a>
       <a class="nav-link hover:text-black transition-colors" href="#career">Sự Nghiệp</a>
-      <a class="nav-link hover:text-black transition-colors font-semibold text-neutral-900 inline-flex items-center gap-1" href="du-an/" title="Kho sản phẩm & chiến dịch bàn giao">
-        <span>Sản Phẩm</span>
-        <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-neutral-100 text-neutral-700 font-bold">Hub</span>
-      </a>
     </nav>
 
     <!-- Right Action CTAs & Mobile Toggle -->
@@ -288,11 +497,12 @@
     </div>
     <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; font-size: 0.875rem; font-weight: 500;">
       <a class="mobile-nav-link" style="display: flex; align-items: center; gap: 0.375rem; padding: 0.625rem; border-radius: 0.75rem; background-color: #f9fafb; color: #1f2937; text-decoration: none;" href="#about"><span>✦</span><span>Về Tôi</span></a>
+      <a class="mobile-nav-link" style="display: flex; align-items: center; gap: 0.375rem; padding: 0.625rem; border-radius: 0.75rem; background-color: #f9fafb; color: #1f2937; text-decoration: none;" href="dich-vu/"><span>✦</span><span>Dịch Vụ</span></a>
       <a class="mobile-nav-link" style="display: flex; align-items: center; gap: 0.375rem; padding: 0.625rem; border-radius: 0.75rem; background-color: #f9fafb; color: #1f2937; text-decoration: none;" href="#leadership"><span>✦</span><span>Năng Lực</span></a>
       <a class="mobile-nav-link" style="display: flex; align-items: center; gap: 0.375rem; padding: 0.625rem; border-radius: 0.75rem; background-color: #f9fafb; color: #1f2937; text-decoration: none;" href="#projects"><span>✦</span><span>Dự Án</span></a>
       <a class="mobile-nav-link" style="display: flex; align-items: center; gap: 0.375rem; padding: 0.625rem; border-radius: 0.75rem; background-color: #f9fafb; color: #1f2937; text-decoration: none;" href="#martech"><span>✦</span><span>MarTech &amp; AI</span></a>
       <a class="mobile-nav-link" style="display: flex; align-items: center; gap: 0.375rem; padding: 0.625rem; border-radius: 0.75rem; background-color: #f9fafb; color: #1f2937; text-decoration: none;" href="#career"><span>✦</span><span>Sự Nghiệp</span></a>
-      <a class="mobile-nav-link" style="display: flex; align-items: center; justify-content: space-between; padding: 0.625rem; border-radius: 0.75rem; background-color: #0f1012 !important; color: #ffffff !important; text-decoration: none; font-weight: 600;" href="du-an/"><span>✦ Kho Dự Án</span><span>↗</span></a>
+      <a class="mobile-nav-link" style="grid-column: span 2 / span 2; display: flex; align-items: center; justify-content: space-between; padding: 0.625rem 0.875rem; border-radius: 0.75rem; background-color: #0f1012 !important; color: #ffffff !important; text-decoration: none; font-weight: 600;" href="du-an/"><span>✦ Mở Trang Toàn Bộ 6 Dự Án</span><span>↗</span></a>
     </div>
 
     <div style="display: flex; flex-direction: column; gap: 0.5rem; padding-top: 0.5rem; border-top: 1px solid #f3f4f6;">
@@ -343,6 +553,11 @@
 <!-- END: Side Dot Navigation -->
 <!-- BEGIN: Hero Section (Strictly inspired by Mindly reference) -->
 <section class="relative min-h-[85vh] pt-24 pb-8 overflow-x-clip hero-atmosphere flex flex-col justify-between border-b border-neutral-100" id="about">
+<!-- Ambient dotted texture -->
+<div class="absolute inset-0 hero-dots pointer-events-none"></div>
+<!-- Ambient glow orbs -->
+<div class="glow-orb glow-orb-mint w-[420px] h-[420px] -left-32 top-40 hidden md:block"></div>
+<div class="glow-orb glow-orb-cyan w-[380px] h-[380px] -right-28 top-72 hidden md:block"></div>
 <!-- Top Floating Mindly Rotating Stamp Badge -->
 <div class="absolute right-8 md:right-20 top-20 hidden lg:block select-none pointer-events-none z-20">
 <div class="relative w-28 h-28 flex items-center justify-center animate-spin-slow opacity-85">
@@ -363,25 +578,33 @@
 </div>
 <!-- Hero Content Container -->
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-20 text-center pt-2 md:pt-4">
+<!-- Availability Status Pill -->
+<div class="flex justify-center mb-5 reveal">
+  <span class="inline-flex items-center gap-2 glass-pill px-4 py-1.5 rounded-full text-[11px] font-semibold text-neutral-700 border border-neutral-200/80 shadow-sm">
+    <span class="status-dot"></span>
+    <span>Đang mở cơ hội Marketing Manager · TP. Hồ Chí Minh</span>
+  </span>
+</div>
 <!-- Editorial Title -->
-<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-serif font-normal tracking-tight text-neutral-950 leading-[1.08] mb-3 max-w-4xl mx-auto">
+<h1 class="reveal text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-serif font-normal tracking-tight text-neutral-950 leading-[1.08] mb-3 max-w-4xl mx-auto" data-delay="1">
         Chiến Lược Marketing.<br>
 <span class="italic font-normal text-neutral-900">Tăng Trưởng Dựa Trên Dữ Liệu &amp; AI.</span>
 </h1>
 <!-- Subtitle -->
-<p class="text-xs sm:text-sm md:text-[15px] text-neutral-600 max-w-2xl mx-auto font-normal leading-relaxed mb-6">
+<p class="reveal text-xs sm:text-sm md:text-[15px] text-neutral-600 max-w-2xl mx-auto font-normal leading-relaxed mb-6" data-delay="2">
         Kết hợp tư duy chiến lược, tăng trưởng từ dữ liệu và công nghệ AI Automation — Tối ưu chi phí &amp; tạo doanh thu thực tế.
       </p>
 <!-- Action Button Group -->
-<div class="flex flex-wrap items-center justify-center gap-3 text-xs md:text-sm font-medium">
-<a class="inline-flex items-center gap-2 bg-neutral-950 text-white px-6 py-3 rounded-full hover:bg-neutral-800 transition-all duration-200 shadow-sm hover:shadow group" href="#projects">
+<div class="reveal flex flex-wrap items-center justify-center gap-3 text-xs md:text-sm font-medium" data-delay="3">
+<a class="inline-flex items-center gap-2 bg-neutral-950 text-white px-6 py-3 rounded-full hover:bg-neutral-800 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 shadow-sm group" href="#projects">
 <span class="">Xem Dự Án Tiêu Biểu</span>
 <span class="group-hover:translate-x-1 transition-transform duration-200">→</span>
 </a>
-<a class="inline-flex items-center gap-2.5 glass-pill px-6 py-3 rounded-full hover:bg-white text-neutral-800 transition-all duration-200 shadow-sm border border-neutral-200/80" href="#contact">
+<a class="inline-flex items-center gap-2.5 glass-pill px-6 py-3 rounded-full hover:bg-white hover:-translate-y-0.5 text-neutral-800 transition-all duration-200 shadow-sm border border-neutral-200/80" href="assets/docs/CV_Ta_Quoc_Duy_Marketing_Manager.pdf" target="_blank">
 <svg class="w-4 h-4 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-<path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M12 10v6m0 0l-3-3m3 3l3-3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M12 4v8m0-8L9 7m3-3l3 3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" opacity="0" ></path>
 </svg>
 <span class="">Tải CV (Bản PDF)</span>
 </a>
@@ -401,7 +624,7 @@
 <path d="M 980 570 C 870 570, 800 560, 720 580" stroke="#E2E8F0" stroke-width="1"></path></svg>
 <!-- Center Hero Studio Portrait - Seamless blended PNG -->
 <div class="relative z-20 flex justify-center items-end select-none">
-<img alt="Tạ Quốc Duy - Growth &amp; MarTech Lead" class="w-[300px] sm:w-[380px] md:w-[440px] lg:w-[480px] max-w-full h-auto object-contain pointer-events-none drop-shadow-md transition-transform duration-300" src="hero_portrait.png">
+<img id="heroPortrait" alt="Tạ Quốc Duy - Growth &amp; MarTech Lead" class="w-[300px] sm:w-[380px] md:w-[440px] lg:w-[480px] max-w-full h-auto object-contain pointer-events-none drop-shadow-md transition-transform duration-300" src="hero_portrait.png">
 </div>
 <!-- Floating Card Left: AI & Tự Động Hóa -->
 <div class="absolute left-4 sm:left-10 md:left-16 lg:left-24 top-8 sm:top-12 z-30 animate-float-slow hidden sm:block max-w-[220px] md:max-w-[250px]">
@@ -480,6 +703,41 @@
 </div>
 </section>
 <!-- END: Hero Section -->
+<!-- BEGIN: Trusted Ecosystem Marquee -->
+<section class="py-7 bg-white border-b border-neutral-100 overflow-hidden" aria-label="Hệ sinh thái thương hiệu đã vận hành">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<p class="text-center text-[10px] font-bold uppercase tracking-[0.22em] text-neutral-400 mb-4 reveal">Hệ sinh thái thương hiệu &amp; hệ thống đã trực tiếp vận hành</p>
+<div class="marquee-mask overflow-hidden reveal">
+<div class="marquee-track gap-2.5 pr-2.5">
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Sala Garden</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Thiên Phúc Viên 450 Tỷ</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Lục Lam Group</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Takashimaya</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Lotte Mart</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Ottocast P3</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Bravigo</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Fclick App</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Brew &amp; Bánh Mì · California</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Toast Tab POS</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Nam Tiến Showroom</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>LATH Group</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Sala Garden</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Thiên Phúc Viên 450 Tỷ</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Lục Lam Group</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Takashimaya</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Lotte Mart</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Ottocast P3</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Bravigo</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Fclick App</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Brew &amp; Bánh Mì · California</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Toast Tab POS</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>Nam Tiến Showroom</span>
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200/70 bg-white text-[11px] font-semibold tracking-wide text-neutral-500 whitespace-nowrap"><span class="text-neutral-300">✦</span>LATH Group</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Trusted Ecosystem Marquee -->
 <!-- BEGIN: Impact Metrics Section -->
 <section class="py-20 bg-white border-b border-neutral-100" id="metrics">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -494,34 +752,34 @@
 </div>
 <!-- 6 Key Metrics Cards -->
 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-<div class="p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 transition-colors">
+<div class="reveal p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300" data-delay="1">
 <p class="text-xs font-medium text-neutral-400 mb-2">Kinh Nghiệm</p>
-<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1">8+ Năm</p>
+<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1 counter-num"><span data-count="8" data-suffix="+">8+</span> Năm</p>
 <p class="text-[11px] text-neutral-500 leading-snug">Hoạch định &amp; quản trị tiếp thị BĐS, F&amp;B, Tech, Bán lẻ</p>
 </div>
-<div class="p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 transition-colors">
+<div class="reveal p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300" data-delay="2">
 <p class="text-xs font-medium text-neutral-400 mb-2">Ngân Sách Ads</p>
-<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1">700M</p>
+<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1 counter-num"><span data-count="700" data-suffix="M">700M</span></p>
 <p class="text-[11px] text-neutral-500 leading-snug">VNĐ/tháng lớn nhất từng quản lý &amp; tối ưu ROI</p>
 </div>
-<div class="p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 transition-colors">
+<div class="reveal p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300" data-delay="3">
 <p class="text-xs font-medium text-neutral-400 mb-2">Sản Xuất Video</p>
-<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1">130+</p>
+<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1 counter-num"><span data-count="130" data-suffix="+">130+</span></p>
 <p class="text-[11px] text-neutral-500 leading-snug">Video ngắn / tháng phủ sóng TikTok, Reels, Shorts</p>
 </div>
-<div class="p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 transition-colors">
+<div class="reveal p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300" data-delay="4">
 <p class="text-xs font-medium text-neutral-400 mb-2">Quy Mô Team</p>
-<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1">10</p>
+<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1 counter-num"><span data-count="10">10</span></p>
 <p class="text-[11px] text-neutral-500 leading-snug">Nhân sự: Điều hành Digital Ads &amp; Brand Creative</p>
 </div>
-<div class="p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 transition-colors">
+<div class="reveal p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300" data-delay="5">
 <p class="text-xs font-medium text-neutral-400 mb-2">Doanh Thu Chuỗi</p>
-<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1">40 Tỷ</p>
+<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1 counter-num"><span data-count="40" data-suffix=" Tỷ">40 Tỷ</span></p>
 <p class="text-[11px] text-neutral-500 leading-snug">VNĐ xây dựng từ số 0 cho Lục Lam Group</p>
 </div>
-<div class="p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 transition-colors">
+<div class="reveal p-5 rounded-2xl bg-canvas border border-neutral-200/70 hover:border-neutral-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300" data-delay="6">
 <p class="text-xs font-medium text-neutral-400 mb-2">AI Automation</p>
-<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1">30%</p>
+<p class="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-950 mb-1 counter-num"><span data-count="30" data-suffix="%">30%</span></p>
 <p class="text-[11px] text-neutral-500 leading-snug">Thời gian vận hành tiết kiệm nhờ AI Agents &amp; Vibe Coding</p>
 </div>
 </div>
@@ -540,7 +798,7 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <!-- Pillar 1 -->
-<div class="bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="reveal bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200/80 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between" data-delay="1">
   <div>
     <div class="flex items-center justify-between mb-4">
       <span class="text-[11px] font-mono tracking-wider text-neutral-400 font-semibold uppercase">01 // TRỤ CỘT</span>
@@ -572,7 +830,7 @@
   </div>
 </div>
 <!-- Pillar 2 -->
-<div class="bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="reveal bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200/80 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between" data-delay="2">
   <div>
     <div class="flex items-center justify-between mb-4">
       <span class="text-[11px] font-mono tracking-wider text-neutral-400 font-semibold uppercase">02 // TRỤ CỘT</span>
@@ -604,7 +862,7 @@
   </div>
 </div>
 <!-- Pillar 3 -->
-<div class="bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="reveal bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200/80 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between" data-delay="3">
   <div>
     <div class="flex items-center justify-between mb-4">
       <span class="text-[11px] font-mono tracking-wider text-neutral-400 font-semibold uppercase">03 // TRỤ CỘT</span>
@@ -653,14 +911,19 @@
 </a>
 </div>
 </div>
-<!-- Projects Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Projects Grid (Bố cục 2 dự án / 1 hàng theo yêu cầu) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
 <!-- Case 1: Sala Garden -->
-<a href="du-an/sala-garden" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg transition-all bg-canvas flex flex-col justify-between block cursor-pointer">
+<a href="du-an/sala-garden" class="case-card reveal group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg bg-canvas flex flex-col justify-between block cursor-pointer" data-delay="1">
 <div>
-<div class="flex items-center justify-between mb-4">
-<span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">BĐS Hoa Viên Sinh Thái</span>
+<div class="case-media">
+<img src="portfolio_assets/images/mockup_sala.jpg" alt="Chiến dịch Sala Garden — BĐS sinh thái Thiên Phúc" loading="lazy" decoding="async">
+<span class="case-chip text-[10px] font-semibold text-white bg-neutral-950/55 px-2.5 py-1 rounded-full border border-white/10">BĐS Hoa Viên Sinh Thái</span>
+<span class="case-open w-8 h-8 rounded-full bg-white/95 text-neutral-950 flex items-center justify-center text-xs font-bold shadow-md">↗</span>
+</div>
+<div class="flex items-center justify-between mb-1">
 <span class="text-[11px] text-neutral-400 font-mono">03/2026 – Hiện tại</span>
+<span class="text-[10px] font-semibold text-neutral-400 uppercase tracking-wider">Case Study</span>
 </div>
 <h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
   <span>Sala Garden</span>
@@ -695,11 +958,16 @@
 </div>
 </a>
 <!-- Case 2: Fclick Mobile App -->
-<a href="du-an/fclick" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg transition-all bg-canvas flex flex-col justify-between block cursor-pointer">
+<a href="du-an/fclick" class="case-card reveal group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg bg-canvas flex flex-col justify-between block cursor-pointer" data-delay="2">
 <div>
-<div class="flex items-center justify-between mb-4">
-<span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">Mobile App &amp; SaaS</span>
+<div class="case-media">
+<img src="portfolio_assets/images/mockup_fclick.jpg" alt="Hệ sinh thái website & app Fclick" loading="lazy" decoding="async">
+<span class="case-chip text-[10px] font-semibold text-white bg-neutral-950/55 px-2.5 py-1 rounded-full border border-white/10">Mobile App &amp; SaaS</span>
+<span class="case-open w-8 h-8 rounded-full bg-white/95 text-neutral-950 flex items-center justify-center text-xs font-bold shadow-md">↗</span>
+</div>
+<div class="flex items-center justify-between mb-1">
 <span class="text-[11px] text-neutral-400 font-mono">06/2025 – 02/2026</span>
+<span class="text-[10px] font-semibold text-neutral-400 uppercase tracking-wider">Case Study</span>
 </div>
 <h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
   <span>Fclick Mobile App</span>
@@ -734,11 +1002,16 @@
 </div>
 </a>
 <!-- Case 3: Lục Lam Group -->
-<a href="du-an/luclam" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg transition-all bg-canvas flex flex-col justify-between block cursor-pointer">
+<a href="du-an/luclam" class="case-card reveal group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg bg-canvas flex flex-col justify-between block cursor-pointer" data-delay="3">
 <div>
-<div class="flex items-center justify-between mb-4">
-<span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">Trà Thảo Mộc &amp; Quà B2B</span>
+<div class="case-media">
+<img src="portfolio_assets/images/mockup_luclam.jpg" alt="Bộ nhận diện & website Lục Lam Group" loading="lazy" decoding="async">
+<span class="case-chip text-[10px] font-semibold text-white bg-neutral-950/55 px-2.5 py-1 rounded-full border border-white/10">Trà Thảo Mộc &amp; Quà B2B</span>
+<span class="case-open w-8 h-8 rounded-full bg-white/95 text-neutral-950 flex items-center justify-center text-xs font-bold shadow-md">↗</span>
+</div>
+<div class="flex items-center justify-between mb-1">
 <span class="text-[11px] text-neutral-400 font-mono">09/2023 – 05/2025</span>
+<span class="text-[10px] font-semibold text-neutral-400 uppercase tracking-wider">Case Study</span>
 </div>
 <h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
   <span>Lục Lam Group</span>
@@ -773,11 +1046,16 @@
 </div>
 </a>
 <!-- Case 4: Bravigo -->
-<a href="du-an/bravigo" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg transition-all bg-canvas flex flex-col justify-between block cursor-pointer">
+<a href="du-an/bravigo" class="case-card reveal group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg bg-canvas flex flex-col justify-between block cursor-pointer" data-delay="1">
 <div>
-<div class="flex items-center justify-between mb-4">
-<span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">Phụ Kiện Ô Tô Thông Minh</span>
+<div class="case-media">
+<img src="portfolio_assets/images/mockup_bravigo.jpg" alt="Ra mắt Ottocast P3 — Bravigo" loading="lazy" decoding="async">
+<span class="case-chip text-[10px] font-semibold text-white bg-neutral-950/55 px-2.5 py-1 rounded-full border border-white/10">Phụ Kiện Ô Tô Thông Minh</span>
+<span class="case-open w-8 h-8 rounded-full bg-white/95 text-neutral-950 flex items-center justify-center text-xs font-bold shadow-md">↗</span>
+</div>
+<div class="flex items-center justify-between mb-1">
 <span class="text-[11px] text-neutral-400 font-mono">11/2022 – 08/2023</span>
+<span class="text-[10px] font-semibold text-neutral-400 uppercase tracking-wider">Case Study</span>
 </div>
 <h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
   <span>Bravigo &amp; Ottocast P3</span>
@@ -812,11 +1090,16 @@
 </div>
 </a>
 <!-- Case 5: Brew & Bánh Mì (USA) -->
-<a href="du-an/brewbanhmi" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg transition-all bg-canvas flex flex-col justify-between block cursor-pointer">
+<a href="du-an/brewbanhmi" class="case-card reveal group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg bg-canvas flex flex-col justify-between block cursor-pointer" data-delay="2">
 <div>
-<div class="flex items-center justify-between mb-4">
-<span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">F&amp;B Quốc Tế (California, USA)</span>
+<div class="case-media">
+<img src="portfolio_assets/images/mockup_brewbanhmi.jpg" alt="Website & POS Brew & Bánh Mì Cafe, California" loading="lazy" decoding="async">
+<span class="case-chip text-[10px] font-semibold text-white bg-neutral-950/55 px-2.5 py-1 rounded-full border border-white/10">F&amp;B Quốc Tế (California, USA)</span>
+<span class="case-open w-8 h-8 rounded-full bg-white/95 text-neutral-950 flex items-center justify-center text-xs font-bold shadow-md">↗</span>
+</div>
+<div class="flex items-center justify-between mb-1">
 <span class="text-[11px] text-neutral-400 font-mono">2024 – 2025</span>
+<span class="text-[10px] font-semibold text-neutral-400 uppercase tracking-wider">Case Study</span>
 </div>
 <h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
   <span>Brew &amp; Bánh Mì Cafe</span>
@@ -851,11 +1134,16 @@
 </div>
 </a>
 <!-- Case 6: LATH Group & Chuỗi Xe Máy Nam Tiến -->
-<a href="du-an/namtien" class="group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg transition-all bg-canvas flex flex-col justify-between block cursor-pointer">
+<a href="du-an/namtien" class="case-card reveal group rounded-3xl border border-neutral-200/80 p-6 sm:p-7 hover:border-neutral-900 hover:shadow-lg bg-canvas flex flex-col justify-between block cursor-pointer" data-delay="3">
 <div>
-<div class="flex items-center justify-between mb-4">
-<span class="text-xs font-semibold text-neutral-900 px-3 py-1 rounded-full bg-neutral-200/70">Bán Lẻ O2O &amp; Mỹ Phẩm</span>
+<div class="case-media">
+<img src="portfolio_assets/images/lath_video_1.jpg" alt="Video viral mỹ phẩm LATH & phễu O2O Nam Tiến" loading="lazy" decoding="async">
+<span class="case-chip text-[10px] font-semibold text-white bg-neutral-950/55 px-2.5 py-1 rounded-full border border-white/10">Bán Lẻ O2O &amp; Mỹ Phẩm</span>
+<span class="case-open w-8 h-8 rounded-full bg-white/95 text-neutral-950 flex items-center justify-center text-xs font-bold shadow-md">↗</span>
+</div>
+<div class="flex items-center justify-between mb-1">
 <span class="text-[11px] text-neutral-400 font-mono">Đa Ngành</span>
+<span class="text-[10px] font-semibold text-neutral-400 uppercase tracking-wider">Case Study</span>
 </div>
 <h3 class="text-xl font-bold text-neutral-900 mb-1 group-hover:text-black flex items-center justify-between">
   <span>LATH &amp; Nam Tiến Showroom</span>
@@ -908,7 +1196,6 @@
   </a>
 </div>
 </div>
-</div>
 </section>
 <!-- END: Case Studies Section -->
 <!-- BEGIN: MarTech Architecture Section -->
@@ -923,7 +1210,7 @@
 </div>
 <!-- 4 Stack Blocks -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<div class="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-700 transition-colors">
+<div class="stack-card reveal bg-neutral-900/90 border border-neutral-800 rounded-2xl p-6" data-delay="1">
 <div class="w-8 h-8 rounded-lg bg-neutral-800 text-neutral-200 flex items-center justify-center text-xs font-mono mb-4">
             01
           </div>
@@ -938,7 +1225,7 @@
 <span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">Zalo OA/ZNS</span>
 </div>
 </div>
-<div class="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-700 transition-colors">
+<div class="stack-card reveal bg-neutral-900/90 border border-neutral-800 rounded-2xl p-6" data-delay="2">
 <div class="w-8 h-8 rounded-lg bg-neutral-800 text-neutral-200 flex items-center justify-center text-xs font-mono mb-4">
             02
           </div>
@@ -953,7 +1240,7 @@
 <span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">Looker Studio</span>
 </div>
 </div>
-<div class="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-700 transition-colors">
+<div class="stack-card reveal bg-neutral-900/90 border border-neutral-800 rounded-2xl p-6" data-delay="3">
 <div class="w-8 h-8 rounded-lg bg-neutral-800 text-neutral-200 flex items-center justify-center text-xs font-mono mb-4">
             03
           </div>
@@ -968,7 +1255,7 @@
 <span class="text-[10px] bg-neutral-800 text-neutral-300 px-2 py-1 rounded">Hotjar</span>
 </div>
 </div>
-<div class="bg-neutral-900/90 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-700 transition-colors">
+<div class="stack-card reveal bg-neutral-900/90 border border-neutral-800 rounded-2xl p-6" data-delay="4">
 <div class="w-8 h-8 rounded-lg bg-neutral-800 text-neutral-200 flex items-center justify-center text-xs font-mono mb-4">
             04
           </div>
@@ -994,10 +1281,10 @@
 <span class="text-xs font-semibold text-neutral-400 uppercase tracking-widest block mb-2">Hành Trình Sự Nghiệp</span>
 <h2 class="text-3xl md:text-4xl font-serif text-neutral-950 font-normal">8+ Năm Thực Chiến &amp; Dẫn Dắt</h2>
 </div>
-<div class="relative border-l border-neutral-200 ml-4 md:ml-32 space-y-10">
+<div class="relative border-l border-neutral-200 ml-4 md:ml-32 space-y-10" id="careerLine">
 <!-- Role 1 -->
-<div class="relative pl-8 group">
-<div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-neutral-950 border-2 border-white ring-4 ring-neutral-100"></div>
+<div class="timeline-item reveal relative pl-8 group" data-delay="1">
+<div class="timeline-dot absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-neutral-950 border-2 border-white ring-4 ring-neutral-100"></div>
 <span class="text-xs font-mono text-neutral-400 block mb-1">03/2026 – Hiện Tại</span>
 <h3 class="text-base font-bold text-neutral-950">Trưởng Phòng Marketing (Marketing Manager)</h3>
 <p class="text-xs font-medium text-neutral-600 mb-2">Công Ty Cổ Phần TM &amp; DV Sala Garden • Bất Động Sản Sinh Thái</p>
@@ -1006,8 +1293,8 @@
           </p>
 </div>
 <!-- Role 2 -->
-<div class="relative pl-8 group">
-<div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-neutral-300 border-2 border-white"></div>
+<div class="timeline-item reveal relative pl-8 group" data-delay="2">
+<div class="timeline-dot absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-neutral-300 border-2 border-white"></div>
 <span class="text-xs font-mono text-neutral-400 block mb-1">06/2025 – 02/2026</span>
 <h3 class="text-base font-bold text-neutral-950">Trưởng Phòng Marketing &amp; MarTech Lead</h3>
 <p class="text-xs font-medium text-neutral-600 mb-2">Công Ty Fclick • Ứng Dụng Di Động &amp; SaaS</p>
@@ -1016,8 +1303,8 @@
           </p>
 </div>
 <!-- Role 3 -->
-<div class="relative pl-8 group">
-<div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-neutral-300 border-2 border-white"></div>
+<div class="timeline-item reveal relative pl-8 group" data-delay="3">
+<div class="timeline-dot absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-neutral-300 border-2 border-white"></div>
 <span class="text-xs font-mono text-neutral-400 block mb-1">09/2023 – 05/2025</span>
 <h3 class="text-base font-bold text-neutral-950">Trưởng Phòng Marketing</h3>
 <p class="text-xs font-medium text-neutral-600 mb-2">Công Ty Cổ Phần Lục Lam • Chuỗi Trà Thảo Mộc &amp; Hộp Quà Tết B2B</p>
@@ -1026,8 +1313,8 @@
           </p>
 </div>
 <!-- Role 4 -->
-<div class="relative pl-8 group">
-<div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-neutral-300 border-2 border-white"></div>
+<div class="timeline-item reveal relative pl-8 group" data-delay="4">
+<div class="timeline-dot absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-neutral-300 border-2 border-white"></div>
 <span class="text-xs font-mono text-neutral-400 block mb-1">11/2022 – 08/2023</span>
 <h3 class="text-base font-bold text-neutral-950">Trưởng Nhóm Marketing Số (Marketing Leader)</h3>
 <p class="text-xs font-medium text-neutral-600 mb-2">Công Ty Bravigo • Phụ Kiện &amp; Thiết Bị Ô Tô Thông Minh</p>
@@ -1036,8 +1323,8 @@
           </p>
 </div>
 <!-- Role 5 -->
-<div class="relative pl-8 group">
-<div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-neutral-300 border-2 border-white"></div>
+<div class="timeline-item reveal relative pl-8 group" data-delay="5">
+<div class="timeline-dot absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-neutral-300 border-2 border-white"></div>
 <span class="text-xs font-mono text-neutral-400 block mb-1">04/2018 – 10/2022</span>
 <h3 class="text-base font-bold text-neutral-950">Trưởng Nhóm Marketing</h3>
 <p class="text-xs font-medium text-neutral-600 mb-2">Tập Đoàn LATH • Thương Hiệu Mỹ Phẩm &amp; Bán Lẻ</p>
@@ -1052,7 +1339,17 @@
 <!-- BEGIN: Contact Section -->
 <section class="py-24 bg-white border-t border-neutral-200" id="contact">
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="rounded-3xl bg-canvas border border-neutral-200/80 p-8 sm:p-12 shadow-sm text-center">
+<div class="reveal relative overflow-hidden rounded-3xl bg-gradient-to-b from-neutral-50 via-canvas to-white border border-neutral-200/80 p-8 sm:p-12 shadow-sm text-center">
+<!-- Decorative corner glows -->
+<div class="absolute -top-24 -left-24 w-72 h-72 rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(87, 223, 254, 0.14) 0%, transparent 70%);"></div>
+<div class="absolute -bottom-24 -right-24 w-72 h-72 rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(78, 222, 163, 0.14) 0%, transparent 70%);"></div>
+<div class="relative">
+<div class="flex justify-center mb-5">
+<span class="inline-flex items-center gap-2 glass-pill px-4 py-1.5 rounded-full text-[11px] font-semibold text-neutral-700 border border-neutral-200/80 shadow-sm">
+<span class="status-dot"></span>
+<span>Phản hồi trong 24 giờ · Zalo 24/7</span>
+</span>
+</div>
 <span class="text-xs font-semibold text-neutral-400 uppercase tracking-widest block mb-2">Kết Nối Tuyển Dụng</span>
 <h2 class="text-3xl md:text-5xl font-serif text-neutral-950 font-normal mb-4">
           Sẵn Sàng Trao Đổi Cơ Hội Hợp Tác
@@ -1062,19 +1359,20 @@
         </p>
 <!-- Quick Contacts -->
 <div class="flex flex-wrap items-center justify-center gap-3.5 mb-10 text-xs md:text-sm">
-<a class="inline-flex items-center gap-2 bg-neutral-950 text-white px-5 py-3 rounded-full hover:bg-neutral-800 transition shadow-sm" href="tel:0392225986">
+<a class="inline-flex items-center gap-2 bg-neutral-950 text-white px-5 py-3 rounded-full hover:bg-neutral-800 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 shadow-sm" href="tel:0392225986">
 <span class="">📞 039 222 5986 (Zalo 24/7)</span>
 </a>
-<a class="inline-flex items-center gap-2 glass-pill px-5 py-3 rounded-full text-neutral-800 hover:bg-white border border-neutral-200 transition shadow-sm" href="mailto:admin@duyhiendigi.com">
+<a class="inline-flex items-center gap-2 glass-pill px-5 py-3 rounded-full text-neutral-800 hover:bg-white hover:-translate-y-0.5 border border-neutral-200 transition-all duration-200 shadow-sm" href="mailto:admin@duyhiendigi.com">
 <span class="">✉️ Trao Đổi Qua Email</span>
 </a>
-<a class="inline-flex items-center gap-2 glass-pill px-5 py-3 rounded-full text-neutral-800 hover:bg-white border border-neutral-200 transition shadow-sm" href="CV_Ta_Quoc_Duy_Marketing_Manager.pdf" target="_blank">
+<a class="inline-flex items-center gap-2 glass-pill px-5 py-3 rounded-full text-neutral-800 hover:bg-white hover:-translate-y-0.5 border border-neutral-200 transition-all duration-200 shadow-sm" href="assets/docs/CV_Ta_Quoc_Duy_Marketing_Manager.pdf" target="_blank">
 <span class="">📄 Tải CV Bản PDF ↗</span>
 </a>
 </div>
 <div class="pt-6 border-t border-neutral-200/70 text-xs text-neutral-400 flex flex-col sm:flex-row items-center justify-between gap-3">
 <span class="">📍 Địa bàn: TP. Hồ Chí Minh (Toàn thời gian Onsite / Hybrid)</span>
 <span class="">Học vấn: Cử nhân CNTT - ĐH Bách Khoa TP.HCM</span>
+</div>
 </div>
 </div>
 </div>
@@ -1103,25 +1401,30 @@
     function updateActiveState(activeId) {
       if (!activeId) return;
       navLinks.forEach(link => {
-        const targetId = link.getAttribute('href')?.replace('#', '');
+        const targetId = link.dataset.navSection || link.getAttribute('href')?.replace('#', '');
         link.classList.toggle('active-nav', targetId === activeId);
       });
     }
 
     // IntersectionObserver for naturally highlighting top nav menu as user scrolls
-    const observer = new IntersectionObserver((entries) => {
-      const visibleEntries = entries.filter(e => e.isIntersecting);
-      if (visibleEntries.length > 0) {
-        visibleEntries.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        updateActiveState(visibleEntries[0].target.id);
-      }
-    }, {
-      root: null,
-      rootMargin: '-15% 0px -35% 0px',
-      threshold: [0.1, 0.3, 0.6]
-    });
+    // Skip when the GSAP layer is active — two systems would fight over .active-nav
+    const gsapOwnsNav = !!(window.gsap && window.ScrollTrigger) &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!gsapOwnsNav && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        const visibleEntries = entries.filter(e => e.isIntersecting);
+        if (visibleEntries.length > 0) {
+          visibleEntries.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+          updateActiveState(visibleEntries[0].target.id);
+        }
+      }, {
+        root: null,
+        rootMargin: '-15% 0px -35% 0px',
+        threshold: [0.1, 0.3, 0.6]
+      });
 
-    sections.forEach(sec => observer.observe(sec));
+      sections.forEach(sec => observer.observe(sec));
+    }
 
     // Handle initial state on load
     const currentHash = window.location.hash.replace('#', '');
@@ -1183,8 +1486,297 @@
         }
       });
     }
+
+    // ===== Scroll Reveal Animations =====
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealEls = Array.from(document.querySelectorAll('.reveal'));
+    const makeVisible = (el) => el.classList.add('is-visible');
+    if (prefersReducedMotion) {
+      revealEls.forEach(makeVisible);
+    } else {
+      // Primary: IntersectionObserver; Fallback: rect check on scroll (some webviews throttle IO)
+      const checkRevealByRect = () => {
+        const vh = window.innerHeight;
+        for (const el of revealEls) {
+          if (el.classList.contains('is-visible')) continue;
+          const r = el.getBoundingClientRect();
+          if (r.top < vh * 0.92 && r.bottom > 0) makeVisible(el);
+        }
+      };
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              makeVisible(entry.target);
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+        revealEls.forEach(el => revealObserver.observe(el));
+      }
+      window.addEventListener('scroll', checkRevealByRect, { passive: true });
+      window.addEventListener('resize', checkRevealByRect, { passive: true });
+      // Initial check + safety pass in case IO callbacks are throttled
+      checkRevealByRect();
+      setTimeout(checkRevealByRect, 350);
+    }
+
+    // ===== Animated Metric Counters =====
+    const counterEls = Array.from(document.querySelectorAll('[data-count]'));
+    if (!prefersReducedMotion) {
+      const animateCounter = (el) => {
+        if (el.dataset.done) return;
+        el.dataset.done = '1';
+        const target = parseInt(el.dataset.count, 10) || 0;
+        const duration = 1400;
+        const startTime = performance.now();
+        const tick = (now) => {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.round(target * eased).toLocaleString('vi-VN') + (el.dataset.suffix || '');
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      };
+      const triggerCounterByRect = () => {
+        const vh = window.innerHeight;
+        for (const el of counterEls) {
+          if (el.dataset.done) continue;
+          const r = el.getBoundingClientRect();
+          if (r.top < vh * 0.8 && r.bottom > 0) animateCounter(el);
+        }
+      };
+      if ('IntersectionObserver' in window) {
+        const counterObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              counterObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.55 });
+        counterEls.forEach(el => counterObserver.observe(el));
+      }
+      window.addEventListener('scroll', triggerCounterByRect, { passive: true });
+      triggerCounterByRect();
+      setTimeout(triggerCounterByRect, 350);
+    }
   });
 </script>
 <!-- END: Clean Navigation Sync Script -->
+
+<!-- BEGIN: GSAP Animation Layer (gsap-core + gsap-scrolltrigger) -->
+<script defer src="assets/js/vendor/gsap.min.js"></script>
+<script defer src="assets/js/vendor/ScrollTrigger.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion || !window.gsap || !window.ScrollTrigger) return;
+
+  const gsap = window.gsap;
+  const ScrollTrigger = window.ScrollTrigger;
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.config({ ignoreMobileResize: true });
+  document.documentElement.classList.add('gsap-ready');
+  gsap.defaults({ ease: 'expo.out', duration: 0.9 });
+
+  // ===== Reading progress bar =====
+  const progressBar = document.getElementById('scrollProgress');
+  if (progressBar) {
+    gsap.to(progressBar, {
+      scaleX: 1,
+      ease: 'none',
+      scrollTrigger: { start: 0, end: 'max', scrub: 0.3, invalidateOnRefresh: true }
+    });
+  }
+
+  // ===== Header gets a solid backdrop once scrolled =====
+  const header = document.getElementById('siteHeader');
+  if (header) {
+    ScrollTrigger.create({
+      start: 20,
+      end: 'max',
+      onToggle: (self) => header.classList.toggle('is-scrolled', self.isActive)
+    });
+  }
+
+  // ===== Hero entrance timeline =====
+  const hero = document.getElementById('about');
+  if (hero) {
+    const heroInner = hero.querySelector('.max-w-7xl');
+    const portraitImg = document.getElementById('heroPortrait');
+    const portraitWrap = portraitImg ? portraitImg.parentElement : null;
+    const floatingCards = hero.querySelectorAll('.glass-card-mindly');
+    const microPills = Array.from(hero.querySelectorAll('.glass-pill'))
+      .filter(el => !heroInner || !heroInner.contains(el));
+    const stamp = hero.querySelector('.animate-spin-slow');
+
+    if (heroInner) {
+      const pill = heroInner.children[0];
+      const h1 = heroInner.querySelector('h1');
+      const sub = heroInner.querySelector('h1 + p');
+      const cta = heroInner.querySelector('h1 + p + div');
+      const tl = gsap.timeline({ delay: 0.1 });
+      hero.classList.add('fx-busy');
+      tl.eventCallback('onComplete', () => hero.classList.remove('fx-busy'));
+
+      if (pill) tl.from(pill, { y: 14, autoAlpha: 0, duration: 0.65 });
+      if (h1) tl.from(h1, { y: 38, autoAlpha: 0, duration: 1.05 }, '-=0.42');
+      if (sub) tl.from(sub, { y: 22, autoAlpha: 0, duration: 0.8 }, '-=0.74');
+      if (cta) tl.from(cta, { y: 16, autoAlpha: 0, duration: 0.7 }, '-=0.64');
+      if (portraitWrap) tl.from(portraitWrap, { y: 44, autoAlpha: 0, duration: 1.15 }, '-=0.96');
+      if (floatingCards.length) tl.from(floatingCards, { y: 24, autoAlpha: 0, duration: 0.85, stagger: 0.12 }, '-=0.82');
+      if (microPills.length) tl.from(microPills, { y: 12, autoAlpha: 0, duration: 0.6, stagger: 0.08 }, '-=0.62');
+      if (stamp) tl.from(stamp, { autoAlpha: 0, duration: 0.9 }, '-=0.7');
+    }
+
+    // Depth parallax while the hero scrolls away (desktop only — keeps mobile scroll cheap)
+    const heroScrub = () => ({
+      trigger: hero,
+      start: 'top top',
+      end: 'bottom top',
+      scrub: 0.8,
+      invalidateOnRefresh: true
+    });
+    const mm = gsap.matchMedia();
+    mm.add('(min-width: 768px)', () => {
+      if (portraitImg) gsap.to(portraitImg, { yPercent: -7, ease: 'none', scrollTrigger: heroScrub() });
+      const mintOrb = hero.querySelector('.glow-orb-mint');
+      const cyanOrb = hero.querySelector('.glow-orb-cyan');
+      if (mintOrb) gsap.to(mintOrb, { yPercent: 32, ease: 'none', scrollTrigger: heroScrub() });
+      if (cyanOrb) gsap.to(cyanOrb, { yPercent: 48, ease: 'none', scrollTrigger: heroScrub() });
+      // Slow ambient drift replaces the CSS orbFloat keyframes that GSAP now owns
+      const orbs = [mintOrb, cyanOrb].filter(Boolean);
+      if (orbs.length) {
+        gsap.to(orbs, {
+          xPercent: 3.5,
+          scale: 1.05,
+          duration: 9,
+          ease: 'sine.inOut',
+          yoyo: true,
+          repeat: -1,
+          stagger: 1.4
+        });
+      }
+    });
+  }
+
+  // ===== Scroll reveals (batched instead of one trigger per element) =====
+  const revealEls = gsap.utils.toArray('.reveal').filter(el => !el.classList.contains('is-visible'));
+  if (revealEls.length) {
+    gsap.set(revealEls, { autoAlpha: 0, y: 26, x: 0 });
+    revealEls.forEach(el => {
+      if (el.classList.contains('reveal-left')) gsap.set(el, { x: -30, y: 0 });
+      else if (el.classList.contains('reveal-right')) gsap.set(el, { x: 30, y: 0 });
+    });
+
+    ScrollTrigger.batch(revealEls, {
+      start: 'top 92%',
+      once: true,
+      interval: 0.12,
+      batchMax: 8,
+      onEnter: (batch) => {
+        batch.forEach((el, i) => {
+          el.classList.add('is-visible', 'fx-busy');
+          gsap.to(el, {
+            autoAlpha: 1,
+            x: 0,
+            y: 0,
+            duration: 0.95,
+            delay: i * 0.075,
+            overwrite: true,
+            clearProps: 'transform',
+            onComplete: () => el.classList.remove('fx-busy')
+          });
+        });
+      }
+    });
+  }
+
+  // ===== Section headings (eyebrow + h2) =====
+  gsap.utils.toArray('section[id] h2').forEach(h2 => {
+    if (h2.closest('.reveal')) return; // already animated by its reveal parent
+    const eyebrow = h2.previousElementSibling;
+    const parts = (eyebrow && eyebrow.tagName === 'SPAN') ? [eyebrow, h2] : [h2];
+    gsap.from(parts, {
+      y: 26,
+      autoAlpha: 0,
+      duration: 0.95,
+      stagger: 0.1,
+      scrollTrigger: { trigger: h2, start: 'top 88%', once: true }
+    });
+  });
+
+  // ===== Career timeline: progress line draws with scroll =====
+  const careerLine = document.getElementById('careerLine');
+  if (careerLine) {
+    const fill = document.createElement('span');
+    fill.id = 'careerLineFill';
+    fill.setAttribute('aria-hidden', 'true');
+    fill.style.cssText = 'position:absolute;left:-1px;top:0;width:1px;height:100%;background:#09090b;transform-origin:top center;transform:scaleY(0);margin-top:0;';
+    careerLine.appendChild(fill);
+
+    gsap.to(fill, {
+      scaleY: 1,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: careerLine,
+        start: 'top 70%',
+        end: 'bottom 75%',
+        scrub: 0.6,
+        invalidateOnRefresh: true
+      }
+    });
+  }
+
+  // ===== Active nav sync (Direct viewport rect check — rock-solid with anchors & hash URLs) =====
+  const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+  const navTargetOf = (link) => link.dataset.navSection || (link.getAttribute('href') || '').replace('#', '');
+  const navTargets = new Set(navLinks.map(navTargetOf));
+  const syncSections = Array.from(document.querySelectorAll('section[id]')).filter(s => navTargets.has(s.id));
+
+  const setActiveNav = (id) => {
+    if (!id || !navTargets.has(id)) return;
+    navLinks.forEach(link => {
+      link.classList.toggle('active-nav', navTargetOf(link) === id);
+    });
+  };
+
+  const syncNavByViewport = () => {
+    const vMid = window.innerHeight * 0.38;
+    for (let i = syncSections.length - 1; i >= 0; i--) {
+      const s = syncSections[i];
+      const r = s.getBoundingClientRect();
+      if (r.top <= vMid && r.bottom > vMid) {
+        setActiveNav(s.id);
+        return;
+      }
+    }
+    if (window.scrollY < 200 && syncSections[0]) {
+      setActiveNav(syncSections[0].id);
+    }
+  };
+
+  window.addEventListener('scroll', syncNavByViewport, { passive: true });
+  ScrollTrigger.addEventListener('refresh', syncNavByViewport);
+  syncNavByViewport();
+  setTimeout(syncNavByViewport, 300);
+
+  // Recalculate once fonts/images settle
+  window.addEventListener('load', () => ScrollTrigger.refresh());
+
+  // Safety net: if a batch trigger never fires, release anything already on screen
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.is-visible)').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) {
+        el.classList.add('is-visible');
+        gsap.set(el, { autoAlpha: 1, x: 0, y: 0, clearProps: 'transform' });
+      }
+    });
+  }, 4000);
+});
+</script>
+<!-- END: GSAP Animation Layer -->
 
 </body></html>

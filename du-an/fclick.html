@@ -107,20 +107,21 @@
     <!-- Center Navigation Pill (Desktop & Tablet Lg) -->
     <nav class="hidden lg:flex items-center gap-1 p-1.5 rounded-full bg-neutral-100/90 border border-neutral-200/60 shadow-inner text-xs sm:text-sm font-medium text-neutral-600">
       <a class="nav-link hover:text-black transition-colors px-3 py-1 rounded-full" href="../#about">Về Tôi</a>
+      <a class="nav-link hover:text-black transition-colors px-3 py-1 rounded-full" href="../dich-vu/">Dịch Vụ</a>
       <a class="nav-link hover:text-black transition-colors px-3 py-1 rounded-full" href="../#leadership">Năng Lực</a>
 
       <!-- Dropdown: Dự Án Thực Chiến -->
       <div class="relative group/dropdown">
-        <button type="button" class="nav-link inline-flex items-center gap-1 hover:text-black transition-colors py-1 px-3 rounded-full bg-white text-black shadow-sm font-semibold">
+        <a href="../du-an/" class="nav-link inline-flex items-center gap-1 hover:text-black transition-colors py-1 px-3 rounded-full bg-white text-black shadow-sm font-semibold" title="Toàn bộ 6 dự án trên 1 trang">
           <span>Dự Án</span>
           <svg class="w-3.5 h-3.5 text-neutral-400 group-hover/dropdown:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-        </button>
+        </a>
         <!-- Dropdown Menu Box -->
         <div class="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-80 opacity-0 pointer-events-none group-hover/dropdown:opacity-100 group-hover/dropdown:pointer-events-auto transition-all duration-200 z-50">
           <div class="bg-white/95 backdrop-blur-2xl rounded-2xl p-2 shadow-2xl border border-neutral-200/80 text-xs flex flex-col gap-1">
-            <div class="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-neutral-400 border-b border-neutral-100">
-              6 Chiến Dịch Quản Trị Tiêu Biểu
-            </div>
+            <div class="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-neutral-400 border-b border-neutral-100 flex items-center justify-between">
+                6 Chiến Dịch Quản Trị Tiêu Biểu <span class="normal-case tracking-normal text-[11px] font-semibold text-neutral-400">Bấm “Dự Án” để xem tất cả ↗</span>
+              </div>
             <a href="sala-garden" class="flex items-center gap-3 p-2 rounded-xl hover:bg-neutral-50 transition-colors group/item">
               <span class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-[11px] shrink-0">130+</span>
               <div class="flex flex-col">
@@ -164,9 +165,9 @@
               </div>
             </a>
             <div class="h-px bg-neutral-100 my-1"></div>
-            <a href="./" class="flex items-center justify-between p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 text-neutral-950 font-semibold transition-colors">
+            <a href="../du-an/#ban-giao" class="flex items-center justify-between p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 text-neutral-950 font-semibold transition-colors">
               <span class="flex items-center gap-1.5">
-                <span>Ma Trận 5 Nhóm Kỹ Năng &amp; Bàn Giao</span>
+                <span>5 Tài Liệu &amp; Bàn Giao Sẵn Sàng</span>
               </span>
               <span class="text-xs">↗</span>
             </a>
@@ -176,10 +177,6 @@
 
       <a class="nav-link hover:text-black transition-colors px-3 py-1 rounded-full" href="../#martech">MarTech &amp; AI</a>
       <a class="nav-link hover:text-black transition-colors px-3 py-1 rounded-full" href="../#career">Sự Nghiệp</a>
-      <a class="nav-link hover:text-black transition-colors font-semibold text-neutral-900 inline-flex items-center gap-1 bg-neutral-100 hover:bg-white px-3 py-1 rounded-full" href="./" title="Kho sản phẩm &amp; chiến dịch bàn giao">
-        <span>Sản Phẩm</span>
-        <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-neutral-200 text-neutral-700 font-bold">Hub</span>
-      </a>
     </nav>
 
     <!-- Right Action CTAs & Mobile Toggle -->
@@ -206,18 +203,19 @@
 
   <!-- Mobile Drawer Menu Overlay -->
   <div id="mobileMenuBackdrop" class="lg:hidden fixed inset-0 bg-neutral-900/30 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-  <div id="mobileMenu" class="lg:hidden fixed inset-x-3 sm:inset-x-4 top-16 sm:top-20 bg-white/95 backdrop-blur-2xl rounded-3xl shadow-2xl border border-neutral-200/80 p-5 flex flex-col gap-3 transition-all duration-300 transform -translate-y-4 opacity-0 pointer-events-none z-50 max-h-[calc(100vh-4.75rem)] overflow-y-auto overscroll-contain">
+  <div id="mobileMenu" class="lg:hidden fixed inset-x-3 sm:inset-x-4 top-16 sm:top-20 bg-white backdrop-blur-2xl rounded-3xl shadow-2xl border border-neutral-200/80 p-5 flex flex-col gap-3 transition-all duration-300 transform -translate-y-4 opacity-0 pointer-events-none z-50 max-h-[calc(100vh-4.75rem)] overflow-y-auto overscroll-contain">
     <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
       <span class="text-xs font-bold uppercase tracking-wider text-neutral-400">Danh Mục Điều Hướng</span>
       <span class="text-[11px] font-mono text-neutral-500">Quốc Duy Portfolio</span>
     </div>
     <div class="grid grid-cols-2 gap-2 text-sm font-medium text-neutral-800">
       <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100" href="../#about">✦ Về Tôi</a>
+      <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100" href="../dich-vu/">✦ Dịch Vụ</a>
       <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100" href="../#leadership">✦ Năng Lực</a>
       <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100" href="../#projects">✦ Dự Án</a>
       <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100" href="../#martech">✦ MarTech &amp; AI</a>
       <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100" href="../#career">✦ Sự Nghiệp</a>
-      <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-900 text-white" href="./">✦ Kho Sản Phẩm ↗</a>
+      <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-900 text-white flex items-center justify-between" href="../du-an/"><span>✦ Mở Trang Toàn Bộ 6 Dự Án</span><span>↗</span></a>
     </div>
 
     <!-- Quick project deep-dive links on mobile -->

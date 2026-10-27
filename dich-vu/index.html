@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
+  <title>Dịch Vụ Tăng Trưởng, MarTech &amp; AI Automation — Tạ Quốc Duy | Growth &amp; MarTech Lead</title>
+  <meta name="description" content="3 dịch vụ tiêu biểu của Tạ Quốc Duy: Tư vấn chiến lược tăng trưởng &amp; quản trị P&amp;L, Performance Marketing đa kênh, MarTech — Data — AI Automation. Kèm các dịch vụ vệ tinh: website, SEO, video ngắn, phễu O2O, dashboard dữ liệu."/>
+  <link rel="canonical" href="https://portfolio.duyhiendigi.com/dich-vu/"/>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CDN + Design Tokens (đồng bộ với trang chủ) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary-container": "#131b2e",
+            "secondary-fixed": "#acedff",
+            "primary": "#000000",
+            "on-surface-variant": "#45464d",
+            "on-surface": "#191c1e",
+            "secondary": "#00687a",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f2f4f6",
+            "background": "#f7f9fb"
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "1.5rem", "xl": "2rem", "full": "9999px" },
+          fontFamily: {
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "display": ["Playfair Display", "serif"],
+            "serif": ["Playfair Display", "Georgia", "serif"],
+            "headline-sm": ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Hotjar Tracking Code per Global Rule (hjid: 6791459, hjsv: 6) -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:6791459,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- Google tag (gtag.js) per Global Rule (ID: G-9KQYN3R3X2) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KQYN3R3X2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9KQYN3R3X2');
+  </script>
+
+  <link rel="stylesheet" href="../assets/css/design-system.css">
+  <style>
+    :root { --canvas: #fafafa; }
+    .bg-canvas { background-color: var(--canvas); }
+
+    .glass-pill {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .status-dot { position: relative; display: inline-flex; width: 0.5rem; height: 0.5rem; }
+    .status-dot::before { content: ''; position: absolute; inset: 0; border-radius: 9999px; background: #10b981; }
+    .status-dot::after {
+      content: ''; position: absolute; inset: 0; border-radius: 9999px; background: #10b981;
+      animation: statusPing 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+    @keyframes statusPing {
+      0% { transform: scale(1); opacity: 0.7; }
+      75%, 100% { transform: scale(2.6); opacity: 0; }
+    }
+
+    /* Scroll-reveal (nhẹ, không phụ thuộc thư viện) */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); will-change: auto; }
+    .reveal[data-delay="1"] { transition-delay: 0.08s; }
+    .reveal[data-delay="2"] { transition-delay: 0.16s; }
+    .reveal[data-delay="3"] { transition-delay: 0.24s; }
+    .reveal[data-delay="4"] { transition-delay: 0.32s; }
+    .reveal[data-delay="5"] { transition-delay: 0.40s; }
+    .reveal[data-delay="6"] { transition-delay: 0.48s; }
+
+    /* Card hover */
+    .svc-card { transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease, border-color 0.3s ease; }
+    .svc-card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px -18px rgba(15, 23, 42, 0.16); }
+    .svc-mini { transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.45s ease; }
+    .svc-mini:hover { transform: translateY(-3px); border-color: #171717; box-shadow: 0 14px 34px -16px rgba(15, 23, 42, 0.18); }
+    .svc-mini:hover .svc-mini-arrow { transform: translate(3px, -3px); }
+    .svc-mini-arrow { transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
+
+    /* Sticky in-page switcher */
+    .svc-pill { transition: all 0.25s ease; }
+    #svcSwitcher::-webkit-scrollbar { display: none; }
+    #svcSwitcher { -ms-overflow-style: none; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    @media (max-width: 768px) {
+      #svcSwitcher { mask-image: linear-gradient(to right, transparent 0, black 14px, black calc(100% - 14px), transparent 100%);
+                     -webkit-mask-image: linear-gradient(to right, transparent 0, black 14px, black calc(100% - 14px), transparent 100%); }
+    }
+
+    section[id] { scroll-margin-top: 96px; }
+    .svc-anchor { scroll-margin-top: 150px; }
+
+    /* Decorative glow orb */
+    .glow-orb {
+      position: absolute; border-radius: 9999px; pointer-events: none; filter: blur(2px);
+      animation: floatOrb 9s ease-in-out infinite;
+    }
+    @keyframes floatOrb {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+      .glow-orb, .status-dot::after { animation: none !important; }
+      .svc-card, .svc-mini { transition: none !important; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-fixed">
+
+  <!-- BEGIN: Site Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-xl border-b border-neutral-200/60 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 h-14 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
+      <a href="../" class="flex flex-col group shrink-0 py-1">
+        <div class="flex items-center gap-1 sm:gap-1.5">
+          <span class="text-sm sm:text-lg font-serif font-semibold tracking-tight text-neutral-900 group-hover:text-black transition-colors">Tạ Quốc Duy</span>
+          <span class="text-neutral-400 text-xs font-mono">✦</span>
+        </div>
+        <span class="text-[9px] sm:text-[11px] font-medium tracking-wider uppercase text-neutral-500">Growth &amp; MarTech Lead</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-1 p-1.5 rounded-full bg-neutral-100/90 border border-neutral-200/60 shadow-inner text-xs sm:text-sm font-medium text-neutral-600">
+        <a class="nav-link hover:text-black transition-colors px-3 py-1 rounded-full" href="../#about">Về Tôi</a>
+        <a class="nav-link px-3 py-1 rounded-full bg-white text-black font-semibold shadow-sm" href="./" aria-current="page" title="Các dịch vụ tăng trưởng, MarTech &amp; AI">Dịch Vụ</a>
+        <a class="nav-link hover:text-black transition-colors px-3 py-1 rounded-full" href="../#leadership">Năng Lực</a>
+
+        <!-- Dropdown: Dự Án Thực Chiến -->
+        <div class="relative group/dropdown">
+          <a class="nav-link inline-flex items-center gap-1 hover:text-black transition-colors px-3 py-1 rounded-full" href="../du-an/">
+            <span>Dự Án</span>
+            <svg class="w-3.5 h-3.5 text-neutral-400 group-hover/dropdown:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </a>
+          <div class="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-80 opacity-0 pointer-events-none group-hover/dropdown:opacity-100 group-hover/dropdown:pointer-events-auto transition-all duration-200 z-50">
+            <div class="bg-white/95 backdrop-blur-2xl rounded-2xl p-2 shadow-2xl border border-neutral-200/80 text-xs flex flex-col gap-1">
+              <div class="px-3 py-1.5 mb-0.5 flex items-center justify-between rounded-lg text-[10px] font-bold uppercase tracking-wider text-neutral-400">
+                <span>Toàn Bộ 6 Dự Án Trên 1 Trang</span>
+                <span class="text-neutral-400 normal-case tracking-normal font-semibold">Bấm “Dự Án” để xem tất cả ↗</span>
+              </div>
+              <a href="../du-an/sala-garden" class="flex items-center gap-3 p-2 rounded-xl hover:bg-neutral-50 transition-colors group/item">
+                <span class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-[11px] shrink-0">450T</span>
+                <div class="flex flex-col">
+                  <span class="font-semibold text-neutral-900 group-hover/item:text-black">Sala Garden &amp; Thiên Phúc</span>
+                  <span class="text-[11px] text-neutral-400">BĐS Sinh Thái • 130+ Video In-house</span>
+                </div>
+              </a>
+              <a href="../du-an/luclam" class="flex items-center gap-3 p-2 rounded-xl hover:bg-neutral-50 transition-colors group/item">
+                <span class="w-8 h-8 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center font-bold text-[11px] shrink-0">40T</span>
+                <div class="flex flex-col">
+                  <span class="font-semibold text-neutral-900 group-hover/item:text-black">Lục Lam Group (Quà Tết 40 Tỷ)</span>
+                  <span class="text-[11px] text-neutral-400">Trà Thảo Mộc • 4 Web • CRM Tự Động</span>
+                </div>
+              </a>
+              <a href="../du-an/bravigo" class="flex items-center gap-3 p-2 rounded-xl hover:bg-neutral-50 transition-colors group/item">
+                <span class="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center font-bold text-[11px] shrink-0">300+</span>
+                <div class="flex flex-col">
+                  <span class="font-semibold text-neutral-900 group-hover/item:text-black">Ottocast P3 Bravigo</span>
+                  <span class="text-[11px] text-neutral-400">300+ Gara • Slide Keynote 45 trang</span>
+                </div>
+              </a>
+              <a href="../du-an/fclick" class="flex items-center gap-3 p-2 rounded-xl hover:bg-neutral-50 transition-colors group/item">
+                <span class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center font-bold text-[11px] shrink-0">-25%</span>
+                <div class="flex flex-col">
+                  <span class="font-semibold text-neutral-900 group-hover/item:text-black">Mobile App Fclick</span>
+                  <span class="text-[11px] text-neutral-400">-25% CPI • AI Automation Tiết Kiệm 30%</span>
+                </div>
+              </a>
+              <a href="../du-an/brewbanhmi" class="flex items-center gap-3 p-2 rounded-xl hover:bg-neutral-50 transition-colors group/item">
+                <span class="w-8 h-8 rounded-lg bg-amber-50 text-amber-800 flex items-center justify-center font-bold text-[11px] shrink-0">USA</span>
+                <div class="flex flex-col">
+                  <span class="font-semibold text-neutral-900 group-hover/item:text-black">Brew &amp; Bánh Mì Cafe (Mỹ)</span>
+                  <span class="text-[11px] text-neutral-400">Milpitas California • Toast Tab POS</span>
+                </div>
+              </a>
+              <a href="../du-an/namtien" class="flex items-center gap-3 p-2 rounded-xl hover:bg-neutral-50 transition-colors group/item">
+                <span class="w-8 h-8 rounded-lg bg-rose-50 text-rose-700 flex items-center justify-center font-bold text-[11px] shrink-0">1.5K</span>
+                <div class="flex flex-col">
+                  <span class="font-semibold text-neutral-900 group-hover/item:text-black">Xe Máy Nam Tiến &amp; LATH</span>
+                  <span class="text-[11px] text-neutral-400">Phễu O2O • 1.500+ Leads/tháng</span>
+                </div>
+              </a>
+              <div class="h-px bg-neutral-100 my-1"></div>
+              <a href="../du-an/#ban-giao" class="flex items-center justify-between p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 text-neutral-950 font-semibold transition-colors">
+                <span>5 Tài Liệu &amp; Bàn Giao Sẵn Sàng</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a class="nav-link hover:text-black transition-colors px-3 py-1 rounded-full" href="../#martech">MarTech &amp; AI</a>
+        <a class="nav-link hover:text-black transition-colors px-3 py-1 rounded-full" href="../#career">Sự Nghiệp</a>
+      </nav>
+
+      <div class="flex items-center gap-1.5 sm:gap-3">
+        <a class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-semibold text-neutral-700 bg-white/80 hover:bg-white hover:text-black transition-all border border-neutral-200/80 shadow-sm" href="../assets/docs/CV_Ta_Quoc_Duy_Marketing_Manager.pdf" target="_blank">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          <span>Tải CV</span>
+        </a>
+        <a class="inline-flex items-center gap-1 sm:gap-1.5 bg-neutral-950 text-white hover:bg-neutral-800 text-xs sm:text-sm font-medium px-3.5 sm:px-5 py-1.5 sm:py-2.5 rounded-full transition-all shadow-sm group whitespace-nowrap" href="#lien-he">
+          <span>Nhận Tư Vấn</span>
+          <span class="text-neutral-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-xs sm:text-sm">↗</span>
+        </a>
+        <button id="mobileMenuBtn" aria-label="Mở Menu Di Động" class="lg:hidden w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/90 border border-neutral-200/80 shadow-sm flex items-center justify-center text-neutral-800 hover:text-black hover:bg-white transition-all focus:outline-none">
+          <svg id="hamburgerIcon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          <svg id="closeIcon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenuBackdrop" class="lg:hidden fixed inset-0 bg-neutral-900/30 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+    <div id="mobileMenu" class="lg:hidden fixed inset-x-3 sm:inset-x-4 top-16 sm:top-20 bg-white backdrop-blur-2xl rounded-2xl sm:rounded-3xl shadow-2xl border border-neutral-200/90 p-4 sm:p-5 flex flex-col gap-3 transition-all duration-300 transform -translate-y-4 opacity-0 pointer-events-none z-50 max-h-[calc(100vh-4.75rem)] overflow-y-auto overscroll-contain">
+      <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
+        <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">Danh Mục Điều Hướng</span>
+        <span class="text-[11px] font-mono text-neutral-500">Tạ Quốc Duy Portfolio</span>
+      </div>
+      <div class="grid grid-cols-2 gap-1.5 sm:gap-2 text-xs sm:text-sm font-medium text-neutral-800">
+        <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100 flex items-center gap-1.5" href="../#about"><span>✦</span><span>Về Tôi</span></a>
+        <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-900 text-white flex items-center gap-1.5" href="./"><span>✦</span><span>Dịch Vụ</span></a>
+        <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100 flex items-center gap-1.5" href="../#leadership"><span>✦</span><span>Năng Lực</span></a>
+        <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100 flex items-center gap-1.5" href="../#martech"><span>✦</span><span>MarTech &amp; AI</span></a>
+        <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100 flex items-center gap-1.5" href="../#career"><span>✦</span><span>Sự Nghiệp</span></a>
+        <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100 flex items-center gap-1.5" href="../du-an/"><span>✦</span><span>Toàn Bộ Dự Án</span></a>
+        <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100 flex items-center gap-1.5 col-span-2" href="#dich-vu-tieu-bieu"><span>✦</span><span>3 Dịch Vụ Tiêu Biểu &amp; 10 Dịch Vụ Vệ Tinh ↓</span></a>
+      </div>
+
+      <div class="flex flex-col gap-1 pt-2 border-t border-neutral-100 text-xs">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 mb-1">Nhảy Nhanh Trong Trang Dịch Vụ:</span>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          <a class="mobile-nav-link p-2 rounded-lg bg-neutral-50 hover:bg-neutral-100 text-neutral-700 flex items-center gap-2" href="#svc-growth">
+            <span class="w-6 h-6 rounded bg-emerald-50 text-emerald-700 text-[10px] font-bold flex items-center justify-center shrink-0">01</span>
+            <span class="truncate">Chiến Lược &amp; P&amp;L</span>
+          </a>
+          <a class="mobile-nav-link p-2 rounded-lg bg-neutral-50 hover:bg-neutral-100 text-neutral-700 flex items-center gap-2" href="#svc-performance">
+            <span class="w-6 h-6 rounded bg-blue-50 text-blue-700 text-[10px] font-bold flex items-center justify-center shrink-0">02</span>
+            <span class="truncate">Performance Đa Kênh</span>
+          </a>
+          <a class="mobile-nav-link p-2 rounded-lg bg-neutral-50 hover:bg-neutral-100 text-neutral-700 flex items-center gap-2" href="#svc-martech">
+            <span class="w-6 h-6 rounded bg-indigo-50 text-indigo-700 text-[10px] font-bold flex items-center justify-center shrink-0">03</span>
+            <span class="truncate">MarTech &amp; AI Automation</span>
+          </a>
+          <a class="mobile-nav-link p-2 rounded-lg bg-neutral-50 hover:bg-neutral-100 text-neutral-700 flex items-center gap-2" href="#dich-vu-khac">
+            <span class="w-6 h-6 rounded bg-neutral-200 text-neutral-700 text-[10px] font-bold flex items-center justify-center shrink-0">+10</span>
+            <span class="truncate">Các Dịch Vụ Khác</span>
+          </a>
+          <a class="mobile-nav-link p-2 rounded-lg bg-neutral-50 hover:bg-neutral-100 text-neutral-700 flex items-center gap-2" href="#quy-trinh">
+            <span class="w-6 h-6 rounded bg-amber-50 text-amber-700 text-[10px] font-bold flex items-center justify-center shrink-0">4</span>
+            <span class="truncate">Quy Trình 4 Bước</span>
+          </a>
+          <a class="mobile-nav-link p-2 rounded-lg bg-neutral-50 hover:bg-neutral-100 text-neutral-700 flex items-center gap-2" href="#ban-giao">
+            <span class="w-6 h-6 rounded bg-neutral-900 text-white text-[10px] font-bold flex items-center justify-center shrink-0">↗</span>
+            <span class="truncate">Bàn Giao &amp; Hợp Tác</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-2 border-t border-neutral-100 flex flex-col sm:flex-row gap-2">
+        <a class="flex-1 flex items-center justify-center gap-2 p-2.5 rounded-xl bg-neutral-100 hover:bg-neutral-200 text-neutral-900 font-semibold text-xs min-h-[42px]" href="../assets/docs/CV_Ta_Quoc_Duy_Marketing_Manager.pdf" target="_blank">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          <span>Tải CV Bản PDF</span>
+        </a>
+        <a class="flex-1 flex items-center justify-center gap-2 p-2.5 rounded-xl bg-neutral-950 text-white font-semibold text-xs shadow-md min-h-[42px]" href="tel:0392225986">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Hotline: 039 222 5986</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- END: Site Header -->
+
+  <main class="w-full pt-14 sm:pt-20 bg-background min-h-screen">
+
+    <!-- BEGIN: Services Hero -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-white via-canvas to-background border-b border-neutral-100">
+      <div class="glow-orb w-72 h-72 -top-24 -left-20" style="background: radial-gradient(circle, rgba(87, 223, 254, 0.18) 0%, transparent 70%);"></div>
+      <div class="glow-orb w-80 h-80 -bottom-32 -right-24" style="background: radial-gradient(circle, rgba(78, 222, 163, 0.16) 0%, transparent 70%); animation-delay: 1.5s;"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 relative">
+        <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div class="lg:col-span-7">
+            <div class="flex flex-wrap items-center gap-2 mb-5">
+              <span class="inline-flex items-center gap-2 glass-pill px-3.5 py-1.5 rounded-full text-[11px] font-semibold text-neutral-700 shadow-sm">
+                <span class="status-dot"></span>
+                <span>Đang nhận dự án mới · Phản hồi trong 24 giờ</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-950 text-white text-[11px] font-semibold">
+                <span>8+ Năm Thực Chiến</span>
+              </span>
+            </div>
+
+            <span class="text-xs font-semibold text-neutral-400 uppercase tracking-widest block mb-3">Dịch Vụ Tư Vấn &amp; Triển Khai</span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif text-neutral-950 font-normal leading-tight mb-4">
+              Tăng Trưởng Doanh Số Bằng<br class="hidden sm:block"/>
+              <span class="italic">Chiến Lược, Performance &amp; MarTech</span>
+            </h1>
+            <p class="text-sm sm:text-base text-neutral-600 max-w-2xl leading-relaxed mb-7">
+              Tôi không chỉ chạy quảng cáo. Tôi chẩn đoán toàn bộ cỗ máy kinh doanh — từ định vị, phễu bán hàng, dữ liệu đến đội ngũ — rồi thiết kế và trực tiếp vận hành hệ thống tăng trưởng có thể đo lường, nhân bản và bàn giao lại cho doanh nghiệp.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-3 mb-9 text-xs sm:text-sm">
+              <a class="inline-flex items-center gap-2 bg-neutral-950 text-white px-5 py-3 rounded-full hover:bg-neutral-800 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 shadow-sm font-semibold" href="#lien-he">
+                <span>📞 Đặt Lịch Tư Vấn 30 Phút</span>
+              </a>
+              <a class="inline-flex items-center gap-2 glass-pill px-5 py-3 rounded-full text-neutral-800 hover:bg-white hover:-translate-y-0.5 transition-all duration-200 shadow-sm font-semibold" href="#svc-growth">
+                <span>Xem 3 Dịch Vụ Tiêu Biểu ↓</span>
+              </a>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+              <div class="bg-white/80 backdrop-blur rounded-2xl border border-neutral-200/70 px-4 py-3 shadow-sm">
+                <div class="font-serif text-xl sm:text-2xl text-neutral-950">700<span class="text-sm ml-0.5">tr/tháng</span></div>
+                <div class="text-[10px] sm:text-[11px] text-neutral-500 mt-0.5 leading-tight">Ngân sách P&amp;L đã quản trị</div>
+              </div>
+              <div class="bg-white/80 backdrop-blur rounded-2xl border border-neutral-200/70 px-4 py-3 shadow-sm">
+                <div class="font-serif text-xl sm:text-2xl text-neutral-950">130<span class="text-sm ml-0.5">+ video</span></div>
+                <div class="text-[10px] sm:text-[11px] text-neutral-500 mt-0.5 leading-tight">Creative in-house mỗi tháng</div>
+              </div>
+              <div class="bg-white/80 backdrop-blur rounded-2xl border border-neutral-200/70 px-4 py-3 shadow-sm">
+                <div class="font-serif text-xl sm:text-2xl text-neutral-950">-25<span class="text-sm ml-0.5">% CPI</span></div>
+                <div class="text-[10px] sm:text-[11px] text-neutral-500 mt-0.5 leading-tight">Tối ưu phễu tải Mobile App</div>
+              </div>
+              <div class="bg-white/80 backdrop-blur rounded-2xl border border-neutral-200/70 px-4 py-3 shadow-sm">
+                <div class="font-serif text-xl sm:text-2xl text-neutral-950">1.500<span class="text-sm ml-0.5">+</span></div>
+                <div class="text-[10px] sm:text-[11px] text-neutral-500 mt-0.5 leading-tight">Leads/tháng từ phễu O2O</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="relative bg-white rounded-3xl border border-neutral-200/80 shadow-[0_25px_60px_-30px_rgba(15,23,42,0.25)] p-6 sm:p-7">
+              <div class="flex items-center justify-between mb-5">
+                <span class="text-[11px] font-mono tracking-wider text-neutral-400 font-semibold uppercase">Cam Kết Đồng Hành</span>
+                <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-semibold border border-emerald-100">SLA 24h</span>
+              </div>
+              <ul class="space-y-4 text-sm text-neutral-700">
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-neutral-950 text-white text-[11px] font-bold flex items-center justify-center shrink-0 mt-0.5">1</span>
+                  <div>
+                    <strong class="text-neutral-950 font-semibold block">Chẩn đoán trước, cam kết sau</strong>
+                    <span class="text-xs text-neutral-500 leading-relaxed">Buổi audit đầu tiên miễn phí — chỉ ra đúng điểm nghẽn trước khi bàn tới ngân sách.</span>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-neutral-950 text-white text-[11px] font-bold flex items-center justify-center shrink-0 mt-0.5">2</span>
+                  <div>
+                    <strong class="text-neutral-950 font-semibold block">KPI rõ ràng, đo bằng số</strong>
+                    <span class="text-xs text-neutral-500 leading-relaxed">Mỗi dịch vụ gắn với chỉ số cụ thể: CPA, ROAS, LTV, số leads, giờ vận hành tiết kiệm.</span>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-neutral-950 text-white text-[11px] font-bold flex items-center justify-center shrink-0 mt-0.5">3</span>
+                  <div>
+                    <strong class="text-neutral-950 font-semibold block">Bàn giao để tự chạy</strong>
+                    <span class="text-xs text-neutral-500 leading-relaxed">SOP, dashboard, tài liệu kỹ thuật và đào tạo đội ngũ in-house — không phụ thuộc dài hạn.</span>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-neutral-950 text-white text-[11px] font-bold flex items-center justify-center shrink-0 mt-0.5">4</span>
+                  <div>
+                    <strong class="text-neutral-950 font-semibold block">Founder-led, không outsource</strong>
+                    <span class="text-xs text-neutral-500 leading-relaxed">Trực tiếp Tạ Quốc Duy tham gia chiến lược và các buổi tối ưu quan trọng.</span>
+                  </div>
+                </li>
+              </ul>
+              <a href="#lien-he" class="mt-6 flex items-center justify-center gap-2 w-full p-3 rounded-2xl bg-neutral-100 hover:bg-neutral-200 text-neutral-900 font-semibold text-xs transition-colors">
+                <span>Nhận Chẩn Đoán Miễn Phí</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Services Hero -->
+
+    <!-- BEGIN: Sticky Service Switcher -->
+    <div class="sticky top-14 sm:top-20 z-40 bg-white/90 backdrop-blur-xl border-b border-neutral-200/70">
+      <div class="max-w-7xl mx-auto px-3 sm:px-6">
+        <div id="svcSwitcher" class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-2.5 text-xs sm:text-sm">
+          <span class="hidden md:inline text-[10px] font-bold uppercase tracking-wider text-neutral-400 shrink-0 pr-1">Dịch vụ:</span>
+          <a class="svc-pill shrink-0 px-3 py-1.5 rounded-full font-semibold bg-neutral-950 text-white shadow-sm" data-target="svc-growth" href="#svc-growth">01 · Chiến Lược &amp; P&amp;L</a>
+          <a class="svc-pill shrink-0 px-3 py-1.5 rounded-full font-semibold text-neutral-600 hover:text-black hover:bg-neutral-100" data-target="svc-performance" href="#svc-performance">02 · Performance Đa Kênh</a>
+          <a class="svc-pill shrink-0 px-3 py-1.5 rounded-full font-semibold text-neutral-600 hover:text-black hover:bg-neutral-100" data-target="svc-martech" href="#svc-martech">03 · MarTech &amp; AI</a>
+          <span class="w-px h-5 bg-neutral-200 shrink-0 mx-1"></span>
+          <a class="svc-pill shrink-0 px-3 py-1.5 rounded-full font-semibold text-neutral-600 hover:text-black hover:bg-neutral-100" data-target="dich-vu-khac" href="#dich-vu-khac">+10 Dịch Vụ Khác</a>
+          <a class="svc-pill shrink-0 px-3 py-1.5 rounded-full font-semibold text-neutral-600 hover:text-black hover:bg-neutral-100" data-target="quy-trinh" href="#quy-trinh">Quy Trình</a>
+          <a class="svc-pill shrink-0 px-3 py-1.5 rounded-full font-semibold text-neutral-600 hover:text-black hover:bg-neutral-100" data-target="ban-giao" href="#ban-giao">Bàn Giao</a>
+        </div>
+      </div>
+    </div>
+    <!-- END: Sticky Service Switcher -->
+
+    <!-- BEGIN: 3 Featured Services -->
+    <section class="py-16 sm:py-20 bg-canvas" id="dich-vu-tieu-bieu">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs font-semibold text-neutral-400 uppercase tracking-widest block mb-2">Dịch Vụ Tiêu Biểu</span>
+          <h2 class="text-3xl md:text-4xl font-serif text-neutral-950 font-normal">3 Gói Dịch Vụ Cốt Lõi</h2>
+          <p class="text-sm text-neutral-500 mt-3 leading-relaxed">
+            Ba nhóm dịch vụ được thiết kế để nối liền nhau: hoạch định đúng hướng — triển khai đúng kênh — vận hành bằng đúng công nghệ.
+          </p>
+        </div>
+
+        <!-- Service 01 -->
+        <article class="svc-anchor svc-card reveal bg-white rounded-3xl border border-neutral-200/80 shadow-sm overflow-hidden mb-6 sm:mb-8" id="svc-growth">
+          <div class="grid lg:grid-cols-12">
+            <div class="lg:col-span-5 p-6 sm:p-8 lg:p-10 bg-gradient-to-b from-neutral-50 to-white border-b lg:border-b-0 lg:border-r border-neutral-100">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[11px] font-mono tracking-wider text-neutral-400 font-semibold uppercase">01 // Dịch Vụ Tiêu Biểu</span>
+                <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-semibold border border-emerald-100">Strategy</span>
+              </div>
+              <h3 class="text-2xl sm:text-[27px] font-serif text-neutral-950 leading-snug mb-3">Tư Vấn Chiến Lược Tăng Trưởng &amp; Quản Trị P&amp;L</h3>
+              <p class="text-sm text-neutral-600 leading-relaxed mb-6">
+                Dành cho doanh nghiệp đang tăng trưởng nhưng chi phí marketing mất kiểm soát, hoặc chuẩn bị mở rộng quy mô và cần một bộ khung vận hành bài bản. Tôi chẩn đoán toàn diện rồi cùng đội ngũ thiết kế lộ trình 90 ngày — đo bằng doanh thu, không bằng cảm tính.
+              </p>
+              <div class="space-y-2.5 pt-4 border-t border-neutral-100">
+                <div class="flex items-start gap-2.5 text-xs text-neutral-700">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                  <span>Audit 360°: kênh, phễu, dữ liệu, nhân sự và chi phí</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs text-neutral-700">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                  <span>Roadmap tăng trưởng 90 ngày gắn OKR — Doanh thu</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs text-neutral-700">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                  <span>Kế hoạch ngân sách &amp; phân bổ kênh theo hiệu suất</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs text-neutral-700">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                  <span>Chuẩn hóa KPI/OKR, SOP và luồng Lead-to-Order</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs text-neutral-700">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                  <span>Coaching &amp; đào tạo đội ngũ in-house theo playbook</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mt-6 pt-5 border-t border-neutral-100">
+                <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Quản trị P&amp;L</span>
+                <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">OKR &amp; SOP</span>
+                <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Fractional CMO</span>
+              </div>
+            </div>
+
+            <div class="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400 block mb-3">Kết Quả Đã Chứng Minh</span>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-7">
+                  <div class="rounded-2xl bg-neutral-50 border border-neutral-200/70 p-4">
+                    <div class="font-serif text-2xl text-neutral-950">700tr</div>
+                    <div class="text-[11px] text-neutral-500 mt-1 leading-tight">Ngân sách P&amp;L quản trị mỗi tháng</div>
+                  </div>
+                  <div class="rounded-2xl bg-neutral-50 border border-neutral-200/70 p-4">
+                    <div class="font-serif text-2xl text-neutral-950">10</div>
+                    <div class="text-[11px] text-neutral-500 mt-1 leading-tight">Nhân sự 2 team Digital &amp; Branding</div>
+                  </div>
+                  <div class="rounded-2xl bg-neutral-50 border border-neutral-200/70 p-4 col-span-2 sm:col-span-1">
+                    <div class="font-serif text-2xl text-neutral-950">450 Tỷ</div>
+                    <div class="text-[11px] text-neutral-500 mt-1 leading-tight">Master plan dự án BĐS đã hoạch định</div>
+                  </div>
+                </div>
+
+                <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400 block mb-3">Phù Hợp Với</span>
+                <div class="grid sm:grid-cols-2 gap-2.5 mb-7 text-xs text-neutral-700">
+                  <div class="flex items-start gap-2 rounded-xl bg-white border border-neutral-200/70 p-3">
+                    <span class="text-neutral-900">◆</span><span>Chuỗi bán lẻ / F&amp;B muốn nhân bản chi nhánh</span>
+                  </div>
+                  <div class="flex items-start gap-2 rounded-xl bg-white border border-neutral-200/70 p-3">
+                    <span class="text-neutral-900">◆</span><span>BĐS, giáo dục, dịch vụ có chu kỳ bán dài</span>
+                  </div>
+                  <div class="flex items-start gap-2 rounded-xl bg-white border border-neutral-200/70 p-3">
+                    <span class="text-neutral-900">◆</span><span>Startup gọi vốn cần số liệu tăng trưởng sạch</span>
+                  </div>
+                  <div class="flex items-start gap-2 rounded-xl bg-white border border-neutral-200/70 p-3">
+                    <span class="text-neutral-900">◆</span><span>Doanh nghiệp có team marketing cần người dẫn dắt</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-5 border-t border-neutral-100">
+                <div class="flex flex-wrap items-center gap-2 text-[11px] text-neutral-500">
+                  <span class="font-semibold text-neutral-700">Case tiêu biểu:</span>
+                  <a href="../du-an/sala-garden" class="px-2.5 py-1 rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-semibold transition-colors">Sala Garden ↗</a>
+                  <a href="../du-an/luclam" class="px-2.5 py-1 rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-semibold transition-colors">Lục Lam Group ↗</a>
+                </div>
+                <a href="#lien-he" class="inline-flex items-center justify-center gap-2 bg-neutral-950 text-white px-5 py-2.5 rounded-full text-xs font-semibold hover:bg-neutral-800 transition-colors shrink-0">
+                  <span>Trao Đổi Về Dịch Vụ Này</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 02 -->
+        <article class="svc-anchor svc-card reveal bg-white rounded-3xl border border-neutral-200/80 shadow-sm overflow-hidden mb-6 sm:mb-8" id="svc-performance">
+          <div class="grid lg:grid-cols-12">
+            <div class="lg:col-span-5 p-6 sm:p-8 lg:p-10 bg-gradient-to-b from-neutral-50 to-white border-b lg:border-b-0 lg:border-r border-neutral-100">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[11px] font-mono tracking-wider text-neutral-400 font-semibold uppercase">02 // Dịch Vụ Tiêu Biểu</span>
+                <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 font-semibold border border-blue-100">Performance</span>
+              </div>
+              <h3 class="text-2xl sm:text-[27px] font-serif text-neutral-950 leading-snug mb-3">Performance Marketing Đa Kênh &amp; Scale Doanh Số</h3>
+              <p class="text-sm text-neutral-600 leading-relaxed mb-6">
+                Trực tiếp vận hành và tối ưu ngân sách quảng cáo trên Meta, Google, TikTok và Zalo OA. Điểm khác biệt: creative sản xuất in-house 130+ video/tháng, nên tốc độ test và scale nhanh hơn hẳn việc thuê ngoài từng chiến dịch.
+              </p>
+              <div class="space-y-2.5 pt-4 border-t border-neutral-100">
+                <div class="flex items-start gap-2.5 text-xs text-neutral-700">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                  <span>Thiết lập &amp; tối ưu tài khoản ads đa kênh theo cấu trúc test</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs text-neutral-700">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                  <span>Xây phễu O2O: QR/landing → POS → CRM → tái mua</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs text-neutral-700">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                  <span>Sản xuất 130+ video ngắn/tháng, A/B testing creative liên tục</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs text-neutral-700">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                  <span>Tối ưu landing page &amp; CRO theo hành vi thực tế</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs text-neutral-700">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                  <span>Báo cáo hiệu suất tuần theo CPA / ROAS / LTV</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mt-6 pt-5 border-t border-neutral-100">
+                <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Meta · Google</span>
+                <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">TikTok · Zalo OA</span>
+                <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Short-form Video</span>
+              </div>
+            </div>
+
+            <div class="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400 block mb-3">Kết Quả Đã Chứng Minh</span>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-7">
+                  <div class="rounded-2xl bg-neutral-50 border border-neutral-200/70 p-4">
+                    <div class="font-serif text-2xl text-neutral-950">-25%</div>
+                    <div class="text-[11px] text-neutral-500 mt-1 leading-tight">CPI tải Mobile App sau tối ưu phễu</div>
+                  </div>
+                  <div class="rounded-2xl bg-neutral-50 border border-neutral-200/70 p-4">
+                    <div class="font-serif text-2xl text-neutral-950">+40%</div>
+                    <div class="text-[11px] text-neutral-500 mt-1 leading-tight">Tăng trưởng hiệu suất quảng cáo</div>
+                  </div>
+                  <div class="rounded-2xl bg-neutral-50 border border-neutral-200/70 p-4 col-span-2 sm:col-span-1">
+                    <div class="font-serif text-2xl text-neutral-950">1.500+</div>
+                    <div class="text-[11px] text-neutral-500 mt-1 leading-tight">Leads/tháng từ hệ thống O2O</div>
+                  </div>
+                </div>
+
+                <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400 block mb-3">Hạng Mục Triển Khai</span>
+                <div class="grid sm:grid-cols-2 gap-2.5 mb-7 text-xs text-neutral-700">
+                  <div class="flex items-start gap-2 rounded-xl bg-white border border-neutral-200/70 p-3">
+                    <span class="text-neutral-900">◆</span><span>Audit &amp; tái cấu trúc tài khoản quảng cáo</span>
+                  </div>
+                  <div class="flex items-start gap-2 rounded-xl bg-white border border-neutral-200/70 p-3">
+                    <span class="text-neutral-900">◆</span><span>Xây dựng phễu O2O cho chuỗi cửa hàng</span>
+                  </div>
+                  <div class="flex items-start gap-2 rounded-xl bg-white border border-neutral-200/70 p-3">
+                    <span class="text-neutral-900">◆</span><span>Content calendar &amp; creative in-house</span>
+                  </div>
+                  <div class="flex items-start gap-2 rounded-xl bg-white border border-neutral-200/70 p-3">
+                    <span class="text-neutral-900">◆</span><span>Đo lường đa điểm chạm &amp; attribution</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-5 border-t border-neutral-100">
+                <div class="flex flex-wrap items-center gap-2 text-[11px] text-neutral-500">
+                  <span class="font-semibold text-neutral-700">Case tiêu biểu:</span>
+                  <a href="../du-an/fclick" class="px-2.5 py-1 rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-semibold transition-colors">Fclick ↗</a>
+                  <a href="../du-an/namtien" class="px-2.5 py-1 rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-semibold transition-colors">Nam Tiến ↗</a>
+                  <a href="../du-an/bravigo" class="px-2.5 py-1 rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-semibold transition-colors">Bravigo ↗</a>
+                </div>
+                <a href="#lien-he" class="inline-flex items-center justify-center gap-2 bg-neutral-950 text-white px-5 py-2.5 rounded-full text-xs font-semibold hover:bg-neutral-800 transition-colors shrink-0">
+                  <span>Trao Đổi Về Dịch Vụ Này</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 03 -->
+        <article class="svc-anchor svc-card reveal bg-white rounded-3xl border border-neutral-200/80 shadow-sm overflow-hidden" id="svc-martech">
+          <div class="grid lg:grid-cols-12">
+            <div class="lg:col-span-5 p-6 sm:p-8 lg:p-10 bg-gradient-to-b from-neutral-50 to-white border-b lg:border-b-0 lg:border-r border-neutral-100">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[11px] font-mono tracking-wider text-neutral-400 font-semibold uppercase">03 // Dịch Vụ Tiêu Biểu</span>
+                <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 font-semibold border border-indigo-100">MarTech &amp; AI</span>
+              </div>
+              <h3 class="text-2xl sm:text-[27px] font-serif text-neutral-950 leading-snug mb-3">MarTech, Data &amp; AI Automation</h3>
+              <p class="text-sm text-neutral-600 leading-relaxed mb-6">
+                Nền tảng Cử nhân CNTT — ĐH Bách Khoa TP.HCM giúp tôi tự tay thiết kế kiến trúc dữ liệu, viết landing page, nối CRM/CDP và dựng AI Agents thay vì phụ thuộc bên thứ ba cho từng thay đổi nhỏ.
+              </p>
+              <div class="space-y-2.5 pt-4 border-t border-neutral-100">
+                <div class="flex items-start gap-2.5 text-xs text-neutral-700">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                  <span>Kiến trúc CRM/CDP &amp; luồng dữ liệu Lead-to-Order</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs text-neutral-700">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                  <span>Dashboard realtime: GA4, GTM, Looker Studio</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs text-neutral-700">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                  <span>AI Agents &amp; automation chăm sóc — báo cáo tự động</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs text-neutral-700">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                  <span>Thiết kế &amp; lập trình Website / Landing Page full-stack</span>
+                </div>
+                <div class="flex items-start gap-2.5 text-xs text-neutral-700">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                  <span>Chuyển giao tài liệu kỹ thuật &amp; đào tạo nội bộ</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mt-6 pt-5 border-t border-neutral-100">
+                <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">CRM · CDP</span>
+                <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">GA4 · Looker</span>
+                <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">AI Agents · Vibe Coding</span>
+              </div>
+            </div>
+
+            <div class="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400 block mb-3">Kết Quả Đã Chứng Minh</span>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-7">
+                  <div class="rounded-2xl bg-neutral-50 border border-neutral-200/70 p-4">
+                    <div class="font-serif text-2xl text-neutral-950">-30%</div>
+                    <div class="text-[11px] text-neutral-500 mt-1 leading-tight">Giờ vận hành nhờ AI Automation</div>
+                  </div>
+                  <div class="rounded-2xl bg-neutral-50 border border-neutral-200/70 p-4">
+                    <div class="font-serif text-2xl text-neutral-950">4 web</div>
+                    <div class="text-[11px] text-neutral-500 mt-1 leading-tight">Hệ thống website &amp; CRM tự động cho 1 tập đoàn</div>
+                  </div>
+                  <div class="rounded-2xl bg-neutral-50 border border-neutral-200/70 p-4 col-span-2 sm:col-span-1">
+                    <div class="font-serif text-2xl text-neutral-950">24/7</div>
+                    <div class="text-[11px] text-neutral-500 mt-1 leading-tight">Dashboard &amp; luồng báo cáo không cần thao tác tay</div>
+                  </div>
+                </div>
+
+                <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400 block mb-3">Năng Lực Kỹ Thuật</span>
+                <div class="flex flex-wrap gap-1.5 mb-7">
+                  <span class="text-[11px] px-2.5 py-1 rounded-lg bg-neutral-50 text-neutral-700 font-medium border border-neutral-200/70">Kiến trúc dữ liệu</span>
+                  <span class="text-[11px] px-2.5 py-1 rounded-lg bg-neutral-50 text-neutral-700 font-medium border border-neutral-200/70">Full-stack Web</span>
+                  <span class="text-[11px] px-2.5 py-1 rounded-lg bg-neutral-50 text-neutral-700 font-medium border border-neutral-200/70">API &amp; Webhook</span>
+                  <span class="text-[11px] px-2.5 py-1 rounded-lg bg-neutral-50 text-neutral-700 font-medium border border-neutral-200/70">Prompt &amp; Agent Design</span>
+                  <span class="text-[11px] px-2.5 py-1 rounded-lg bg-neutral-50 text-neutral-700 font-medium border border-neutral-200/70">Tracking Server-side</span>
+                  <span class="text-[11px] px-2.5 py-1 rounded-lg bg-neutral-50 text-neutral-700 font-medium border border-neutral-200/70">Dashboard Looker Studio</span>
+                </div>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-5 border-t border-neutral-100">
+                <div class="flex flex-wrap items-center gap-2 text-[11px] text-neutral-500">
+                  <span class="font-semibold text-neutral-700">Case tiêu biểu:</span>
+                  <a href="../du-an/luclam" class="px-2.5 py-1 rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-semibold transition-colors">Lục Lam Group ↗</a>
+                  <a href="../du-an/fclick" class="px-2.5 py-1 rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-semibold transition-colors">Fclick ↗</a>
+                  <a href="../du-an/brewbanhmi" class="px-2.5 py-1 rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-semibold transition-colors">Brew &amp; Bánh Mì ↗</a>
+                </div>
+                <a href="#lien-he" class="inline-flex items-center justify-center gap-2 bg-neutral-950 text-white px-5 py-2.5 rounded-full text-xs font-semibold hover:bg-neutral-800 transition-colors shrink-0">
+                  <span>Trao Đổi Về Dịch Vụ Này</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- END: 3 Featured Services -->
+
+    <!-- BEGIN: Other Services -->
+    <section class="py-16 sm:py-20 bg-white border-t border-neutral-100" id="dich-vu-khac">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-12">
+          <div>
+            <span class="text-xs font-semibold text-neutral-400 uppercase tracking-widest block mb-2">Danh Mục Mở Rộng</span>
+            <h2 class="text-3xl md:text-4xl font-serif text-neutral-950 font-normal">Các Dịch Vụ Khác</h2>
+            <p class="text-sm text-neutral-500 mt-3 max-w-2xl leading-relaxed">
+              10 hạng mục có thể triển khai độc lập hoặc ghép thành gói trọn bộ cùng 3 dịch vụ tiêu biểu — tuỳ mức độ trưởng thành của đội ngũ marketing hiện tại.
+            </p>
+          </div>
+          <a href="#lien-he" class="inline-flex items-center gap-2 self-start md:self-auto px-5 py-2.5 rounded-full border border-neutral-300 hover:border-neutral-900 hover:bg-neutral-950 hover:text-white text-xs font-semibold text-neutral-800 transition-all duration-200 shrink-0">
+            <span>Ghép Gói Theo Nhu Cầu</span>
+            <span>↗</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+          <!-- 01 -->
+          <div class="svc-mini reveal bg-canvas rounded-2xl border border-neutral-200/80 p-5 sm:p-6 flex flex-col justify-between" data-delay="1">
+            <div>
+              <div class="flex items-start justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-neutral-950 text-white flex items-center justify-center text-sm">🖥️</span>
+                <span class="svc-mini-arrow text-neutral-300 text-sm">↗</span>
+              </div>
+              <h3 class="text-base font-bold text-neutral-950 mb-1.5">Website &amp; Landing Page</h3>
+              <p class="text-xs text-neutral-500 leading-relaxed">Thiết kế và lập trình full-stack, tối ưu tốc độ, chuẩn SEO và CRO theo từng chiến dịch.</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-neutral-200/70">
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Full-stack</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">CRO</span>
+            </div>
+          </div>
+
+          <!-- 02 -->
+          <div class="svc-mini reveal bg-canvas rounded-2xl border border-neutral-200/80 p-5 sm:p-6 flex flex-col justify-between" data-delay="2">
+            <div>
+              <div class="flex items-start justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-neutral-950 text-white flex items-center justify-center text-sm">🔍</span>
+                <span class="svc-mini-arrow text-neutral-300 text-sm">↗</span>
+              </div>
+              <h3 class="text-base font-bold text-neutral-950 mb-1.5">SEO &amp; Content Marketing</h3>
+              <p class="text-xs text-neutral-500 leading-relaxed">Chiến lược nội dung theo cụm chủ đề, tối ưu on-page và xây dựng traffic bền vững.</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-neutral-200/70">
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">5.000 traffic</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Topic Cluster</span>
+            </div>
+          </div>
+
+          <!-- 03 -->
+          <div class="svc-mini reveal bg-canvas rounded-2xl border border-neutral-200/80 p-5 sm:p-6 flex flex-col justify-between" data-delay="3">
+            <div>
+              <div class="flex items-start justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-neutral-950 text-white flex items-center justify-center text-sm">🎬</span>
+                <span class="svc-mini-arrow text-neutral-300 text-sm">↗</span>
+              </div>
+              <h3 class="text-base font-bold text-neutral-950 mb-1.5">Video Ngắn &amp; Creative In-house</h3>
+              <p class="text-xs text-neutral-500 leading-relaxed">Sản xuất 130+ video/tháng: kịch bản, quay dựng, tối ưu hook cho từng nền tảng.</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-neutral-200/70">
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">130+ video/tháng</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Hook Testing</span>
+            </div>
+          </div>
+
+          <!-- 04 -->
+          <div class="svc-mini reveal bg-canvas rounded-2xl border border-neutral-200/80 p-5 sm:p-6 flex flex-col justify-between" data-delay="1">
+            <div>
+              <div class="flex items-start justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-neutral-950 text-white flex items-center justify-center text-sm">🧭</span>
+                <span class="svc-mini-arrow text-neutral-300 text-sm">↗</span>
+              </div>
+              <h3 class="text-base font-bold text-neutral-950 mb-1.5">Phễu O2O &amp; Lead Generation</h3>
+              <p class="text-xs text-neutral-500 leading-relaxed">Nối online với cửa hàng: QR, POS, CRM và kịch bản nuôi dưỡng khách hàng tự động.</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-neutral-200/70">
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">1.500+ leads</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">QR · POS · CRM</span>
+            </div>
+          </div>
+
+          <!-- 05 -->
+          <div class="svc-mini reveal bg-canvas rounded-2xl border border-neutral-200/80 p-5 sm:p-6 flex flex-col justify-between" data-delay="2">
+            <div>
+              <div class="flex items-start justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-neutral-950 text-white flex items-center justify-center text-sm">🛒</span>
+                <span class="svc-mini-arrow text-neutral-300 text-sm">↗</span>
+              </div>
+              <h3 class="text-base font-bold text-neutral-950 mb-1.5">Social Commerce &amp; Sàn TMĐT</h3>
+              <p class="text-xs text-neutral-500 leading-relaxed">Vận hành gian hàng Shopee, TikTok Shop và Zalo OA: hình ảnh, giá, livestream, chăm sóc.</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-neutral-200/70">
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">TikTok Shop</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Shopee</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Zalo OA</span>
+            </div>
+          </div>
+
+          <!-- 06 -->
+          <div class="svc-mini reveal bg-canvas rounded-2xl border border-neutral-200/80 p-5 sm:p-6 flex flex-col justify-between" data-delay="3">
+            <div>
+              <div class="flex items-start justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-neutral-950 text-white flex items-center justify-center text-sm">🎨</span>
+                <span class="svc-mini-arrow text-neutral-300 text-sm">↗</span>
+              </div>
+              <h3 class="text-base font-bold text-neutral-950 mb-1.5">Thương Hiệu &amp; Nhận Diện</h3>
+              <p class="text-xs text-neutral-500 leading-relaxed">Định vị, thông điệp, bộ nhận diện ứng dụng đồng nhất từ offline tới mọi kênh số.</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-neutral-200/70">
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Brand Identity</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Messaging</span>
+            </div>
+          </div>
+
+          <!-- 07 -->
+          <div class="svc-mini reveal bg-canvas rounded-2xl border border-neutral-200/80 p-5 sm:p-6 flex flex-col justify-between" data-delay="1">
+            <div>
+              <div class="flex items-start justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-neutral-950 text-white flex items-center justify-center text-sm">📊</span>
+                <span class="svc-mini-arrow text-neutral-300 text-sm">↗</span>
+              </div>
+              <h3 class="text-base font-bold text-neutral-950 mb-1.5">Dashboard &amp; Đo Lường Dữ Liệu</h3>
+              <p class="text-xs text-neutral-500 leading-relaxed">Dựng dashboard realtime bằng GA4, GTM và Looker Studio — một nguồn số liệu duy nhất.</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-neutral-200/70">
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">GA4 · GTM</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Looker Studio</span>
+            </div>
+          </div>
+
+          <!-- 08 -->
+          <div class="svc-mini reveal bg-canvas rounded-2xl border border-neutral-200/80 p-5 sm:p-6 flex flex-col justify-between" data-delay="2">
+            <div>
+              <div class="flex items-start justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-neutral-950 text-white flex items-center justify-center text-sm">🎓</span>
+                <span class="svc-mini-arrow text-neutral-300 text-sm">↗</span>
+              </div>
+              <h3 class="text-base font-bold text-neutral-950 mb-1.5">Đào Tạo &amp; Chuyển Giao SOP</h3>
+              <p class="text-xs text-neutral-500 leading-relaxed">Huấn luyện đội ngũ in-house, bàn giao playbook vận hành và bộ tài liệu chuẩn hoá.</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-neutral-200/70">
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Playbook</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Training</span>
+            </div>
+          </div>
+
+          <!-- 09 -->
+          <div class="svc-mini reveal bg-canvas rounded-2xl border border-neutral-200/80 p-5 sm:p-6 flex flex-col justify-between" data-delay="3">
+            <div>
+              <div class="flex items-start justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-neutral-950 text-white flex items-center justify-center text-sm">🎪</span>
+                <span class="svc-mini-arrow text-neutral-300 text-sm">↗</span>
+              </div>
+              <h3 class="text-base font-bold text-neutral-950 mb-1.5">Event, Activation &amp; Khai Trương</h3>
+              <p class="text-xs text-neutral-500 leading-relaxed">Tổ chức sự kiện, activation tại điểm bán và chiến dịch khai trương gắn với mục tiêu bán hàng.</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-neutral-200/70">
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Activation</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Grand Opening</span>
+            </div>
+          </div>
+
+          <!-- 10 -->
+          <div class="svc-mini reveal bg-canvas rounded-2xl border border-neutral-200/80 p-5 sm:p-6 flex flex-col justify-between" data-delay="4">
+            <div>
+              <div class="flex items-start justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-neutral-950 text-white flex items-center justify-center text-sm">🌏</span>
+                <span class="svc-mini-arrow text-neutral-300 text-sm">↗</span>
+              </div>
+              <h3 class="text-base font-bold text-neutral-950 mb-1.5">Mở Rộng Thị Trường Quốc Tế</h3>
+              <p class="text-xs text-neutral-500 leading-relaxed">Kinh nghiệm vận hành thị trường Mỹ: định vị, kênh địa phương, POS và tối ưu chi phí vận hành.</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-neutral-200/70">
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Thị trường Mỹ</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-md bg-white text-neutral-600 font-medium border border-neutral-200/70">Toast POS</span>
+            </div>
+          </div>
+
+          <!-- CTA tile -->
+          <div class="reveal rounded-2xl border border-neutral-900 bg-neutral-950 text-white p-5 sm:p-6 flex flex-col justify-between" data-delay="5">
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 block mb-3">Chưa Chắc Cần Gì?</span>
+              <h3 class="text-base font-bold mb-1.5">Ghép Gói Riêng Cho Doanh Nghiệp</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed">Mô tả mục tiêu, tôi sẽ đề xuất cấu trúc dịch vụ và thứ tự triển khai phù hợp nhất.</p>
+            </div>
+            <a href="#lien-he" class="mt-5 inline-flex items-center justify-between gap-2 px-4 py-2.5 rounded-xl bg-white text-neutral-950 text-xs font-semibold hover:bg-neutral-200 transition-colors">
+              <span>Trao Đổi Nhanh 30 Phút</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Other Services -->
+
+    <!-- BEGIN: Process -->
+    <section class="py-16 sm:py-20 bg-canvas border-t border-neutral-100" id="quy-trinh">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs font-semibold text-neutral-400 uppercase tracking-widest block mb-2">Cách Làm Việc</span>
+          <h2 class="text-3xl md:text-4xl font-serif text-neutral-950 font-normal">Quy Trình 4 Bước</h2>
+          <p class="text-sm text-neutral-500 mt-3 leading-relaxed">
+            Mỗi bước đều có đầu ra cụ thể và mốc thời gian rõ ràng — không có giai đoạn "làm rồi chờ xem".
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+          <div class="reveal relative bg-white rounded-3xl border border-neutral-200/80 p-6 sm:p-7 shadow-sm" data-delay="1">
+            <span class="text-[11px] font-mono tracking-wider text-neutral-400 font-semibold uppercase">Bước 01</span>
+            <div class="text-4xl font-serif text-neutral-200 absolute top-5 right-6 select-none">01</div>
+            <h3 class="text-lg font-bold text-neutral-950 mt-3 mb-2">Audit &amp; Chẩn Đoán</h3>
+            <p class="text-xs text-neutral-500 leading-relaxed mb-4">Rà soát kênh, phễu, dữ liệu, ngân sách và năng lực đội ngũ để tìm đúng điểm nghẽn.</p>
+            <div class="text-[11px] pt-3 border-t border-neutral-100 text-neutral-600 font-semibold">Đầu ra: Báo cáo chẩn đoán + danh sách ưu tiên</div>
+          </div>
+
+          <div class="reveal relative bg-white rounded-3xl border border-neutral-200/80 p-6 sm:p-7 shadow-sm" data-delay="2">
+            <span class="text-[11px] font-mono tracking-wider text-neutral-400 font-semibold uppercase">Bước 02</span>
+            <div class="text-4xl font-serif text-neutral-200 absolute top-5 right-6 select-none">02</div>
+            <h3 class="text-lg font-bold text-neutral-950 mt-3 mb-2">Chiến Lược &amp; Roadmap</h3>
+            <p class="text-xs text-neutral-500 leading-relaxed mb-4">Xây lộ trình 90 ngày theo OKR, phân bổ ngân sách và chốt bộ KPI đo lường.</p>
+            <div class="text-[11px] pt-3 border-t border-neutral-100 text-neutral-600 font-semibold">Đầu ra: Strategy deck + kế hoạch media</div>
+          </div>
+
+          <div class="reveal relative bg-white rounded-3xl border border-neutral-200/80 p-6 sm:p-7 shadow-sm" data-delay="3">
+            <span class="text-[11px] font-mono tracking-wider text-neutral-400 font-semibold uppercase">Bước 03</span>
+            <div class="text-4xl font-serif text-neutral-200 absolute top-5 right-6 select-none">03</div>
+            <h3 class="text-lg font-bold text-neutral-950 mt-3 mb-2">Triển Khai &amp; Vận Hành</h3>
+            <p class="text-xs text-neutral-500 leading-relaxed mb-4">Trực tiếp chạy ads, sản xuất creative, hoàn thiện landing page và tự động hoá quy trình.</p>
+            <div class="text-[11px] pt-3 border-t border-neutral-100 text-neutral-600 font-semibold">Đầu ra: Hệ thống chạy thật + dashboard realtime</div>
+          </div>
+
+          <div class="reveal relative bg-white rounded-3xl border border-neutral-200/80 p-6 sm:p-7 shadow-sm" data-delay="4">
+            <span class="text-[11px] font-mono tracking-wider text-neutral-400 font-semibold uppercase">Bước 04</span>
+            <div class="text-4xl font-serif text-neutral-200 absolute top-5 right-6 select-none">04</div>
+            <h3 class="text-lg font-bold text-neutral-950 mt-3 mb-2">Đo Lường, Scale &amp; Bàn Giao</h3>
+            <p class="text-xs text-neutral-500 leading-relaxed mb-4">Đọc số liệu theo tuần, nhân bản cái hiệu quả, cắt cái lãng phí và chuyển giao SOP.</p>
+            <div class="text-[11px] pt-3 border-t border-neutral-100 text-neutral-600 font-semibold">Đầu ra: Playbook + đội ngũ tự vận hành</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Process -->
+
+    <!-- BEGIN: Deliverables & Engagement -->
+    <section class="py-16 sm:py-20 bg-neutral-950 text-white" id="ban-giao">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mb-12">
+          <span class="text-xs font-semibold text-neutral-500 uppercase tracking-widest block mb-2">Bàn Giao &amp; Hợp Tác</span>
+          <h2 class="text-3xl md:text-4xl font-serif font-normal text-white">Bạn Nhận Được Gì Sau Mỗi Giai Đoạn</h2>
+          <p class="text-sm text-neutral-400 mt-3 leading-relaxed">
+            Mọi hạng mục đều là tài sản nằm lại trong doanh nghiệp — tài liệu, hệ thống, tài khoản và kỹ năng của đội ngũ.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-10">
+          <div class="lg:col-span-7">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="reveal rounded-2xl bg-white/[0.04] border border-white/10 p-5 hover:bg-white/[0.07] transition-colors" data-delay="1">
+                <span class="text-lg">📄</span>
+                <h3 class="text-sm font-bold text-white mt-2.5 mb-1">Strategy Deck &amp; Roadmap 90 Ngày</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed">Mục tiêu, KPI, ngân sách và thứ tự triển khai theo từng tuần.</p>
+              </div>
+              <div class="reveal rounded-2xl bg-white/[0.04] border border-white/10 p-5 hover:bg-white/[0.07] transition-colors" data-delay="2">
+                <span class="text-lg">📘</span>
+                <h3 class="text-sm font-bold text-white mt-2.5 mb-1">Bộ SOP / Playbook Vận Hành</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed">Quy trình chuẩn cho ads, content, chăm sóc khách và báo cáo.</p>
+              </div>
+              <div class="reveal rounded-2xl bg-white/[0.04] border border-white/10 p-5 hover:bg-white/[0.07] transition-colors" data-delay="3">
+                <span class="text-lg">📊</span>
+                <h3 class="text-sm font-bold text-white mt-2.5 mb-1">Dashboard Đo Lường Realtime</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed">Một nguồn số liệu duy nhất cho marketing, sales và ban điều hành.</p>
+              </div>
+              <div class="reveal rounded-2xl bg-white/[0.04] border border-white/10 p-5 hover:bg-white/[0.07] transition-colors" data-delay="4">
+                <span class="text-lg">🎯</span>
+                <h3 class="text-sm font-bold text-white mt-2.5 mb-1">Tài Khoản Ads Cấu Trúc Chuẩn</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed">Cấu trúc chiến dịch, nhóm test và naming convention dễ bàn giao.</p>
+              </div>
+              <div class="reveal rounded-2xl bg-white/[0.04] border border-white/10 p-5 hover:bg-white/[0.07] transition-colors" data-delay="5">
+                <span class="text-lg">🗂️</span>
+                <h3 class="text-sm font-bold text-white mt-2.5 mb-1">Kho Creative &amp; Content Calendar</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed">Video, ảnh, kịch bản và lịch đăng theo từng kênh.</p>
+              </div>
+              <div class="reveal rounded-2xl bg-white/[0.04] border border-white/10 p-5 hover:bg-white/[0.07] transition-colors" data-delay="6">
+                <span class="text-lg">🧑‍🏫</span>
+                <h3 class="text-sm font-bold text-white mt-2.5 mb-1">Buổi Đào Tạo &amp; Chuyển Giao</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed">Hướng dẫn đội ngũ dùng hệ thống mới và tự xử lý công việc thường ngày.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="rounded-3xl bg-white/[0.06] border border-white/10 p-6 sm:p-7">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400 block mb-4">3 Hình Thức Hợp Tác</span>
+              <div class="space-y-4">
+                <div class="rounded-2xl bg-white/[0.05] border border-white/10 p-4">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <h3 class="text-sm font-bold text-white">Theo Dự Án</h3>
+                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-neutral-300 font-semibold">1–3 tháng</span>
+                  </div>
+                  <p class="text-xs text-neutral-400 leading-relaxed">Phù hợp mục tiêu có điểm kết thúc: ra mắt sản phẩm, mở chi nhánh, tái cấu trúc phễu.</p>
+                </div>
+                <div class="rounded-2xl bg-white text-neutral-950 p-4">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <h3 class="text-sm font-bold">Đồng Hành Theo Tháng</h3>
+                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-neutral-950 text-white font-semibold">Đề xuất</span>
+                  </div>
+                  <p class="text-xs text-neutral-600 leading-relaxed">Vai trò Growth/Marketing Lead bán thời gian: hoạch định, tối ưu, quản trị đội ngũ và báo cáo định kỳ.</p>
+                </div>
+                <div class="rounded-2xl bg-white/[0.05] border border-white/10 p-4">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <h3 class="text-sm font-bold text-white">Toàn Thời Gian (In-house)</h3>
+                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-neutral-300 font-semibold">TP.HCM</span>
+                  </div>
+                  <p class="text-xs text-neutral-400 leading-relaxed">Sẵn sàng đảm nhiệm vị trí Marketing Manager / Trưởng phòng Marketing onsite hoặc hybrid.</p>
+                </div>
+              </div>
+              <div class="mt-6 pt-5 border-t border-white/10 text-xs text-neutral-400 leading-relaxed">
+                Kinh nghiệm nền: <span class="text-white font-semibold">8+ năm</span> đa ngành (BĐS, F&amp;B, bán lẻ, SaaS, thị trường Mỹ) · Cử nhân CNTT ĐH Bách Khoa TP.HCM.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Deliverables & Engagement -->
+
+    <!-- BEGIN: CTA Contact -->
+    <section class="py-16 sm:py-24 bg-white border-t border-neutral-200" id="lien-he">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal relative overflow-hidden rounded-3xl bg-gradient-to-b from-neutral-50 via-canvas to-white border border-neutral-200/80 p-8 sm:p-12 shadow-sm text-center">
+          <div class="absolute -top-24 -left-24 w-72 h-72 rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(87, 223, 254, 0.14) 0%, transparent 70%);"></div>
+          <div class="absolute -bottom-24 -right-24 w-72 h-72 rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(78, 222, 163, 0.14) 0%, transparent 70%);"></div>
+          <div class="relative">
+            <div class="flex justify-center mb-5">
+              <span class="inline-flex items-center gap-2 glass-pill px-4 py-1.5 rounded-full text-[11px] font-semibold text-neutral-700 border border-neutral-200/80 shadow-sm">
+                <span class="status-dot"></span>
+                <span>Phản hồi trong 24 giờ · Zalo 24/7</span>
+              </span>
+            </div>
+            <span class="text-xs font-semibold text-neutral-400 uppercase tracking-widest block mb-2">Bắt Đầu Từ Một Cuộc Gọi</span>
+            <h2 class="text-3xl md:text-5xl font-serif text-neutral-950 font-normal mb-4">Nói Cho Tôi Biết Điểm Nghẽn Của Bạn</h2>
+            <p class="text-sm md:text-base text-neutral-600 max-w-xl mx-auto mb-8 leading-relaxed">
+              30 phút đầu tiên hoàn toàn miễn phí. Tôi sẽ chỉ ra vấn đề đang chặn tăng trưởng và đề xuất hướng xử lý cụ thể — dù bạn có hợp tác tiếp hay không.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-3.5 mb-10 text-xs md:text-sm">
+              <a class="inline-flex items-center gap-2 bg-neutral-950 text-white px-5 py-3 rounded-full hover:bg-neutral-800 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 shadow-sm font-semibold" href="tel:0392225986">
+                <span>📞 039 222 5986 (Zalo 24/7)</span>
+              </a>
+              <a class="inline-flex items-center gap-2 glass-pill px-5 py-3 rounded-full text-neutral-800 hover:bg-white hover:-translate-y-0.5 border border-neutral-200 transition-all duration-200 shadow-sm font-semibold" href="mailto:admin@duyhiendigi.com">
+                <span>✉️ Gửi Brief Qua Email</span>
+              </a>
+              <a class="inline-flex items-center gap-2 glass-pill px-5 py-3 rounded-full text-neutral-800 hover:bg-white hover:-translate-y-0.5 border border-neutral-200 transition-all duration-200 shadow-sm font-semibold" href="../du-an/">
+                <span>📁 Xem 6 Case Studies ↗</span>
+              </a>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 text-xs text-neutral-400 pt-6 border-t border-neutral-200/70">
+              <span class="inline-flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Đang nhận dự án cho quý tới
+              </span>
+              <span class="hidden sm:inline text-neutral-300">•</span>
+              <span>📍 TP. Hồ Chí Minh (Onsite / Hybrid / Remote)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: CTA Contact -->
+
+  </main>
+
+  <footer class="w-full bg-surface-container-lowest border-t border-neutral-100 py-6 sm:py-10">
+    <div class="max-w-[1360px] mx-auto px-4 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+      <div class="flex flex-col gap-1 items-center md:items-start">
+        <div class="flex items-center gap-2">
+          <span class="font-headline-sm text-sm sm:text-base text-on-surface font-bold">Tạ Quốc Duy</span>
+          <span class="text-secondary text-[10px]">✦</span>
+          <span class="text-xs uppercase text-on-surface-variant font-medium">Dịch Vụ Tăng Trưởng &amp; MarTech</span>
+        </div>
+        <p class="text-xs text-on-surface-variant">Growth Strategy • Performance Marketing • MarTech Architecture • AI Automation</p>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center gap-3 text-xs text-on-surface-variant">
+        <a href="../du-an/" class="hover:text-black font-semibold transition-colors">Toàn Bộ Dự Án</a>
+        <span class="hidden sm:inline text-neutral-300">•</span>
+        <a href="../#contact" class="hover:text-black font-semibold transition-colors">Liên Hệ</a>
+        <span class="hidden sm:inline text-neutral-300">•</span>
+        <span>© 2026 Tạ Quốc Duy. Porcelain Minimalist Edition</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Scripts: Mobile Drawer, Scroll Reveal, Service Switcher -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Mobile Menu
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
+      const hamburgerIcon = document.getElementById('hamburgerIcon');
+      const closeIcon = document.getElementById('closeIcon');
+
+      if (mobileMenuBtn && mobileMenu) {
+        const openMobileMenu = () => {
+          mobileMenu.classList.remove('pointer-events-none', 'opacity-0', '-translate-y-4');
+          mobileMenu.classList.add('pointer-events-auto', 'opacity-100', 'translate-y-0');
+          if (mobileMenuBackdrop) {
+            mobileMenuBackdrop.classList.remove('pointer-events-none', 'opacity-0');
+            mobileMenuBackdrop.classList.add('pointer-events-auto', 'opacity-100');
+          }
+          if (hamburgerIcon) hamburgerIcon.classList.add('hidden');
+          if (closeIcon) closeIcon.classList.remove('hidden');
+        };
+        const closeMobileMenu = () => {
+          mobileMenu.classList.add('pointer-events-none', 'opacity-0', '-translate-y-4');
+          mobileMenu.classList.remove('pointer-events-auto', 'opacity-100', 'translate-y-0');
+          if (mobileMenuBackdrop) {
+            mobileMenuBackdrop.classList.add('pointer-events-none', 'opacity-0');
+            mobileMenuBackdrop.classList.remove('pointer-events-auto', 'opacity-100');
+          }
+          if (hamburgerIcon) hamburgerIcon.classList.remove('hidden');
+          if (closeIcon) closeIcon.classList.add('hidden');
+        };
+
+        mobileMenuBtn.addEventListener('click', () => {
+          const isOpen = mobileMenu.classList.contains('opacity-100');
+          isOpen ? closeMobileMenu() : openMobileMenu();
+        });
+
+        if (mobileMenuBackdrop) mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+        document.querySelectorAll('.mobile-nav-link').forEach(link => link.addEventListener('click', closeMobileMenu));
+        document.addEventListener('click', (e) => {
+          if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) closeMobileMenu();
+        });
+      }
+
+      // 2. Scroll Reveal
+      const revealEls = Array.from(document.querySelectorAll('.reveal'));
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (reduceMotion) {
+        revealEls.forEach(el => el.classList.add('is-visible'));
+      } else if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { root: null, rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+        revealEls.forEach(el => revealObserver.observe(el));
+
+        // Fallback cho thiết bị không bắn observer (in-app browser cũ)
+        setTimeout(() => {
+          revealEls.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) el.classList.add('is-visible');
+          });
+        }, 600);
+      } else {
+        revealEls.forEach(el => el.classList.add('is-visible'));
+      }
+
+      // 3. Service Switcher: highlight theo section đang xem
+      const pills = Array.from(document.querySelectorAll('.svc-pill'));
+      const targets = pills
+        .map(p => document.getElementById(p.getAttribute('data-target')))
+        .filter(Boolean);
+
+      const pillIdle = 'svc-pill shrink-0 px-3 py-1.5 rounded-full font-semibold text-neutral-600 hover:text-black hover:bg-neutral-100';
+      const pillActive = 'svc-pill shrink-0 px-3 py-1.5 rounded-full font-semibold bg-neutral-950 text-white shadow-sm';
+
+      const highlightPill = (id) => {
+        pills.forEach(p => {
+          const isActive = p.getAttribute('data-target') === id;
+          p.className = isActive ? pillActive : pillIdle;
+          if (isActive) {
+            const switcher = document.getElementById('svcSwitcher');
+            if (switcher) {
+              switcher.scrollTo({
+                left: Math.max(0, p.offsetLeft - (switcher.offsetWidth / 2) + (p.offsetWidth / 2)),
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      };
+
+      const syncPillByViewport = () => {
+        const probe = window.innerHeight * 0.35;
+        let currentId = null;
+        targets.forEach(sec => {
+          const rect = sec.getBoundingClientRect();
+          if (rect.top <= probe && rect.bottom > probe) currentId = sec.id;
+        });
+        if (currentId) highlightPill(currentId);
+      };
+
+      let pillTicking = false;
+      window.addEventListener('scroll', () => {
+        if (pillTicking) return;
+        pillTicking = true;
+        window.requestAnimationFrame(() => { syncPillByViewport(); pillTicking = false; });
+      }, { passive: true });
+      window.addEventListener('resize', syncPillByViewport);
+      syncPillByViewport();
+
+      // 4. Click vào pill: cuộn mượt có trừ offset header
+      pills.forEach(pill => {
+        pill.addEventListener('click', (e) => {
+          const id = pill.getAttribute('data-target');
+          const el = document.getElementById(id);
+          if (!el) return;
+          e.preventDefault();
+          const headerOffset = window.innerWidth >= 1024 ? 150 : 132;
+          const top = el.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+          window.scrollTo({ top: Math.max(0, top), behavior: reduceMotion ? 'auto' : 'smooth' });
+          highlightPill(id);
+          history.replaceState(null, '', '#' + id);
+        });
+      });
+
+      // 5. Nếu vào trang bằng hash có sẵn
+      if (window.location.hash) {
+        const id = window.location.hash.substring(1);
+        const el = document.getElementById(id);
+        if (el) {
+          setTimeout(() => {
+            const headerOffset = window.innerWidth >= 1024 ? 150 : 132;
+            window.scrollTo({ top: Math.max(0, el.getBoundingClientRect().top + window.pageYOffset - headerOffset), behavior: 'auto' });
+            highlightPill(id);
+          }, 120);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -54,6 +54,7 @@
           fontFamily: {
             "body-lg": ["Plus Jakarta Sans", "sans-serif"],
             "display": ["Playfair Display", "serif"],
+            "serif": ["Playfair Display", "Georgia", "serif"],
             "body-sm": ["Plus Jakarta Sans", "sans-serif"],
             "body-md": ["Plus Jakarta Sans", "sans-serif"],
             "label-lg": ["Plus Jakarta Sans", "sans-serif"],
@@ -119,19 +120,21 @@
       <!-- Center Navigation Pill (Desktop & Tablet Lg) -->
       <nav class="hidden lg:flex items-center gap-1 p-1.5 rounded-full bg-neutral-100/90 border border-neutral-200/60 shadow-inner text-xs sm:text-sm font-medium text-neutral-600">
         <a class="nav-link hover:text-black transition-colors px-3 py-1 rounded-full" href="../#about">Về Tôi</a>
+        <a class="nav-link hover:text-black transition-colors px-3 py-1 rounded-full" href="../dich-vu/">Dịch Vụ</a>
         <a class="nav-link hover:text-black transition-colors px-3 py-1 rounded-full" href="../#leadership">Năng Lực</a>
 
-        <!-- Dropdown: Dự Án Thực Chiến -->
+        <!-- Dropdown: Dự Án — mục duy nhất cho dự án (trang này chính là "toàn bộ dự án") -->
         <div class="relative group/dropdown">
-          <button type="button" class="nav-link inline-flex items-center gap-1 hover:text-black transition-colors py-1 px-3 rounded-full bg-white text-black shadow-sm font-semibold">
+          <a class="nav-link inline-flex items-center gap-1 hover:text-black transition-colors py-1 px-3 rounded-full bg-white text-black shadow-sm font-semibold" href="#case-hub-header" title="Toàn bộ 6 dự án &amp; case studies trên trang này">
             <span>Dự Án</span>
             <svg class="w-3.5 h-3.5 text-neutral-400 group-hover/dropdown:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </button>
+          </a>
           <!-- Dropdown Menu Box -->
           <div class="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-80 opacity-0 pointer-events-none group-hover/dropdown:opacity-100 group-hover/dropdown:pointer-events-auto transition-all duration-200 z-50">
             <div class="bg-white/95 backdrop-blur-2xl rounded-2xl p-2 shadow-2xl border border-neutral-200/80 text-xs flex flex-col gap-1">
-              <div class="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-neutral-400 border-b border-neutral-100">
-                Toàn Bộ 6 Dự Án Trên 1 Trang
+              <div class="px-3 py-1.5 mb-0.5 flex items-center justify-between rounded-lg text-[10px] font-bold uppercase tracking-wider text-neutral-400 border-b border-neutral-100">
+                <span>6 Dự Án Trên Trang Này</span>
+                <span class="text-neutral-400 normal-case tracking-normal font-semibold">Bấm “Dự Án” để về đầu trang ↑</span>
               </div>
               <a href="#sala-garden" class="flex items-center gap-3 p-2 rounded-xl hover:bg-neutral-50 transition-colors group/item">
                 <span class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-[11px] shrink-0">130+</span>
@@ -176,8 +179,8 @@
                 </div>
               </a>
               <div class="h-px bg-neutral-100 my-1"></div>
-              <a href="#case-hub-header" class="flex items-center justify-between p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 text-neutral-950 font-semibold transition-colors">
-                <span>Ma Trận 5 Nhóm Kỹ Năng &amp; Bàn Giao</span>
+              <a href="#ban-giao" class="flex items-center justify-between p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 text-neutral-950 font-semibold transition-colors">
+                <span>5 Tài Liệu &amp; Bàn Giao Sẵn Sàng</span>
                 <span class="text-xs">↗</span>
               </a>
             </div>
@@ -186,10 +189,6 @@
 
         <a class="nav-link hover:text-black transition-colors px-3 py-1 rounded-full" href="../#martech">MarTech &amp; AI</a>
         <a class="nav-link hover:text-black transition-colors px-3 py-1 rounded-full" href="../#career">Sự Nghiệp</a>
-        <a class="nav-link hover:text-black transition-colors font-semibold text-neutral-900 inline-flex items-center gap-1 bg-white px-3 py-1 rounded-full shadow-sm" href="./" title="Trang tổng hợp toàn bộ 6 dự án">
-          <span>Tất Cả Dự Án</span>
-          <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-neutral-100 text-neutral-700 font-bold">1 Trang</span>
-        </a>
       </nav>
 
       <!-- Right Action CTAs & Mobile Toggle -->
@@ -213,18 +212,19 @@
 
     <!-- Mobile Drawer Menu Overlay -->
     <div id="mobileMenuBackdrop" class="lg:hidden fixed inset-0 bg-neutral-900/30 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-    <div id="mobileMenu" class="lg:hidden fixed inset-x-3 sm:inset-x-4 top-16 sm:top-20 bg-white/98 backdrop-blur-2xl rounded-2xl sm:rounded-3xl shadow-2xl border border-neutral-200/90 p-4 sm:p-5 flex flex-col gap-3 transition-all duration-300 transform -translate-y-4 opacity-0 pointer-events-none z-50 max-h-[calc(100vh-4.75rem)] overflow-y-auto overscroll-contain">
+    <div id="mobileMenu" class="lg:hidden fixed inset-x-3 sm:inset-x-4 top-16 sm:top-20 bg-white backdrop-blur-2xl rounded-2xl sm:rounded-3xl shadow-2xl border border-neutral-200/90 p-4 sm:p-5 flex flex-col gap-3 transition-all duration-300 transform -translate-y-4 opacity-0 pointer-events-none z-50 max-h-[calc(100vh-4.75rem)] overflow-y-auto overscroll-contain">
       <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
         <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">Danh Mục Điều Hướng</span>
         <span class="text-[11px] font-mono text-neutral-500">Tạ Quốc Duy Portfolio</span>
       </div>
       <div class="grid grid-cols-2 gap-1.5 sm:gap-2 text-xs sm:text-sm font-medium text-neutral-800">
         <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100 flex items-center gap-1.5" href="../#about"><span>✦</span><span>Về Tôi</span></a>
+        <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100 flex items-center gap-1.5" href="../dich-vu/"><span>✦</span><span>Dịch Vụ</span></a>
         <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100 flex items-center gap-1.5" href="../#leadership"><span>✦</span><span>Năng Lực</span></a>
-        <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100 flex items-center gap-1.5" href="../#projects"><span>✦</span><span>Dự Án</span></a>
+        <a class="mobile-nav-link p-2.5 rounded-xl bg-white border border-neutral-900 font-semibold text-neutral-900 flex items-center gap-1.5" href="#case-hub-header"><span>✦</span><span>Dự Án</span></a>
         <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100 flex items-center gap-1.5" href="../#martech"><span>✦</span><span>MarTech &amp; AI</span></a>
         <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-50 hover:bg-neutral-100 flex items-center gap-1.5" href="../#career"><span>✦</span><span>Sự Nghiệp</span></a>
-        <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-900 text-white flex items-center justify-between" href="#case-hub-header"><span>✦ 1 Trang Toàn Dự Án</span><span>↓</span></a>
+        <a class="mobile-nav-link p-2.5 rounded-xl bg-neutral-900 text-white flex items-center justify-between col-span-2" href="#ban-giao"><span>✦ 5 Tài Liệu &amp; Bàn Giao Sẵn Sàng</span><span>↓</span></a>
       </div>
 
       <div class="flex flex-col gap-1 pt-2 border-t border-neutral-100 text-xs">
@@ -274,7 +274,7 @@
     <div class="flex flex-col w-full">
 
       <!-- Breadcrumb & Master Sticky Nav Anchor Bar -->
-      <section class="w-full max-w-[1360px] mx-auto px-3 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-2" id="case-hub-header">
+      <section class="w-full max-w-[1360px] mx-auto px-3 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-2 scroll-mt-28" id="case-hub-header">
         <div class="flex flex-col gap-2.5 sm:gap-3">
           <nav class="flex items-center flex-wrap gap-1.5 sm:gap-2 text-on-surface-variant text-xs sm:text-sm">
             <a class="hover:text-on-surface transition-colors" href="../">Trang Chủ</a>
@@ -872,7 +872,7 @@
       </section>
 
       <!-- Section 7: Ready-to-Transfer Management Artifacts -->
-      <section class="max-w-[1360px] mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 w-full">
+      <section class="max-w-[1360px] mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 w-full scroll-mt-28" id="ban-giao">
         <div class="bg-surface-container-low/80 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-12 border border-neutral-200/80">
           <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-3">
             <div class="flex flex-col">
