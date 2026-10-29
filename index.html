@@ -353,6 +353,17 @@
       html { scroll-behavior: auto; }
       #scrollProgress { display: none; }
     }
+
+    /* ===== Fail-visible fallback =====
+       The animation layer hides content while it animates it in. When animation frames never
+       run (in-app browsers that throttle them, power-save modes, a tab that is never given
+       frames), those animations never fire. JS then marks the page html.fx-static and these
+       rules show every section without the animation layer. */
+    html.fx-static .reveal,
+    html.fx-static .reveal-left,
+    html.fx-static .reveal-right { opacity: 1 !important; transform: none !important; transition: none !important; }
+    html.fx-static .glow-orb, html.fx-static .status-dot::after { animation: none !important; }
+    html.fx-static #scrollProgress { display: none; }
   </style>
   <!-- Hotjar Tracking Code per Rule 6 -->
   <script>
@@ -1599,6 +1610,59 @@
       setTimeout(checkRevealByRect, 350);
     }
 
+    // ===== Fail-visible watchdog =====
+    // The animation layer further down hides elements with inline styles before animating
+    // them in, and inline styles beat every rule in this file. If animation frames never run
+    // (throttled in-app browsers, power-save modes, a tab that is never given frames) those
+    // animations never fire and the page would stay blank. So watch the frame counter, and
+    // keep clearing the inline hiding from whatever is on screen.
+    (function () {
+      let frames = 0;
+      const countFrames = () => { frames++; requestAnimationFrame(countFrames); };
+      requestAnimationFrame(countFrames);
+      const clearHiding = (el) => {
+        el.style.removeProperty('opacity');
+        el.style.removeProperty('visibility');
+        el.style.removeProperty('transform');
+      };
+      const isHiddenInline = (el) => el.style.opacity === '0' || el.style.visibility === 'hidden';
+      const isTweening = (el) => !!(window.gsap && window.gsap.isTweening && window.gsap.isTweening(el));
+      // Release everything, wherever it sits on the page (motion is known to be dead here)
+      const releaseAll = () => {
+        document.documentElement.classList.add('fx-static');
+        document.querySelectorAll('[style]').forEach((el) => {
+          if (isHiddenInline(el)) clearHiding(el);
+        });
+      };
+      // Release only what is on screen and not being animated right now
+      let reconcileQueued = false;
+      const reconcileOnScreen = () => {
+        reconcileQueued = false;
+        document.querySelectorAll('[style]').forEach((el) => {
+          if (!isHiddenInline(el) || isTweening(el)) return;
+          const r = el.getBoundingClientRect();
+          if (r.top < window.innerHeight && r.bottom > 0) clearHiding(el);
+        });
+      };
+      const queueReconcile = () => {
+        if (reconcileQueued) return;
+        reconcileQueued = true;
+        setTimeout(reconcileOnScreen, 250);
+      };
+      const check = () => {
+        if (frames > 2) return;                        // frames are running - animations will handle it
+        if (document.visibilityState === 'hidden') {    // no frames only because the tab is hidden
+          frames = 0;
+          setTimeout(check, 1200);
+          return;
+        }
+        releaseAll();
+      };
+      setTimeout(check, 1500);
+      setTimeout(reconcileOnScreen, 3000);
+      window.addEventListener('scroll', queueReconcile, { passive: true });
+    })();
+
     // ===== Animated Metric Counters =====
     const counterEls = Array.from(document.querySelectorAll('[data-count]'));
     if (!prefersReducedMotion) {
@@ -1740,14 +1804,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ===== Scroll reveals (batched instead of one trigger per element) =====
+  // Driven by the .reveal stylesheet rule and the class toggle only - never by inline styles -
+  // so that if this script or its triggers ever fail, the site's own reveal observer still
+  // brings the content in instead of leaving it hidden.
   const revealEls = gsap.utils.toArray('.reveal').filter(el => !el.classList.contains('is-visible'));
   if (revealEls.length) {
-    gsap.set(revealEls, { autoAlpha: 0, y: 26, x: 0 });
-    revealEls.forEach(el => {
-      if (el.classList.contains('reveal-left')) gsap.set(el, { x: -30, y: 0 });
-      else if (el.classList.contains('reveal-right')) gsap.set(el, { x: 30, y: 0 });
-    });
-
     ScrollTrigger.batch(revealEls, {
       start: 'top 92%',
       once: true,
@@ -1755,17 +1816,9 @@ document.addEventListener('DOMContentLoaded', () => {
       batchMax: 8,
       onEnter: (batch) => {
         batch.forEach((el, i) => {
-          el.classList.add('is-visible', 'fx-busy');
-          gsap.to(el, {
-            autoAlpha: 1,
-            x: 0,
-            y: 0,
-            duration: 0.95,
-            delay: i * 0.075,
-            overwrite: true,
-            clearProps: 'transform',
-            onComplete: () => el.classList.remove('fx-busy')
-          });
+          if (i) el.style.transitionDelay = (i * 0.075).toFixed(3) + 's';
+          el.classList.add('is-visible');
+          window.setTimeout(() => { el.style.transitionDelay = ''; }, 1600);
         });
       }
     });
